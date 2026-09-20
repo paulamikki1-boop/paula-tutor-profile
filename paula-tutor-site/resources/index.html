@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Study Resources | Paula — IGCSE &amp; A Level Tutor in Kuala Lumpur</title>
+    <meta name="description" content="Free study notes, past paper guides, and revision resources for IGCSE and A Level students. Chemistry, Physics, Biology, Maths, Economics, Business Studies, Accounting, and English.">
+    <link rel="canonical" href="/resources/">
+    <meta property="og:title" content="Free Study Resources — Paula, IGCSE &amp; A Level Tutor">
+    <meta property="og:description" content="Free study notes, past paper guides, and revision resources for IGCSE and A Level students in Kuala Lumpur.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/resources/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --blue: #1e3a5f;
+            --blue-mid: #2a5080;
+            --blue-light: #3a6ea5;
+            --sky: #e8f0fe;
+            --white: #ffffff;
+            --off-white: #f5f8fc;
+            --muted: #4a5568;
+            --accent: #4a90d9;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--navy);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Nav */
+        .nav {
+            background: var(--navy);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .nav a { text-decoration: none; }
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .nav-links { display: flex; gap: 1.25rem; align-items: center; }
+        .nav-links a { color: var(--sky); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--white); }
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #25d366;
+            color: var(--white) !important;
+            padding: 0.5rem 1.1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .whatsapp-btn:hover { background: #1da851; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 3.5rem 1.5rem 3rem;
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--sky);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filters */
+        .filters-section {
+            background: var(--off-white);
+            padding: 1.5rem;
+            border-bottom: 1px solid #dde4ee;
+        }
+        .filters-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .filter-group {
+            margin-bottom: 1rem;
+        }
+        .filter-group:last-child { margin-bottom: 0; }
+        .filter-label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .filter-btn {
+            background: var(--white);
+            border: 1.5px solid #d0d8e4;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            color: var(--blue);
+            transition: all 0.2s;
+        }
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        .filter-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--white);
+        }
+
+        /* Cards grid */
+        .cards-section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: var(--white);
+            border: 1px solid #dde4ee;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.2s, transform 0.15s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 16px rgba(10, 22, 40, 0.1);
+            transform: translateY(-2px);
+        }
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.75rem;
+        }
+        .tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .tag-subject {
+            background: var(--sky);
+            color: var(--blue);
+        }
+        .tag-level {
+            background: #e0e7f1;
+            color: var(--blue-mid);
+        }
+        .card h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            line-height: 1.35;
+        }
+        .card-desc {
+            font-size: 0.92rem;
+            color: var(--muted);
+            margin-bottom: 0.75rem;
+            flex: 1;
+        }
+        .card-format {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .card-format svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            display: none;
+        }
+        .empty-state.visible { display: block; }
+        .empty-state h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--blue);
+            margin-bottom: 0.5rem;
+        }
+        .empty-state p { color: var(--muted); }
+
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--sky);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero { padding: 2.5rem 1rem 2rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="nav-brand">Paula</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/resources/">Resources</a>
+            <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Free Study Resources</h1>
+        <p>Notes, guides, and past paper techniques to help you ace IGCSE and A Level exams.</p>
+    </section>
+
+    <section class="filters-section">
+        <div class="filters-inner">
+            <div class="filter-group">
+                <span class="filter-label">Subject</span>
+                <div class="filter-buttons" data-filter="subject">
+                    <button class="filter-btn" data-value="Chemistry">Chemistry</button>
+                    <button class="filter-btn" data-value="Physics">Physics</button>
+                    <button class="filter-btn" data-value="Biology">Biology</button>
+                    <button class="filter-btn" data-value="Maths/Add Maths">Maths/Add Maths</button>
+                    <button class="filter-btn" data-value="Economics">Economics</button>
+                    <button class="filter-btn" data-value="Business Studies">Business Studies</button>
+                    <button class="filter-btn" data-value="Accounting">Accounting</button>
+                    <button class="filter-btn" data-value="English">English</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label">Level</span>
+                <div class="filter-buttons" data-filter="level">
+                    <button class="filter-btn" data-value="IGCSE">IGCSE</button>
+                    <button class="filter-btn" data-value="A Level">A Level</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <div class="cards-grid" id="cards-grid">
+
+            <a class="card" href="/resources/igcse-chemistry-past-paper-technique/" data-subject="Chemistry" data-level="IGCSE">
+                <div class="card-tags">
+                    <span class="tag tag-subject">Chemistry</span>
+                    <span class="tag tag-level">IGCSE</span>
+                </div>
+                <h2>IGCSE Chemistry Past Paper Technique</h2>
+                <p class="card-desc">A step-by-step guide to approaching Chemistry exam questions, with worked examples and common mistakes to avoid.</p>
+                <span class="card-format">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Read online
+                </span>
+            </a>
+
+            <a class="card" href="/resources/a-level-biology-key-definitions/" data-subject="Biology" data-level="A Level">
+                <div class="card-tags">
+                    <span class="tag tag-subject">Biology</span>
+                    <span class="tag tag-level">A Level</span>
+                </div>
+                <h2>A Level Biology Key Definitions</h2>
+                <p class="card-desc">Essential definitions for A Level Biology, organised by topic for quick revision and exam preparation.</p>
+                <span class="card-format">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Read online
+                </span>
+            </a>
+
+            <a class="card" href="/resources/igcse-physics-formula-sheet/" data-subject="Physics" data-level="IGCSE">
+                <div class="card-tags">
+                    <span class="tag tag-subject">Physics</span>
+                    <span class="tag tag-level">IGCSE</span>
+                </div>
+                <h2>IGCSE Physics Formula Sheet</h2>
+                <p class="card-desc">All the key formulas you need for IGCSE Physics, with units and explanations for each one.</p>
+                <span class="card-format">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    PDF download
+                </span>
+            </a>
+
+            <a class="card" href="/resources/igcse-economics-essay-structure-guide/" data-subject="Economics" data-level="IGCSE">
+                <div class="card-tags">
+                    <span class="tag tag-subject">Economics</span>
+                    <span class="tag tag-level">IGCSE</span>
+                </div>
+                <h2>IGCSE Economics Essay Structure Guide</h2>
+                <p class="card-desc">How to structure your Economics essays for maximum marks, with paragraph frameworks and example plans.</p>
+                <span class="card-format">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Read online
+                </span>
+            </a>
+
+        </div>
+
+        <div class="empty-state" id="empty-state">
+            <h3>No resources found</h3>
+            <p>No resources match your current filters. Try selecting a different subject or level.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur</p>
+        <p style="margin-top:0.5rem;"><a href="https://wa.me/60103686902">Book a session on WhatsApp</a></p>
+    </footer>
+
+    <script>
+    (function() {
+        var cards = document.querySelectorAll('.card');
+        var grid = document.getElementById('cards-grid');
+        var emptyState = document.getElementById('empty-state');
+        var filters = { subject: null, level: null };
+
+        // Restore from URL on load
+        function readURL() {
+            var params = new URLSearchParams(window.location.search);
+            filters.subject = params.get('subject') || null;
+            filters.level = params.get('level') || null;
+        }
+
+        function updateURL() {
+            var params = new URLSearchParams();
+            if (filters.subject) params.set('subject', filters.subject);
+            if (filters.level) params.set('level', filters.level);
+            var qs = params.toString();
+            var newURL = window.location.pathname + (qs ? '?' + qs : '');
+            history.replaceState(null, '', newURL);
+        }
+
+        function syncButtons() {
+            document.querySelectorAll('.filter-btn').forEach(function(btn) {
+                var group = btn.closest('[data-filter]').getAttribute('data-filter');
+                var val = btn.getAttribute('data-value');
+                btn.classList.toggle('active', filters[group] === val);
+            });
+        }
+
+        function applyFilters() {
+            var visibleCount = 0;
+            cards.forEach(function(card) {
+                var matchSubject = !filters.subject || card.getAttribute('data-subject') === filters.subject;
+                var matchLevel = !filters.level || card.getAttribute('data-level') === filters.level;
+                var show = matchSubject && matchLevel;
+                card.style.display = show ? '' : 'none';
+                if (show) visibleCount++;
+            });
+            emptyState.classList.toggle('visible', visibleCount === 0);
+            syncButtons();
+            updateURL();
+        }
+
+        // Bind filter buttons
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var group = btn.closest('[data-filter]').getAttribute('data-filter');
+                var val = btn.getAttribute('data-value');
+                // Toggle: clicking active filter deselects it
+                filters[group] = (filters[group] === val) ? null : val;
+                applyFilters();
+            });
+        });
+
+        readURL();
+        applyFilters();
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TEMPLATE: Replace with actual title -->
+    <title>[Resource Title] | Paula — IGCSE &amp; A Level Tutor</title>
+    <meta name="description" content="[One-sentence description of what this resource covers.]">
+    <link rel="canonical" href="/resources/[slug]/">
+    <meta property="og:title" content="[Resource Title] — Free Study Resource">
+    <meta property="og:description" content="[One-sentence description.]">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/resources/[slug]/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --blue: #1e3a5f;
+            --blue-mid: #2a5080;
+            --blue-light: #3a6ea5;
+            --sky: #e8f0fe;
+            --white: #ffffff;
+            --off-white: #f5f8fc;
+            --muted: #4a5568;
+            --accent: #4a90d9;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'DM Sans', sans-serif; color: var(--navy); background: var(--white); line-height: 1.7; }
+
+        .nav { background: var(--navy); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+        .nav a { text-decoration: none; }
+        .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--white); }
+        .nav-links { display: flex; gap: 1.25rem; align-items: center; }
+        .nav-links a { color: var(--sky); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--white); }
+        .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: #25d366; color: var(--white) !important; padding: 0.5rem 1.1rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+        .whatsapp-btn:hover { background: #1da851; }
+
+        .breadcrumbs { padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--muted); max-width: 800px; margin: 0 auto; }
+        .breadcrumbs a { color: var(--accent); text-decoration: none; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+
+        .content { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 2rem; }
+        .content h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.25; }
+        .content .intro { font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; border-left: 3px solid var(--accent); padding-left: 1rem; }
+
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--blue); margin: 2.5rem 0 0.75rem; }
+        .content h3 { font-size: 1.1rem; font-weight: 600; margin: 1.75rem 0 0.5rem; color: var(--blue-mid); }
+        .content p { margin-bottom: 1rem; }
+        .content ul, .content ol { margin: 0 0 1rem 1.5rem; }
+        .content li { margin-bottom: 0.4rem; }
+
+        .content blockquote {
+            background: var(--off-white);
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-style: italic;
+            color: var(--blue);
+        }
+        .content code {
+            background: var(--sky);
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* Highlight / tip boxes */
+        .tip-box {
+            background: #f0f7e6;
+            border: 1px solid #c3dea0;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .tip-box.warning {
+            background: #fef6e6;
+            border-color: #f0d080;
+        }
+        .tip-box strong { display: block; margin-bottom: 0.35rem; }
+
+        /* Worked example box */
+        .worked-example {
+            background: var(--off-white);
+            border: 1px solid #dde4ee;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .worked-example h3 { margin-top: 0; color: var(--blue); }
+        .worked-example .question {
+            background: var(--white);
+            border: 1px solid #dde4ee;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 0.75rem 0;
+            font-style: italic;
+        }
+        .worked-example .answer { margin-top: 1rem; }
+        .worked-example .answer p:first-child { font-weight: 600; color: var(--blue-mid); }
+
+        /* Table styling */
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+        }
+        .content th, .content td {
+            padding: 0.6rem 0.75rem;
+            border: 1px solid #dde4ee;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        .content th { background: var(--sky); font-weight: 600; color: var(--blue); }
+        .content tr:nth-child(even) td { background: var(--off-white); }
+
+        /* Related resources */
+        .related { margin: 3rem 0 2rem; }
+        .related h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--blue); margin-bottom: 1rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+        .related-card {
+            background: var(--off-white);
+            border: 1px solid #dde4ee;
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s;
+        }
+        .related-card:hover { box-shadow: 0 2px 10px rgba(10,22,40,0.08); }
+        .related-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.35rem; }
+        .related-card .tag { font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.45rem; border-radius: 3px; background: var(--sky); color: var(--blue); }
+
+        /* WhatsApp CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+        .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 0.75rem; }
+        .cta-section p { color: var(--sky); margin-bottom: 1.25rem; }
+        .cta-section .whatsapp-btn { font-size: 1rem; padding: 0.7rem 1.5rem; }
+
+        .footer { background: var(--navy); color: var(--sky); text-align: center; padding: 1.5rem; font-size: 0.85rem; }
+        .footer a { color: var(--accent); text-decoration: none; }
+
+        /* Print styles */
+        @media print {
+            .nav, .breadcrumbs, .cta-section, .footer, .related, .whatsapp-btn { display: none !important; }
+            body { font-size: 11pt; line-height: 1.5; color: #000; background: #fff; }
+            .content { max-width: 100%; padding: 0; margin: 0; }
+            .content h1 { font-size: 20pt; color: #000; }
+            .content h2 { font-size: 14pt; color: #333; page-break-after: avoid; }
+            .content h3 { font-size: 12pt; color: #333; page-break-after: avoid; }
+            .worked-example, .tip-box, blockquote {
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+            a { color: #000; text-decoration: none; }
+            a[href]::after { content: none; }
+        }
+
+        @media (max-width: 600px) {
+            .content h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="nav-brand">Paula</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/resources/">Resources</a>
+            <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        <a href="/">Home</a> &rsaquo; <a href="/resources/">Resources</a> &rsaquo; [Resource Title]
+    </div>
+
+    <article class="content">
+        <h1>[Resource Title]</h1>
+        <p class="intro">
+            <!-- TEMPLATE: Who this is for and what it covers. -->
+            This guide is for [level] [subject] students who want to [goal].
+            It covers [brief content description].
+        </p>
+
+        <!-- TEMPLATE: Full notes content goes here. Use the CSS classes available:
+             - .tip-box for tips (add .warning class for caution notes)
+             - .worked-example with .question and .answer for worked examples
+             - <blockquote> for key takeaways
+             - <table> for data/comparison tables
+        -->
+
+        <h2>[Section 1 Title]</h2>
+        <p>[Section content...]</p>
+
+        <h2>[Section 2 Title]</h2>
+        <p>[Section content...]</p>
+
+        <div class="worked-example">
+            <h3>Worked Example</h3>
+            <div class="question">
+                <p>[Exam question text]</p>
+            </div>
+            <div class="answer">
+                <p>Model Answer:</p>
+                <p>[Step-by-step answer]</p>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <strong>Tip</strong>
+            [Helpful tip text]
+        </div>
+
+        <div class="tip-box warning">
+            <strong>Common Mistake</strong>
+            [Description of a common mistake and how to avoid it]
+        </div>
+
+        <!-- Related Resources -->
+        <div class="related">
+            <h2>Related Resources</h2>
+            <div class="related-grid">
+                <a class="related-card" href="/resources/[related-slug-1]/">
+                    <span class="tag">[Subject]</span>
+                    <h3>[Related Resource Title 1]</h3>
+                </a>
+                <a class="related-card" href="/resources/[related-slug-2]/">
+                    <span class="tag">[Subject]</span>
+                    <h3>[Related Resource Title 2]</h3>
+                </a>
+                <a class="related-card" href="/resources/[related-slug-3]/">
+                    <span class="tag">[Subject]</span>
+                    <h3>[Related Resource Title 3]</h3>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- WhatsApp CTA -->
+    <section class="cta-section">
+        <h2>Need Help With [Subject]?</h2>
+        <p>Book a one-on-one tutoring session and get personalised guidance for your exams.</p>
+        <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with Paula on WhatsApp
+        </a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur</p>
+    </footer>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+            { "@type": "ListItem", "position": 2, "name": "Resources", "item": "/resources/" },
+            { "@type": "ListItem", "position": 3, "name": "[Resource Title]" }
+        ]
+    }
+    </script>
+
+    <!-- LearningResource Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "[Resource Title]",
+        "description": "[One-sentence description]",
+        "educationalLevel": "[IGCSE or A Level]",
+        "about": { "@type": "Thing", "name": "[Subject]" },
+        "author": { "@type": "Person", "name": "Paula" },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+</body>
+</html>
