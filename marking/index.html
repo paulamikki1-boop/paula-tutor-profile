@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Paper Marking Service | Paula — IGCSE &amp; A Level Tutor</title>
+    <meta name="description" content="Get your IGCSE, GCSE and A Level past paper answers marked by a 9A* tutor, returned within 48 hours with examiner-style feedback. Full papers for sciences and maths; questions and essays for Economics, Business and English.">
+    <link rel="canonical" href="https://paulamikki1-boop.github.io/paula-tutor-profile/marking/">
+    <meta property="og:title" content="Past Paper Marking Service — Paula, IGCSE &amp; A Level Tutor">
+    <meta property="og:description" content="Past paper answers marked within 48 hours, with examiner-style feedback.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paulamikki1-boop.github.io/paula-tutor-profile/marking/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --blue: #1e3a5f;
+            --blue-mid: #2a5080;
+            --blue-light: #3a6ea5;
+            --sky: #e8f0fe;
+            --white: #ffffff;
+            --off-white: #f5f8fc;
+            --muted: #4a5568;
+            --accent: #4a90d9;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'DM Sans', sans-serif; color: var(--navy); background: var(--white); line-height: 1.7; }
+
+        .nav { background: var(--navy); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+        .nav a { text-decoration: none; }
+        .nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--white); }
+        .nav-links { display: flex; gap: 1.25rem; align-items: center; }
+        .nav-links a { color: var(--sky); font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--white); }
+        .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: #25d366; color: var(--white) !important; padding: 0.5rem 1.1rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+        .whatsapp-btn:hover { background: #1da851; }
+
+        .breadcrumbs { padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--muted); max-width: 800px; margin: 0 auto; }
+        .breadcrumbs a { color: var(--accent); text-decoration: none; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+
+        .content { max-width: 800px; margin: 0 auto; padding: 0 1.5rem 2rem; }
+        .content h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.25; }
+        .content .intro { font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; border-left: 3px solid var(--accent); padding-left: 1rem; }
+
+        .content h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--blue); margin: 2.5rem 0 0.75rem; }
+        .content h3 { font-size: 1.1rem; font-weight: 600; margin: 1.75rem 0 0.5rem; color: var(--blue-mid); }
+        .content p { margin-bottom: 1rem; }
+        .content ul, .content ol { margin: 0 0 1rem 1.5rem; }
+        .content li { margin-bottom: 0.4rem; }
+
+        .content blockquote {
+            background: var(--off-white);
+            border-left: 4px solid var(--accent);
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+            font-style: italic;
+            color: var(--blue);
+        }
+        .content code {
+            background: var(--sky);
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* Highlight / tip boxes */
+        .tip-box {
+            background: #f0f7e6;
+            border: 1px solid #c3dea0;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .tip-box.warning {
+            background: #fef6e6;
+            border-color: #f0d080;
+        }
+        .tip-box strong { display: block; margin-bottom: 0.35rem; }
+
+        /* Worked example box */
+        .worked-example {
+            background: var(--off-white);
+            border: 1px solid #dde4ee;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .worked-example h3 { margin-top: 0; color: var(--blue); }
+        .worked-example .question {
+            background: var(--white);
+            border: 1px solid #dde4ee;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 0.75rem 0;
+            font-style: italic;
+        }
+        .worked-example .answer { margin-top: 1rem; }
+        .worked-example .answer p:first-child { font-weight: 600; color: var(--blue-mid); }
+
+        /* Table styling */
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+        }
+        .content th, .content td {
+            padding: 0.6rem 0.75rem;
+            border: 1px solid #dde4ee;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        .content th { background: var(--sky); font-weight: 600; color: var(--blue); }
+        .content tr:nth-child(even) td { background: var(--off-white); }
+
+        /* Related resources */
+        .related { margin: 3rem 0 2rem; }
+        .related h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--blue); margin-bottom: 1rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+        .related-card {
+            background: var(--off-white);
+            border: 1px solid #dde4ee;
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s;
+        }
+        .related-card:hover { box-shadow: 0 2px 10px rgba(10,22,40,0.08); }
+        .related-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.35rem; }
+        .related-card .tag { font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.45rem; border-radius: 3px; background: var(--sky); color: var(--blue); }
+
+        /* WhatsApp CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 2rem;
+        }
+        .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 0.75rem; }
+        .cta-section p { color: var(--sky); margin-bottom: 1.25rem; }
+        .cta-section .whatsapp-btn { font-size: 1rem; padding: 0.7rem 1.5rem; }
+
+        .footer { background: var(--navy); color: var(--sky); text-align: center; padding: 1.5rem; font-size: 0.85rem; }
+        .footer a { color: var(--accent); text-decoration: none; }
+
+
+        .content { max-width: 960px; }
+        .hero-note { display: inline-block; background: var(--sky); color: var(--blue); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 4px; margin-bottom: 0.9rem; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin: 1.25rem 0 0.5rem; }
+        .step { background: var(--off-white); border: 1px solid #dde4ee; border-radius: 10px; padding: 1.1rem; }
+        .step-num { width: 30px; height: 30px; border-radius: 50%; background: var(--blue-mid); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; }
+        .step strong { display: block; margin-bottom: 0.25rem; }
+        .step span { font-size: 0.92rem; color: var(--muted); }
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 1.25rem 0; }
+        .price-card { border: 1px solid #dde4ee; border-radius: 12px; padding: 1.5rem; background: var(--white); box-shadow: 0 2px 10px rgba(10,22,40,0.05); display: flex; flex-direction: column; }
+        .price-card .subjects { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
+        .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--navy); margin: 0 0 0.5rem; }
+        .price-card .range { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--blue-mid); line-height: 1.1; }
+        .price-card .range small { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; color: var(--muted); }
+        .price-card ul { margin: 0.9rem 0 1.1rem 1.1rem; font-size: 0.95rem; }
+        .price-card .options { display: grid; gap: 0.5rem; margin: 0.6rem 0 0.2rem; }
+        .price-card .option { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.95rem; border-bottom: 1px dashed #dde4ee; padding-bottom: 0.4rem; }
+        .price-card .option b { color: var(--blue-mid); white-space: nowrap; }
+        .price-card .choose { margin-top: auto; display: inline-block; text-align: center; background: var(--blue); color: var(--white); text-decoration: none; padding: 0.65rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.92rem; }
+        .price-card .choose:hover { background: var(--blue-mid); }
+        .quote-note { font-size: 0.92rem; color: var(--muted); }
+        .form-card { background: var(--off-white); border: 1px solid #dde4ee; border-radius: 12px; padding: 1.5rem; margin: 1.25rem 0; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-grid .full { grid-column: 1 / -1; }
+        .form-card label { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.35rem; }
+        .form-card input, .form-card select, .form-card textarea { width: 100%; font: inherit; font-size: 0.95rem; padding: 0.65rem 0.75rem; border: 1px solid #cfd9e6; border-radius: 6px; background: var(--white); color: var(--navy); }
+        .form-card textarea { min-height: 160px; resize: vertical; }
+        .form-card input:focus, .form-card select:focus, .form-card textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+        .hint { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+        .send-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; margin-top: 1.1rem; background: #25d366; color: var(--white); border: none; border-radius: 6px; padding: 0.9rem 1rem; font: inherit; font-weight: 600; font-size: 1rem; cursor: pointer; }
+        .send-btn:hover { background: #1da851; }
+        .form-error { display: none; color: #c0392b; font-size: 0.9rem; margin-top: 0.6rem; }
+        .faq details { border-bottom: 1px solid #dde4ee; padding: 0.85rem 0; }
+        .faq summary { cursor: pointer; font-weight: 600; color: var(--blue); }
+        .faq details p { margin: 0.6rem 0 0; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+
+        /* Print styles */
+        @media print {
+            .nav, .breadcrumbs, .cta-section, .footer, .related, .whatsapp-btn { display: none !important; }
+            body { font-size: 11pt; line-height: 1.5; color: #000; background: #fff; }
+            .content { max-width: 100%; padding: 0; margin: 0; }
+            .content h1 { font-size: 20pt; color: #000; }
+            .content h2 { font-size: 14pt; color: #333; page-break-after: avoid; }
+            .content h3 { font-size: 12pt; color: #333; page-break-after: avoid; }
+            .worked-example, .tip-box, blockquote {
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+            a { color: #000; text-decoration: none; }
+            a[href]::after { content: none; }
+        }
+
+        @media (max-width: 600px) {
+            .content h1 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../" class="nav-brand">Paula</a>
+        <div class="nav-links">
+            <a href="../">Home</a>
+            <a href="../resources/">Resources</a>
+            <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="breadcrumbs">
+        <a href="../">Home</a> &rsaquo; Answer Marking
+    </div>
+
+    <article class="content">
+        <span class="hero-note">Returned within 48 hours</span>
+        <h1>Get Your Answers Marked</h1>
+        <p class="intro">Send me your past paper answers and get them back with a mark, examiner-style comments and exactly what to change to reach the top band. Available for IGCSE, GCSE and A Level, Cambridge and Edexcel.</p>
+
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step"><div class="step-num">1</div><strong>Choose a service</strong><span>A full past paper, a single question or an essay.</span></div>
+            <div class="step"><div class="step-num">2</div><strong>Send it on WhatsApp</strong><span>Fill in the form below. It opens WhatsApp with your details; attach photos or a PDF of your work.</span></div>
+            <div class="step"><div class="step-num">3</div><strong>Get your quote</strong><span>I confirm the price and payment details before I start. No payment until you agree.</span></div>
+            <div class="step"><div class="step-num">4</div><strong>Receive your feedback</strong><span>Marked work back within 48 hours, with comments and a model of what full marks looks like.</span></div>
+        </div>
+
+        <h2>Services &amp; Prices</h2>
+        <div class="price-grid">
+            <div class="price-card">
+                <div class="subjects">Chemistry &middot; Physics &middot; Biology &middot; Maths / Add Maths</div>
+                <h3>Full Past Paper Marking</h3>
+                <div class="range">RM40&ndash;120 <small>per paper</small></div>
+                <ul>
+                    <li>Every question marked against the mark scheme</li>
+                    <li>Where each mark was lost, and why</li>
+                    <li>Your weakest topics and what to revise next</li>
+                    <li>Calculation working checked line by line</li>
+                </ul>
+                <a class="choose" href="#send" data-service="Full past paper">Send a paper</a>
+            </div>
+            <div class="price-card">
+                <div class="subjects">Business &middot; Economics &middot; English</div>
+                <h3>Question &amp; Essay Marking</h3>
+                <div class="options">
+                    <div class="option"><span>Single question (2&ndash;6 marks)</span><b>RM10&ndash;20</b></div>
+                    <div class="option"><span>Essay / extended answer (8+ marks)</span><b>RM20&ndash;40</b></div>
+                </div>
+                <ul>
+                    <li>Marked to Cambridge / Edexcel levels</li>
+                    <li>Comments on analysis, evaluation and structure</li>
+                    <li>A rewritten paragraph showing top-band style</li>
+                </ul>
+                <a class="choose" href="#send" data-service="Single question">Send an answer</a>
+            </div>
+        </div>
+        <p class="quote-note">Prices depend on the length of the paper or answer and the level. <strong>WhatsApp me for an exact quote</strong> before you send anything. Bundles are available if you want several papers or essays marked.</p>
+
+        <h2 id="send">Send Your Work</h2>
+        <div class="form-card">
+            <div class="form-grid">
+                <div>
+                    <label for="m-name">Your name</label>
+                    <input type="text" id="m-name" placeholder="e.g. Sarah" autocomplete="given-name">
+                </div>
+                <div>
+                    <label for="m-level">Level &amp; exam board</label>
+                    <select id="m-level">
+                        <option>IGCSE (Cambridge)</option>
+                        <option>IGCSE (Edexcel)</option>
+                        <option>GCSE</option>
+                        <option>A Level (Cambridge)</option>
+                        <option>A Level (Edexcel)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="m-subject">Subject</label>
+                    <select id="m-subject">
+                        <optgroup label="Full past paper marking">
+                            <option>Chemistry</option>
+                            <option>Physics</option>
+                            <option>Biology</option>
+                            <option>Maths / Add Maths</option>
+                        </optgroup>
+                        <optgroup label="Question &amp; essay marking">
+                            <option>Economics</option>
+                            <option>Business Studies</option>
+                            <option>English</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="m-service">Service</label>
+                    <select id="m-service"></select>
+                </div>
+                <div class="full">
+                    <label for="m-paper">Paper / question reference</label>
+                    <input type="text" id="m-paper" placeholder="e.g. 0455/22/M/J/24 Question 3(d), or 0620/42 Oct/Nov 2023">
+                    <div class="hint">Copy the reference from the front of the paper so I can use the right mark scheme.</div>
+                </div>
+                <div class="full">
+                    <label for="m-answer">Your answer (optional)</label>
+                    <textarea id="m-answer" placeholder="Paste a typed answer here, or leave blank and attach photos in WhatsApp."></textarea>
+                    <div class="hint">Handwritten work is fine: after WhatsApp opens, attach clear photos or a PDF.</div>
+                </div>
+            </div>
+            <button class="send-btn" type="button" onclick="sendForMarking()"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Send on WhatsApp</button>
+            <div class="form-error" id="m-error">Please add your name and the paper or question reference.</div>
+        </div>
+
+        <h2>Questions</h2>
+        <div class="faq">
+            <details><summary>How do I pay?</summary><p>After I confirm the quote on WhatsApp, I send you the payment details. You only pay once you have agreed the price.</p></details>
+            <details><summary>Can I send handwritten answers?</summary><p>Yes. Take clear, well-lit photos of each page (or scan to PDF) and attach them in the WhatsApp chat.</p></details>
+            <details><summary>How quickly will I get it back?</summary><p>Within 48 hours of payment. Before exam season it is worth sending work early.</p></details>
+            <details><summary>What will the feedback look like?</summary><p>Your work comes back annotated with the marks awarded, where marks were lost and how to fix it. For essays you also get a rewritten paragraph showing what a top-band answer looks like.</p></details>
+            <details><summary>Where can I find questions to practise?</summary><p>Past papers are on the Cambridge and Edexcel websites. The model answers in my <a href="../resources/igcse-economics-notes/#answers-economic-problem">Economics notes</a> are a good place to see the standard first.</p></details>
+        </div>
+    </article>
+
+    <!-- WhatsApp CTA -->
+    <section class="cta-section">
+        <h2>Prefer Lessons Instead?</h2>
+        <p>Marking shows you what to fix. Lessons show you how. Ask about one-to-one IGCSE, GCSE and A Level tuition.</p>
+        <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with Paula on WhatsApp
+        </a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur</p>
+    </footer>
+
+
+    <script>
+    (function() {
+      var FULL = ['Chemistry', 'Physics', 'Biology', 'Maths / Add Maths'];
+      var subject = document.getElementById('m-subject');
+      var service = document.getElementById('m-service');
+
+      function fillServices(preferred) {
+        var opts = FULL.indexOf(subject.value) >= 0
+          ? ['Full past paper']
+          : ['Single question', 'Essay / extended answer'];
+        service.innerHTML = opts.map(function(o) { return '<option>' + o + '</option>'; }).join('');
+        if (preferred && opts.indexOf(preferred) >= 0) service.value = preferred;
+      }
+      subject.addEventListener('change', function() { fillServices(); });
+
+      // Price-card buttons pick a matching subject group
+      document.querySelectorAll('.choose').forEach(function(a) {
+        a.addEventListener('click', function() {
+          var svc = a.getAttribute('data-service');
+          if (svc === 'Full past paper' && FULL.indexOf(subject.value) < 0) subject.value = 'Chemistry';
+          if (svc !== 'Full past paper' && FULL.indexOf(subject.value) >= 0) subject.value = 'Economics';
+          fillServices(svc);
+        });
+      });
+
+      // Prefill from links such as ?subject=Economics&q=...
+      var params = new URLSearchParams(location.search);
+      if (params.get('subject')) {
+        for (var i = 0; i < subject.options.length; i++) {
+          if (subject.options[i].text === params.get('subject')) subject.value = subject.options[i].text;
+        }
+      }
+      fillServices(params.get('service'));
+      if (params.get('q')) document.getElementById('m-paper').value = params.get('q');
+      if (params.get('level')) document.getElementById('m-level').value = params.get('level');
+
+      window.sendForMarking = function() {
+        var name = document.getElementById('m-name').value.trim();
+        var paper = document.getElementById('m-paper').value.trim();
+        var answer = document.getElementById('m-answer').value.trim();
+        var err = document.getElementById('m-error');
+        if (!name || !paper) { err.style.display = 'block'; return; }
+        err.style.display = 'none';
+        var msg = 'Hi Paula, I would like my work marked.\n\n' +
+          'Name: ' + name + '\n' +
+          'Level: ' + document.getElementById('m-level').value + '\n' +
+          'Subject: ' + subject.value + '\n' +
+          'Service: ' + service.value + '\n' +
+          'Paper / question: ' + paper + '\n';
+        msg += answer ? '\nMy answer:\n' + answer : '\nI will attach photos of my work.';
+        window.open('https://wa.me/60103686902?text=' + encodeURIComponent(msg), '_blank');
+      };
+    })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "IGCSE, GCSE and A Level Past Paper Marking",
+        "serviceType": "Exam answer marking and feedback",
+        "provider": { "@type": "Person", "name": "Paula" },
+        "areaServed": "Online",
+        "url": "https://paulamikki1-boop.github.io/paula-tutor-profile/marking/",
+        "offers": [
+            { "@type": "Offer", "name": "Full past paper marking (sciences and maths)", "priceCurrency": "MYR", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 40, "maxPrice": 120, "priceCurrency": "MYR" } },
+            { "@type": "Offer", "name": "Question and essay marking (business, economics, English)", "priceCurrency": "MYR", "priceSpecification": { "@type": "PriceSpecification", "minPrice": 10, "maxPrice": 40, "priceCurrency": "MYR" } }
+        ]
+    }
+    </script>
+</body>
+</html>
