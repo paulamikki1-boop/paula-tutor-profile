@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGCSE Chemistry Notes: All 12 Topics (Cambridge 0620, 2026&ndash;2028) | Paula — IGCSE &amp; A Level Tutor</title>
+    <meta name="description" content="Free Cambridge IGCSE Chemistry (0620) revision notes for the 2026&ndash;2028 syllabus, covering all 12 topics, with key definitions, equations, worked calculations, chemical tests, examiner tips and checklists.">
+    <link rel="canonical" href="https://paulamikki1-boop.github.io/paula-tutor-profile/resources/igcse-chemistry-notes/">
+    <meta property="og:title" content="IGCSE Chemistry Notes — Free Study Resource">
+    <meta property="og:description" content="Free Cambridge IGCSE Chemistry (0620) revision notes for the 2026&ndash;2028 syllabus, covering all 12 topics, with key definitions, equations, worked calculations, chemical tests, examiner tips and checklists.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://paulamikki1-boop.github.io/paula-tutor-profile/resources/igcse-chemistry-notes/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+  /* Site palette (matches the profile and other resource pages) */
+  --navy: #0a1628;
+  --blue: #1e3a5f;
+  --blue-mid: #2a5080;
+  --blue-light: #3a6ea5;
+  --sky: #e8f0fe;
+  --white: #ffffff;
+  --off-white: #f5f8fc;
+  --site-muted: #4a5568;
+  --site-accent: #4a90d9;
+
+  /* Notes tokens mapped onto the site palette */
+  --bg: var(--white);
+  --bg-card: var(--white);
+  --bg-sidebar: var(--navy);
+  --bg-sidebar-hover: var(--blue);
+  --bg-sidebar-active: var(--blue-mid);
+  --bg-tip: var(--sky);
+  --bg-mistake: #fdf0ec;
+  --bg-structure: var(--off-white);
+  --bg-checklist: #f0f7e6;
+  --text: var(--navy);
+  --text-muted: var(--site-muted);
+  --text-sidebar: #c9d6e8;
+  --text-sidebar-active: #ffffff;
+  --accent: var(--blue-mid);
+  --accent-light: var(--site-accent);
+  --gold: var(--blue);
+  --gold-bg: var(--sky);
+  --border: #dde4ee;
+  --border-light: #e8eef6;
+  --red: #c0392b;
+  --shadow: 0 1px 3px rgba(10,22,40,0.06), 0 1px 2px rgba(10,22,40,0.04);
+  --shadow-lg: 0 4px 12px rgba(10,22,40,0.08);
+  --radius: 8px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.notes-layout {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--bg-sidebar);
+  color: var(--text-sidebar);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar-header h1 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.sidebar-header .syllabus {
+  font-size: 12px;
+  color: var(--text-sidebar);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.3);
+  padding: 20px 20px 8px;
+  font-weight: 600;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-size: 14px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  user-select: none;
+}
+
+.nav-item:hover { background: var(--bg-sidebar-hover); }
+.nav-item.active {
+  background: var(--bg-sidebar-active);
+  color: var(--text-sidebar-active);
+  border-left-color: #fff;
+}
+
+.nav-item .nav-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-item.active .nav-icon { background: rgba(255,255,255,0.15); }
+
+/* Sub-navigation within sections */
+.subnav {
+  display: none;
+  flex-direction: column;
+  padding: 4px 0 8px;
+}
+.subnav.show { display: flex; }
+
+.subnav-item {
+  padding: 6px 20px 6px 58px;
+  font-size: 13px;
+  color: var(--text-sidebar);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.subnav-item:hover { color: #fff; background: var(--bg-sidebar-hover); }
+.subnav-item.active { color: var(--accent-light); }
+
+/* Main content */
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 40px 60px;
+  max-width: 900px;
+}
+
+.section { display: none; }
+.section.active { display: block; }
+
+.section-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+}
+
+.section-header .form-badge {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-tip);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  text-wrap: balance;
+}
+
+.section-header .purpose {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+/* Content blocks */
+h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 36px 0 16px;
+  color: var(--blue);
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin: 24px 0 10px;
+}
+
+p { margin-bottom: 12px; max-width: 640px; }
+
+ul, ol {
+  margin: 0 0 16px 20px;
+  max-width: 640px;
+}
+li { margin-bottom: 6px; }
+li strong { color: var(--text); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+/* Structure diagram cards */
+.structure-card {
+  background: var(--bg-structure);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.structure-card .step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.structure-card .step + .step { border-top: 1px solid var(--border-light); }
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.step-content strong { display: block; font-size: 14px; font-weight: 600; }
+.step-content span { font-size: 14px; color: var(--text-muted); }
+
+/* Tip boxes */
+.tip-box {
+  background: var(--bg-tip);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.tip-box .tip-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* Mistake boxes */
+.mistake-box {
+  background: var(--bg-mistake);
+  border-left: 3px solid var(--red);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.mistake-box .mistake-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+/* Checklist */
+.checklist {
+  background: var(--bg-checklist);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.checklist h4 {
+  margin-top: 0;
+  color: var(--gold);
+}
+
+.checklist ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.checklist li {
+  padding: 4px 0;
+  padding-left: 22px;
+  position: relative;
+}
+
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Key terms */
+.key-term {
+  display: inline-block;
+  background: var(--gold-bg);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+/* Table */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--bg-structure);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+/* Example block */
+.example-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.example-block .ex-label {
+  font-style: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+/* Mnemonic */
+.mnemonic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.mnemonic span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.mnemonic span strong {
+  color: var(--accent);
+  font-size: 15px;
+}
+
+/* Conventions grid */
+.conventions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.convention-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.convention-item .conv-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.convention-item .conv-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hamburger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  transition: transform 0.2s;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 90;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .notes-layout { display: block; }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .overlay.open { display: block; }
+  .main {
+    padding: 8px 16px 40px;
+  }
+  .section-header h2 { font-size: 30px; }
+  h3 { font-size: 21px; }
+  .conventions { grid-template-columns: 1fr 1fr; }
+}
+
+/* Scroll anchoring */
+[id] { scroll-margin-top: 20px; }
+
+/* Model answer blocks */
+.model-block {
+  margin: 20px 0;
+}
+
+.model-text {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 20px 24px;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: none;
+}
+
+.model-text p { font-style: italic; max-width: none; }
+.model-text p:last-child { margin-bottom: 0; }
+
+.model-annotation {
+  background: var(--bg-tip);
+  border: 1px solid var(--border-light);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 14px 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.model-annotation strong { color: var(--accent); font-weight: 600; }
+
+.model-score {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+  font-style: normal;
+}
+
+.model-task {
+  background: var(--bg-structure);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 16px 0 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.model-task .task-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+/* Site chrome */
+.nav { background: var(--navy); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.nav a { text-decoration: none; }
+.nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--white); }
+.nav-links { display: flex; gap: 1.25rem; align-items: center; }
+.nav-links a { color: var(--sky); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--white); }
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: #25d366; color: var(--white) !important; padding: 0.5rem 1.1rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+.whatsapp-btn:hover { background: #1da851; }
+
+.breadcrumbs { padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--site-muted); }
+.breadcrumbs a { color: var(--accent); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+/* WhatsApp CTA */
+.cta-section {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 2rem;
+}
+.cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 0.75rem; }
+.cta-section p { color: var(--sky); margin-bottom: 1.25rem; }
+.cta-section .whatsapp-btn { font-size: 1rem; padding: 0.7rem 1.5rem; }
+
+.footer { background: var(--navy); color: var(--sky); text-align: center; padding: 1.5rem; font-size: 0.85rem; }
+.footer a { color: var(--accent); text-decoration: none; }
+
+.cta-section h2 { font-weight: 700; }
+.cta-section p, .footer p { max-width: none; margin-bottom: 1.25rem; }
+.footer p { margin-bottom: 0; }
+
+@media print {
+  .nav, .breadcrumbs, .hamburger, .overlay, .sidebar, .cta-section, .footer { display: none !important; }
+  body { font-size: 11pt; background: #fff; }
+  .main { padding: 0; max-width: 100%; }
+  .tip-box, .mistake-box, .checklist, .structure-card, .model-block, table { page-break-inside: avoid; }
+  h2, h3, h4 { page-break-after: avoid; }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../../" class="nav-brand">Paula</a>
+        <div class="nav-links">
+            <a href="../../">Home</a>
+            <a href="../../resources/">Resources</a>
+            <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="breadcrumbs">
+        <a href="../../">Home</a> &rsaquo; <a href="../../resources/">Resources</a> &rsaquo; IGCSE Chemistry Notes
+    </div>
+
+<button class="hamburger" onclick="toggleSidebar()" aria-label="Open topic navigation">
+  <span class="hamburger-icon"><span></span><span></span><span></span></span> Browse topics
+</button>
+
+<div class="notes-layout">
+<div class="overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h1>IGCSE Chemistry Notes</h1>
+    <div class="syllabus">Cambridge IGCSE 0620 &middot; 2026&ndash;2028 Syllabus</div>
+  </div>
+
+  <div class="nav-section-label">Particles &amp; Structure</div>
+  <div class="nav-item active" data-section="states-of-matter" onclick="showSection('states-of-matter')">
+    <div class="nav-icon">1</div> States of Matter
+  </div>
+  <div class="nav-item" data-section="atoms-elements-compounds" onclick="showSection('atoms-elements-compounds')">
+    <div class="nav-icon">2</div> Atoms, Elements &amp; Compounds
+  </div>
+  <div class="nav-section-label">Quantitative &amp; Physical</div>
+  <div class="nav-item" data-section="stoichiometry" onclick="showSection('stoichiometry')">
+    <div class="nav-icon">3</div> Stoichiometry
+  </div>
+  <div class="nav-item" data-section="electrochemistry" onclick="showSection('electrochemistry')">
+    <div class="nav-icon">4</div> Electrochemistry
+  </div>
+  <div class="nav-item" data-section="chemical-energetics" onclick="showSection('chemical-energetics')">
+    <div class="nav-icon">5</div> Chemical Energetics
+  </div>
+  <div class="nav-item" data-section="chemical-reactions" onclick="showSection('chemical-reactions')">
+    <div class="nav-icon">6</div> Chemical Reactions
+  </div>
+  <div class="nav-section-label">Inorganic Chemistry</div>
+  <div class="nav-item" data-section="acids-bases-salts" onclick="showSection('acids-bases-salts')">
+    <div class="nav-icon">7</div> Acids, Bases &amp; Salts
+  </div>
+  <div class="nav-item" data-section="periodic-table" onclick="showSection('periodic-table')">
+    <div class="nav-icon">8</div> The Periodic Table
+  </div>
+  <div class="nav-item" data-section="metals" onclick="showSection('metals')">
+    <div class="nav-icon">9</div> Metals
+  </div>
+  <div class="nav-section-label">Environment &amp; Organic</div>
+  <div class="nav-item" data-section="chemistry-environment" onclick="showSection('chemistry-environment')">
+    <div class="nav-icon">10</div> Chemistry of the Environment
+  </div>
+  <div class="nav-item" data-section="organic-chemistry" onclick="showSection('organic-chemistry')">
+    <div class="nav-icon">11</div> Organic Chemistry
+  </div>
+  <div class="nav-section-label">Practical Skills</div>
+  <div class="nav-item" data-section="experimental-techniques" onclick="showSection('experimental-techniques')">
+    <div class="nav-icon">12</div> Experimental Techniques
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ==================== 1. STATES-OF-MATTER ==================== -->
+  <div class="section active" id="sec-states-of-matter">
+    <div class="section-header">
+      <span class="form-badge">Topic 1 &middot; Particles &amp; Structure</span>
+      <h2>States of Matter</h2>
+      <p class="purpose">How the arrangement, movement and energy of particles explain the properties of solids, liquids and gases, and why substances change state or spread out by diffusion. These ideas underpin almost every later topic, and examiners reward precise particle language.</p>
+    </div>
+  
+    <h3>The three states</h3>
+    <p>All matter is made of tiny particles (atoms, molecules or ions). The <strong>kinetic particle theory</strong> says these particles are always moving, and the amount of movement depends on how much kinetic energy they have.</p>
+  
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Property</th><th>Solid</th><th>Liquid</th><th>Gas</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Shape</td><td>Fixed shape</td><td>Takes the shape of the container</td><td>Fills the whole container</td></tr>
+          <tr><td>Volume</td><td>Fixed volume</td><td>Fixed volume</td><td>No fixed volume</td></tr>
+          <tr><td>Compressibility</td><td>Cannot be compressed</td><td>Almost impossible to compress</td><td>Easily compressed</td></tr>
+          <tr><td>Arrangement</td><td>Regular, closely packed (lattice)</td><td>Irregular, close together</td><td>Random, far apart</td></tr>
+          <tr><td>Motion</td><td>Vibrate about fixed positions</td><td>Move around (slide past) each other</td><td>Move quickly and randomly in all directions</td></tr>
+          <tr><td>Forces between particles</td><td>Strong</td><td>Weaker than in solids</td><td>Very weak / negligible</td></tr>
+          <tr><td>Energy of particles</td><td>Lowest</td><td>Intermediate</td><td>Highest</td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="mnemonic"><span><strong>A</strong>rrangement</span> <span><strong>M</strong>otion</span> <span><strong>S</strong>eparation</span> <span><strong>F</strong>orces</span> &mdash; describe all four for any state and you will pick up the marks.</div>
+  
+    <h3>Changes of state</h3>
+    <p>Changes of state are <strong>physical changes</strong>: no new substance is made and they are reversible.</p>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Melting</div><div class="conv-value">Solid &rarr; liquid, at the melting point</div></div>
+      <div class="convention-item"><div class="conv-label">Freezing</div><div class="conv-value">Liquid &rarr; solid, at the same temperature as melting</div></div>
+      <div class="convention-item"><div class="conv-label">Boiling</div><div class="conv-value">Liquid &rarr; gas throughout the liquid, at the boiling point</div></div>
+      <div class="convention-item"><div class="conv-label">Evaporation</div><div class="conv-value">Liquid &rarr; gas at the surface only, below the boiling point</div></div>
+      <div class="convention-item"><div class="conv-label">Condensation</div><div class="conv-value">Gas &rarr; liquid on cooling</div></div>
+      <div class="convention-item"><div class="conv-label">Sublimation</div><div class="conv-value">Solid &rarr; gas directly (e.g. solid CO<sub>2</sub>, iodine)</div></div>
+    </div>
+  
+    <h4>Explaining changes of state with particles</h4>
+    <ul>
+      <li><strong>Melting:</strong> heating gives particles more kinetic energy; they vibrate more until they overcome some of the forces holding them in fixed positions and can move past each other.</li>
+      <li><strong>Boiling:</strong> particles gain enough energy to overcome the attractive forces between them completely and escape as a gas; bubbles of gas form throughout the liquid.</li>
+      <li><strong>Evaporation:</strong> only the most energetic particles at the surface escape, so it can happen at any temperature. It is faster when the liquid is warmer, has a larger surface area, or when air moves over it.</li>
+      <li><strong>Condensing and freezing:</strong> particles lose kinetic energy, slow down and the attractive forces pull them closer together.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Do not say particles themselves &ldquo;expand&rdquo;, &ldquo;melt&rdquo; or &ldquo;get bigger&rdquo; when heated. The particles stay the same size; it is the <strong>spacing</strong> and <strong>movement</strong> that change. Also avoid saying bonds break when a simple molecular substance boils &mdash; it is the forces <strong>between</strong> molecules that are overcome.</div>
+  
+    <h3><span class="key-term">Supplement</span> Heating and cooling curves</h3>
+    <p>If a pure solid is heated steadily and its temperature is recorded against time, the graph shows sloping sections and flat sections.</p>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Solid warming up</strong><span>Temperature rises; particles vibrate faster.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Flat section at melting point</strong><span>Temperature stays constant. Energy supplied is used to overcome forces of attraction between particles, not to raise kinetic energy. Solid and liquid are both present.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Liquid warming up</strong><span>Temperature rises again; particles move faster.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Flat section at boiling point</strong><span>Temperature constant while energy overcomes the remaining attractive forces. Liquid and gas both present. This plateau is longer than the melting one because more energy is needed.</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Gas warming up</strong><span>Temperature rises as gas particles move faster.</span></div></div>
+    </div>
+    <ul>
+      <li>A <strong>cooling curve</strong> is the reverse: the flat sections occur at the boiling (condensing) point and freezing point, where energy is <strong>released</strong> as forces of attraction form, so the temperature stays constant.</li>
+      <li>A <strong>pure</strong> substance melts and boils at a sharp, fixed temperature. An impure substance melts over a range and at a lower temperature, and boils at a higher temperature.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>For the flat sections, the credited explanation is that <strong>energy is used to overcome the forces of attraction between particles</strong> (or is released as these forces form during cooling). Simply writing &ldquo;the substance is changing state&rdquo; describes but does not explain.</div>
+  
+    <h3><span class="key-term">Supplement</span> Effect of temperature and pressure on the volume of a gas</h3>
+    <ul>
+      <li><strong>Increasing temperature</strong> (at constant pressure): particles gain kinetic energy, move faster and hit the container walls harder and more often, so the gas <strong>expands</strong> &mdash; volume increases.</li>
+      <li><strong>Increasing pressure</strong> (at constant temperature): particles are pushed closer together, so the <strong>volume decreases</strong>. Gases can be compressed because there is lots of space between particles.</li>
+      <li>In a sealed container of fixed volume, raising the temperature increases the <strong>pressure</strong>, because particles collide with the walls more frequently and with more force.</li>
+    </ul>
+  
+    <h3>Diffusion</h3>
+    <p><strong>Diffusion</strong> is the net movement of particles from a region of higher concentration to a region of lower concentration, as a result of their random motion. It happens in gases and liquids (very slowly in liquids) but not noticeably in solids.</p>
+    <h4>Evidence for diffusion</h4>
+    <ul>
+      <li>A purple crystal of potassium manganate(VII) placed in water: the colour slowly spreads through all the water without stirring.</li>
+      <li>A smell (e.g. perfume) spreads across a room.</li>
+      <li>Bromine gas in a gas jar spreads upwards into a jar of air above it until the brown colour is even throughout.</li>
+    </ul>
+  
+    <h3><span class="key-term">Supplement</span> Effect of relative molecular mass on rate of diffusion</h3>
+    <ul>
+      <li>At the same temperature, gas particles with a <strong>lower relative molecular mass (M<sub>r</sub>)</strong> move faster on average, so they <strong>diffuse faster</strong>.</li>
+      <li>Higher temperature also increases the rate of diffusion because all particles move faster.</li>
+    </ul>
+    <h4>The ammonia and hydrogen chloride experiment</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Set up</strong><span>Place cotton wool soaked in concentrated ammonia solution at one end of a long glass tube, and cotton wool soaked in concentrated hydrochloric acid at the other. Seal both ends with bungs.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Observe</strong><span>After a few minutes a white ring (smoke) of ammonium chloride forms inside the tube: NH<sub>3</sub>(g) + HCl(g) &rarr; NH<sub>4</sub>Cl(s)</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Conclude</strong><span>The ring forms closer to the HCl end. NH<sub>3</sub> (M<sub>r</sub> = 17) has a lower M<sub>r</sub> than HCl (M<sub>r</sub> = 36.5), so ammonia molecules move faster and travel further in the same time.</span></div></div>
+    </div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>In the experiment above, explain why the white solid forms nearer to the hydrochloric acid end of the tube. [3]</strong><br>Both gases diffuse along the tube by the random movement of their particles. Ammonia has a lower relative molecular mass (17) than hydrogen chloride (36.5), so ammonia molecules move faster at the same temperature. Ammonia therefore travels further along the tube before the two gases meet and react to form ammonium chloride, so the ring is closer to the hydrochloric acid end.</div>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Writing that ammonia is &ldquo;lighter&rdquo; or &ldquo;less dense&rdquo; is too vague. Use the term <strong>lower relative molecular mass</strong> and link it to the particles <strong>moving faster</strong>.</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe the arrangement, motion and forces of particles in solids, liquids and gases.</li>
+      <li>I can name and explain melting, boiling, evaporating, freezing and condensing using kinetic particle theory.</li>
+      <li>I can explain the difference between boiling and evaporation.</li>
+      <li>I can interpret heating and cooling curves and explain the flat sections (Supplement).</li>
+      <li>I can explain how temperature and pressure affect the volume of a gas (Supplement).</li>
+      <li>I can define diffusion and give evidence for it.</li>
+      <li>I can explain how relative molecular mass affects the rate of diffusion using the NH<sub>3</sub>/HCl experiment (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 2. ATOMS-ELEMENTS-COMPOUNDS ==================== -->
+  <div class="section" id="sec-atoms-elements-compounds">
+    <div class="section-header">
+      <span class="form-badge">Topic 2 &middot; Particles &amp; Structure</span>
+      <h2>Atoms, Elements and Compounds</h2>
+      <p class="purpose">What atoms are made of, how electrons are arranged, and how atoms join by ionic, covalent and metallic bonding. Structure and bonding questions appear on every paper, and explaining properties from structure is a favourite source of 3&ndash;4 mark questions.</p>
+    </div>
+  
+    <h3>Elements, compounds and mixtures</h3>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Element</div><div class="conv-value">A substance made of only one type of atom</div></div>
+      <div class="convention-item"><div class="conv-label">Compound</div><div class="conv-value">A substance made of two or more elements chemically combined</div></div>
+      <div class="convention-item"><div class="conv-label">Mixture</div><div class="conv-value">Two or more substances not chemically combined</div></div>
+    </div>
+    <ul>
+      <li>A compound has different properties from the elements it contains and a fixed composition; it can only be separated by a chemical reaction.</li>
+      <li>A mixture keeps the properties of its components and can be separated by physical methods (filtration, distillation, chromatography).</li>
+    </ul>
+  
+    <h3>Atomic structure</h3>
+    <p>An atom has a tiny central <strong>nucleus</strong> containing protons and neutrons, surrounded by <strong>electrons</strong> in shells.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Particle</th><th>Relative charge</th><th>Relative mass</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td>Proton</td><td>+1</td><td>1</td><td>Nucleus</td></tr>
+          <tr><td>Neutron</td><td>0</td><td>1</td><td>Nucleus</td></tr>
+          <tr><td>Electron</td><td>&minus;1</td><td>1/1840 (negligible)</td><td>Shells around the nucleus</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li><strong>Proton number (atomic number, Z):</strong> the number of protons in the nucleus of an atom.</li>
+      <li><strong>Mass number (nucleon number, A):</strong> the total number of protons and neutrons in the nucleus of an atom.</li>
+      <li>Number of neutrons = mass number &minus; proton number. Atoms are neutral, so number of electrons = number of protons.</li>
+      <li>Notation: <sup>23</sup><sub>11</sub>Na has 11 protons, 11 electrons and 12 neutrons.</li>
+    </ul>
+  
+    <h4>Electronic configuration (first 20 elements)</h4>
+    <ul>
+      <li>Shells fill in order: first shell holds up to 2, second up to 8, third up to 8 (for elements 1&ndash;20).</li>
+      <li>Examples: C 2,4; O 2,6; Na 2,8,1; Cl 2,8,7; Ca 2,8,8,2.</li>
+      <li>The number of <strong>occupied shells</strong> = the <strong>period number</strong>.</li>
+      <li>The number of <strong>outer-shell electrons</strong> = the <strong>group number</strong> (Groups I&ndash;VII).</li>
+      <li>Noble gases (Group VIII) have a <strong>full outer shell</strong>, which makes them unreactive. Helium has 2 outer electrons; the others have 8.</li>
+    </ul>
+  
+    <h3>Isotopes</h3>
+    <p><strong>Isotopes</strong> are different atoms of the same element that have the same number of protons but different numbers of neutrons.</p>
+    <ul>
+      <li>Example: <sup>35</sup><sub>17</sub>Cl (18 neutrons) and <sup>37</sup><sub>17</sub>Cl (20 neutrons).</li>
+      <li>Isotopes of an element have the same chemical properties.</li>
+      <li><span class="key-term">Supplement</span> This is because they have the <strong>same number of electrons in their outer shell</strong> (the same electronic configuration), and chemical reactions involve electrons.</li>
+    </ul>
+  
+    <h4><span class="key-term">Supplement</span> Calculating relative atomic mass</h4>
+    <p>Relative atomic mass (A<sub>r</sub>) is the weighted average mass of the isotopes of an element, using their relative abundances.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>Chlorine is 75% chlorine-35 and 25% chlorine-37. Calculate A<sub>r</sub>.</strong><br>A<sub>r</sub> = (35 &times; 75 + 37 &times; 25) &divide; 100<br>= (2625 + 925) &divide; 100<br>= 3550 &divide; 100<br>= 35.5</div>
+  
+    <h3>Ions and ionic bonding</h3>
+    <ul>
+      <li>An <strong>ion</strong> is a charged particle formed when an atom gains or loses electrons.</li>
+      <li><strong>Cations</strong> are positive ions, formed when atoms (usually metals) <strong>lose</strong> electrons. <strong>Anions</strong> are negative ions, formed when atoms (usually non-metals) <strong>gain</strong> electrons.</li>
+      <li>An <strong>ionic bond</strong> is a strong electrostatic attraction between oppositely charged ions.</li>
+      <li>Ionic bonds form between metals and non-metals. Electrons are transferred from the metal to the non-metal so both gain a full outer shell (noble gas configuration).</li>
+    </ul>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Sodium atom, Na 2,8,1</strong><span>Loses its one outer electron to become Na<sup>+</sup> (2,8).</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Chlorine atom, Cl 2,8,7</strong><span>Gains that electron to become Cl<sup>&minus;</sup> (2,8,8).</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Dot-and-cross diagram</strong><span>Draw the ions in square brackets with the charge outside the top right; show the transferred electron as a cross among the dots of the chloride ion. Usually only outer shells need to be shown.</span></div></div>
+    </div>
+    <ul>
+      <li>Core: dot-and-cross diagrams for Group I metals with Group VII non-metals (e.g. NaCl, KBr).</li>
+      <li><span class="key-term">Supplement</span> Dot-and-cross diagrams for other metal/non-metal combinations, e.g. MgO (Mg<sup>2+</sup> and O<sup>2&minus;</sup>, two electrons transferred) and CaCl<sub>2</sub> (one Ca<sup>2+</sup> and two Cl<sup>&minus;</sup>).</li>
+      <li><span class="key-term">Supplement</span> An ionic compound has a <strong>giant lattice structure</strong>: a regular arrangement of alternating positive and negative ions, e.g. sodium chloride.</li>
+    </ul>
+    <h4>Properties of ionic compounds</h4>
+    <ul>
+      <li>High melting and boiling points.</li>
+      <li>Good electrical conductivity when molten or in aqueous solution; poor when solid.</li>
+      <li><span class="key-term">Supplement</span> Explanation: many strong electrostatic attractions between oppositely charged ions in the giant lattice need a lot of energy to overcome. When solid the ions are held in fixed positions; when molten or dissolved the ions are <strong>free to move</strong> and carry charge.</li>
+    </ul>
+  
+    <h3>Simple molecules and covalent bonds</h3>
+    <ul>
+      <li>A <strong>covalent bond</strong> forms when a <strong>pair of electrons is shared</strong> between two atoms, giving each a noble gas electronic configuration. Covalent bonding occurs between non-metal atoms.</li>
+      <li>Core dot-and-cross diagrams: H<sub>2</sub>, Cl<sub>2</sub>, H<sub>2</sub>O, CH<sub>4</sub>, NH<sub>3</sub>, HCl.</li>
+      <li><span class="key-term">Supplement</span> Also: CH<sub>3</sub>OH, C<sub>2</sub>H<sub>4</sub> (one C=C double bond), O<sub>2</sub> (double bond), CO<sub>2</sub> (two C=O double bonds), N<sub>2</sub> (triple bond).</li>
+    </ul>
+    <h4>Properties of simple molecular substances</h4>
+    <ul>
+      <li>Low melting and boiling points (many are gases or liquids at room temperature).</li>
+      <li>Poor electrical conductivity: there are no ions or free electrons to carry charge.</li>
+      <li><span class="key-term">Supplement</span> Explanation: the covalent bonds within molecules are strong, but the <strong>intermolecular forces</strong> (attractive forces between molecules) are weak, so little energy is needed to separate the molecules. Larger molecules have stronger intermolecular forces and higher boiling points.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Saying water has a low boiling point because &ldquo;covalent bonds are weak&rdquo; loses the mark. Covalent bonds are strong; it is the <strong>weak forces between molecules</strong> that are overcome on boiling.</div>
+  
+    <h3>Giant covalent structures</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Feature</th><th>Diamond</th><th>Graphite</th></tr></thead>
+        <tbody>
+          <tr><td>Bonding per carbon</td><td>Each C covalently bonded to 4 others, tetrahedral</td><td>Each C covalently bonded to 3 others in flat hexagonal layers</td></tr>
+          <tr><td>Between layers</td><td>No layers; 3D network</td><td>Weak forces between layers</td></tr>
+          <tr><td>Hardness</td><td>Very hard</td><td>Soft and slippery; layers slide over each other</td></tr>
+          <tr><td>Electrical conductivity</td><td>Does not conduct (no free electrons)</td><td>Conducts: one delocalised electron per carbon, free to move along layers</td></tr>
+          <tr><td>Melting point</td><td>Very high</td><td>Very high</td></tr>
+          <tr><td>Uses</td><td>Cutting tools, drill tips</td><td>Lubricant, electrodes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li>Both have very high melting points because many strong covalent bonds must be broken.</li>
+      <li><span class="key-term">Supplement</span> Silicon(IV) oxide, SiO<sub>2</sub>, has a giant covalent structure similar to diamond: each Si is bonded to 4 O atoms and each O to 2 Si atoms. It is hard, has a very high melting point and does not conduct electricity.</li>
+    </ul>
+  
+    <h3><span class="key-term">Supplement</span> Metallic bonding</h3>
+    <ul>
+      <li><strong>Metallic bonding</strong> is the electrostatic attraction between a lattice of positive metal ions and a &ldquo;sea&rdquo; of delocalised electrons.</li>
+      <li><strong>Good electrical conductivity:</strong> the delocalised electrons are free to move through the structure and carry charge.</li>
+      <li><strong>Malleable and ductile:</strong> the layers of positive ions can slide over each other without breaking the metallic bonding, because the delocalised electrons still hold them together.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>When explaining conductivity always name the <strong>mobile charge carrier</strong>: ions for molten or dissolved ionic compounds, delocalised electrons for metals and graphite. Never say ions move in a metal or electrons move in an electrolyte.</div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>Explain why sodium chloride conducts electricity when molten but not when solid. [3]</strong><br>Sodium chloride is made of Na<sup>+</sup> and Cl<sup>&minus;</sup> ions held in a giant ionic lattice. In the solid, the ions are held in fixed positions by strong electrostatic attractions and cannot move. When molten, the lattice breaks down and the ions are free to move, so they can carry charge through the liquid.</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can define element, compound and mixture and state the particles in an atom with their charges and masses.</li>
+      <li>I can define proton number, mass number and isotopes, and work out electronic configurations for elements 1&ndash;20.</li>
+      <li>I can calculate relative atomic mass from isotope abundances (Supplement).</li>
+      <li>I can draw dot-and-cross diagrams for ionic compounds and simple covalent molecules.</li>
+      <li>I can explain the properties of ionic and simple molecular substances from their structure.</li>
+      <li>I can compare diamond and graphite and describe SiO<sub>2</sub> (Supplement).</li>
+      <li>I can describe metallic bonding and explain conductivity and malleability (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 3. STOICHIOMETRY ==================== -->
+  <div class="section" id="sec-stoichiometry">
+    <div class="section-header">
+      <span class="form-badge">Topic 3 &middot; Quantitative Chemistry</span>
+      <h2>Stoichiometry</h2>
+      <p class="purpose">Writing formulae and balanced equations, and using relative masses and the mole to calculate amounts of substances. Calculation questions carry many marks on the Extended paper, and method marks are awarded for clear working even if the final answer is wrong.</p>
+    </div>
+  
+    <h3>Formulae</h3>
+    <ul>
+      <li>The <strong>molecular formula</strong> is the number and type of different atoms in one molecule, e.g. C<sub>2</sub>H<sub>6</sub> for ethane.</li>
+      <li><span class="key-term">Supplement</span> The <strong>empirical formula</strong> is the simplest whole-number ratio of the different atoms or ions in a compound, e.g. CH<sub>3</sub> for ethane.</li>
+      <li>You should be able to deduce a formula from a diagram or model by counting each type of atom.</li>
+      <li>Ionic formulae come from ion charges: the total positive charge must equal the total negative charge.</li>
+    </ul>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Positive ions</th><th>Negative ions</th></tr></thead>
+        <tbody>
+          <tr><td>Na<sup>+</sup>, K<sup>+</sup>, H<sup>+</sup>, NH<sub>4</sub><sup>+</sup>, Ag<sup>+</sup></td><td>Cl<sup>&minus;</sup>, Br<sup>&minus;</sup>, OH<sup>&minus;</sup>, NO<sub>3</sub><sup>&minus;</sup></td></tr>
+          <tr><td>Mg<sup>2+</sup>, Ca<sup>2+</sup>, Cu<sup>2+</sup>, Zn<sup>2+</sup>, Fe<sup>2+</sup></td><td>O<sup>2&minus;</sup>, S<sup>2&minus;</sup>, SO<sub>4</sub><sup>2&minus;</sup>, CO<sub>3</sub><sup>2&minus;</sup></td></tr>
+          <tr><td>Al<sup>3+</sup>, Fe<sup>3+</sup></td><td>N<sup>3&minus;</sup>, PO<sub>4</sub><sup>3&minus;</sup></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Examples: Al<sup>3+</sup> + O<sup>2&minus;</sup> gives Al<sub>2</sub>O<sub>3</sub>; Ca<sup>2+</sup> + NO<sub>3</sub><sup>&minus;</sup> gives Ca(NO<sub>3</sub>)<sub>2</sub>. Roman numerals give the charge: iron(III) chloride is FeCl<sub>3</sub>.</p>
+  
+    <h3>Equations</h3>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Word equation</strong><span>magnesium + hydrochloric acid &rarr; magnesium chloride + hydrogen</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Correct formulae</strong><span>Mg + HCl &rarr; MgCl<sub>2</sub> + H<sub>2</sub> (never change a formula to balance)</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Balance with big numbers in front</strong><span>Mg + 2HCl &rarr; MgCl<sub>2</sub> + H<sub>2</sub></span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Add state symbols</strong><span>Mg(s) + 2HCl(aq) &rarr; MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g). (s) solid, (l) liquid, (g) gas, (aq) dissolved in water.</span></div></div>
+    </div>
+    <ul>
+      <li><span class="key-term">Supplement</span> <strong>Ionic equations</strong> show only the ions that change; spectator ions are left out. Neutralisation: H<sup>+</sup>(aq) + OH<sup>&minus;</sup>(aq) &rarr; H<sub>2</sub>O(l). Precipitation: Ag<sup>+</sup>(aq) + Cl<sup>&minus;</sup>(aq) &rarr; AgCl(s).</li>
+      <li>You may be asked to deduce a balanced equation from information given in words, including state symbols.</li>
+    </ul>
+  
+    <h3>Relative masses</h3>
+    <ul>
+      <li><strong>Relative atomic mass, A<sub>r</sub>:</strong> the average mass of the isotopes of an element compared to 1/12th of the mass of an atom of carbon-12.</li>
+      <li><strong>Relative molecular mass, M<sub>r</sub>:</strong> the sum of the relative atomic masses of all the atoms in a molecule. The same term (relative formula mass) is used for ionic compounds.</li>
+      <li>Example: M<sub>r</sub> of CaCO<sub>3</sub> = 40 + 12 + (3 &times; 16) = 100. Relative masses have <strong>no units</strong>.</li>
+      <li>Calculate reacting masses in simple proportions, e.g. if 100 g CaCO<sub>3</sub> gives 56 g CaO, then 25 g gives 14 g. Mass is conserved in reactions.</li>
+    </ul>
+  
+    <h3>Concentration</h3>
+    <ul>
+      <li>Concentration can be measured in <strong>g/dm<sup>3</sup></strong> or <strong>mol/dm<sup>3</sup></strong>.</li>
+      <li>1 dm<sup>3</sup> = 1000 cm<sup>3</sup>; divide cm<sup>3</sup> by 1000 to convert to dm<sup>3</sup>.</li>
+    </ul>
+  
+    <h3><span class="key-term">Supplement</span> The mole and the Avogadro constant</h3>
+    <ul>
+      <li>The <strong>mole (mol)</strong> is the unit of amount of substance. One mole contains 6.02 &times; 10<sup>23</sup> particles (the <strong>Avogadro constant</strong>).</li>
+      <li>The mass of one mole of a substance in grams equals its A<sub>r</sub> or M<sub>r</sub> (the molar mass, in g/mol).</li>
+    </ul>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Moles from mass</div><div class="conv-value">amount (mol) = mass (g) &divide; molar mass (g/mol)</div></div>
+      <div class="convention-item"><div class="conv-label">Gas volume at r.t.p.</div><div class="conv-value">amount (mol) = volume (dm<sup>3</sup>) &divide; 24</div></div>
+      <div class="convention-item"><div class="conv-label">Solutions</div><div class="conv-value">amount (mol) = concentration (mol/dm<sup>3</sup>) &times; volume (dm<sup>3</sup>)</div></div>
+      <div class="convention-item"><div class="conv-label">Particles</div><div class="conv-value">number = amount (mol) &times; 6.02 &times; 10<sup>23</sup></div></div>
+      <div class="convention-item"><div class="conv-label">Molar gas volume</div><div class="conv-value">24 dm<sup>3</sup> (24 000 cm<sup>3</sup>) at room temperature and pressure</div></div>
+      <div class="convention-item"><div class="conv-label">g/dm<sup>3</sup> &harr; mol/dm<sup>3</sup></div><div class="conv-value">g/dm<sup>3</sup> = mol/dm<sup>3</sup> &times; M<sub>r</sub></div></div>
+    </div>
+  
+    <h4>Reacting masses and gas volumes</h4>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>What mass of calcium oxide forms when 20.0 g of calcium carbonate is heated? What volume of CO<sub>2</sub> is produced at r.t.p.?</strong><br>CaCO<sub>3</sub>(s) &rarr; CaO(s) + CO<sub>2</sub>(g)<br>Moles CaCO<sub>3</sub> = 20.0 &divide; 100 = 0.200 mol<br>Mole ratio CaCO<sub>3</sub> : CaO : CO<sub>2</sub> = 1 : 1 : 1<br>Mass CaO = 0.200 &times; 56 = 11.2 g<br>Volume CO<sub>2</sub> = 0.200 &times; 24 = 4.80 dm<sup>3</sup></div>
+  
+    <h4>Limiting reactant</h4>
+    <p>The limiting reactant is the one that is completely used up; it controls the amount of product. The other reactant is <strong>in excess</strong>.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>2.4 g of magnesium is added to 0.10 mol of hydrochloric acid. Which reactant is limiting, and what mass of MgCl<sub>2</sub> forms?</strong><br>Mg(s) + 2HCl(aq) &rarr; MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)<br>Moles Mg = 2.4 &divide; 24 = 0.10 mol<br>0.10 mol Mg needs 0.20 mol HCl, but only 0.10 mol is present<br>So HCl is limiting; Mg is in excess<br>Moles MgCl<sub>2</sub> = 0.10 &divide; 2 = 0.050 mol<br>Mass MgCl<sub>2</sub> = 0.050 &times; 95 = 4.75 g</div>
+  
+    <h4>Titration calculations</h4>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>25.0 cm<sup>3</sup> of sodium hydroxide solution is neutralised by 20.0 cm<sup>3</sup> of 0.100 mol/dm<sup>3</sup> sulfuric acid. Find the concentration of the NaOH.</strong><br>H<sub>2</sub>SO<sub>4</sub>(aq) + 2NaOH(aq) &rarr; Na<sub>2</sub>SO<sub>4</sub>(aq) + 2H<sub>2</sub>O(l)<br>Moles H<sub>2</sub>SO<sub>4</sub> = 0.100 &times; (20.0 &divide; 1000) = 0.00200 mol<br>Moles NaOH = 2 &times; 0.00200 = 0.00400 mol<br>Concentration NaOH = 0.00400 &divide; (25.0 &divide; 1000) = 0.160 mol/dm<sup>3</sup></div>
+  
+    <h4>Empirical and molecular formulae</h4>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A hydrocarbon contains 85.7% carbon and 14.3% hydrogen by mass. Its M<sub>r</sub> is 56. Find its empirical and molecular formulae.</strong><br>C: 85.7 &divide; 12 = 7.14; H: 14.3 &divide; 1 = 14.3<br>Divide by smallest: C = 7.14 &divide; 7.14 = 1; H = 14.3 &divide; 7.14 = 2<br>Empirical formula = CH<sub>2</sub> (mass 14)<br>56 &divide; 14 = 4<br>Molecular formula = C<sub>4</sub>H<sub>8</sub></div>
+  
+    <h4>Percentage yield, composition and purity</h4>
+    <ul>
+      <li><strong>Percentage yield</strong> = (actual yield &divide; theoretical yield) &times; 100</li>
+      <li><strong>Percentage composition by mass</strong> of an element = (total A<sub>r</sub> of that element in the formula &divide; M<sub>r</sub>) &times; 100</li>
+      <li><strong>Percentage purity</strong> = (mass of pure substance &divide; mass of impure sample) &times; 100</li>
+    </ul>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>In the calcium carbonate example above, only 9.8 g of CaO was collected. Calculate the percentage yield.</strong><br>Theoretical yield = 11.2 g<br>Percentage yield = (9.8 &divide; 11.2) &times; 100<br>= 87.5%</div>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Use the mole-ratio step every time: moles of known &rarr; ratio from the balanced equation &rarr; moles of unknown &rarr; convert. Write units on every line and keep 3 significant figures unless told otherwise; rounding too early is a common way to lose the final mark.</div>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Forgetting to convert cm<sup>3</sup> to dm<sup>3</sup> before using concentration or the 24 dm<sup>3</sup> molar volume. Another frequent error is ignoring the mole ratio (e.g. treating H<sub>2</sub>SO<sub>4</sub> : NaOH as 1 : 1 instead of 1 : 2).</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can write formulae of ionic compounds from ion charges and define molecular and empirical formula.</li>
+      <li>I can write balanced symbol equations with state symbols, and ionic equations (Supplement).</li>
+      <li>I can define A<sub>r</sub> and M<sub>r</sub> and calculate M<sub>r</sub> from a formula.</li>
+      <li>I can convert between g/dm<sup>3</sup> and mol/dm<sup>3</sup> and between cm<sup>3</sup> and dm<sup>3</sup>.</li>
+      <li>I can use the mole, the Avogadro constant and the molar gas volume in calculations (Supplement).</li>
+      <li>I can identify a limiting reactant and carry out titration calculations (Supplement).</li>
+      <li>I can calculate empirical formula, molecular formula, percentage yield, composition and purity (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 4. ELECTROCHEMISTRY ==================== -->
+  <div class="section" id="sec-electrochemistry">
+    <div class="section-header">
+      <span class="form-badge">Topic 4 &middot; Physical Chemistry</span>
+      <h2>Electrochemistry</h2>
+      <p class="purpose">How electricity decomposes ionic compounds, how to predict the products at each electrode, and how electroplating and hydrogen&ndash;oxygen fuel cells work. Examiners regularly ask for products, observations and, on the Extended paper, ionic half-equations.</p>
+    </div>
+  
+    <h3>Electrolysis: key terms</h3>
+    <p><strong>Electrolysis</strong> is the decomposition of an ionic compound, when molten or in aqueous solution, by the passage of an electric current.</p>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Electrolyte</div><div class="conv-value">The molten or aqueous ionic compound that conducts and is decomposed</div></div>
+      <div class="convention-item"><div class="conv-label">Cathode</div><div class="conv-value">Negative electrode; attracts cations</div></div>
+      <div class="convention-item"><div class="conv-label">Anode</div><div class="conv-value">Positive electrode; attracts anions</div></div>
+      <div class="convention-item"><div class="conv-label">Inert electrodes</div><div class="conv-value">Graphite (carbon) or platinum; do not react</div></div>
+      <div class="convention-item"><div class="conv-label">External circuit</div><div class="conv-value">Wires and power supply connecting the electrodes</div></div>
+    </div>
+    <div class="mnemonic"><span><strong>PANIC</strong>:</span> <span><strong>P</strong>ositive <strong>A</strong>node,</span> <span><strong>N</strong>egative <strong>I</strong>s <strong>C</strong>athode.</span> <span><strong>OIL RIG</strong>: <strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss, <strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain of electrons.</span></div>
+  
+    <h3><span class="key-term">Supplement</span> Transfer of charge during electrolysis</h3>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>External circuit</strong><span>Electrons move through the wires from the anode to the cathode, pushed by the power supply.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Electrolyte</strong><span>Ions move: cations towards the cathode, anions towards the anode. Ions, not electrons, carry the current in the electrolyte.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>At the cathode</strong><span>Cations gain electrons (reduction).</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>At the anode</strong><span>Anions lose electrons (oxidation), and these electrons enter the external circuit.</span></div></div>
+    </div>
+  
+    <h3>Predicting products</h3>
+    <ul>
+      <li><strong>Molten binary compound</strong> (two elements, inert electrodes): the metal forms at the cathode and the non-metal at the anode.</li>
+      <li>In general, <strong>metals or hydrogen</strong> form at the cathode and <strong>non-metals (other than hydrogen)</strong> form at the anode.</li>
+      <li><strong>Aqueous solutions</strong> also contain H<sup>+</sup> and OH<sup>&minus;</sup> ions from water.</li>
+      <li>At the cathode: <strong>hydrogen</strong> forms if the metal is more reactive than hydrogen; the <strong>metal</strong> forms if it is less reactive (e.g. copper, silver).</li>
+      <li>At the anode: with a <strong>concentrated</strong> halide solution the <strong>halogen</strong> forms; with a <strong>dilute</strong> halide solution, or a sulfate, <strong>oxygen</strong> forms.</li>
+    </ul>
+  
+    <h3>Required electrolytes</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Electrolyte (inert electrodes)</th><th>Cathode product</th><th>Anode product</th><th>Observations</th></tr></thead>
+        <tbody>
+          <tr><td>Molten lead(II) bromide, PbBr<sub>2</sub></td><td>Lead</td><td>Bromine</td><td>Grey/silvery liquid metal at cathode; red-brown vapour at anode</td></tr>
+          <tr><td>Concentrated aqueous sodium chloride</td><td>Hydrogen</td><td>Chlorine</td><td>Bubbles at both; pale yellow-green gas at anode that bleaches damp litmus paper; solution becomes sodium hydroxide</td></tr>
+          <tr><td>Dilute sulfuric acid</td><td>Hydrogen</td><td>Oxygen</td><td>Bubbles at both; twice the volume of gas at the cathode</td></tr>
+          <tr><td><span class="key-term">Supplement</span> Aqueous copper(II) sulfate, carbon electrodes</td><td>Copper</td><td>Oxygen</td><td>Pink-brown coating on cathode; bubbles at anode; blue colour fades</td></tr>
+          <tr><td><span class="key-term">Supplement</span> Aqueous copper(II) sulfate, copper electrodes</td><td>Copper</td><td>Copper dissolves (Cu<sup>2+</sup> ions)</td><td>Cathode gains mass, anode loses mass; blue colour stays the same</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>Gas tests</h4>
+    <ul>
+      <li><strong>Hydrogen:</strong> a lighted splint gives a &ldquo;pop&rdquo;.</li>
+      <li><strong>Oxygen:</strong> relights a glowing splint.</li>
+      <li><strong>Chlorine:</strong> bleaches damp litmus paper.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>In the molten lead(II) bromide experiment, the ionic solid does not conduct until it melts because the ions cannot move in the solid. The experiment should be done in a fume cupboard because bromine vapour is toxic. Mention both points when asked about the practical.</div>
+  
+    <h3><span class="key-term">Supplement</span> Ionic half-equations</h3>
+    <p>Reduction happens at the cathode (electrons gained); oxidation happens at the anode (electrons lost). Balance atoms and charges.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Electrode</th><th>Half-equation</th></tr></thead>
+        <tbody>
+          <tr><td>Cathode (lead)</td><td>Pb<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Pb</td></tr>
+          <tr><td>Anode (bromine)</td><td>2Br<sup>&minus;</sup> &rarr; Br<sub>2</sub> + 2e<sup>&minus;</sup></td></tr>
+          <tr><td>Cathode (hydrogen)</td><td>2H<sup>+</sup> + 2e<sup>&minus;</sup> &rarr; H<sub>2</sub></td></tr>
+          <tr><td>Anode (chlorine)</td><td>2Cl<sup>&minus;</sup> &rarr; Cl<sub>2</sub> + 2e<sup>&minus;</sup></td></tr>
+          <tr><td>Anode (oxygen)</td><td>4OH<sup>&minus;</sup> &rarr; O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>&minus;</sup></td></tr>
+          <tr><td>Cathode (copper)</td><td>Cu<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Cu</td></tr>
+          <tr><td>Copper anode (dissolving)</td><td>Cu &rarr; Cu<sup>2+</sup> + 2e<sup>&minus;</sup></td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Writing the chlorine anode equation as Cl<sup>&minus;</sup> &rarr; Cl + e<sup>&minus;</sup>. Chlorine is diatomic, so it must be 2Cl<sup>&minus;</sup> &rarr; Cl<sub>2</sub> + 2e<sup>&minus;</sup>. Also check the charges balance on both sides, and that electrons appear on the left at the cathode and on the right at the anode.</div>
+  
+    <h3>Electroplating</h3>
+    <p>Electroplating uses electrolysis to coat one metal with a thin layer of another metal.</p>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Cathode</strong><span>The object to be plated (e.g. a steel spoon).</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Anode</strong><span>A piece of the plating metal (e.g. silver).</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Electrolyte</strong><span>An aqueous solution containing ions of the plating metal (e.g. silver nitrate).</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Result</strong><span>Metal ions are reduced and deposited on the object; the anode dissolves to replace them, so the electrolyte concentration stays constant.</span></div></div>
+    </div>
+    <ul>
+      <li>Uses: to improve <strong>appearance</strong> (e.g. silver or gold plating on jewellery) and to <strong>resist corrosion</strong> (e.g. chromium on steel taps, tin on steel cans).</li>
+      <li><span class="key-term">Supplement</span> Copper is purified the same way: impure copper as the anode, pure copper as the cathode, copper(II) sulfate solution as electrolyte. Impurities fall below the anode.</li>
+    </ul>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>Aqueous copper(II) sulfate is electrolysed using carbon electrodes. Explain what is seen at each electrode and why the colour of the solution changes. [4]</strong><br>At the cathode a pink-brown solid forms, because Cu<sup>2+</sup> ions gain electrons and are deposited as copper: Cu<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Cu. Copper is less reactive than hydrogen, so copper is discharged instead of hydrogen. At the anode bubbles of oxygen form, from hydroxide ions losing electrons. The blue colour fades because Cu<sup>2+</sup> ions, which cause the blue colour, are removed from the solution and not replaced.</div>
+  
+    <h3>Hydrogen&ndash;oxygen fuel cells</h3>
+    <ul>
+      <li>A fuel cell uses <strong>hydrogen and oxygen</strong> to produce <strong>electricity</strong>, with <strong>water as the only chemical product</strong>.</li>
+      <li>Overall reaction: 2H<sub>2</sub>(g) + O<sub>2</sub>(g) &rarr; 2H<sub>2</sub>O(l)</li>
+    </ul>
+    <h4><span class="key-term">Supplement</span> Fuel cells compared with petrol engines</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Advantages of fuel cells</th><th>Disadvantages of fuel cells</th></tr></thead>
+        <tbody>
+          <tr><td>Only product is water; no CO<sub>2</sub>, CO, oxides of nitrogen or unburnt hydrocarbons released from the vehicle</td><td>Hydrogen is difficult and expensive to store; it is a gas that must be kept under high pressure</td></tr>
+          <tr><td>More efficient at converting chemical energy into useful energy</td><td>Hydrogen is flammable and explosive</td></tr>
+          <tr><td>Fewer moving parts, quieter</td><td>Hydrogen is often produced from fossil fuels or using electricity, which may release CO<sub>2</sub></td></tr>
+          <tr><td>Do not use up crude oil (a finite resource)</td><td>Few hydrogen refuelling stations; fuel cells are expensive to make</td></tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can define electrolysis and identify the anode, cathode, electrolyte and external circuit.</li>
+      <li>I can describe how charge is carried by electrons in the circuit and ions in the electrolyte (Supplement).</li>
+      <li>I can state the products and observations for molten PbBr<sub>2</sub>, concentrated aqueous NaCl and dilute H<sub>2</sub>SO<sub>4</sub>.</li>
+      <li>I can predict products for molten binary compounds and for dilute or concentrated halide solutions.</li>
+      <li>I can describe the electrolysis of aqueous CuSO<sub>4</sub> with carbon and copper electrodes (Supplement).</li>
+      <li>I can write ionic half-equations showing oxidation at the anode and reduction at the cathode (Supplement).</li>
+      <li>I can describe electroplating and its uses, and state what a hydrogen&ndash;oxygen fuel cell produces.</li>
+      <li>I can give advantages and disadvantages of fuel cells compared with petrol engines (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 5. CHEMICAL-ENERGETICS ==================== -->
+  <div class="section" id="sec-chemical-energetics">
+    <div class="section-header">
+      <span class="form-badge">Topic 5 &middot; Physical Chemistry</span>
+      <h2>Chemical Energetics</h2>
+      <p class="purpose">Every reaction either releases thermal energy to the surroundings or takes it in. This topic covers exothermic and endothermic reactions, reaction pathway diagrams and (for Supplement) calculating enthalpy changes from bond energies &mdash; a reliable source of calculation marks on Paper 4.</p>
+    </div>
+  
+    <h3>Exothermic and endothermic reactions</h3>
+    <p>Energy is conserved in every reaction. What changes is where it is stored: some energy is held in the chemical bonds (the <strong>system</strong>), and some is thermal energy in everything around the reaction (the <strong>surroundings</strong> &mdash; the solvent, test tube, air and thermometer).</p>
+    <ul>
+      <li><strong>Exothermic reaction:</strong> a reaction that transfers thermal energy <strong>to</strong> the surroundings, so the temperature of the surroundings <strong>increases</strong>.</li>
+      <li><strong>Endothermic reaction:</strong> a reaction that takes in thermal energy <strong>from</strong> the surroundings, so the temperature of the surroundings <strong>decreases</strong>.</li>
+    </ul>
+  
+    <div class="table-wrap"><table>
+      <thead><tr><th>Exothermic examples</th><th>Endothermic examples</th></tr></thead>
+      <tbody>
+        <tr><td>Combustion of fuels, e.g. CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g) + 2H<sub>2</sub>O(l)</td><td>Thermal decomposition, e.g. CaCO<sub>3</sub>(s) &rarr; CaO(s) + CO<sub>2</sub>(g)</td></tr>
+        <tr><td>Neutralisation, e.g. HCl(aq) + NaOH(aq) &rarr; NaCl(aq) + H<sub>2</sub>O(l)</td><td>Photosynthesis (energy taken in as light)</td></tr>
+        <tr><td>Reactive metals with water or acid, e.g. Mg(s) + 2HCl(aq) &rarr; MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)</td><td>Dissolving ammonium nitrate or ammonium chloride in water</td></tr>
+        <tr><td>Respiration</td><td>Citric acid reacting with sodium hydrogencarbonate</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4>Measuring the temperature change in the lab</h4>
+    <ul>
+      <li>Carry out the reaction in an insulated container (a polystyrene cup with a lid) to reduce thermal energy loss to the air.</li>
+      <li>Record the starting temperature, mix, stir, and record the highest (or lowest) temperature reached.</li>
+      <li>A rise in temperature shows an exothermic reaction; a fall shows an endothermic reaction.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Saying &ldquo;an endothermic reaction gets hotter because it takes in heat&rdquo;. The reaction mixture and the container actually feel <strong>colder</strong>, because thermal energy is being drawn out of the surroundings into the chemical bonds of the products.</div>
+  
+    <h3>Reaction pathway diagrams</h3>
+    <p>A reaction pathway diagram (energy level diagram) plots the energy of the chemicals on the vertical axis against the progress of the reaction on the horizontal axis.</p>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Exothermic</div><div class="conv-value">Products lower than reactants; energy released to surroundings</div></div>
+      <div class="convention-item"><div class="conv-label">Endothermic</div><div class="conv-value">Products higher than reactants; energy taken in from surroundings</div></div>
+      <div class="convention-item"><div class="conv-label">The &ldquo;hump&rdquo;</div><div class="conv-value">Energy barrier the reactants must get over: the activation energy</div></div>
+      <div class="convention-item"><div class="conv-label">Axes</div><div class="conv-value">y: energy; x: progress of reaction</div></div>
+    </div>
+  
+    <h3><span class="key-term">Supplement</span> Enthalpy change and activation energy</h3>
+    <ul>
+      <li><strong>Enthalpy change, &Delta;H:</strong> the transfer of thermal energy during a reaction. Units: kJ/mol.</li>
+      <li>For an <strong>exothermic</strong> reaction &Delta;H is <strong>negative</strong> (the system loses energy).</li>
+      <li>For an <strong>endothermic</strong> reaction &Delta;H is <strong>positive</strong> (the system gains energy).</li>
+      <li><strong>Activation energy, E<sub>a</sub>:</strong> the minimum energy that colliding particles must have in order to react.</li>
+    </ul>
+  
+    <h4>Drawing and labelling a pathway diagram (Supplement)</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Draw and label the axes</strong><span>Vertical axis &ldquo;energy&rdquo;, horizontal axis &ldquo;progress of reaction&rdquo;.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Reactant and product levels</strong><span>Draw two horizontal lines and write the formulae of the reactants and products on them. Products lower for exothermic, higher for endothermic.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Draw the curve</strong><span>Join the levels with a smooth curve that rises to a peak above both lines.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Label E<sub>a</sub></strong><span>A vertical arrow pointing <strong>upwards</strong> from the reactant level to the top of the peak.</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Label &Delta;H</strong><span>A vertical arrow from the reactant level to the product level: pointing down for exothermic (&Delta;H negative), up for endothermic (&Delta;H positive).</span></div></div>
+    </div>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>The activation energy arrow must start at the <strong>reactants</strong> line, not at the baseline or the products line. Arrows with a head at both ends, or arrows that do not touch the lines, commonly lose the mark.</div>
+  
+    <h3><span class="key-term">Supplement</span> Bond breaking and bond making</h3>
+    <ul>
+      <li><strong>Bond breaking is endothermic</strong> &mdash; energy must be supplied to pull atoms apart.</li>
+      <li><strong>Bond making is exothermic</strong> &mdash; energy is released when new bonds form.</li>
+      <li>If more energy is released making bonds than is taken in breaking bonds, the reaction is <strong>exothermic</strong> overall.</li>
+      <li>If more energy is taken in breaking bonds than is released making bonds, the reaction is <strong>endothermic</strong> overall.</li>
+    </ul>
+  
+    <div class="mnemonic"><span><strong>B</strong>reaking</span> <span><strong>I</strong>n (energy in),</span> <span><strong>M</strong>aking</span> <span><strong>O</strong>ut (energy out) &mdash; &ldquo;BIMO&rdquo;</span></div>
+  
+    <h4>Calculating &Delta;H from bond energies</h4>
+    <p>&Delta;H = total energy needed to break bonds in reactants &minus; total energy released making bonds in products.</p>
+  
+    <div class="example-block"><div class="ex-label">Worked example</div>
+      <strong>Calculate &Delta;H for H<sub>2</sub>(g) + Cl<sub>2</sub>(g) &rarr; 2HCl(g). Bond energies (kJ/mol): H&ndash;H 436, Cl&ndash;Cl 242, H&ndash;Cl 431.</strong><br>
+      Bonds broken: 1 &times; H&ndash;H + 1 &times; Cl&ndash;Cl = 436 + 242 = 678 kJ<br>
+      Bonds made: 2 &times; H&ndash;Cl = 2 &times; 431 = 862 kJ<br>
+      &Delta;H = 678 &minus; 862<br>
+      &Delta;H = &minus;184 kJ/mol (exothermic, because more energy is released than taken in)
+    </div>
+  
+    <div class="example-block"><div class="ex-label">Worked example</div>
+      <strong>Calculate &Delta;H for the combustion of methane: CH<sub>4</sub> + 2O<sub>2</sub> &rarr; CO<sub>2</sub> + 2H<sub>2</sub>O. Bond energies (kJ/mol): C&ndash;H 412, O=O 496, C=O 743, O&ndash;H 463.</strong><br>
+      Bonds broken: 4 &times; C&ndash;H = 1648; 2 &times; O=O = 992; total = 2640 kJ<br>
+      Bonds made: 2 &times; C=O = 1486; 4 &times; O&ndash;H (two in each H<sub>2</sub>O) = 1852; total = 3338 kJ<br>
+      &Delta;H = 2640 &minus; 3338<br>
+      &Delta;H = &minus;698 kJ/mol
+    </div>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Forgetting to count every bond. Draw out the displayed formula of each molecule first, then multiply by the balancing number: 2H<sub>2</sub>O contains <strong>four</strong> O&ndash;H bonds, and CO<sub>2</sub> contains <strong>two</strong> C=O double bonds. Also always include the sign in the final answer.</div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div>
+      <strong>The combustion of hydrogen is exothermic. Explain why, in terms of bond breaking and bond making. [3]</strong><br>
+      Energy is taken in to break the bonds in the reactants (H&ndash;H and O=O), so bond breaking is endothermic. Energy is released when the new O&ndash;H bonds in water form, so bond making is exothermic. More energy is released in making the new bonds than is taken in breaking the old ones, so overall thermal energy is given out and &Delta;H is negative.
+    </div>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>When asked whether a reaction is exothermic or endothermic from data, always give the <strong>comparison</strong> (&ldquo;more energy released making bonds than absorbed breaking bonds&rdquo;), not just the name. The comparison carries the mark.</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can define exothermic and endothermic reactions in terms of thermal energy transfer and the temperature of the surroundings.</li>
+      <li>I can give examples of each type and describe how to measure a temperature change.</li>
+      <li>I can interpret a reaction pathway diagram and say whether it shows an exothermic or endothermic reaction.</li>
+      <li>(Supplement) I can define enthalpy change and activation energy and state the sign of &Delta;H for each type.</li>
+      <li>(Supplement) I can draw and fully label a reaction pathway diagram with E<sub>a</sub> and &Delta;H arrows.</li>
+      <li>(Supplement) I can explain that bond breaking is endothermic and bond making is exothermic.</li>
+      <li>(Supplement) I can calculate &Delta;H from bond energies, including the correct sign.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 6. CHEMICAL-REACTIONS ==================== -->
+  <div class="section" id="sec-chemical-reactions">
+    <div class="section-header">
+      <span class="form-badge">Topic 6 &middot; Physical Chemistry</span>
+      <h2>Chemical Reactions</h2>
+      <p class="purpose">This topic covers how to tell physical and chemical changes apart, what controls the rate of a reaction, reversible reactions and equilibrium (including the Haber and Contact processes), and redox. Rate graphs, collision theory explanations and equilibrium predictions appear on almost every paper.</p>
+    </div>
+  
+    <h3>Physical and chemical changes</h3>
+    <ul>
+      <li><strong>Physical change:</strong> no new substance is made and the change is usually easy to reverse, e.g. melting ice, dissolving salt, boiling water.</li>
+      <li><strong>Chemical change:</strong> one or more new substances are formed; often accompanied by an energy change, a colour change, fizzing or a precipitate, and usually hard to reverse, e.g. burning magnesium, rusting.</li>
+    </ul>
+  
+    <h3>Rate of reaction</h3>
+    <p>Rate measures how quickly reactants are used up or products are formed. The five factors on the syllabus:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Change made</th><th>Effect on rate</th><th>Collision theory reason</th></tr></thead>
+      <tbody>
+        <tr><td>Increase concentration of a solution</td><td>Increases</td><td>More particles per unit volume, so more frequent collisions</td></tr>
+        <tr><td>Increase pressure of a gas</td><td>Increases</td><td>Particles are closer together, so more particles per unit volume and more frequent collisions</td></tr>
+        <tr><td>Increase surface area (smaller pieces or powder)</td><td>Increases</td><td>More particles exposed at the surface, so more frequent collisions</td></tr>
+        <tr><td>Increase temperature</td><td>Increases</td><td>Particles have more kinetic energy, move faster so collide more often, and a greater proportion of collisions have energy &ge; activation energy</td></tr>
+        <tr><td>Add a catalyst</td><td>Increases</td><td>Provides an alternative pathway with a lower activation energy</td></tr>
+      </tbody>
+    </table></div>
+  
+    <ul>
+      <li><strong>Catalyst:</strong> a substance that increases the rate of a reaction and is unchanged in mass and chemical composition at the end of the reaction.</li>
+      <li><strong>Enzymes</strong> are proteins that act as biological catalysts. They work best at an optimum temperature and pH; high temperatures denature them.</li>
+      <li>Fine powders (e.g. flour, coal dust) suspended in air can burn so fast that they cause explosions &mdash; a hazard in mills and mines.</li>
+    </ul>
+  
+    <h3><span class="key-term">Supplement</span> Collision theory in detail</h3>
+    <ul>
+      <li>Particles react only when they collide with energy equal to or greater than the <strong>activation energy</strong>. These are <strong>successful collisions</strong>.</li>
+      <li>Rate depends on the <strong>frequency of successful collisions</strong> (number per second), not just the number of collisions.</li>
+      <li>Temperature has two effects: collisions become more frequent, and a larger proportion of particles have energy &ge; E<sub>a</sub>. The second effect is the more important one.</li>
+      <li>A catalyst lowers the activation energy, so a larger proportion of collisions are successful at the same temperature.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Writing &ldquo;more collisions&rdquo;. Examiners want <strong>more frequent collisions</strong> or <strong>more collisions per second</strong>. A reaction eventually has the same total number of collisions either way &mdash; what changes is how often they happen.</div>
+  
+    <h4>Practical methods for following rate</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Volume of gas produced</strong><span>Collect the gas in a gas syringe (or an inverted measuring cylinder over water) and record the volume at regular time intervals. Suits e.g. Mg + HCl producing H<sub>2</sub>.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Loss of mass</strong><span>Place the flask on a balance with a cotton wool plug (lets gas out, keeps acid spray in) and record the mass at regular intervals. Suits reactions giving off a dense gas such as CO<sub>2</sub> from CaCO<sub>3</sub> + HCl.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Time for a precipitate to obscure a mark</strong><span>Sodium thiosulfate + hydrochloric acid produces a sulfur precipitate; time how long until a cross under the flask disappears. Rate is proportional to 1/time.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Control variables</strong><span>Change one factor only; keep volumes, concentrations, mass and particle size of solid and temperature the same in every other respect.</span></div></div>
+    </div>
+  
+    <h4>Interpreting rate graphs</h4>
+    <ul>
+      <li>On a graph of volume of gas (or loss of mass) against time, the <strong>gradient</strong> shows the rate.</li>
+      <li>The curve is steepest at the start (highest concentration of reactants) and levels off when one reactant is used up.</li>
+      <li>A faster reaction gives a steeper initial curve. If the amounts of reactants are the same, it levels off at the <strong>same final volume</strong>, just sooner.</li>
+      <li>Halving the amount of the limiting reactant halves the final volume of gas.</li>
+      <li><span class="key-term">Supplement</span> Calculate average rate = change in volume &divide; time taken; find the rate at a point by drawing a tangent and working out its gradient.</li>
+    </ul>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div>
+      <strong>Explain why magnesium powder reacts faster with hydrochloric acid than the same mass of magnesium ribbon. [3]</strong><br>
+      The powder has a larger surface area. More magnesium atoms are exposed to the acid particles, so there are more frequent collisions between acid particles and magnesium atoms. This gives more frequent successful collisions, so the rate is higher.
+    </div>
+  
+    <h3>Reversible reactions</h3>
+    <ul>
+      <li>Some reactions can go in both directions; this is shown by the symbol &#8652;.</li>
+      <li>Heating blue <strong>hydrated copper(II) sulfate</strong> drives off water and leaves white anhydrous copper(II) sulfate. Adding water turns it blue again:<br>CuSO<sub>4</sub>&middot;5H<sub>2</sub>O(s) &#8652; CuSO<sub>4</sub>(s) + 5H<sub>2</sub>O(l)</li>
+      <li>Pink <strong>hydrated cobalt(II) chloride</strong> becomes blue when heated (anhydrous) and turns pink again when water is added:<br>CoCl<sub>2</sub>&middot;6H<sub>2</sub>O(s) &#8652; CoCl<sub>2</sub>(s) + 6H<sub>2</sub>O(l)</li>
+      <li>These colour changes are used as <strong>chemical tests for water</strong> (anhydrous CuSO<sub>4</sub> white &rarr; blue; anhydrous CoCl<sub>2</sub> blue &rarr; pink). To test whether water is <strong>pure</strong>, check that it boils at exactly 100&nbsp;&deg;C and freezes at 0&nbsp;&deg;C.</li>
+    </ul>
+  
+    <h3><span class="key-term">Supplement</span> Equilibrium</h3>
+    <ul>
+      <li>A reversible reaction in a <strong>closed system</strong> reaches <strong>equilibrium</strong> when the rate of the forward reaction equals the rate of the reverse reaction and the concentrations of reactants and products no longer change.</li>
+      <li>Equilibrium is dynamic: both reactions keep happening.</li>
+    </ul>
+  
+    <div class="table-wrap"><table>
+      <thead><tr><th>Change</th><th>Position of equilibrium moves&hellip;</th></tr></thead>
+      <tbody>
+        <tr><td>Increase temperature</td><td>In the endothermic direction</td></tr>
+        <tr><td>Decrease temperature</td><td>In the exothermic direction</td></tr>
+        <tr><td>Increase pressure (gases)</td><td>To the side with fewer moles of gas</td></tr>
+        <tr><td>Decrease pressure (gases)</td><td>To the side with more moles of gas</td></tr>
+        <tr><td>Increase concentration of a reactant</td><td>To the right (more products)</td></tr>
+        <tr><td>Remove a product</td><td>To the right</td></tr>
+        <tr><td>Add a catalyst</td><td>No change &mdash; equilibrium is reached faster</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4><span class="key-term">Supplement</span> The Haber process (ammonia)</h4>
+    <p>N<sub>2</sub>(g) + 3H<sub>2</sub>(g) &#8652; 2NH<sub>3</sub>(g) &nbsp; &Delta;H negative (forward reaction exothermic)</p>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Nitrogen source</div><div class="conv-value">Air</div></div>
+      <div class="convention-item"><div class="conv-label">Hydrogen source</div><div class="conv-value">Methane (natural gas)</div></div>
+      <div class="convention-item"><div class="conv-label">Temperature</div><div class="conv-value">450&nbsp;&deg;C</div></div>
+      <div class="convention-item"><div class="conv-label">Pressure</div><div class="conv-value">20&nbsp;000&nbsp;kPa (200&nbsp;atm)</div></div>
+      <div class="convention-item"><div class="conv-label">Catalyst</div><div class="conv-value">Iron</div></div>
+    </div>
+  
+    <h4><span class="key-term">Supplement</span> The Contact process (sulfuric acid)</h4>
+    <p>2SO<sub>2</sub>(g) + O<sub>2</sub>(g) &#8652; 2SO<sub>3</sub>(g) &nbsp; &Delta;H negative</p>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">SO<sub>2</sub> source</div><div class="conv-value">Burning sulfur, or roasting sulfide ores</div></div>
+      <div class="convention-item"><div class="conv-label">O<sub>2</sub> source</div><div class="conv-value">Air</div></div>
+      <div class="convention-item"><div class="conv-label">Temperature</div><div class="conv-value">450&nbsp;&deg;C</div></div>
+      <div class="convention-item"><div class="conv-label">Pressure</div><div class="conv-value">200&nbsp;kPa (2&nbsp;atm)</div></div>
+      <div class="convention-item"><div class="conv-label">Catalyst</div><div class="conv-value">Vanadium(V) oxide, V<sub>2</sub>O<sub>5</sub></div></div>
+    </div>
+  
+    <h4><span class="key-term">Supplement</span> Explaining the chosen conditions</h4>
+    <ul>
+      <li><strong>Temperature:</strong> a low temperature would give a higher equilibrium yield (forward reaction is exothermic) but the rate would be too slow. 450&nbsp;&deg;C is a <strong>compromise</strong> between rate and yield.</li>
+      <li><strong>Pressure (Haber):</strong> high pressure moves equilibrium to the right (4 moles of gas &rarr; 2) and increases rate, but very high pressures are expensive and dangerous; 20&nbsp;000&nbsp;kPa balances yield against cost and safety.</li>
+      <li><strong>Pressure (Contact):</strong> the equilibrium already lies well to the right, so only a low pressure is needed; higher pressure is not worth the extra cost.</li>
+      <li><strong>Catalyst:</strong> increases the rate so equilibrium is reached faster; it does not change the yield.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>For &ldquo;explain the temperature used&rdquo; questions, you need both sides: why not lower (<strong>rate too slow</strong>) and why not higher (<strong>yield too low</strong> because the forward reaction is exothermic). Mention the word &ldquo;compromise&rdquo;.</div>
+  
+    <h3>Redox</h3>
+    <ul>
+      <li><strong>Oxidation</strong> is gain of oxygen; <strong>reduction</strong> is loss of oxygen.</li>
+      <li><strong>Redox</strong> reactions involve simultaneous oxidation and reduction, e.g. in CuO + H<sub>2</sub> &rarr; Cu + H<sub>2</sub>O, copper(II) oxide is reduced and hydrogen is oxidised.</li>
+      <li>Roman numerals show the oxidation number of an element in a compound, e.g. iron(II) sulfate contains Fe<sup>2+</sup>, iron(III) chloride contains Fe<sup>3+</sup>.</li>
+    </ul>
+  
+    <h4><span class="key-term">Supplement</span> Electrons and oxidation numbers</h4>
+    <ul>
+      <li><strong>Oxidation</strong> is loss of electrons and an increase in oxidation number. <strong>Reduction</strong> is gain of electrons and a decrease in oxidation number.</li>
+      <li>Rules: an uncombined element has oxidation number 0; a simple ion has oxidation number equal to its charge; in a compound the oxidation numbers add up to 0; in an ion they add up to the charge. Oxygen is usually &minus;2 and hydrogen usually +1.</li>
+      <li>An <strong>oxidising agent</strong> oxidises another substance and is itself reduced. A <strong>reducing agent</strong> reduces another substance and is itself oxidised.</li>
+      <li>Example: Zn(s) + Cu<sup>2+</sup>(aq) &rarr; Zn<sup>2+</sup>(aq) + Cu(s)<br>Zn &rarr; Zn<sup>2+</sup> + 2e<sup>&minus;</sup> (oxidation; Zn is the reducing agent)<br>Cu<sup>2+</sup> + 2e<sup>&minus;</sup> &rarr; Cu (reduction; Cu<sup>2+</sup> is the oxidising agent)</li>
+      <li>Tests using colour changes: acidified <strong>potassium manganate(VII)</strong> is an oxidising agent and turns from <strong>purple to colourless</strong> when it reacts with a reducing agent. Aqueous <strong>potassium iodide</strong> is a reducing agent and turns from <strong>colourless to brown</strong> (iodine forms) when it reacts with an oxidising agent.</li>
+    </ul>
+  
+    <div class="mnemonic"><span><strong>OIL</strong> &mdash; Oxidation Is Loss (of electrons),</span> <span><strong>RIG</strong> &mdash; Reduction Is Gain</span></div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can distinguish physical and chemical changes and name the factors that affect rate.</li>
+      <li>I can describe practical methods for following rate and interpret rate graphs.</li>
+      <li>(Supplement) I can explain rate changes using the frequency of successful collisions and activation energy.</li>
+      <li>I can describe the reversible hydration of copper(II) sulfate and cobalt(II) chloride and use them to test for water.</li>
+      <li>(Supplement) I can define equilibrium and predict how temperature, pressure, concentration and a catalyst affect it.</li>
+      <li>(Supplement) I can give the equations, raw materials and conditions for the Haber and Contact processes and explain the choices.</li>
+      <li>I can identify redox in terms of oxygen; (Supplement) in terms of electrons and oxidation numbers, naming oxidising and reducing agents.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 7. ACIDS-BASES-SALTS ==================== -->
+  <div class="section" id="sec-acids-bases-salts">
+    <div class="section-header">
+      <span class="form-badge">Topic 7 &middot; Inorganic Chemistry</span>
+      <h2>Acids, Bases and Salts</h2>
+      <p class="purpose">This topic covers the typical reactions of acids and bases, the pH scale and indicators, the classification of oxides, and how to prepare pure, dry samples of salts. Salt preparation methods are a favourite extended-writing question on both core and extended papers.</p>
+    </div>
+  
+    <h3>Properties of acids</h3>
+    <ul>
+      <li>Acids contain <strong>hydrogen ions, H<sup>+</sup>(aq)</strong>, when dissolved in water.</li>
+      <li>Acids have a pH below 7, turn blue litmus red, turn methyl orange red and keep thymolphthalein colourless.</li>
+    </ul>
+    <h4>Reactions of acids (learn the general word equations)</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>General equation</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>acid + metal &rarr; salt + hydrogen</td><td>Zn(s) + H<sub>2</sub>SO<sub>4</sub>(aq) &rarr; ZnSO<sub>4</sub>(aq) + H<sub>2</sub>(g)</td></tr>
+        <tr><td>acid + base &rarr; salt + water</td><td>CuO(s) + 2HCl(aq) &rarr; CuCl<sub>2</sub>(aq) + H<sub>2</sub>O(l)</td></tr>
+        <tr><td>acid + alkali &rarr; salt + water</td><td>HNO<sub>3</sub>(aq) + KOH(aq) &rarr; KNO<sub>3</sub>(aq) + H<sub>2</sub>O(l)</td></tr>
+        <tr><td>acid + carbonate &rarr; salt + water + carbon dioxide</td><td>CaCO<sub>3</sub>(s) + 2HCl(aq) &rarr; CaCl<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</td></tr>
+      </tbody>
+    </table></div>
+    <p>Hydrochloric acid gives <strong>chlorides</strong>, sulfuric acid gives <strong>sulfates</strong>, nitric acid gives <strong>nitrates</strong>.</p>
+  
+    <h3>Properties of bases and alkalis</h3>
+    <ul>
+      <li><strong>Bases</strong> are metal oxides and hydroxides; they neutralise acids to form a salt and water.</li>
+      <li><strong>Alkalis</strong> are soluble bases. They contain <strong>hydroxide ions, OH<sup>&minus;</sup>(aq)</strong>, when dissolved in water.</li>
+      <li>Alkalis have a pH above 7, turn red litmus blue, turn methyl orange yellow and turn thymolphthalein blue.</li>
+      <li>Bases react with <strong>ammonium salts</strong> when warmed, releasing ammonia gas:<br>NH<sub>4</sub>Cl(s) + NaOH(aq) &rarr; NaCl(aq) + H<sub>2</sub>O(l) + NH<sub>3</sub>(g)<br>(Test for NH<sub>4</sub><sup>+</sup>: ammonia turns damp red litmus paper blue.)</li>
+    </ul>
+  
+    <div class="table-wrap"><table>
+      <thead><tr><th>Indicator</th><th>In acid</th><th>In alkali</th></tr></thead>
+      <tbody>
+        <tr><td>Litmus</td><td>Red</td><td>Blue</td></tr>
+        <tr><td>Methyl orange</td><td>Red</td><td>Yellow</td></tr>
+        <tr><td>Thymolphthalein</td><td>Colourless</td><td>Blue</td></tr>
+        <tr><td>Universal indicator</td><td>Red (pH 1&ndash;3), orange/yellow (pH 4&ndash;6)</td><td>Blue (pH 8&ndash;11), purple (pH 12&ndash;14); green at pH 7</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h3>The pH scale and neutralisation</h3>
+    <ul>
+      <li>pH runs from 1 to 14. Below 7 is acidic, 7 is neutral, above 7 is alkaline. Measure it with universal indicator (compare to a colour chart) or a pH meter.</li>
+      <li><strong>Neutralisation</strong> is the reaction between an acid and an alkali: H<sup>+</sup>(aq) + OH<sup>&minus;</sup>(aq) &rarr; H<sub>2</sub>O(l)</li>
+    </ul>
+  
+    <h3><span class="key-term">Supplement</span> Proton transfer and strength of acids</h3>
+    <ul>
+      <li>An <strong>acid</strong> is a proton (H<sup>+</sup>) donor; a <strong>base</strong> is a proton acceptor.</li>
+      <li>A <strong>strong acid</strong> is completely dissociated in aqueous solution, e.g. hydrochloric acid: HCl(aq) &rarr; H<sup>+</sup>(aq) + Cl<sup>&minus;</sup>(aq)</li>
+      <li>A <strong>weak acid</strong> is only partially dissociated in aqueous solution, e.g. ethanoic acid: CH<sub>3</sub>COOH(aq) &#8652; H<sup>+</sup>(aq) + CH<sub>3</sub>COO<sup>&minus;</sup>(aq)</li>
+      <li>At the same concentration, a strong acid has a higher H<sup>+</sup> concentration, so a lower pH and reacts faster (e.g. with magnesium).</li>
+      <li>The lower the pH, the higher the H<sup>+</sup> concentration. Each drop of 1 pH unit means a <strong>tenfold</strong> increase in H<sup>+</sup> concentration.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Confusing <strong>strong</strong> with <strong>concentrated</strong>. Strength is about how completely the acid dissociates; concentration is about how much acid is dissolved per dm<sup>3</sup>. You can have a dilute strong acid or a concentrated weak acid.</div>
+  
+    <h3>Oxides</h3>
+    <ul>
+      <li><strong>Acidic oxides</strong> are usually oxides of non-metals, e.g. CO<sub>2</sub>, SO<sub>2</sub>. They react with bases to form a salt and water.</li>
+      <li><strong>Basic oxides</strong> are usually oxides of metals, e.g. CuO, CaO. They react with acids to form a salt and water.</li>
+      <li><span class="key-term">Supplement</span> <strong>Amphoteric oxides</strong> react with both acids and bases to produce a salt and water, e.g. aluminium oxide, Al<sub>2</sub>O<sub>3</sub>, and zinc oxide, ZnO.</li>
+    </ul>
+  
+    <h3>Preparing salts</h3>
+    <p>A <strong>salt</strong> is formed when the hydrogen of an acid is replaced by a metal (or ammonium) ion. First decide whether the salt is soluble.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Soluble</th><th>Insoluble (exceptions)</th></tr></thead>
+      <tbody>
+        <tr><td>All sodium, potassium and ammonium salts</td><td>&mdash;</td></tr>
+        <tr><td>All nitrates</td><td>&mdash;</td></tr>
+        <tr><td>Most chlorides, bromides and iodides</td><td>Silver and lead(II) halides</td></tr>
+        <tr><td>Most sulfates</td><td>Barium, calcium and lead(II) sulfate</td></tr>
+        <tr><td>Sodium, potassium and ammonium carbonates</td><td>All other carbonates</td></tr>
+        <tr><td>Sodium, potassium and ammonium hydroxides</td><td>Most other hydroxides (calcium hydroxide is only partially soluble)</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4>Method A: soluble salt from an insoluble solid (excess metal, base or carbonate)</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Warm the acid</strong><span>Place dilute acid in a beaker and warm it gently to speed up the reaction.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Add the solid in excess</strong><span>Add the metal, oxide or carbonate a little at a time, stirring, until no more dissolves (and fizzing stops for a carbonate). Excess ensures all the acid is used up.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Filter</strong><span>Remove the unreacted excess solid; the filtrate is the salt solution.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Evaporate to saturation</strong><span>Heat the filtrate until it is saturated (crystals form on a glass rod dipped in and cooled).</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Crystallise</strong><span>Leave to cool so crystals form, filter them off, wash with a little cold distilled water and dry between filter papers.</span></div></div>
+    </div>
+    <p>Example: making copper(II) sulfate crystals from excess copper(II) oxide and dilute sulfuric acid.</p>
+  
+    <h4>Method B: soluble salt by titration (acid + alkali)</h4>
+    <ul>
+      <li>Used for sodium, potassium and ammonium salts, where both reactants are solutions so an excess cannot be filtered off.</li>
+      <li>Pipette a known volume of alkali into a conical flask, add a few drops of indicator (e.g. methyl orange) and add acid from a burette until the indicator just changes colour. Record the volume.</li>
+      <li>Repeat with the same volumes but <strong>no indicator</strong>, then evaporate and crystallise as in Method A.</li>
+    </ul>
+  
+    <div class="example-block"><div class="ex-label">Worked example</div>
+      <strong>25.0&nbsp;cm<sup>3</sup> of 0.100&nbsp;mol/dm<sup>3</sup> sodium hydroxide is neutralised by 20.0&nbsp;cm<sup>3</sup> of hydrochloric acid. Find the concentration of the acid.</strong><br>
+      NaOH(aq) + HCl(aq) &rarr; NaCl(aq) + H<sub>2</sub>O(l)<br>
+      Moles NaOH = 0.100 &times; 25.0/1000 = 0.00250 mol<br>
+      Mole ratio 1 : 1, so moles HCl = 0.00250 mol<br>
+      Concentration HCl = 0.00250 &divide; (20.0/1000)<br>
+      = 0.125&nbsp;mol/dm<sup>3</sup>
+    </div>
+  
+    <h4><span class="key-term">Supplement</span> Method C: insoluble salt by precipitation</h4>
+    <ul>
+      <li>Mix two solutions that between them contain the ions of the insoluble salt, e.g. barium chloride and sodium sulfate:<br>BaCl<sub>2</sub>(aq) + Na<sub>2</sub>SO<sub>4</sub>(aq) &rarr; BaSO<sub>4</sub>(s) + 2NaCl(aq)<br>Ionic equation: Ba<sup>2+</sup>(aq) + SO<sub>4</sub><sup>2&minus;</sup>(aq) &rarr; BaSO<sub>4</sub>(s)</li>
+      <li>Filter to collect the precipitate, wash it with distilled water to remove soluble impurities, then dry it in a warm oven.</li>
+    </ul>
+  
+    <h4>Water of crystallisation</h4>
+    <ul>
+      <li><strong>Hydrated substance:</strong> a substance that is chemically combined with water, e.g. CuSO<sub>4</sub>&middot;5H<sub>2</sub>O.</li>
+      <li><strong>Anhydrous substance:</strong> a substance containing no water.</li>
+      <li><strong>Water of crystallisation:</strong> the water molecules present in the crystals of a hydrated substance.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>In a salt-preparation question, always say <strong>why</strong> the solid is added in excess (to make sure all the acid reacts) and <strong>do not</strong> say &ldquo;evaporate to dryness&rdquo; &mdash; heating to dryness can drive off water of crystallisation and give a powder rather than crystals.</div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div>
+      <strong>Describe how you would prepare pure, dry crystals of zinc chloride from zinc carbonate and dilute hydrochloric acid. [4]</strong><br>
+      Add zinc carbonate to warm dilute hydrochloric acid, stirring, until no more fizzing is seen and some solid remains (the carbonate is in excess). Filter to remove the excess zinc carbonate. Heat the filtrate to evaporate some water until the solution is saturated, then leave it to cool so that crystals form. Filter off the crystals and dry them between filter papers.
+    </div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe the reactions of acids with metals, bases and carbonates, with equations.</li>
+      <li>I can give the colours of litmus, methyl orange, thymolphthalein and universal indicator.</li>
+      <li>I can describe the pH scale and write the ionic equation for neutralisation.</li>
+      <li>(Supplement) I can define acids and bases as proton donors and acceptors and explain strong and weak acids.</li>
+      <li>I can classify oxides as acidic or basic; (Supplement) and identify amphoteric oxides.</li>
+      <li>I can use the solubility rules to choose a method and describe how to make a pure, dry soluble salt.</li>
+      <li>(Supplement) I can describe preparing an insoluble salt by precipitation.</li>
+      <li>I can define hydrated, anhydrous and water of crystallisation.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 8. PERIODIC-TABLE ==================== -->
+  <div class="section" id="sec-periodic-table">
+    <div class="section-header">
+      <span class="form-badge">Topic 8 &middot; Inorganic Chemistry</span>
+      <h2>The Periodic Table</h2>
+      <p class="purpose">The Periodic Table organises the elements so that their properties can be predicted from their position. You need to explain trends in Group I, Group VII, the transition elements and the noble gases, and predict the properties of elements you have never met &mdash; a common source of &ldquo;suggest&rdquo; marks.</p>
+    </div>
+  
+    <h3>Arrangement of elements</h3>
+    <ul>
+      <li>Elements are arranged in order of increasing <strong>proton number</strong> (atomic number).</li>
+      <li><strong>Periods</strong> are horizontal rows; <strong>groups</strong> are vertical columns.</li>
+      <li>Across a period, elements change from <strong>metallic to non-metallic</strong> character (e.g. period 3: Na, Mg, Al are metals; Si is a metalloid; P, S, Cl, Ar are non-metals).</li>
+      <li>The <strong>group number</strong> equals the number of outer-shell electrons (Group I has 1, Group VII has 7). Group VIII (Group 0) noble gases have a full outer shell.</li>
+      <li>The <strong>period number</strong> equals the number of occupied electron shells, e.g. chlorine (2,8,7) is in period 3, Group VII.</li>
+      <li>Elements in the same group have similar chemical properties because they have the <strong>same number of outer-shell electrons</strong>.</li>
+      <li>The Periodic Table can be used to predict the charge on an ion: Group I forms 1+, Group II 2+, Group III 3+, Group VI 2&minus;, Group VII 1&minus;.</li>
+    </ul>
+  
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Group I</div><div class="conv-value">Alkali metals</div></div>
+      <div class="convention-item"><div class="conv-label">Group VII</div><div class="conv-value">Halogens</div></div>
+      <div class="convention-item"><div class="conv-label">Group VIII</div><div class="conv-value">Noble gases</div></div>
+      <div class="convention-item"><div class="conv-label">Central block</div><div class="conv-value">Transition elements</div></div>
+    </div>
+  
+    <h3>Group I: the alkali metals</h3>
+    <ul>
+      <li>Lithium, sodium and potassium are <strong>soft</strong> metals (can be cut with a knife) with <strong>relatively low melting points</strong> and low densities.</li>
+      <li>Freshly cut surfaces are shiny but tarnish quickly in air, so they are stored under oil.</li>
+      <li>They react with cold water to form a metal hydroxide (alkaline solution) and hydrogen:<br>2Na(s) + 2H<sub>2</sub>O(l) &rarr; 2NaOH(aq) + H<sub>2</sub>(g)</li>
+    </ul>
+  
+    <div class="table-wrap"><table>
+      <thead><tr><th>Metal</th><th>Observations with cold water</th></tr></thead>
+      <tbody>
+        <tr><td>Lithium</td><td>Floats, fizzes steadily, slowly gets smaller</td></tr>
+        <tr><td>Sodium</td><td>Floats, melts into a ball, moves around quickly, fizzes vigorously</td></tr>
+        <tr><td>Potassium</td><td>As sodium but more violent; the hydrogen ignites with a lilac flame</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4>Trends down Group I</h4>
+    <ul>
+      <li>Reactivity <strong>increases</strong>.</li>
+      <li>Melting point <strong>decreases</strong>.</li>
+      <li>Density generally <strong>increases</strong> (potassium is an exception, less dense than sodium).</li>
+      <li>Use the trends to predict: rubidium and caesium are even softer, melt at lower temperatures and react explosively with water.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Observations must be things you can <strong>see</strong>: &ldquo;fizzing&rdquo;, &ldquo;floats&rdquo;, &ldquo;melts into a ball&rdquo;. &ldquo;Hydrogen is produced&rdquo; is a conclusion, not an observation, and will not score an observation mark.</div>
+  
+    <h3>Group VII: the halogens</h3>
+    <ul>
+      <li>Halogens exist as <strong>diatomic molecules</strong>: Cl<sub>2</sub>, Br<sub>2</sub>, I<sub>2</sub>.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Halogen</th><th>State at room temperature</th><th>Colour</th></tr></thead>
+      <tbody>
+        <tr><td>Chlorine, Cl<sub>2</sub></td><td>Gas</td><td>Pale yellow-green</td></tr>
+        <tr><td>Bromine, Br<sub>2</sub></td><td>Liquid</td><td>Red-brown</td></tr>
+        <tr><td>Iodine, I<sub>2</sub></td><td>Solid</td><td>Grey-black</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4>Trends down Group VII</h4>
+    <ul>
+      <li>Colour becomes <strong>darker</strong>.</li>
+      <li>Density and melting/boiling points <strong>increase</strong> (gas &rarr; liquid &rarr; solid).</li>
+      <li>Reactivity <strong>decreases</strong> &mdash; the opposite of Group I.</li>
+      <li>Predictions: fluorine is a very pale yellow gas and the most reactive halogen; astatine would be a dark solid and the least reactive.</li>
+    </ul>
+  
+    <h4>Displacement reactions</h4>
+    <p>A more reactive halogen displaces a less reactive halogen from an aqueous solution of its halide.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Halogen added</th><th>Potassium chloride(aq)</th><th>Potassium bromide(aq)</th><th>Potassium iodide(aq)</th></tr></thead>
+      <tbody>
+        <tr><td>Chlorine water</td><td>No reaction</td><td>Turns orange (Br<sub>2</sub> formed)</td><td>Turns brown (I<sub>2</sub> formed)</td></tr>
+        <tr><td>Bromine water</td><td>No reaction</td><td>No reaction</td><td>Turns brown (I<sub>2</sub> formed)</td></tr>
+        <tr><td>Iodine solution</td><td>No reaction</td><td>No reaction</td><td>No reaction</td></tr>
+      </tbody>
+    </table></div>
+    <p>Cl<sub>2</sub>(aq) + 2KBr(aq) &rarr; 2KCl(aq) + Br<sub>2</sub>(aq)</p>
+    <ul>
+      <li><span class="key-term">Supplement</span> Ionic equation: Cl<sub>2</sub>(aq) + 2Br<sup>&minus;</sup>(aq) &rarr; 2Cl<sup>&minus;</sup>(aq) + Br<sub>2</sub>(aq)</li>
+      <li><span class="key-term">Supplement</span> This is a redox reaction: chlorine gains electrons (reduced, Cl<sub>2</sub> + 2e<sup>&minus;</sup> &rarr; 2Cl<sup>&minus;</sup>) and bromide ions lose electrons (oxidised, 2Br<sup>&minus;</sup> &rarr; Br<sub>2</sub> + 2e<sup>&minus;</sup>). Chlorine is the oxidising agent.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Mixing up <strong>chlorine</strong> and <strong>chloride</strong>. Chlorine is the element (Cl<sub>2</sub>); chloride is the ion (Cl<sup>&minus;</sup>) found in compounds such as potassium chloride. &ldquo;Chloride displaces bromine&rdquo; is wrong &mdash; chlorine displaces bromine from bromide.</div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div>
+      <strong>Aqueous bromine is added to aqueous potassium iodide. Describe what is seen and explain the result. [3]</strong><br>
+      The solution changes from colourless to brown. Bromine is more reactive than iodine, so it displaces iodine from potassium iodide: Br<sub>2</sub> + 2KI &rarr; 2KBr + I<sub>2</sub>. The brown colour is due to the iodine formed.
+    </div>
+  
+    <h3>Transition elements</h3>
+    <p>Transition elements (e.g. iron, copper, nickel, chromium) are metals with:</p>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>High densities</strong><span>Much denser than Group I metals.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>High melting points</strong><span>Iron melts at over 1500&nbsp;&deg;C, compared with sodium at about 98&nbsp;&deg;C.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Coloured compounds</strong><span>e.g. copper(II) sulfate solution is blue, iron(II) salts are pale green, iron(III) salts are yellow-brown.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Catalytic activity</strong><span>The elements and their compounds often act as catalysts, e.g. iron in the Haber process, vanadium(V) oxide in the Contact process.</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong><span class="key-term">Supplement</span> Variable oxidation numbers</strong><span>They form ions with different charges, e.g. iron(II) Fe<sup>2+</sup> and iron(III) Fe<sup>3+</sup>; copper(I) and copper(II).</span></div></div>
+    </div>
+  
+    <h3>Noble gases (Group VIII)</h3>
+    <ul>
+      <li>Helium, neon, argon, krypton, xenon and radon are <strong>unreactive, monatomic gases</strong>.</li>
+      <li>Explanation: their atoms have a <strong>full outer shell</strong> of electrons (a stable electronic configuration; helium has 2, the others have 8), so they do not need to lose, gain or share electrons.</li>
+      <li>Uses linked to unreactivity: argon in light bulbs and as an inert atmosphere in welding; helium in balloons (also low density).</li>
+    </ul>
+  
+    <div class="mnemonic"><span><strong>Group I</strong> gets more reactive going <strong>down</strong>;</span> <span><strong>Group VII</strong> gets more reactive going <strong>up</strong> &mdash; the most reactive elements sit at the far corners (bottom left, top right).</span></div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe how the Periodic Table is arranged and link group and period number to electronic configuration.</li>
+      <li>I can describe the change from metallic to non-metallic character across a period.</li>
+      <li>I can describe the properties of Li, Na and K, their reaction with water, and predict properties of Rb and Cs.</li>
+      <li>I can state the colours and states of Cl<sub>2</sub>, Br<sub>2</sub> and I<sub>2</sub> and describe the trends down Group VII.</li>
+      <li>I can describe and explain halogen displacement reactions; (Supplement) with ionic equations and in terms of redox.</li>
+      <li>I can list the properties of transition elements; (Supplement) including variable oxidation numbers.</li>
+      <li>I can explain why noble gases are unreactive and monatomic.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 9. METALS ==================== -->
+  <div class="section" id="sec-metals">
+    <div class="section-header">
+      <span class="form-badge">Topic 9 &middot; Inorganic Chemistry</span>
+      <h2>Metals</h2>
+      <p class="purpose">How metals behave, why we mix them into alloys, how the reactivity series predicts their reactions, how we stop them corroding and how we get them out of their ores. Extraction of iron and aluminium and the reactivity series appear in almost every paper.</p>
+    </div>
+  
+    <h3>Properties of metals</h3>
+    <h4>Physical properties (compared with non-metals)</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Property</th><th>Typical metal</th><th>Typical non-metal</th></tr></thead>
+      <tbody>
+        <tr><td>Thermal conductivity</td><td>Good</td><td>Poor (insulator)</td></tr>
+        <tr><td>Electrical conductivity</td><td>Good</td><td>Poor (graphite is the exception)</td></tr>
+        <tr><td>Malleability and ductility</td><td>Malleable (hammered into shape) and ductile (drawn into wires)</td><td>Brittle when solid</td></tr>
+        <tr><td>Melting and boiling points</td><td>Usually high</td><td>Usually low</td></tr>
+        <tr><td>Appearance</td><td>Shiny when freshly cut</td><td>Usually dull</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4>General chemical properties</h4>
+    <ul>
+      <li><strong>With dilute acids:</strong> metal + acid &rarr; salt + hydrogen, e.g. Mg(s) + 2HCl(aq) &rarr; MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)</li>
+      <li><strong>With cold water:</strong> reactive metals give a metal hydroxide + hydrogen, e.g. 2Na(s) + 2H<sub>2</sub>O(l) &rarr; 2NaOH(aq) + H<sub>2</sub>(g)</li>
+      <li><strong>With steam:</strong> less reactive metals give a metal oxide + hydrogen, e.g. Mg(s) + H<sub>2</sub>O(g) &rarr; MgO(s) + H<sub>2</sub>(g)</li>
+      <li><strong>With oxygen:</strong> metal + oxygen &rarr; metal oxide, e.g. 2Cu(s) + O<sub>2</sub>(g) &rarr; 2CuO(s). Metal oxides are basic.</li>
+    </ul>
+  
+    <h3>Uses of metals</h3>
+    <p>Always link the use to a property.</p>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Aluminium: aircraft</div><div class="conv-value">Low density, strong</div></div>
+      <div class="convention-item"><div class="conv-label">Aluminium: overhead power cables</div><div class="conv-value">Low density, good electrical conductor</div></div>
+      <div class="convention-item"><div class="conv-label">Aluminium: food containers</div><div class="conv-value">Resists corrosion (protective oxide layer)</div></div>
+      <div class="convention-item"><div class="conv-label">Copper: electrical wiring</div><div class="conv-value">Very good electrical conductor, ductile</div></div>
+    </div>
+  
+    <h3>Alloys</h3>
+    <ul>
+      <li>An <strong>alloy</strong> is a mixture of a metal with other elements (metals or non-metals such as carbon).</li>
+      <li><strong>Brass</strong> is a mixture of copper and zinc.</li>
+      <li><strong>Stainless steel</strong> is a mixture of iron with other elements such as chromium, nickel and carbon.</li>
+      <li>Alloys can be harder and stronger than the pure metals, which is why they are more useful.</li>
+      <li>Stainless steel is used in cutlery because it is hard and resistant to rusting.</li>
+      <li><span class="key-term">Supplement</span> In a pure metal the positive ions are all the same size and arranged in regular layers that slide easily over one another. In an alloy, atoms of different sizes distort the layers, so the layers cannot slide as easily. This makes the alloy harder and stronger.</li>
+      <li>You should be able to identify an alloy from a diagram: a lattice with a few differently sized circles among the regular metal ions.</li>
+    </ul>
+  
+    <h3>Reactivity series</h3>
+    <div class="mnemonic"><span><strong>P</strong>otassium</span> <span><strong>S</strong>odium</span> <span><strong>C</strong>alcium</span> <span><strong>M</strong>agnesium</span> <span><strong>A</strong>luminium</span> <span><strong>C</strong>arbon</span> <span><strong>Z</strong>inc</span> <span><strong>I</strong>ron</span> <span><strong>H</strong>ydrogen</span> <span><strong>C</strong>opper</span> <span><strong>S</strong>ilver</span> <span><strong>G</strong>old</span></div>
+    <p>Most reactive at the top (potassium), least reactive at the bottom (gold). Carbon and hydrogen are included as reference points.</p>
+  
+    <div class="table-wrap"><table>
+      <thead><tr><th>Metal</th><th>Cold water</th><th>Steam</th><th>Dilute hydrochloric acid</th></tr></thead>
+      <tbody>
+        <tr><td>Potassium, sodium</td><td>Vigorous; hydroxide + hydrogen</td><td>(Too dangerous)</td><td>Explosive</td></tr>
+        <tr><td>Calcium</td><td>Steady fizzing; hydroxide + hydrogen</td><td>(Too dangerous)</td><td>Very vigorous</td></tr>
+        <tr><td>Magnesium</td><td>Very slow</td><td>Burns brightly; oxide + hydrogen</td><td>Vigorous fizzing</td></tr>
+        <tr><td>Zinc, iron</td><td>No reaction</td><td>React when heated; oxide + hydrogen</td><td>Steady to slow fizzing</td></tr>
+        <tr><td>Copper, silver, gold</td><td>No reaction</td><td>No reaction</td><td>No reaction</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4>Displacement reactions</h4>
+    <ul>
+      <li>A more reactive metal displaces a less reactive metal from a solution of its salt or from its oxide.</li>
+      <li>Zn(s) + CuSO<sub>4</sub>(aq) &rarr; ZnSO<sub>4</sub>(aq) + Cu(s): blue solution fades, pink-brown copper forms, temperature rises.</li>
+      <li>Thermite: 2Al(s) + Fe<sub>2</sub>O<sub>3</sub>(s) &rarr; Al<sub>2</sub>O<sub>3</sub>(s) + 2Fe(l)</li>
+      <li>You can use displacement results (and reactions with water and acid) to put unfamiliar metals into order of reactivity.</li>
+      <li><span class="key-term">Supplement</span> Reactivity is the tendency of a metal to form positive ions. A more reactive metal loses electrons more readily. Ionic equation: Zn(s) + Cu<sup>2+</sup>(aq) &rarr; Zn<sup>2+</sup>(aq) + Cu(s). Zinc is oxidised (loses electrons); copper ions are reduced (gain electrons).</li>
+      <li><span class="key-term">Supplement</span> Aluminium seems unreactive (e.g. no reaction with water, slow start with acid) because it is covered by a thin, tough, unreactive layer of aluminium oxide that prevents contact with water or acid.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Saying "copper reacts with dilute acid slowly". Copper is below hydrogen, so it does not react with dilute hydrochloric or sulfuric acid at all. Also do not say aluminium is unreactive: it is reactive, but protected by its oxide layer.</div>
+  
+    <h3>Corrosion of metals</h3>
+    <ul>
+      <li><strong>Rusting</strong> is the corrosion of iron and steel. It needs <strong>both water and oxygen</strong>. Rust is hydrated iron(III) oxide.</li>
+      <li>Classic experiment: iron nails in three tubes: (1) air and water &rarr; rusts; (2) boiled water with an oil layer (no oxygen) &rarr; no rust; (3) dry air with anhydrous calcium chloride (no water) &rarr; no rust.</li>
+      <li>Salt water speeds up rusting.</li>
+    </ul>
+    <h4>Preventing rusting</h4>
+    <ul>
+      <li><strong>Barrier methods</strong> keep out water and oxygen: painting, greasing or oiling, coating with plastic.</li>
+      <li><strong>Galvanising</strong>: coating iron with a layer of zinc.</li>
+      <li><span class="key-term">Supplement</span> Barrier methods work only while the coating is unbroken.</li>
+      <li><span class="key-term">Supplement</span> <strong>Sacrificial protection</strong>: a more reactive metal (zinc or magnesium) is attached to the iron. The more reactive metal loses electrons (is oxidised) in preference to iron, so iron does not rust. Used on ship hulls and pipelines. Zn(s) &rarr; Zn<sup>2+</sup>(aq) + 2e<sup>&minus;</sup></li>
+      <li><span class="key-term">Supplement</span> Galvanising protects in two ways: the zinc acts as a barrier, and if scratched the zinc still corrodes sacrificially instead of the iron.</li>
+    </ul>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>Explain why blocks of zinc attached to a steel ship hull stop the hull rusting, even where the paint is scratched. [3]</strong><br>Zinc is more reactive than iron.<br>Zinc loses electrons / is oxidised more readily than iron, so the zinc corrodes instead of the iron (sacrificial protection).<br>Electrons from the zinc flow to the iron, so iron does not form ions / is not oxidised.</div>
+  
+    <h3>Extraction of metals</h3>
+    <ul>
+      <li>The ease of extracting a metal depends on its position in the reactivity series.</li>
+      <li>Metals <strong>above carbon</strong> (K, Na, Ca, Mg, Al) are extracted by <strong>electrolysis</strong> of the molten compound.</li>
+      <li>Metals <strong>below carbon</strong> (Zn, Fe, Cu) are extracted by <strong>reduction with carbon</strong> (or carbon monoxide).</li>
+      <li>Very unreactive metals (silver, gold) are found uncombined (native).</li>
+    </ul>
+  
+    <h4>Iron from hematite in the blast furnace</h4>
+    <p>Raw materials: <strong>hematite</strong> (iron ore, mainly Fe<sub>2</sub>O<sub>3</sub>), <strong>coke</strong> (carbon), <strong>limestone</strong> (CaCO<sub>3</sub>) and hot air.</p>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Coke burns</strong><span>Carbon burns in hot air, releasing heat: C(s) + O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g)</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Carbon monoxide forms</strong><span>Carbon dioxide reacts with more coke: CO<sub>2</sub>(g) + C(s) &rarr; 2CO(g)</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Hematite is reduced</strong><span>Carbon monoxide reduces iron(III) oxide to molten iron: Fe<sub>2</sub>O<sub>3</sub>(s) + 3CO(g) &rarr; 2Fe(l) + 3CO<sub>2</sub>(g)</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Limestone decomposes</strong><span>Thermal decomposition: CaCO<sub>3</sub>(s) &rarr; CaO(s) + CO<sub>2</sub>(g)</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Slag forms</strong><span>Calcium oxide (basic) neutralises silicon(IV) oxide (acidic impurity, sand): CaO(s) + SiO<sub>2</sub>(s) &rarr; CaSiO<sub>3</sub>(l). Molten slag floats on the molten iron and is tapped off separately.</span></div></div>
+    </div>
+    <p><span class="key-term">Supplement</span> You must be able to write all five symbol equations above. Word equations are enough for Core.</p>
+  
+    <h4>Aluminium from bauxite</h4>
+    <ul>
+      <li>The main ore of aluminium is <strong>bauxite</strong>, which is purified to aluminium oxide (alumina), Al<sub>2</sub>O<sub>3</sub>.</li>
+      <li>Aluminium is too reactive to be reduced by carbon, so it is extracted by <strong>electrolysis</strong>.</li>
+      <li><span class="key-term">Supplement</span> Aluminium oxide is dissolved in molten <strong>cryolite</strong>. This lowers the operating temperature (saving energy and cost) and makes a better conductor than molten alumina alone.</li>
+      <li><span class="key-term">Supplement</span> Cathode (&minus;): Al<sup>3+</sup> + 3e<sup>&minus;</sup> &rarr; Al (molten aluminium collects at the bottom).</li>
+      <li><span class="key-term">Supplement</span> Anode (+): 2O<sup>2&minus;</sup> &rarr; O<sub>2</sub> + 4e<sup>&minus;</sup>. The carbon (graphite) anodes react with the oxygen to form carbon dioxide, C + O<sub>2</sub> &rarr; CO<sub>2</sub>, so they burn away and must be replaced regularly.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>In the blast furnace, the main reducing agent is <strong>carbon monoxide</strong>, not coke. Coke's job is to provide heat and to make the CO. Limestone's job is to remove the acidic impurity silicon(IV) oxide as slag &mdash; say "removes impurities" alone and you may miss the mark.</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can compare the physical properties of metals and non-metals and link uses of aluminium and copper to their properties.</li>
+      <li>I can describe alloys, name brass and stainless steel, and explain (Supplement) why alloys are harder using a structure diagram.</li>
+      <li>I can recall the reactivity series and describe reactions of metals with water, steam and dilute acid.</li>
+      <li>I can predict displacement reactions and write ionic equations for them (Supplement).</li>
+      <li>I can state the conditions for rusting and describe barrier methods, galvanising and sacrificial protection.</li>
+      <li>I can describe the blast furnace with equations and explain the role of each raw material.</li>
+      <li>I can explain why aluminium is extracted by electrolysis, why cryolite is used and why anodes are replaced.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 10. CHEMISTRY-ENVIRONMENT ==================== -->
+  <div class="section" id="sec-chemistry-environment">
+    <div class="section-header">
+      <span class="form-badge">Topic 10 &middot; Environment &amp; Organic</span>
+      <h2>Chemistry of the Environment</h2>
+      <p class="purpose">Water testing and treatment, fertilisers, the composition of air, the sources and effects of air pollutants, and climate change. Questions here reward precise cause-and-effect statements, so learn which pollutant comes from which source.</p>
+    </div>
+  
+    <h3>Water</h3>
+    <h4>Chemical tests for water</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Test</th><th>Result if water is present</th></tr></thead>
+      <tbody>
+        <tr><td>Add to anhydrous copper(II) sulfate</td><td>Turns from <strong>white to blue</strong></td></tr>
+        <tr><td>Add to anhydrous cobalt(II) chloride (e.g. on paper)</td><td>Turns from <strong>blue to pink</strong></td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>These tests show that water is <strong>present</strong>; they do not show it is pure.</li>
+      <li><strong>Physical test for purity:</strong> pure water melts at exactly 0 &deg;C and boils at exactly 100 &deg;C (at atmospheric pressure).</li>
+      <li><strong>Distilled water</strong> is used in practical chemistry instead of tap water because it contains fewer chemical impurities that could interfere with results.</li>
+    </ul>
+  
+    <h4>Substances found in water from natural sources and from pollution</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Substance</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td>Dissolved oxygen</td><td>Beneficial: needed by aquatic life for respiration</td></tr>
+        <tr><td>Metal compounds</td><td>Some beneficial (provide essential minerals for life); some harmful (toxic, e.g. compounds of lead or mercury)</td></tr>
+        <tr><td>Plastics</td><td>Harmful to aquatic life (swallowed, entanglement)</td></tr>
+        <tr><td>Sewage</td><td>Harmful: contains harmful microbes that cause disease</td></tr>
+        <tr><td>Nitrates (from fertilisers)</td><td>Harmful: lead to deoxygenation of water, damaging aquatic life</td></tr>
+        <tr><td>Phosphates (from fertilisers and detergents)</td><td>Harmful: lead to deoxygenation of water, damaging aquatic life</td></tr>
+      </tbody>
+    </table></div>
+    <p><span class="key-term">Supplement</span> You need to state which substances are beneficial and which are harmful, and why, as shown in the table. Deoxygenation happens because nitrates and phosphates cause rapid growth of algae; when the algae die, bacteria decompose them and use up the dissolved oxygen, so fish die (eutrophication).</p>
+  
+    <h4>Treatment of the domestic water supply</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Sedimentation</strong><span>Water stands in tanks so that large insoluble particles settle to the bottom.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Filtration</strong><span>Water passes through beds of sand and gravel to remove smaller insoluble solids.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Carbon</strong><span>Activated carbon removes substances that cause tastes and odours.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Chlorination</strong><span>Chlorine is added to kill harmful microbes.</span></div></div>
+    </div>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Writing that chlorine "cleans" the water or that filtration "removes bacteria". Chlorination <strong>kills microbes</strong>; filtration removes <strong>insoluble solids</strong>. Neither step removes dissolved substances such as salts.</div>
+  
+    <h3>Fertilisers</h3>
+    <ul>
+      <li>Common fertilisers are <strong>ammonium salts</strong> (e.g. ammonium nitrate, ammonium sulfate, ammonium phosphate) and <strong>nitrates</strong> (e.g. potassium nitrate).</li>
+      <li><strong>NPK fertilisers</strong> provide the three elements needed for improved plant growth: nitrogen (N), phosphorus (P) and potassium (K).</li>
+      <li>Nitrogen is needed for making proteins, so plants grow larger and greener; phosphorus helps root growth; potassium helps flowering and fruiting.</li>
+      <li>Ammonium salts are made by neutralising ammonia with an acid, e.g. NH<sub>3</sub>(aq) + HNO<sub>3</sub>(aq) &rarr; NH<sub>4</sub>NO<sub>3</sub>(aq).</li>
+    </ul>
+  
+    <h3>Air quality and climate</h3>
+    <h4>Composition of clean, dry air</h4>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Nitrogen</div><div class="conv-value">Approximately 78%</div></div>
+      <div class="convention-item"><div class="conv-label">Oxygen</div><div class="conv-value">Approximately 21%</div></div>
+      <div class="convention-item"><div class="conv-label">Remainder (about 1%)</div><div class="conv-value">Mainly noble gases (argon), plus carbon dioxide (about 0.04%)</div></div>
+    </div>
+  
+    <h4>Sources and adverse effects of air pollutants</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Pollutant</th><th>Source</th><th>Adverse effect</th></tr></thead>
+      <tbody>
+        <tr><td>Carbon dioxide</td><td>Complete combustion of carbon-containing fuels</td><td>Increased global warming, leading to climate change</td></tr>
+        <tr><td>Carbon monoxide</td><td>Incomplete combustion of carbon-containing fuels</td><td>Toxic gas (reduces the blood's ability to carry oxygen)</td></tr>
+        <tr><td>Particulates (soot, carbon)</td><td>Incomplete combustion of carbon-containing fuels</td><td>Increased risk of respiratory problems and cancer</td></tr>
+        <tr><td>Methane</td><td>Decomposition of vegetation and waste gases from digestion in animals (e.g. cattle)</td><td>Increased global warming, leading to climate change</td></tr>
+        <tr><td>Oxides of nitrogen (NO, NO<sub>2</sub>)</td><td>Car engines: nitrogen and oxygen from the air react at the high temperature</td><td>Acid rain, photochemical smog, respiratory problems</td></tr>
+        <tr><td>Sulfur dioxide</td><td>Combustion of fossil fuels that contain sulfur compounds</td><td>Acid rain</td></tr>
+      </tbody>
+    </table></div>
+    <p>Acid rain damages buildings made of limestone and marble, corrodes metal structures, kills trees and makes lakes too acidic for fish.</p>
+  
+    <h3><span class="key-term">Supplement</span> The greenhouse effect</h3>
+    <ul>
+      <li>The Sun's radiation passes through the atmosphere and warms the Earth's surface.</li>
+      <li>The Earth's surface emits thermal (infrared) energy.</li>
+      <li>Greenhouse gases (carbon dioxide, methane) <strong>absorb</strong> some of this thermal energy and <strong>re-emit</strong> it in all directions, including back towards the Earth, while some is <strong>reflected</strong> back into space.</li>
+      <li>Higher concentrations of greenhouse gases mean more thermal energy is kept in the atmosphere, so the average temperature rises (global warming) and climate changes.</li>
+    </ul>
+  
+    <h3><span class="key-term">Supplement</span> Strategies to reduce environmental effects</h3>
+    <h4>Climate change</h4>
+    <ul>
+      <li>Planting trees (they remove CO<sub>2</sub> by photosynthesis).</li>
+      <li>Reducing livestock farming (less methane).</li>
+      <li>Decreasing use of fossil fuels.</li>
+      <li>Increasing use of hydrogen as a fuel and of renewable energy such as wind and solar.</li>
+    </ul>
+    <h4>Acid rain</h4>
+    <ul>
+      <li>Using <strong>catalytic converters</strong> in vehicles.</li>
+      <li>Using <strong>low-sulfur fuels</strong>.</li>
+      <li><strong>Flue gas desulfurisation</strong> using calcium oxide in power stations: CaO(s) + SO<sub>2</sub>(g) &rarr; CaSO<sub>3</sub>(s)</li>
+    </ul>
+    <h4>Catalytic converters</h4>
+    <p>Catalytic converters remove oxides of nitrogen and carbon monoxide (and unburnt hydrocarbons) from exhaust gases using a platinum or rhodium catalyst:</p>
+    <ul>
+      <li>2CO(g) + 2NO(g) &rarr; 2CO<sub>2</sub>(g) + N<sub>2</sub>(g)</li>
+      <li>2NO<sub>2</sub>(g) + 4CO(g) &rarr; N<sub>2</sub>(g) + 4CO<sub>2</sub>(g)</li>
+      <li>2CO(g) + O<sub>2</sub>(g) &rarr; 2CO<sub>2</sub>(g)</li>
+    </ul>
+  
+    <h3>Photosynthesis</h3>
+    <ul>
+      <li>Word equation: carbon dioxide + water &rarr; glucose + oxygen, in the presence of light and chlorophyll.</li>
+      <li><span class="key-term">Supplement</span> Symbol equation: 6CO<sub>2</sub>(g) + 6H<sub>2</sub>O(l) &rarr; C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) + 6O<sub>2</sub>(g)</li>
+      <li>Photosynthesis removes carbon dioxide from the atmosphere, which is why deforestation adds to climate change.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Keep your pollutant stories separate. Carbon dioxide and methane cause <strong>global warming</strong>; sulfur dioxide and oxides of nitrogen cause <strong>acid rain</strong>. Carbon monoxide is <strong>toxic</strong> but is not a greenhouse gas answer and does not cause acid rain. Never link CO<sub>2</sub> to the "hole in the ozone layer".</div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>Explain how running a car engine leads to the formation of acid rain. [3]</strong><br>The high temperature inside the engine makes nitrogen and oxygen from the air react.<br>This forms oxides of nitrogen (e.g. nitrogen dioxide), which are released in the exhaust.<br>The oxides of nitrogen dissolve in rain water (with oxygen) to form nitric acid, which falls as acid rain.</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe the tests for water using copper(II) sulfate and cobalt(II) chloride, and test purity with melting and boiling points.</li>
+      <li>I can explain why distilled water is used in practical work.</li>
+      <li>I can list substances found in water and say whether each is beneficial or harmful, including how nitrates and phosphates cause deoxygenation.</li>
+      <li>I can describe the four stages of domestic water treatment.</li>
+      <li>I can name common fertilisers and explain what NPK stands for.</li>
+      <li>I can state the composition of clean air and match each pollutant to its source and effect.</li>
+      <li>I can explain the greenhouse effect and strategies to reduce climate change and acid rain, including catalytic converter equations (Supplement).</li>
+      <li>I can write the word (and symbol) equation for photosynthesis.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 11. ORGANIC-CHEMISTRY ==================== -->
+  <div class="section" id="sec-organic-chemistry">
+    <div class="section-header">
+      <span class="form-badge">Topic 11 &middot; Environment &amp; Organic</span>
+      <h2>Organic Chemistry</h2>
+      <p class="purpose">The chemistry of carbon compounds: naming and drawing them, fuels from petroleum, and the reactions of alkanes, alkenes, alcohols and carboxylic acids, finishing with polymers. It is a large, high-scoring topic where exact conditions and correct displayed formulae earn the marks.</p>
+    </div>
+  
+    <h3>Formulae and terminology</h3>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Molecular formula</div><div class="conv-value">Number and type of each atom in one molecule, e.g. C<sub>2</sub>H<sub>6</sub>O</div></div>
+      <div class="convention-item"><div class="conv-label">Structural formula</div><div class="conv-value">Unambiguous arrangement of atoms without drawing every bond, e.g. CH<sub>3</sub>CH<sub>2</sub>OH</div></div>
+      <div class="convention-item"><div class="conv-label">Displayed formula</div><div class="conv-value">Shows every atom and every bond</div></div>
+      <div class="convention-item"><div class="conv-label">General formula</div><div class="conv-value">Formula for a whole homologous series, e.g. C<sub>n</sub>H<sub>2n+2</sub></div></div>
+      <div class="convention-item"><div class="conv-label">Hydrocarbon</div><div class="conv-value">Compound containing hydrogen and carbon only</div></div>
+      <div class="convention-item"><div class="conv-label">Functional group</div><div class="conv-value">Atom or group of atoms that determines the chemical properties</div></div>
+    </div>
+    <ul>
+      <li>A <strong>homologous series</strong> is a family of similar compounds with similar chemical properties due to the presence of the same functional group.</li>
+      <li><span class="key-term">Supplement</span> Members of a homologous series have the same general formula, differ from one member to the next by a CH<sub>2</sub> unit, show a trend in physical properties (e.g. boiling point rises with chain length) and have similar chemical properties.</li>
+      <li><strong>Saturated</strong>: only single carbon&ndash;carbon bonds. <strong>Unsaturated</strong>: contains one or more C=C double (or triple) bonds.</li>
+      <li><span class="key-term">Supplement</span> <strong>Structural isomers</strong> are compounds with the same molecular formula but different structural formulae, e.g. butane CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub> and methylpropane CH<sub>3</sub>CH(CH<sub>3</sub>)CH<sub>3</sub>; or but-1-ene and but-2-ene.</li>
+    </ul>
+  
+    <h3>Naming organic compounds</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Series</th><th>Ending</th><th>Functional group</th><th>General formula</th><th>Examples (C1&ndash;C4)</th></tr></thead>
+      <tbody>
+        <tr><td>Alkanes</td><td>-ane</td><td>C&ndash;C single bonds only</td><td>C<sub>n</sub>H<sub>2n+2</sub></td><td>methane, ethane, propane, butane</td></tr>
+        <tr><td>Alkenes</td><td>-ene</td><td>C=C</td><td>C<sub>n</sub>H<sub>2n</sub></td><td>ethene, propene, but-1-ene, but-2-ene</td></tr>
+        <tr><td>Alcohols</td><td>-ol</td><td>&ndash;OH</td><td>C<sub>n</sub>H<sub>2n+1</sub>OH</td><td>methanol, ethanol, propan-1-ol, propan-2-ol, butan-1-ol</td></tr>
+        <tr><td>Carboxylic acids</td><td>-oic acid</td><td>&ndash;COOH</td><td>C<sub>n</sub>H<sub>2n+1</sub>COOH</td><td>methanoic, ethanoic, propanoic, butanoic acid</td></tr>
+        <tr><td>Esters</td><td>-yl -oate</td><td>&ndash;COO&ndash;</td><td>&mdash;</td><td>ethyl ethanoate, methyl propanoate</td></tr>
+      </tbody>
+    </table></div>
+    <div class="mnemonic"><span><strong>M</strong>eth = 1</span> <span><strong>E</strong>th = 2</span> <span><strong>P</strong>rop = 3</span> <span><strong>B</strong>ut = 4</span> &mdash; "Monkeys Eat Peeled Bananas"</div>
+    <ul>
+      <li>Core: name and draw displayed formulae of methane, ethane, ethene, ethanol, ethanoic acid and the products of their reactions.</li>
+      <li><span class="key-term">Supplement</span> Name and draw structural and displayed formulae of unbranched alkanes, alkenes, alcohols and carboxylic acids with up to four carbon atoms, and esters made from alcohols and acids each with up to four carbon atoms.</li>
+      <li><span class="key-term">Supplement</span> Ester names: alcohol part first (ending -yl), acid part second (ending -oate). Methanol + propanoic acid &rarr; methyl propanoate, CH<sub>3</sub>CH<sub>2</sub>COOCH<sub>3</sub>.</li>
+    </ul>
+  
+    <h3>Fuels and petroleum</h3>
+    <ul>
+      <li>Fossil fuels: <strong>coal, natural gas and petroleum</strong>. The main constituent of natural gas is <strong>methane</strong>.</li>
+      <li><strong>Petroleum</strong> is a mixture of hydrocarbons, separated into useful <strong>fractions</strong> by <strong>fractional distillation</strong>.</li>
+      <li>The crude oil is vaporised; vapours rise up a column that is hot at the bottom and cooler at the top. Each fraction condenses where the temperature falls below its boiling point range.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Fraction (top to bottom)</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td>Refinery gas</td><td>Gas for heating and cooking</td></tr>
+        <tr><td>Gasoline / petrol</td><td>Fuel for cars</td></tr>
+        <tr><td>Naphtha</td><td>Chemical feedstock (making other chemicals)</td></tr>
+        <tr><td>Kerosene / paraffin</td><td>Jet fuel</td></tr>
+        <tr><td>Diesel oil / gas oil</td><td>Fuel for diesel engines</td></tr>
+        <tr><td>Fuel oil</td><td>Fuel for ships and home heating systems</td></tr>
+        <tr><td>Lubricating oil</td><td>Lubricants, waxes and polishes</td></tr>
+        <tr><td>Bitumen</td><td>Making roads</td></tr>
+      </tbody>
+    </table></div>
+    <p>Moving from the bottom to the top of the column: chain length <strong>decreases</strong>, volatility <strong>increases</strong>, boiling point <strong>decreases</strong> and viscosity <strong>decreases</strong>.</p>
+  
+    <h3>Alkanes</h3>
+    <ul>
+      <li>Saturated hydrocarbons; generally unreactive apart from combustion.</li>
+      <li>Complete combustion: CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) &rarr; CO<sub>2</sub>(g) + 2H<sub>2</sub>O(l)</li>
+      <li><strong>Substitution</strong> with chlorine in the presence of ultraviolet light (a photochemical reaction): a hydrogen atom is replaced by a chlorine atom.</li>
+      <li><span class="key-term">Supplement</span> CH<sub>4</sub>(g) + Cl<sub>2</sub>(g) &rarr; CH<sub>3</sub>Cl(g) + HCl(g) (UV light). Further substitution can give CH<sub>2</sub>Cl<sub>2</sub>, CHCl<sub>3</sub> and CCl<sub>4</sub>.</li>
+    </ul>
+  
+    <h3>Alkenes</h3>
+    <ul>
+      <li>Made by <strong>cracking</strong> larger alkane molecules, using a <strong>high temperature and a catalyst</strong>. Cracking produces alkenes and hydrogen as well as smaller alkanes, e.g. C<sub>10</sub>H<sub>22</sub> &rarr; C<sub>8</sub>H<sub>18</sub> + C<sub>2</sub>H<sub>4</sub>.</li>
+      <li>Reasons for cracking: supply of long-chain fractions exceeds demand, while demand for shorter chains (petrol) and alkenes (for polymers) is greater than supply.</li>
+      <li><strong>Test for unsaturation</strong>: add aqueous bromine. Alkenes turn it from <strong>orange to colourless</strong>; alkanes leave it orange.</li>
+      <li><span class="key-term">Supplement</span> Alkenes undergo <strong>addition reactions</strong> in which only one product forms:</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Reagent</th><th>Conditions</th><th>Equation</th></tr></thead>
+      <tbody>
+        <tr><td>Bromine</td><td>Room temperature</td><td>C<sub>2</sub>H<sub>4</sub> + Br<sub>2</sub> &rarr; C<sub>2</sub>H<sub>4</sub>Br<sub>2</sub> (1,2-dibromoethane)</td></tr>
+        <tr><td>Hydrogen</td><td>Nickel catalyst, heat</td><td>C<sub>2</sub>H<sub>4</sub> + H<sub>2</sub> &rarr; C<sub>2</sub>H<sub>6</sub></td></tr>
+        <tr><td>Steam</td><td>Acid catalyst (phosphoric acid), about 300 &deg;C, 6000 kPa</td><td>C<sub>2</sub>H<sub>4</sub> + H<sub>2</sub>O &#8652; C<sub>2</sub>H<sub>5</sub>OH</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h3>Alcohols</h3>
+    <ul>
+      <li>Ethanol is made by <strong>fermentation</strong> of aqueous glucose at 25&ndash;35 &deg;C with yeast, in the absence of oxygen: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>(aq) &rarr; 2C<sub>2</sub>H<sub>5</sub>OH(aq) + 2CO<sub>2</sub>(g)</li>
+      <li>Or by <strong>catalytic addition of steam to ethene</strong> (see table above).</li>
+      <li>Combustion: C<sub>2</sub>H<sub>5</sub>OH(l) + 3O<sub>2</sub>(g) &rarr; 2CO<sub>2</sub>(g) + 3H<sub>2</sub>O(l)</li>
+      <li>Uses of ethanol: as a <strong>solvent</strong> and as a <strong>fuel</strong>.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th><span class="key-term">Supplement</span> Comparison</th><th>Fermentation</th><th>Hydration of ethene</th></tr></thead>
+      <tbody>
+        <tr><td>Raw material</td><td>Renewable (sugar from crops)</td><td>Non-renewable (ethene from petroleum)</td></tr>
+        <tr><td>Rate</td><td>Slow</td><td>Fast</td></tr>
+        <tr><td>Process type</td><td>Batch</td><td>Continuous</td></tr>
+        <tr><td>Purity of product</td><td>Low; needs fractional distillation</td><td>High</td></tr>
+        <tr><td>Energy needed</td><td>Low (low temperature)</td><td>High (high temperature and pressure)</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h3>Carboxylic acids</h3>
+    <ul>
+      <li>Ethanoic acid is a weak acid and shows typical acid reactions, forming <strong>ethanoate</strong> salts:</li>
+      <li>With metals: 2CH<sub>3</sub>COOH + Mg &rarr; (CH<sub>3</sub>COO)<sub>2</sub>Mg + H<sub>2</sub> (magnesium ethanoate)</li>
+      <li>With bases: CH<sub>3</sub>COOH + NaOH &rarr; CH<sub>3</sub>COONa + H<sub>2</sub>O (sodium ethanoate)</li>
+      <li>With carbonates: 2CH<sub>3</sub>COOH + Na<sub>2</sub>CO<sub>3</sub> &rarr; 2CH<sub>3</sub>COONa + H<sub>2</sub>O + CO<sub>2</sub></li>
+      <li><span class="key-term">Supplement</span> Ethanoic acid forms by oxidation of ethanol: (a) by bacterial oxidation during fermentation (wine turning to vinegar), or (b) with acidified aqueous potassium manganate(VII), which turns from purple to colourless.</li>
+      <li><span class="key-term">Supplement</span> Carboxylic acids react with alcohols, with a concentrated sulfuric acid catalyst and heat, to make <strong>esters</strong> and water: CH<sub>3</sub>COOH + C<sub>2</sub>H<sub>5</sub>OH &#8652; CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> + H<sub>2</sub>O (ethyl ethanoate).</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Naming esters the wrong way round. The product of ethanol and propanoic acid is <strong>ethyl propanoate</strong>, not propyl ethanoate. Also, in formulae remember the C of &ndash;COOH is counted in the chain: ethanoic acid is CH<sub>3</sub>COOH (two carbons).</div>
+  
+    <h3>Polymers</h3>
+    <ul>
+      <li><strong>Polymers</strong> are large molecules built up from many small units called <strong>monomers</strong>. Plastics are made from polymers.</li>
+      <li><strong>Addition polymerisation</strong>: many alkene monomers join; the C=C opens. Ethene forms poly(ethene).</li>
+      <li>Disposal problems of plastics (they are non-biodegradable): they take up space and persist in <strong>landfill</strong>; they <strong>accumulate in oceans</strong>, harming marine life; <strong>burning</strong> them forms toxic gases.</li>
+      <li><span class="key-term">Supplement</span> Identify the repeat unit and linkages in a polymer; deduce the polymer from a monomer and vice versa. Draw the repeat unit in brackets with continuation bonds through them and "n" outside, e.g. propene gives poly(propene) with repeat unit &ndash;[CH<sub>2</sub>&ndash;CH(CH<sub>3</sub>)]&ndash;.</li>
+      <li><span class="key-term">Supplement</span> <strong>Addition</strong> polymerisation gives only the polymer; <strong>condensation</strong> polymerisation joins monomers with two functional groups and also releases a small molecule such as water.</li>
+      <li><span class="key-term">Supplement</span> <strong>Nylon</strong> is a polyamide (amide linkage &ndash;CONH&ndash;) from a dicarboxylic acid and a diamine. <strong>PET</strong> is a polyester (ester linkage &ndash;COO&ndash;) from a dicarboxylic acid and a diol. PET can be converted back into monomers and re-polymerised, which aids recycling.</li>
+      <li><span class="key-term">Supplement</span> <strong>Proteins</strong> are natural polyamides formed by condensation polymerisation of <strong>amino acid</strong> monomers, joined by amide linkages.</li>
+    </ul>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>When drawing any displayed formula, check every carbon has exactly four bonds, every hydrogen one and every oxygen two. In the &ndash;COOH group draw the C=O and the O&ndash;H separately. Missing hydrogens or a five-bonded carbon lose the mark.</div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>Explain why cracking is carried out in oil refineries. [3]</strong><br>Fractional distillation produces more long-chain hydrocarbons than are needed (supply exceeds demand).<br>Cracking breaks these long-chain alkanes into shorter-chain alkanes, such as petrol, for which demand is high.<br>It also produces alkenes (and hydrogen), which are used to make polymers and other chemicals.</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can define homologous series, saturated, unsaturated and (Supplement) structural isomer.</li>
+      <li>I can name and draw alkanes, alkenes, alcohols, carboxylic acids and esters up to four carbons.</li>
+      <li>I can name the petroleum fractions, give their uses and describe trends down the column.</li>
+      <li>I can describe combustion and chlorine substitution of alkanes, and cracking with its conditions.</li>
+      <li>I can describe the bromine water test and (Supplement) addition reactions of alkenes with conditions.</li>
+      <li>I can describe and compare fermentation and hydration of ethene to make ethanol.</li>
+      <li>I can write reactions of ethanoic acid, including esterification (Supplement).</li>
+      <li>I can describe addition and condensation polymers, draw repeat units and explain plastic disposal problems.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 12. EXPERIMENTAL-TECHNIQUES ==================== -->
+  <div class="section" id="sec-experimental-techniques">
+    <div class="section-header">
+      <span class="form-badge">Topic 12 &middot; Practical Skills</span>
+      <h2>Experimental Techniques and Chemical Analysis</h2>
+      <p class="purpose">Choosing apparatus, carrying out titrations, separating and purifying mixtures, chromatography, and the full set of tests for ions and gases. This topic underpins the practical and alternative-to-practical papers, where exact colours and precise wording are essential.</p>
+    </div>
+  
+    <h3>Experimental design</h3>
+    <h4>Measuring apparatus</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Quantity</th><th>Apparatus</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Time</td><td>Stopwatch / stopclock</td><td>Seconds; start and stop at a clear, defined point</td></tr>
+        <tr><td>Temperature</td><td>Thermometer</td><td>&deg;C; read at eye level</td></tr>
+        <tr><td>Mass</td><td>Balance</td><td>g; tare with the container on</td></tr>
+        <tr><td>Volume of liquid (fixed)</td><td>Volumetric pipette</td><td>Very accurate for one fixed volume, e.g. 25.0 cm<sup>3</sup></td></tr>
+        <tr><td>Volume of liquid (variable)</td><td>Burette</td><td>Accurate to 0.05 cm<sup>3</sup>; delivers any volume up to 50 cm<sup>3</sup></td></tr>
+        <tr><td>Volume of liquid (approximate)</td><td>Measuring cylinder</td><td>Quick but less accurate</td></tr>
+        <tr><td>Volume of gas</td><td>Gas syringe</td><td>Accurate; alternatively collect over water in an inverted measuring cylinder</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>Be ready to suggest advantages and disadvantages of methods and apparatus, e.g. a gas syringe is more accurate than collecting over water, but collecting over water cannot be used for gases that dissolve (ammonia, hydrogen chloride).</li>
+      <li>Read volumes at the bottom of the meniscus, at eye level.</li>
+    </ul>
+  
+    <h4>Key terms</h4>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Solvent</div><div class="conv-value">A substance that dissolves a solute</div></div>
+      <div class="convention-item"><div class="conv-label">Solute</div><div class="conv-value">A substance that is dissolved in a solvent</div></div>
+      <div class="convention-item"><div class="conv-label">Solution</div><div class="conv-value">A mixture of one or more solutes dissolved in a solvent</div></div>
+      <div class="convention-item"><div class="conv-label">Saturated solution</div><div class="conv-value">A solution containing the maximum concentration of a solute dissolved in the solvent at a specified temperature</div></div>
+      <div class="convention-item"><div class="conv-label">Residue</div><div class="conv-value">A substance that remains after evaporation, distillation, filtration or any similar process</div></div>
+      <div class="convention-item"><div class="conv-label">Filtrate</div><div class="conv-value">A liquid or solution that has passed through a filter</div></div>
+    </div>
+  
+    <h3>Acid&ndash;base titrations</h3>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Measure the alkali</strong><span>Use a volumetric pipette (with filler) to transfer exactly 25.0 cm<sup>3</sup> of alkali into a conical flask.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Add indicator</strong><span>Add a few drops of a suitable indicator, e.g. methyl orange or thymolphthalein.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Fill the burette</strong><span>Rinse and fill the burette with acid; record the initial reading.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Titrate</strong><span>Add acid while swirling, then dropwise near the end-point, until the indicator just changes colour permanently. Record the final reading.</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Repeat</strong><span>The first run is a rough titration. Repeat until you have concordant results (within 0.10 cm<sup>3</sup>) and average them.</span></div></div>
+    </div>
+    <ul>
+      <li>End-point colours: methyl orange goes from yellow (alkali) to <strong>orange</strong> at the end-point (red in excess acid); thymolphthalein goes from <strong>blue to colourless</strong> as acid is added to alkali.</li>
+      <li>Titre = final reading &minus; initial reading. To make a pure salt, repeat without indicator using the known volumes, then crystallise.</li>
+    </ul>
+  
+    <h3>Chromatography</h3>
+    <ul>
+      <li>Paper chromatography separates mixtures of soluble coloured substances using a suitable solvent.</li>
+      <li>Method: draw a start line in <strong>pencil</strong> (graphite does not dissolve); spot the samples on it; stand the paper in solvent with the solvent level <strong>below</strong> the start line (so the spots do not dissolve into the bulk solvent); cover and allow the solvent to rise; remove and mark the solvent front.</li>
+      <li>A <strong>pure</strong> substance gives <strong>one spot</strong>; an impure substance (mixture) gives two or more spots.</li>
+      <li>Identify unknowns by comparing their spots with those of known substances run on the same paper: spots at the same height match.</li>
+      <li><span class="key-term">Supplement</span> Colourless substances are made visible with a <strong>locating agent</strong>, sprayed on the dried chromatogram.</li>
+      <li><span class="key-term">Supplement</span> R<sub>f</sub> = distance travelled by substance &divide; distance travelled by solvent. R<sub>f</sub> has no units and is always less than 1.</li>
+    </ul>
+    <div class="example-block"><div class="ex-label">Worked example</div><span class="key-term">Supplement</span> A spot moves 3.6 cm from the start line. The solvent front is 8.0 cm from the start line. Calculate the R<sub>f</sub> value.<br>R<sub>f</sub> = distance moved by substance &divide; distance moved by solvent<br>R<sub>f</sub> = 3.6 &divide; 8.0<br>R<sub>f</sub> = 0.45</div>
+  
+    <h3>Separation and purification</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Technique</th><th>Separates</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Filtration</td><td>An insoluble solid from a liquid</td><td>Sand from salt solution; excess metal oxide after making a salt</td></tr>
+        <tr><td>Crystallisation</td><td>A dissolved solid from its solution</td><td>Copper(II) sulfate crystals: heat to the point of crystallisation, cool, filter, dry between filter papers</td></tr>
+        <tr><td>Simple distillation</td><td>A solvent from a solution</td><td>Pure water from sea water</td></tr>
+        <tr><td>Fractional distillation</td><td>Miscible liquids with different boiling points</td><td>Ethanol from water; petroleum fractions</td></tr>
+        <tr><td>Paper chromatography</td><td>Soluble substances in a mixture</td><td>Dyes in ink</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>Choose a technique from the information given, e.g. solubility and boiling point data.</li>
+      <li><strong>Assessing purity:</strong> a pure substance has a <strong>sharp</strong> melting point and boiling point. Impurities <strong>lower</strong> the melting point and <strong>raise</strong> the boiling point, and make them occur over a range of temperatures.</li>
+      <li>Purity matters in food and medicines, where impurities could be harmful.</li>
+    </ul>
+  
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Heating a solution to dryness to get crystals. This can decompose the salt or drive off water of crystallisation. Heat only until a drop placed on a cold tile forms crystals (the point of crystallisation), then leave to cool.</div>
+  
+    <h3>Identification of ions and gases</h3>
+    <h4>Tests for anions</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Anion</th><th>Test</th><th>Positive result</th></tr></thead>
+      <tbody>
+        <tr><td>Carbonate, CO<sub>3</sub><sup>2&minus;</sup></td><td>Add dilute acid; bubble gas through limewater</td><td>Effervescence; carbon dioxide turns limewater milky</td></tr>
+        <tr><td>Chloride, Cl<sup>&minus;</sup></td><td>Acidify with dilute nitric acid, add aqueous silver nitrate</td><td>White precipitate</td></tr>
+        <tr><td>Bromide, Br<sup>&minus;</sup></td><td>Acidify with dilute nitric acid, add aqueous silver nitrate</td><td>Cream precipitate</td></tr>
+        <tr><td>Iodide, I<sup>&minus;</sup></td><td>Acidify with dilute nitric acid, add aqueous silver nitrate</td><td>Yellow precipitate</td></tr>
+        <tr><td>Nitrate, NO<sub>3</sub><sup>&minus;</sup></td><td>Add aqueous sodium hydroxide and aluminium foil; warm</td><td>Ammonia given off (turns damp red litmus blue)</td></tr>
+        <tr><td>Sulfate, SO<sub>4</sub><sup>2&minus;</sup></td><td>Acidify, add aqueous barium nitrate</td><td>White precipitate</td></tr>
+        <tr><td>Sulfite, SO<sub>3</sub><sup>2&minus;</sup></td><td>Add acidified aqueous potassium manganate(VII)</td><td>Turns from purple to colourless</td></tr>
+      </tbody>
+    </table></div>
+  
+    <h4>Tests for aqueous cations</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Cation</th><th>Aqueous sodium hydroxide</th><th>Aqueous ammonia</th></tr></thead>
+      <tbody>
+        <tr><td>Aluminium, Al<sup>3+</sup></td><td>White ppt, soluble in excess giving a colourless solution</td><td>White ppt, insoluble in excess</td></tr>
+        <tr><td>Ammonium, NH<sub>4</sub><sup>+</sup></td><td>Ammonia produced on warming</td><td>&mdash;</td></tr>
+        <tr><td>Calcium, Ca<sup>2+</sup></td><td>White ppt, insoluble in excess</td><td>No ppt or very slight white ppt</td></tr>
+        <tr><td>Chromium(III), Cr<sup>3+</sup></td><td>Green ppt, soluble in excess</td><td>Green ppt, insoluble in excess</td></tr>
+        <tr><td>Copper(II), Cu<sup>2+</sup></td><td>Light blue ppt, insoluble in excess</td><td>Light blue ppt, soluble in excess giving a dark blue solution</td></tr>
+        <tr><td>Iron(II), Fe<sup>2+</sup></td><td>Green ppt, insoluble in excess (turns brown near the surface on standing)</td><td>Green ppt, insoluble in excess</td></tr>
+        <tr><td>Iron(III), Fe<sup>3+</sup></td><td>Red-brown ppt, insoluble in excess</td><td>Red-brown ppt, insoluble in excess</td></tr>
+        <tr><td>Zinc, Zn<sup>2+</sup></td><td>White ppt, soluble in excess giving a colourless solution</td><td>White ppt, soluble in excess giving a colourless solution</td></tr>
+      </tbody>
+    </table></div>
+    <p>Aluminium and zinc give identical results with sodium hydroxide; use aqueous ammonia to tell them apart (only zinc hydroxide dissolves in excess ammonia).</p>
+  
+    <h4>Flame tests for metal ions</h4>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Lithium, Li<sup>+</sup></div><div class="conv-value">Red</div></div>
+      <div class="convention-item"><div class="conv-label">Sodium, Na<sup>+</sup></div><div class="conv-value">Yellow</div></div>
+      <div class="convention-item"><div class="conv-label">Potassium, K<sup>+</sup></div><div class="conv-value">Lilac</div></div>
+      <div class="convention-item"><div class="conv-label">Calcium, Ca<sup>2+</sup></div><div class="conv-value">Orange-red</div></div>
+      <div class="convention-item"><div class="conv-label">Barium, Ba<sup>2+</sup></div><div class="conv-value">Light green</div></div>
+      <div class="convention-item"><div class="conv-label">Copper(II), Cu<sup>2+</sup></div><div class="conv-value">Blue-green</div></div>
+    </div>
+    <p>Use a clean nichrome or platinum wire dipped in concentrated hydrochloric acid, then in the sample, and hold it in a blue (roaring) Bunsen flame.</p>
+  
+    <h4>Tests for gases</h4>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Gas</th><th>Test</th><th>Positive result</th></tr></thead>
+      <tbody>
+        <tr><td>Ammonia, NH<sub>3</sub></td><td>Damp red litmus paper</td><td>Turns blue</td></tr>
+        <tr><td>Carbon dioxide, CO<sub>2</sub></td><td>Bubble through limewater</td><td>Limewater turns milky</td></tr>
+        <tr><td>Chlorine, Cl<sub>2</sub></td><td>Damp litmus paper</td><td>Bleached (turns white)</td></tr>
+        <tr><td>Hydrogen, H<sub>2</sub></td><td>Lighted splint</td><td>Squeaky pop</td></tr>
+        <tr><td>Oxygen, O<sub>2</sub></td><td>Glowing splint</td><td>Relights</td></tr>
+        <tr><td>Sulfur dioxide, SO<sub>2</sub></td><td>Acidified aqueous potassium manganate(VII)</td><td>Turns from purple to colourless</td></tr>
+      </tbody>
+    </table></div>
+    <p>Water is tested with anhydrous copper(II) sulfate (white to blue) or cobalt(II) chloride (blue to pink); see Topic 10.</p>
+  
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Write test <strong>and</strong> result, with the exact reagent: "acidified aqueous silver nitrate", not "silver". "Cloudy" or "milky" limewater is credited; "chalky" is not. For chlorine say "bleaches damp litmus paper"; damp blue litmus may turn red first, then white. For precipitates always say whether they dissolve in excess.</div>
+  
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>A solid is a white powder. Describe tests to show it is ammonium sulfate. [4]</strong><br>Warm a sample with aqueous sodium hydroxide; a gas is given off that turns damp red litmus paper blue, showing ammonia and so ammonium ions.<br>Dissolve a sample in water, add dilute nitric (or hydrochloric) acid, then aqueous barium nitrate.<br>A white precipitate forms, showing sulfate ions.</div>
+  
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can choose apparatus for measuring time, temperature, mass and volume, and compare their accuracy.</li>
+      <li>I can define solvent, solute, solution, saturated solution, residue and filtrate.</li>
+      <li>I can describe an acid&ndash;base titration with a burette, volumetric pipette and indicator.</li>
+      <li>I can describe paper chromatography, interpret chromatograms and (Supplement) calculate R<sub>f</sub> values and use locating agents.</li>
+      <li>I can choose between filtration, crystallisation, simple and fractional distillation and assess purity from melting and boiling points.</li>
+      <li>I can recall the tests and results for anions, cations (NaOH, NH<sub>3</sub> and flame tests) and gases.</li>
+    </ul></div>
+  </div>
+
+</main>
+</div>
+
+    <!-- WhatsApp CTA -->
+    <section class="cta-section">
+        <h2>Need Help With IGCSE Chemistry?</h2>
+        <p>Book a one-on-one tutoring session and get personalised help with the topics you find hardest.</p>
+        <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with Paula on WhatsApp
+        </a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur</p>
+    </footer>
+
+
+    <script>
+    function showSection(id, fromHash) {
+      var sec = document.getElementById('sec-' + id);
+      if (!sec) return;
+      document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('active'); });
+      document.querySelectorAll('.nav-item').forEach(function(n) { n.classList.remove('active'); });
+      sec.classList.add('active');
+
+      var nav = document.querySelector('.nav-item[data-section="' + id + '"]');
+      if (nav) nav.classList.add('active');
+
+      // Keep the open topic in the URL so it can be linked to and survives a refresh
+      if (!fromHash && location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+
+      if (!fromHash) document.querySelector('.notes-layout').scrollIntoView();
+
+      if (window.innerWidth <= 768) {
+        document.querySelector('.sidebar').classList.remove('open');
+        document.querySelector('.overlay').classList.remove('open');
+      }
+    }
+
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+      document.querySelector('.overlay').classList.toggle('open');
+    }
+
+    if (location.hash) showSection(location.hash.slice(1), true);
+    window.addEventListener('hashchange', function() { showSection(location.hash.slice(1), true); });
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://paulamikki1-boop.github.io/paula-tutor-profile/" },
+            { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://paulamikki1-boop.github.io/paula-tutor-profile/resources/" },
+            { "@type": "ListItem", "position": 3, "name": "IGCSE Chemistry Notes" }
+        ]
+    }
+    </script>
+
+    <!-- LearningResource Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "IGCSE Chemistry Notes: All 12 Topics (Cambridge 0620, 2026-2028)",
+        "description": "Free Cambridge IGCSE Chemistry (0620) revision notes for the 2026-2028 syllabus, covering all 12 topics, with key definitions, equations, worked calculations, chemical tests, examiner tips and checklists.",
+        "educationalLevel": "IGCSE",
+        "about": { "@type": "Thing", "name": "Chemistry" },
+        "author": { "@type": "Person", "name": "Paula" },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+</body>
+</html>
