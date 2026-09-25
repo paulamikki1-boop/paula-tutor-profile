@@ -14,6 +14,8 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   ├── _template-notes.html                    — Template for written notes resources
 │   ├── igcse-chemistry-past-paper-technique/
 │   │   └── index.html                          — Full resource page
+│   ├── igcse-english-writing-forms/
+│   │   └── index.html                          — Full resource page (sidebar-navigated notes)
 │   ├── a-level-biology-key-definitions/
 │   │   └── index.html                          — Stub (coming soon)
 │   ├── igcse-physics-formula-sheet/
