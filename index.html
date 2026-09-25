@@ -235,6 +235,40 @@
     color: rgba(255,255,255,0.85);
     margin-bottom: 1.2rem;
   }
+  .about-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  .about-point {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(74,144,217,0.3);
+    border-radius: 4px;
+    padding: 1.1rem 1.2rem;
+  }
+  .about-point-head {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+  .about-point-icon { font-size: 1.2rem; }
+  .about-point ul { list-style: none; margin: 0; padding: 0; }
+  .about-point li {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0.35rem;
+  }
+  .about-point li::before {
+    content: '';
+    position: absolute; left: 0; top: 0.6em;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent);
+  }
   .about-credentials {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -574,6 +608,30 @@
     transition: opacity 0.2s, transform 0.15s;
   }
   .whatsapp-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+  .facebook-btn {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: #1877F2;
+    color: white;
+    padding: 1rem 2.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin: 0.5rem;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .facebook-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+  .cta-section .whatsapp-btn { margin: 0.5rem; }
+  .fb-alt {
+    display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+    margin-top: 1rem;
+    color: #1877F2;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .fb-alt:hover { text-decoration: underline; }
   .location-tag {
     display: inline-flex; align-items: center; gap: 0.4rem;
     background: rgba(74,144,217,0.15);
@@ -625,6 +683,7 @@
     .approach-list { grid-template-columns: 1fr; }
     .photos-grid { grid-template-columns: 1fr 1fr; }
     .about-credentials { grid-template-columns: 1fr 1fr; }
+    .about-points { grid-template-columns: 1fr; }
     .reviews-grid { grid-template-columns: 1fr; }
     .message-box { padding: 1.5rem; }
     .message-section { padding: 4rem 1.5rem; }
@@ -688,9 +747,41 @@
   <div class="section-title">Your <em>IGCSE, GCSE & A Level tutor</em></div>
   <div class="about-grid">
     <div class="about-text">
-      <p>Hi, I'm Paula, an experienced IGCSE, GCSE and A Level tutor based in Kuala Lumpur. I offer online and in person tuition for Cambridge and Edexcel across sciences, maths, business, and more. I know exactly what it takes to excel because I've sat these exams myself.</p>
-      <p>I graduated with a Bachelor's Degree in Biotechnology and have been tutoring since 2021. My lessons are tailored to each student, whether you need help understanding a tricky topic or want intensive past paper practice before your exams.</p>
-      <p>Sessions are flexible, ranging from one to two hours, and available online or in person in KL. I also provide comprehensive notes and study resources.</p>
+      <p>Hi, I'm Paula, an experienced IGCSE, GCSE and A Level tutor based in Kuala Lumpur. I know exactly what it takes to excel because I've sat these exams myself.</p>
+      <div class="about-points">
+        <div class="about-point">
+          <div class="about-point-head"><span class="about-point-icon">👋</span> What I teach</div>
+          <ul>
+            <li>IGCSE, GCSE and A Level</li>
+            <li>Cambridge and Edexcel</li>
+            <li>Sciences, maths, business and more</li>
+          </ul>
+        </div>
+        <div class="about-point">
+          <div class="about-point-head"><span class="about-point-icon">🎓</span> My background</div>
+          <ul>
+            <li>Bachelor's Degree in Biotechnology</li>
+            <li>Tutoring since 2021</li>
+            <li>Sat the same exams myself</li>
+          </ul>
+        </div>
+        <div class="about-point">
+          <div class="about-point-head"><span class="about-point-icon">📚</span> My lessons</div>
+          <ul>
+            <li>Tailored to each student</li>
+            <li>Help with tricky topics</li>
+            <li>Intensive past paper practice</li>
+            <li>Comprehensive notes and study resources</li>
+          </ul>
+        </div>
+        <div class="about-point">
+          <div class="about-point-head"><span class="about-point-icon">🗓️</span> Sessions</div>
+          <ul>
+            <li>Flexible, one to two hours</li>
+            <li>Online, or in person in KL</li>
+          </ul>
+        </div>
+      </div>
       <div class="about-credentials">
         <div class="credential">
           <div class="credential-icon">🏆</div>
@@ -735,10 +826,7 @@
 <section class="subjects" id="subjects">
   <div class="section-label">IGCSE, GCSE & A Level Tuition</div>
   <div class="section-title">Subjects <em>I Teach</em></div>
-  <p style="color:var(--muted); margin-top:0.5rem; margin-bottom:1.5rem; max-width:560px; line-height:1.7;">
-    I offer IGCSE, GCSE and A Level tutoring for both Cambridge and Edexcel exam boards. Available for online tuition or in person sessions in Kuala Lumpur.
-  </p>
-  <div style="margin-bottom:2rem;">
+  <div style="margin-top:1.5rem; margin-bottom:2rem;">
     <span class="exam-badge">Cambridge</span>
     <span class="exam-badge">Edexcel</span>
     <span class="exam-badge">Oct / Nov Prep</span>
@@ -899,6 +987,7 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.529 5.852L0 24l6.335-1.502A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.502-5.18-1.378l-.37-.218-3.833.909.973-3.72-.241-.386A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Send via WhatsApp
     </button>
+    <a href="https://www.facebook.com/paulamikkitutor" class="fb-alt" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971h-1.513c-1.491 0-1.956.93-1.956 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg> Prefer Facebook? Message me there</a>
   </div>
 </section>
 
@@ -906,15 +995,19 @@
   <div class="section-label">Get Started</div>
   <div class="section-title">Ready for your <em>A*?</em></div>
   <div class="location-tag">Kuala Lumpur · Online & In Person</div>
-  <p>Limited slots available for Cambridge and Edexcel exam preparation. Reach out on WhatsApp to check availability and book your first IGCSE, GCSE or A Level tutoring session.</p>
+  <p>Limited slots available for Cambridge and Edexcel exam preparation. Reach out on WhatsApp or Facebook to check availability and book your first IGCSE, GCSE or A Level tutoring session.</p>
   <a href="https://wa.me/60103686902" class="whatsapp-btn">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.529 5.852L0 24l6.335-1.502A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.502-5.18-1.378l-.37-.218-3.833.909.973-3.72-.241-.386A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
     WhatsApp Me to Book
   </a>
+  <a href="https://www.facebook.com/paulamikkitutor" class="facebook-btn" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971h-1.513c-1.491 0-1.956.93-1.956 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+    Message Me on Facebook
+  </a>
 </section>
 
 <footer>
-  &copy; 2025 Paula &middot; IGCSE, GCSE & A Level Tutor &middot; Cambridge & Edexcel &middot; Kuala Lumpur
+  &copy; 2025 Paula &middot; IGCSE, GCSE & A Level Tutor &middot; Cambridge & Edexcel &middot; Kuala Lumpur &middot; <a href="https://www.facebook.com/paulamikkitutor" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none;">Facebook</a>
 </footer>
 
 <script>
