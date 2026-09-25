@@ -57,6 +57,17 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--accent); }
+  .nav-toggle {
+    display: none;
+    align-items: center; gap: 0.5rem;
+    background: none; border: 1px solid var(--sky); border-radius: 6px;
+    padding: 0.45rem 0.8rem;
+    font: inherit; font-size: 0.8rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--navy); cursor: pointer;
+  }
+  .nav-toggle-icon { display: inline-flex; flex-direction: column; gap: 3px; }
+  .nav-toggle-icon span { display: block; width: 16px; height: 2px; background: currentColor; border-radius: 1px; }
 
   .hero {
     min-height: 100vh;
@@ -589,7 +600,17 @@
 
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--sky);
+      box-shadow: 0 8px 24px rgba(30,58,95,0.08);
+    }
+    nav.open .nav-links { display: flex; }
+    .nav-links a { display: block; padding: 0.9rem 1.5rem; border-top: 1px solid var(--sky); }
     .hero { padding: 6rem 1.5rem 3rem; }
     .hero::before { display: none; }
     .hero-inner { flex-direction: column; gap: 2rem; text-align: center; }
@@ -614,12 +635,15 @@
 
 <nav>
   <div class="nav-logo">Paula<span>.</span></div>
-  <ul class="nav-links">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+    <span class="nav-toggle-icon"><span></span><span></span><span></span></span> Menu
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#subjects">Subjects</a></li>
     <li><a href="#student-proof">Results</a></li>
     <li><a href="#reviews">Reviews</a></li>
-    <li><a href="/resources/">Resources</a></li>
+    <li><a href="resources/">Resources</a></li>
     <li><a href="#message">Message</a></li>
   </ul>
 </nav>
@@ -894,6 +918,21 @@
 </footer>
 
 <script>
+// Mobile menu: open/close, and close again after picking a link
+(function() {
+  var nav = document.querySelector('nav');
+  var toggle = nav.querySelector('.nav-toggle');
+  toggle.addEventListener('click', function() {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
 function openLightbox(el) {
   var img = el.querySelector('img');
   document.getElementById('lightbox-img').src = img.src;
