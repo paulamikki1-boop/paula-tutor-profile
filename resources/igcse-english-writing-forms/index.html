@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGCSE English Writing Forms: Notes &amp; Model Answers | Paula — IGCSE &amp; A Level Tutor</title>
+    <meta name="description" content="Cambridge IGCSE English (0500) notes on every writing form: report, article, speech, letter, interview, journal and news report, with top-band model answers.">
+    <link rel="canonical" href="/resources/igcse-english-writing-forms/">
+    <meta property="og:title" content="IGCSE English Writing Forms — Free Study Resource">
+    <meta property="og:description" content="Cambridge IGCSE English (0500) notes on every writing form: report, article, speech, letter, interview, journal and news report, with top-band model answers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/resources/igcse-english-writing-forms/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+  /* Site palette (matches the profile and other resource pages) */
+  --navy: #0a1628;
+  --blue: #1e3a5f;
+  --blue-mid: #2a5080;
+  --blue-light: #3a6ea5;
+  --sky: #e8f0fe;
+  --white: #ffffff;
+  --off-white: #f5f8fc;
+  --site-muted: #4a5568;
+  --site-accent: #4a90d9;
+
+  /* Notes tokens mapped onto the site palette */
+  --bg: var(--white);
+  --bg-card: var(--white);
+  --bg-sidebar: var(--navy);
+  --bg-sidebar-hover: var(--blue);
+  --bg-sidebar-active: var(--blue-mid);
+  --bg-tip: var(--sky);
+  --bg-mistake: #fdf0ec;
+  --bg-structure: var(--off-white);
+  --bg-checklist: #f0f7e6;
+  --text: var(--navy);
+  --text-muted: var(--site-muted);
+  --text-sidebar: #c9d6e8;
+  --text-sidebar-active: #ffffff;
+  --accent: var(--blue-mid);
+  --accent-light: var(--site-accent);
+  --gold: var(--blue);
+  --gold-bg: var(--sky);
+  --border: #dde4ee;
+  --border-light: #e8eef6;
+  --red: #c0392b;
+  --shadow: 0 1px 3px rgba(10,22,40,0.06), 0 1px 2px rgba(10,22,40,0.04);
+  --shadow-lg: 0 4px 12px rgba(10,22,40,0.08);
+  --radius: 8px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.notes-layout {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--bg-sidebar);
+  color: var(--text-sidebar);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar-header h1 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.sidebar-header .syllabus {
+  font-size: 12px;
+  color: var(--text-sidebar);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.3);
+  padding: 20px 20px 8px;
+  font-weight: 600;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-size: 14px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  user-select: none;
+}
+
+.nav-item:hover { background: var(--bg-sidebar-hover); }
+.nav-item.active {
+  background: var(--bg-sidebar-active);
+  color: var(--text-sidebar-active);
+  border-left-color: #fff;
+}
+
+.nav-item .nav-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-item.active .nav-icon { background: rgba(255,255,255,0.15); }
+
+/* Sub-navigation within sections */
+.subnav {
+  display: none;
+  flex-direction: column;
+  padding: 4px 0 8px;
+}
+.subnav.show { display: flex; }
+
+.subnav-item {
+  padding: 6px 20px 6px 58px;
+  font-size: 13px;
+  color: var(--text-sidebar);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.subnav-item:hover { color: #fff; background: var(--bg-sidebar-hover); }
+.subnav-item.active { color: var(--accent-light); }
+
+/* Main content */
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 40px 60px;
+  max-width: 900px;
+}
+
+.section { display: none; }
+.section.active { display: block; }
+
+.section-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+}
+
+.section-header .form-badge {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-tip);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  text-wrap: balance;
+}
+
+.section-header .purpose {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+/* Content blocks */
+h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 36px 0 16px;
+  color: var(--blue);
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin: 24px 0 10px;
+}
+
+p { margin-bottom: 12px; max-width: 640px; }
+
+ul, ol {
+  margin: 0 0 16px 20px;
+  max-width: 640px;
+}
+li { margin-bottom: 6px; }
+li strong { color: var(--text); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+/* Structure diagram cards */
+.structure-card {
+  background: var(--bg-structure);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.structure-card .step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.structure-card .step + .step { border-top: 1px solid var(--border-light); }
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.step-content strong { display: block; font-size: 14px; font-weight: 600; }
+.step-content span { font-size: 14px; color: var(--text-muted); }
+
+/* Tip boxes */
+.tip-box {
+  background: var(--bg-tip);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.tip-box .tip-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* Mistake boxes */
+.mistake-box {
+  background: var(--bg-mistake);
+  border-left: 3px solid var(--red);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.mistake-box .mistake-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+/* Checklist */
+.checklist {
+  background: var(--bg-checklist);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.checklist h4 {
+  margin-top: 0;
+  color: var(--gold);
+}
+
+.checklist ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.checklist li {
+  padding: 4px 0;
+  padding-left: 22px;
+  position: relative;
+}
+
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Key terms */
+.key-term {
+  display: inline-block;
+  background: var(--gold-bg);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+/* Table */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--bg-structure);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+/* Example block */
+.example-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.example-block .ex-label {
+  font-style: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+/* Mnemonic */
+.mnemonic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.mnemonic span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.mnemonic span strong {
+  color: var(--accent);
+  font-size: 15px;
+}
+
+/* Conventions grid */
+.conventions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.convention-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.convention-item .conv-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.convention-item .conv-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hamburger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  transition: transform 0.2s;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 90;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .notes-layout { display: block; }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .overlay.open { display: block; }
+  .main {
+    padding: 8px 16px 40px;
+  }
+  .section-header h2 { font-size: 30px; }
+  h3 { font-size: 21px; }
+  .conventions { grid-template-columns: 1fr 1fr; }
+}
+
+/* Scroll anchoring */
+[id] { scroll-margin-top: 20px; }
+
+/* Model answer blocks */
+.model-block {
+  margin: 20px 0;
+}
+
+.model-text {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 20px 24px;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: none;
+}
+
+.model-text p { font-style: italic; max-width: none; }
+.model-text p:last-child { margin-bottom: 0; }
+
+.model-annotation {
+  background: var(--bg-tip);
+  border: 1px solid var(--border-light);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 14px 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.model-annotation strong { color: var(--accent); font-weight: 600; }
+
+.model-score {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+  font-style: normal;
+}
+
+.model-task {
+  background: var(--bg-structure);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 16px 0 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.model-task .task-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+/* Site chrome */
+.nav { background: var(--navy); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.nav a { text-decoration: none; }
+.nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--white); }
+.nav-links { display: flex; gap: 1.25rem; align-items: center; }
+.nav-links a { color: var(--sky); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--white); }
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: #25d366; color: var(--white) !important; padding: 0.5rem 1.1rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+.whatsapp-btn:hover { background: #1da851; }
+
+.breadcrumbs { padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--site-muted); }
+.breadcrumbs a { color: var(--accent); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+/* WhatsApp CTA */
+.cta-section {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 2rem;
+}
+.cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 0.75rem; }
+.cta-section p { color: var(--sky); margin-bottom: 1.25rem; }
+.cta-section .whatsapp-btn { font-size: 1rem; padding: 0.7rem 1.5rem; }
+
+.footer { background: var(--navy); color: var(--sky); text-align: center; padding: 1.5rem; font-size: 0.85rem; }
+.footer a { color: var(--accent); text-decoration: none; }
+
+.cta-section h2 { font-weight: 700; }
+.cta-section p, .footer p { max-width: none; margin-bottom: 1.25rem; }
+.footer p { margin-bottom: 0; }
+
+@media print {
+  .nav, .breadcrumbs, .hamburger, .overlay, .sidebar, .cta-section, .footer { display: none !important; }
+  body { font-size: 11pt; background: #fff; }
+  .main { padding: 0; max-width: 100%; }
+  .tip-box, .mistake-box, .checklist, .structure-card, .model-block, table { page-break-inside: avoid; }
+  h2, h3, h4 { page-break-after: avoid; }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="nav-brand">Paula</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/resources/">Resources</a>
+            <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="breadcrumbs">
+        <a href="/">Home</a> &rsaquo; <a href="/resources/">Resources</a> &rsaquo; IGCSE English Writing Forms
+    </div>
+
+<button class="hamburger" onclick="toggleSidebar()" aria-label="Open topic navigation">
+  <span class="hamburger-icon"><span></span><span></span><span></span></span> Browse topics
+</button>
+
+<div class="notes-layout">
+<div class="overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h1>IGCSE English Writing Forms</h1>
+    <div class="syllabus">Cambridge IGCSE 0500 &middot; First Language</div>
+  </div>
+
+  <div class="nav-section-label">Writing Forms</div>
+
+  <div class="nav-item active" data-section="report" onclick="showSection('report')">
+    <div class="nav-icon">R</div> Report
+  </div>
+  <div class="nav-item" data-section="article" onclick="showSection('article')">
+    <div class="nav-icon">A</div> Article
+  </div>
+  <div class="nav-item" data-section="speech" onclick="showSection('speech')">
+    <div class="nav-icon">S</div> Speech
+  </div>
+  <div class="nav-item" data-section="letter" onclick="showSection('letter')">
+    <div class="nav-icon">L</div> Letter
+  </div>
+  <div class="nav-item" data-section="persuasive" onclick="showSection('persuasive')">
+    <div class="nav-icon">P</div> Persuasive Writing
+  </div>
+  <div class="nav-item" data-section="interview" onclick="showSection('interview')">
+    <div class="nav-icon">I</div> Interview
+  </div>
+  <div class="nav-item" data-section="journal" onclick="showSection('journal')">
+    <div class="nav-icon">J</div> Journal
+  </div>
+  <div class="nav-item" data-section="newspaper" onclick="showSection('newspaper')">
+    <div class="nav-icon">N</div> Newspaper Report
+  </div>
+
+  <div class="nav-section-label">Model Answers</div>
+  <div class="nav-item" data-section="model-letter" onclick="showSection('model-letter')">
+    <div class="nav-icon">L</div> Letter (40/40)
+  </div>
+  <div class="nav-item" data-section="model-article" onclick="showSection('model-article')">
+    <div class="nav-icon">A</div> Article (40/40)
+  </div>
+  <div class="nav-item" data-section="model-speech" onclick="showSection('model-speech')">
+    <div class="nav-icon">S</div> Speech (40/40)
+  </div>
+  <div class="nav-item" data-section="model-descriptive" onclick="showSection('model-descriptive')">
+    <div class="nav-icon">D</div> Descriptive (40/40)
+  </div>
+  <div class="nav-item" data-section="model-narrative" onclick="showSection('model-narrative')">
+    <div class="nav-icon">N</div> Narrative (40/40)
+  </div>
+  <div class="nav-item" data-section="model-journal" onclick="showSection('model-journal')">
+    <div class="nav-icon">J</div> Journal (Top Band)
+  </div>
+  <div class="nav-item" data-section="model-newspaper" onclick="showSection('model-newspaper')">
+    <div class="nav-icon">N</div> News Report (Top Band)
+  </div>
+  <div class="nav-item" data-section="model-foodwaste" onclick="showSection('model-foodwaste')">
+    <div class="nav-icon">A</div> Article: Food Waste (40/40)
+  </div>
+  <div class="nav-item" data-section="model-cashfree" onclick="showSection('model-cashfree')">
+    <div class="nav-icon">S</div> Speech: Cash-Free (40/40)
+  </div>
+
+  <div class="nav-section-label">Quick Reference</div>
+  <div class="nav-item" data-section="comparison" onclick="showSection('comparison')">
+    <div class="nav-icon">&harr;</div> Form Comparison
+  </div>
+  <div class="nav-item" data-section="techniques" onclick="showSection('techniques')">
+    <div class="nav-icon">&loz;</div> Techniques Glossary
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ==================== REPORT ==================== -->
+  <div class="section active" id="sec-report">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Directed &amp; Composition</span>
+      <h2>Writing a Report</h2>
+      <p class="purpose">Present relevant information in an ordered way and make carefully considered suggestions. A mixture of fact and opinion, written for someone in authority.</p>
+    </div>
+
+    <h3>Purpose &amp; Audience</h3>
+    <p>Reports are written for a <strong>reader in a position of authority</strong> &mdash; a principal, employer, committee chair. The tone is <strong>formal, impersonal, and objective</strong>. You are presenting findings and recommendations, not personal feelings.</p>
+    <p>Reports can serve two purposes: to <strong>offer suggestions</strong> based on experience, or to <strong>present alternatives</strong> so the reader can decide.</p>
+
+    <h3>Three-Part Structure</h3>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Overview / Introduction</strong>
+          <span>Briefly introduce the topic and outline what the report will cover. The reader should understand the scope from this section alone.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Middle / Findings</strong>
+          <span>Develop and support relevant facts and opinions. Use subheadings to group related points. Include both positives and areas for improvement.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>End / Recommendations</strong>
+          <span>Summarise suggestions, recommendations, or solutions. Include any new points for future consideration.</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Key Features of the Form</h3>
+    <div class="conventions">
+      <div class="convention-item">
+        <div class="conv-label">Addressing</div>
+        <div class="conv-value">"To the Principal"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Title</div>
+        <div class="conv-value">"A report on&hellip;"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Subheadings</div>
+        <div class="conv-value">Yes &mdash; essential</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Bullet Points</div>
+        <div class="conv-value">Sparingly, for key lists</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Register</div>
+        <div class="conv-value">Formal &amp; impersonal</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Tone</div>
+        <div class="conv-value">Calm, polite, objective</div>
+      </div>
+    </div>
+
+    <h3>Language &amp; Tone</h3>
+    <ul>
+      <li><strong>Impersonal and formal</strong> &mdash; no slang, no contractions (don't, can't), no humour or sarcasm.</li>
+      <li><strong>Objective perspective</strong> &mdash; distance yourself from criticism. Report what was said indirectly: "It was suggested that&hellip;" rather than "I think&hellip;"</li>
+      <li><strong>Calm and polite</strong> &mdash; avoid emotive language and personal appeals. Your reader needs to trust the evaluation is accurate.</li>
+      <li><strong>Range of topic vocabulary</strong> &mdash; show subject knowledge through appropriate terminology.</li>
+      <li><strong>Logical connectives</strong> &mdash; "in conclusion", "as a consequence", "furthermore", "however".</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-label">Examiner Tip</div>
+      The report form is one of the most structured. Use <strong>clear subheadings</strong> to show organisation &mdash; this alone signals to the examiner that you understand the form. Group similar points under each heading.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      Writing a report as if it were a personal letter or diary entry. Reports should <strong>not</strong> be full of "I felt" and "I think". Distance yourself and report findings objectively.
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>Addressed to someone in authority</li>
+        <li>Clear title: "A report on&hellip;"</li>
+        <li>Subheadings used to organise sections</li>
+        <li>Formal, impersonal register throughout</li>
+        <li>Balance of fact and opinion</li>
+        <li>Logical linking words between sections</li>
+        <li>Concluding recommendations or suggestions</li>
+        <li>No slang, contractions, humour, or sarcasm</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== ARTICLE ==================== -->
+  <div class="section" id="sec-article">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Directed &amp; Composition</span>
+      <h2>Writing an Article</h2>
+      <p class="purpose">Inform and persuade readers about a topic, bringing together different perspectives. Articles can present a balanced argument or advocate for a particular viewpoint.</p>
+    </div>
+
+    <h3>Purpose &amp; Audience</h3>
+    <p>Articles appear in <strong>newspapers, magazines, and school publications</strong>. You don't know your readers personally, so consider their likely interests and experience. The tone is <strong>semi-formal</strong> &mdash; more relaxed than a report, but still controlled.</p>
+    <p>An article can either <strong>persuade readers to agree</strong> with a viewpoint, or <strong>present both sides</strong> and let readers decide.</p>
+
+    <h3>Three-Part Structure</h3>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Introduction</strong>
+          <span>Engage the reader's interest. Introduce the argument or main points. A rhetorical question or striking fact works well as a hook.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Middle / Development</strong>
+          <span>Develop points with evidence, examples, and contrasting viewpoints. Each paragraph should advance the argument or explore a new angle.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>End / Conclusion</strong>
+          <span>Draw points together. Leave the reader with a clear impression of the argument or viewpoints to consider.</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Key Features of the Form</h3>
+    <div class="conventions">
+      <div class="convention-item">
+        <div class="conv-label">Headline</div>
+        <div class="conv-value">Attention-grabbing title</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Subheadings</div>
+        <div class="conv-value">Optional, for longer pieces</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Register</div>
+        <div class="conv-value">Semi-formal</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Viewpoints</div>
+        <div class="conv-value">Multiple, or one strong</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Engagement</div>
+        <div class="conv-value">Rhetorical Qs, quotes</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Expert Voices</div>
+        <div class="conv-value">Quotations from sources</div>
+      </div>
+    </div>
+
+    <h3>Language &amp; Tone</h3>
+    <ul>
+      <li><strong>Semi-formal tone</strong> &mdash; imagine your article being read aloud. Match the tone to the topic (a film review can be wry; a news piece must be measured).</li>
+      <li><strong>Varied sentence structures</strong> &mdash; mix short, punchy sentences with longer, complex ones to maintain reader interest.</li>
+      <li><strong>Contrasting viewpoints</strong> &mdash; acknowledge both sides. Use "however", "on the other hand", "conversely" to signal shifts.</li>
+      <li><strong>Expert quotations</strong> &mdash; "'You and your real friends may not always be able to meet in person,' explains one lifestyle expert." This adds authority.</li>
+      <li><strong>Linking words</strong> &mdash; "in addition", "likewise", "similarly", "however", "nevertheless".</li>
+    </ul>
+
+    <div class="example-block">
+      <div class="ex-label">Example Opening</div>
+      "In recent years, technology has taken over our daily lives. Many people claim that they simply couldn't imagine a life without the internet and social media. So are your online friendships doing you more harm than good?"
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Examiner Tip</div>
+      The headline is the first thing the examiner sees. Make it <strong>relevant and engaging</strong> &mdash; not just a restatement of the question. A good headline can set the tone for the entire piece.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      Using the same sentence structures and repetitive vocabulary throughout. Articles require <strong>varied grammatical structures</strong> and a wide range of vocabulary to keep the reader engaged.
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>Engaging headline relevant to the topic</li>
+        <li>Hook in the opening paragraph</li>
+        <li>Contrasting viewpoints explored fairly</li>
+        <li>Evidence: quotes, statistics, examples</li>
+        <li>Semi-formal, varied tone throughout</li>
+        <li>Linking words to connect paragraphs</li>
+        <li>Strong conclusion with a clear final impression</li>
+        <li>Optional subheadings if the article is long</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== SPEECH ==================== -->
+  <div class="section" id="sec-speech">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Directed &amp; Composition</span>
+      <h2>Writing a Speech</h2>
+      <p class="purpose">Inform, persuade, or motivate a live audience. Written to be spoken aloud &mdash; the words must sound natural and carry a speaker's energy on the page.</p>
+    </div>
+
+    <h3>Purpose &amp; Audience</h3>
+    <p>Speeches are delivered to a <strong>specific audience</strong> (classmates, parents, a public meeting). The speaker has a relationship with the listeners and can address them directly. Consider whether your audience is <strong>likely to agree or disagree</strong> with you.</p>
+    <p>Speeches can inform, persuade, or call the audience to action &mdash; "join this club", "change this policy", "think differently about this issue".</p>
+
+    <h3>Three-Part Structure</h3>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Opening &mdash; Grab Attention</strong>
+          <span>Pose a question, use a dramatic statement, or share a striking anecdote. Make the topic and your stance clear immediately.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Middle &mdash; Developed Argument</strong>
+          <span>Support your argument with real-life examples, anecdotes, evidence. Build paragraph by paragraph, each pushing the argument forward.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Conclusion &mdash; Powerful Close</strong>
+          <span>Use a tricolon (rule of three), a thought-provoking question, or a memorable image. Thank the audience. End with momentum, not a fade-out.</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Key Features of the Form</h3>
+    <div class="conventions">
+      <div class="convention-item">
+        <div class="conv-label">Greeting</div>
+        <div class="conv-value">"Good morning&hellip;"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Direct Address</div>
+        <div class="conv-value">"you", "we", "all of us"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Register</div>
+        <div class="conv-value">Semi-formal to formal</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Closing</div>
+        <div class="conv-value">"Thank you for listening"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Rhetorical Qs</div>
+        <div class="conv-value">Central to the form</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Inclusive "we"</div>
+        <div class="conv-value">Unite speaker &amp; audience</div>
+      </div>
+    </div>
+
+    <h3>Language &amp; Tone</h3>
+    <ul>
+      <li><strong>Spoken register</strong> &mdash; imagine saying the words aloud. Vary pace: short, punchy sentences for emphasis; longer ones for development.</li>
+      <li><strong>Inclusive language</strong> &mdash; "we", "all of us", "our" makes listeners feel you're on the same side.</li>
+      <li><strong>Deal with objections</strong> &mdash; "A few people may still think, however&hellip;" Then defeat the objection.</li>
+      <li><strong>Emotive word choice</strong> &mdash; choose words that appeal to the emotions of your listeners. Your tone must match your message.</li>
+      <li><strong>Rhetorical devices</strong> &mdash; questions, tricolons, repetition, dramatic pauses (signalled by short sentences or ellipses).</li>
+    </ul>
+
+    <div class="example-block">
+      <div class="ex-label">Example Opening</div>
+      "Good morning everyone. How did you all spend your weekend? Did you go hiking perhaps or climb the mountains? Guess what I did. Not hiking, not climbing, no &mdash; I spent the whole of yesterday afternoon learning vocab with my best friend Tony!"
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Examiner Tip</div>
+      The speech must <strong>sound like speech</strong>. If it reads like an essay with "Good morning" tacked on, you have not used the form. Think about dramatic pauses, audience reactions, and conversational asides.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      Writing an essay and adding "Good morning" at the start and "Thank you" at the end. A speech needs <strong>audience interaction</strong> throughout &mdash; rhetorical questions, direct address, reactions to imagined audience responses.
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>Appropriate greeting for the audience</li>
+        <li>Attention-grabbing opening (question, anecdote, drama)</li>
+        <li>Direct address: "you", "we", "our" throughout</li>
+        <li>Rhetorical questions woven through the speech</li>
+        <li>Anecdotes and real-life examples for evidence</li>
+        <li>Varied pace: short punchy + longer reflective</li>
+        <li>Objections acknowledged and defeated</li>
+        <li>Powerful conclusion with a call to action</li>
+        <li>Thanks to the audience at the close</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== LETTER ==================== -->
+  <div class="section" id="sec-letter">
+    <div class="section-header">
+      <span class="form-badge">Paper 1 Q4 &middot; Paper 2 Directed</span>
+      <h2>Writing a Letter</h2>
+      <p class="purpose">Inform, persuade, or communicate an experience or point of view to a specific reader. Formal letters follow strict conventions; informal letters allow a warmer register.</p>
+    </div>
+
+    <h3>Purpose &amp; Audience</h3>
+    <p>Letters are written to <strong>one specific reader</strong> (though you may not know their name). The formality depends entirely on the relationship: a letter to an editor or hotel manager is formal; to a friend, informal.</p>
+    <p>Purposes include: complaint, persuasion, application, request, sharing experiences, or responding to an article.</p>
+
+    <h3>Three-Part Structure</h3>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Opening Paragraph</strong>
+          <span>State the overall aim and make clear why you are writing. "I am writing in connection with&hellip;" or "I am writing to express my concern about&hellip;"</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Middle / Development</strong>
+          <span>Explain and develop your points. Each paragraph addresses one aspect. Support with evidence, examples, details.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>End / Closing</strong>
+          <span>Summarise main points, state the action you expect, or leave the reader with your key message. Close with an appropriate sign-off.</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Letter Conventions</h3>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Element</th><th>Formal (unknown name)</th><th>Formal (known name)</th><th>Informal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Opening</td><td>Dear Sir/Madam</td><td>Dear Mr/Mrs [Name]</td><td>Dear [First name]</td></tr>
+            <tr><td>Sign-off</td><td>Yours faithfully</td><td>Yours sincerely</td><td>Best wishes / Regards</td></tr>
+            <tr><td>Register</td><td>Highly formal</td><td>Formal</td><td>Conversational</td></tr>
+            <tr><td>Contractions</td><td>No</td><td>No</td><td>Yes</td></tr>
+            <tr><td>Address/Date</td><td>Yes &mdash; both parties</td><td>Yes &mdash; both parties</td><td>Optional</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Language &amp; Tone</h3>
+    <ul>
+      <li><strong>Match formality to audience</strong> &mdash; formal for unknown/authority readers; informal for friends and family.</li>
+      <li><strong>Remain calm and polite</strong> &mdash; even when complaining. Anger weakens your position.</li>
+      <li><strong>Formal linking words</strong> &mdash; "furthermore", "however", "in conclusion", "additionally".</li>
+      <li><strong>Time markers</strong> &mdash; "I am currently", "previously", "prior to that" to make timescales clear.</li>
+      <li><strong>Varied sentence structures</strong> &mdash; avoid simple, repetitive patterns. Range of complex sentences signals command of language.</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-label">Examiner Tip</div>
+      <strong>"Yours faithfully"</strong> goes with <strong>"Dear Sir/Madam"</strong> (you don't know the name). <strong>"Yours sincerely"</strong> goes with <strong>"Dear Mr/Mrs [Name]"</strong> (you know the name). Getting this wrong loses form marks.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      Mixing "Yours faithfully" with "Dear Mr Smith" or vice versa. Also: forgetting to acknowledge positives before criticising (in complaint letters), which makes the tone sound unreasonable.
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>Correct greeting matched to sign-off</li>
+        <li>Opening paragraph states the purpose clearly</li>
+        <li>Paragraphed development of points</li>
+        <li>Formal linking words and time markers</li>
+        <li>Calm, polite tone even in complaints</li>
+        <li>Balanced view: acknowledge positives if relevant</li>
+        <li>Clear statement of expected action at the end</li>
+        <li>Correct sign-off (faithfully / sincerely)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== PERSUASIVE ==================== -->
+  <div class="section" id="sec-persuasive">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Composition &middot; Argumentative option</span>
+      <h2>Persuasive Writing</h2>
+      <p class="purpose">Build a structured case using evidence, counter-argument, and rhetorical technique. State your position upfront and hold it consistently. The form for candidates who think analytically.</p>
+    </div>
+
+    <h3>The Five-Section Shape</h3>
+    <p>Within 350&ndash;450 words, the persuasive essay has a tight, predictable structure:</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Section</th><th>~Words</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Introduction</td><td>50</td><td>State position, signal angle</td></tr>
+            <tr><td>Body paragraph 1</td><td>80</td><td>First main argument (PEEL)</td></tr>
+            <tr><td>Body paragraph 2</td><td>80</td><td>Second main argument (PEEL)</td></tr>
+            <tr><td>Body paragraph 3</td><td>80</td><td>Third main argument (PEEL)</td></tr>
+            <tr><td>Counter-argument</td><td>80</td><td>Acknowledge + defeat opposing view</td></tr>
+            <tr><td>Conclusion</td><td>50</td><td>Reframe &mdash; most memorable version of your case</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>DAFOREST &mdash; Eight Persuasive Techniques</h3>
+    <p>A mnemonic for the techniques to deploy in service of your argument:</p>
+    <div class="mnemonic">
+      <span><strong>D</strong>irect address</span>
+      <span><strong>A</strong>lliteration</span>
+      <span><strong>F</strong>acts</span>
+      <span><strong>O</strong>pinion</span>
+      <span><strong>R</strong>hetorical Qs</span>
+      <span><strong>E</strong>motive language</span>
+      <span><strong>S</strong>tatistics</span>
+      <span><strong>T</strong>riplets (rule of 3)</span>
+    </div>
+    <p>Aim for <strong>4&ndash;5 different techniques per essay</strong>. Used in service of argument &mdash; never as decoration alone.</p>
+
+    <h3>Three Types of Evidence</h3>
+    <p>Mix all three across the essay. Pure assertion ("I think uniforms are bad") has no evidence and scores poorly.</p>
+    <ul>
+      <li><strong>Statistical / data evidence</strong> &mdash; "Tallinn's free-transport pilot reduced city-centre car traffic by 9% in its first year." Persuades the analytical mind.</li>
+      <li><strong>Examples / case studies</strong> &mdash; "Hasselt in Belgium ran the world's first universal free-bus scheme for almost two decades." Concrete and memorable.</li>
+      <li><strong>Anecdote / human story</strong> &mdash; "Take Priya, a sixteen-year-old who used her gap year to volunteer." Persuades the emotional mind.</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-label">Inventing Evidence</div>
+      Cambridge mark schemes <strong>accept plausible invented evidence</strong>. You can invent named studies, named places, and named individuals. The standard is plausibility &mdash; would a casual reader believe this exists?
+    </div>
+
+    <h3>Counter-Argument &mdash; The Top-Band Move</h3>
+    <p>A persuasive essay that ignores the opposing view feels naive. One that acknowledges and defeats it signals analytical maturity. This is the <strong>clearest single discriminator for the top band</strong>.</p>
+
+    <h4>The Four Steps</h4>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content"><strong>Concede</strong><span>Briefly admit the strength of the opposing view: "Critics will argue that&hellip;" / "The concern is fair."</span></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content"><strong>State fairly</strong><span>Don't strawman. Present the <em>strongest</em> version of the opposing case (steelman it).</span></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content"><strong>Defeat with evidence</strong><span>Show why your position still wins, using data, examples, or anecdote.</span></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content"><strong>Reaffirm</strong><span>Return to your main thread. The reader must know which side you are on.</span></div>
+      </div>
+    </div>
+
+    <h3>Rhetorical Tools</h3>
+    <p>Devices serve the argument. They don't decorate it. Use 1&ndash;2 instances of each, and <strong>4&ndash;5 different devices</strong> across the essay.</p>
+    <ul>
+      <li><strong>Rule of three</strong> &mdash; "Less pollution, lower healthcare costs, fewer cars on the road."</li>
+      <li><strong>Antithesis</strong> &mdash; "The question is not whether we can afford to act &mdash; it is whether we can afford NOT to."</li>
+      <li><strong>Concession</strong> &mdash; "Critics are right that initial costs are real." Signals fairness before defeating it.</li>
+      <li><strong>Rhetorical question</strong> &mdash; "Are we content to keep paying the higher cost of inaction?" Frames the answer in your favour.</li>
+      <li><strong>Aphoristic claim</strong> &mdash; "Tradition is not nothing &mdash; but it is not, in this instance, enough." Short, quotable, for conclusions.</li>
+    </ul>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistakes</div>
+      <strong>No counter-argument</strong> &mdash; caps you at mid-band. <strong>Argument-by-assertion</strong> &mdash; "Uniforms are bad because they make students unhappy" with no evidence. <strong>Stacking rhetorical questions</strong> &mdash; three in a row reads as decoration. <strong>Sitting on the fence</strong> &mdash; persuasion is not a balanced report.
+    </div>
+
+    <div class="example-block">
+      <div class="ex-label">Model Counter-Argument Paragraph</div>
+      "Critics will argue that abolishing uniforms invites distraction, peer pressure, and the same brand competition uniforms were meant to silence. The concern is fair. Yet the same Australian schools that ended the requirement found that a simple dress code produced no rise in distraction and substantial gains in student satisfaction. Replacing uniforms with a thoughtful dress code is not, as critics fear, the absence of policy &mdash; it is a more proportionate version of one."
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>State position upfront &mdash; no fence-sitting</li>
+        <li>Five-section shape: intro, 3 body, counter-arg, conclusion</li>
+        <li>Three evidence types mixed: data, examples, anecdote</li>
+        <li>Counter-argument: concede, state, defeat, reaffirm</li>
+        <li>4&ndash;5 different rhetorical devices across the essay</li>
+        <li>Reframe in conclusion &mdash; don't just restate</li>
+        <li>Confident but not aggressive tone</li>
+        <li>350&ndash;450 words</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== INTERVIEW ==================== -->
+  <div class="section" id="sec-interview">
+    <div class="section-header">
+      <span class="form-badge">Paper 1 Q4 &middot; Paper 2 Directed</span>
+      <h2>Writing an Interview</h2>
+      <p class="purpose">Two voices, one structure. Speaker labels, varied question types, a distinctive interviewee voice, and source texts woven naturally into answers. The form for candidates who want to dramatise an argument.</p>
+    </div>
+
+    <h3>Interview Anatomy</h3>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content"><strong>Framing Paragraph (~50 words)</strong><span>Sets up who, why, when. "Maya Chen, a Year 11 student, spent eighteen months campaigning for&hellip; She spoke to us this week."</span></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content"><strong>5&ndash;6 Q&amp;A Pairs</strong><span>Each pair on a new line with speaker labels. Questions shorter than answers. Variable answer length &mdash; mix short and long.</span></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content"><strong>Brief Close</strong><span>End on the final answer. No formal sign-off (or one polite line max). The last answer should be the most memorable.</span></div>
+      </div>
+    </div>
+
+    <h3>Key Features of the Form</h3>
+    <div class="conventions">
+      <div class="convention-item">
+        <div class="conv-label">Speaker Labels</div>
+        <div class="conv-value">Every turn, new line</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Label Format</div>
+        <div class="conv-value">"Interviewer:" / "[Name]:"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Framing Intro</div>
+        <div class="conv-value">2&ndash;3 sentences before Q&amp;A</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Word Count</div>
+        <div class="conv-value">250&ndash;300 words typical</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Answer Length</div>
+        <div class="conv-value">Varied: short &amp; long</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Source Texts</div>
+        <div class="conv-value">In interviewee's answers</div>
+      </div>
+    </div>
+
+    <h3>The Five Question Types</h3>
+    <p>Mix all five across the interview. Each does a different job.</p>
+    <ul>
+      <li><strong>Opening question</strong> &mdash; establish topic. "Maya, you've been doing this for over a year. What got you started?"</li>
+      <li><strong>Open exploratory</strong> &mdash; invite reflection. "What did you find when you spoke to other students?" Uses "what", "how", "why".</li>
+      <li><strong>Specific factual</strong> &mdash; get details. "How many incidents have been reported?" Short, concrete answer.</li>
+      <li><strong>Challenging question</strong> &mdash; raise counter-argument. "Some councillors argued the cost was prohibitive. How did you respond?" This is where the counter-argument lives.</li>
+      <li><strong>Closing question</strong> &mdash; forward-looking. "What needs to happen next?" Most memorable lines come here.</li>
+    </ul>
+
+    <h3>Building a Distinctive Interviewee Voice</h3>
+    <p>The interviewee should feel like a real person, not a position-paper with a name.</p>
+    <ul>
+      <li><strong>Distinctive vocabulary</strong> &mdash; match to character. A scientist uses precise terms; a teenager uses youthful idiom; an activist uses direct, urgent language.</li>
+      <li><strong>Pacing variation</strong> &mdash; some answers short and decisive, others longer and reflective. The same person gives both kinds.</li>
+      <li><strong>Self-correction / hesitation</strong> &mdash; "Well&hellip;", "Actually, let me put that differently", "Honestly?" signals authentic speech.</li>
+      <li><strong>Favourite framings</strong> &mdash; a character who twice uses "the way I see it" has a more memorable voice than one who never repeats.</li>
+    </ul>
+
+    <h3>Weaving Source Texts into Answers</h3>
+    <p>Reading marks (15/40) still apply. Source ideas live in the <strong>interviewee's answers</strong>, not labelled academically.</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th style="color:var(--accent)">Do</th><th style="color:var(--red)">Don't</th></tr></thead>
+          <tbody>
+            <tr><td>"The first article I read described a survey showing that&hellip;"</td><td>"Text A says&hellip;"</td></tr>
+            <tr><td>"A friend sent me an article that put numbers on what I'd been feeling&hellip;"</td><td>"According to the second source&hellip;"</td></tr>
+            <tr><td>Interviewee uses source data as their own knowledge</td><td>Quoting source passages verbatim at length</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Examiner Tip</div>
+      Top-band interviews are praised for <strong>"varied question types, authentic voice, and skilful integration of source material"</strong>. The most-flagged failure is uniform questions and uniform answer length, flattening the rhythm of a real conversation.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistakes</div>
+      <strong>Repeating Text C</strong> instead of developing it &mdash; lifting sentences from the source. <strong>Every question the same type</strong> ("Tell me about&hellip;" repeated). <strong>No distinctive voice</strong> &mdash; the interviewee sounds like a generic essay. <strong>No challenging question</strong> &mdash; misses the counter-argument.
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>Framing intro: who, why, when</li>
+        <li>Speaker labels on every turn, new line per speaker</li>
+        <li>Five question types: opening, open, specific, challenging, closing</li>
+        <li>Variable answer length &mdash; short and long mixed</li>
+        <li>Distinctive interviewee voice: vocabulary, pacing, framings</li>
+        <li>Source ideas in interviewee's answers, in their own voice</li>
+        <li>Counter-argument in the challenging question</li>
+        <li>Memorable final answer</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== JOURNAL ==================== -->
+  <div class="section" id="sec-journal">
+    <div class="section-header">
+      <span class="form-badge">Paper 1 Q4 &middot; Paper 2 Directed Writing</span>
+      <h2>Writing a Journal Entry</h2>
+      <p class="purpose">A personal, reflective piece written in first person with intimate tone. Record thoughts, feelings, and reflections on an event or experience &mdash; honest, private, and introspective.</p>
+    </div>
+
+    <h3>Purpose &amp; Audience</h3>
+    <p>A journal entry is written <strong>for yourself</strong> &mdash; there is no external audience. This makes it the most personal form in the exam. The tone is <strong>intimate, honest, and reflective</strong>. You can express doubt, confusion, mixed feelings, and private thoughts that you would not share in a letter or article.</p>
+    <p>Examiners reward <strong>emotional depth</strong> and <strong>genuine reflection</strong> &mdash; not just describing what happened, but exploring what it meant to you and what you learned.</p>
+
+    <h3>Structure</h3>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Date</strong>
+          <span>Write a date at the top &mdash; this is essential journal form. E.g. "Monday, 15 June 2026" or "15th June."</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Opening &mdash; Set the Mood</strong>
+          <span>Start with a feeling, question, or striking moment: "I still can&rsquo;t believe what happened today." Hook the reader into your emotional state immediately.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Event Description</strong>
+          <span>Describe what happened with key details &mdash; chronologically or thematically. Include sensory detail to bring the experience alive.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Feelings &amp; Reactions</strong>
+          <span>Express emotional responses honestly and specifically. "I felt a mix of relief and guilt" beats "I was sad." Name the specific emotions.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <strong>Reflection &amp; Closing</strong>
+          <span>What did it mean? What did you learn? A final thought or forward look: "I realise now that&hellip;" or "Tomorrow I&rsquo;ll try to&hellip;"</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Key Features of the Form</h3>
+    <div class="conventions">
+      <div class="convention-item">
+        <div class="conv-label">Date</div>
+        <div class="conv-value">At the top &mdash; essential</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Salutation</div>
+        <div class="conv-value">"Dear Diary" optional, not required</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Person</div>
+        <div class="conv-value">First person: "I", "my", "me"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Register</div>
+        <div class="conv-value">Informal, personal, reflective</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Tone</div>
+        <div class="conv-value">Intimate, honest, introspective</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Contractions</div>
+        <div class="conv-value">Yes &mdash; "can&rsquo;t", "I&rsquo;ve", "didn&rsquo;t"</div>
+      </div>
+    </div>
+
+    <h3>Language &amp; Tone</h3>
+    <ul>
+      <li><strong>First person throughout</strong> &mdash; "I", "my", "me". This is the one form where every sentence should feel personal.</li>
+      <li><strong>Informal register is appropriate</strong> &mdash; contractions, conversational phrasing, sentence fragments for effect ("What a day.").</li>
+      <li><strong>Specific emotion words</strong> &mdash; don&rsquo;t default to "happy" or "sad". Use precise terms: anxious, relieved, humiliated, elated, conflicted, grateful.</li>
+      <li><strong>Sensory and descriptive detail</strong> &mdash; bring the experience alive through what you saw, heard, felt. This is not a report &mdash; it&rsquo;s a lived experience.</li>
+      <li><strong>Internal questions</strong> &mdash; journals naturally ask "Why did I do that?" or "What was I thinking?" This creates authentic voice.</li>
+      <li><strong>Reflection, not just narration</strong> &mdash; describe what happened, then explore what it meant. The reflection is what separates top-band from mid-band.</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-label">Examiner Tip</div>
+      The biggest distinction between a journal and a narrative is <strong>reflection</strong>. A narrative tells the story; a journal tells the story <em>and</em> thinks about it afterwards. If the question asks you to "reflect," make sure at least one-third of your response is looking back on what the event meant, not just describing it.
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Voice Tip</div>
+      A journal entry should read like someone thinking on paper. Use natural pauses: "I suppose, looking back, I should have seen it coming." Internal monologue, self-correction ("Actually, that&rsquo;s not quite right &mdash; what I really felt was&hellip;"), and rhetorical self-questioning all create an authentic journal voice.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      <strong>Describing without feeling.</strong> Students write a blow-by-blow account of the event without expressing emotions or reflecting on meaning. If the question says "record your thoughts and feelings," the feelings must be there &mdash; not implied, but stated.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      <strong>Using third person or formal register.</strong> "It was observed that the event was enjoyable" is report register, not journal. Write: "I couldn&rsquo;t stop smiling &mdash; I haven&rsquo;t felt that alive in months."
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>Date at the top of the entry</li>
+        <li>First person ("I") throughout</li>
+        <li>Informal, personal, reflective register</li>
+        <li>Opening with emotional impact, not "Today I went to&hellip;"</li>
+        <li>Key events described with sensory detail</li>
+        <li>Specific emotion words, not generic "happy/sad"</li>
+        <li>Reflection on what the experience meant or taught you</li>
+        <li>Internal questions and honest self-examination</li>
+        <li>Forward-looking closing thought</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== NEWSPAPER REPORT ==================== -->
+  <div class="section" id="sec-newspaper">
+    <div class="section-header">
+      <span class="form-badge">Paper 1 Q4 &middot; Paper 2 Directed Writing</span>
+      <h2>Writing a Newspaper Report</h2>
+      <p class="purpose">A factual, impersonal report for a general readership. Lead with the most important information, attribute opinions to named sources, and maintain an objective third-person register throughout.</p>
+    </div>
+
+    <h3>Purpose &amp; Audience</h3>
+    <p>A newspaper report is written for a <strong>general readership</strong> &mdash; think BBC News, The Guardian&rsquo;s news pages, a local paper. The register is <strong>impersonal, factual, and objective</strong>. You are a reporter presenting facts, not a student sharing opinions.</p>
+    <p>This is <strong>not</strong> the same as a magazine article. News reports use third person throughout and never editorialise. Opinions appear only inside attributed quotations from named sources.</p>
+
+    <h3>The Inverted Pyramid</h3>
+    <p>News reports use the <strong>inverted pyramid</strong>: most important information at the top, less essential detail at the bottom. The reader can stop at any paragraph and still have the key facts.</p>
+    <div class="structure-card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Headline</strong>
+          <span>Short, factual, specific. Active voice. No full stop. E.g. "Pupils haul half a tonne of waste from Mill river in town-first clean-up"</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Lead Paragraph &mdash; The 5 Ws</strong>
+          <span>WHO + WHAT + WHEN + WHERE (+ WHY) in 1&ndash;2 sentences. The reader gets the whole story from this paragraph alone.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Key Facts &amp; Attributed Quotes</strong>
+          <span>Background detail, additional facts, and direct quotations from named sources. Each paragraph is less essential than the one before.</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Context &amp; Future Steps</strong>
+          <span>Broader implications, related history, what happens next. Optional but shows maturity.</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Key Features of the Form</h3>
+    <div class="conventions">
+      <div class="convention-item">
+        <div class="conv-label">Headline</div>
+        <div class="conv-value">Short, factual, active voice</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Standfirst</div>
+        <div class="conv-value">Optional sub-headline summary</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Byline</div>
+        <div class="conv-value">"By [reporter name]" &mdash; optional</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Person</div>
+        <div class="conv-value">Third person only &mdash; no "I" or "we"</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Register</div>
+        <div class="conv-value">Impersonal, factual, objective</div>
+      </div>
+      <div class="convention-item">
+        <div class="conv-label">Quotations</div>
+        <div class="conv-value">Named sources, varied attribution verbs</div>
+      </div>
+    </div>
+
+    <h3>News Report vs Magazine Article</h3>
+    <p>Cambridge sometimes asks for a news report, sometimes a magazine article. The two look similar but differ in crucial ways:</p>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>News Report</th><th>Magazine Article</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Voice</strong></td><td>Third-person impersonal</td><td>First-person allowed</td></tr>
+            <tr><td><strong>Tone</strong></td><td>Neutral, factual</td><td>Opinion-led, persuasive</td></tr>
+            <tr><td><strong>Structure</strong></td><td>Inverted pyramid</td><td>Hook &rarr; argument &rarr; close</td></tr>
+            <tr><td><strong>Quotations</strong></td><td>Named direct quotes</td><td>Anecdotes, paraphrased ideas</td></tr>
+            <tr><td><strong>Editorial</strong></td><td>None &mdash; facts only</td><td>Yes &mdash; author has a position</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Direct Quotation &amp; Attribution</h3>
+    <p>News reports <strong>carry their argument through named sources</strong>. The reporter doesn&rsquo;t editorialise; the sources do.</p>
+    <ul>
+      <li><strong>Format:</strong> Quote in double quotation marks, attributed by name and role.</li>
+      <li><strong>Example:</strong> &ldquo;The decision will reshape morning routines for thousands of families,&rdquo; said Councillor Hayes, the borough&rsquo;s lead member for transport.</li>
+      <li><strong>Vary attribution verbs:</strong> said, told reporters, commented, noted, argued, added, responded, acknowledged.</li>
+    </ul>
+
+    <h4>Inventing Plausible Sources</h4>
+    <p>Cambridge mark schemes accept and reward plausible invented sources. You can invent:</p>
+    <ul>
+      <li>A headteacher with a name and school</li>
+      <li>A council officer with a name and role</li>
+      <li>A student with a name and year group</li>
+      <li>A parent, local resident, or expert</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-label">Examiner Tip</div>
+      The inverted pyramid is the <strong>single most form-distinguishing feature</strong> of a news report. Get the 5 Ws into your lead paragraph and structure detail in descending importance &mdash; this alone earns the form mark. Examiner reports praise candidates who &ldquo;attribute opinions to plausible sources rather than editorialising.&rdquo;
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">How to Spot the Form</div>
+      <strong>"Newspaper article" / "news report" / "local newspaper"</strong> &rarr; news register (impersonal, factual, inverted pyramid).<br>
+      <strong>"Magazine article" / "school magazine" / "opinion piece"</strong> &rarr; magazine register (first-person allowed, opinion-led, hook-driven).
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      <strong>Using first-person opinion in a news report.</strong> Writing &ldquo;I was there&rdquo; or &ldquo;I think this is unfair&rdquo; caps the W4 (purpose/audience) mark immediately. The reporter is invisible. Any opinion must be inside an attributed quotation: &ldquo;&lsquo;This decision is unfair,&rsquo; said local resident Mrs Patel.&rdquo;
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      <strong>Burying the main event.</strong> Don&rsquo;t build up to the news like an essay or anecdote. The lead paragraph must contain the key facts. If the reader has to wait until paragraph three for the news, you&rsquo;ve lost the inverted pyramid.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">Common Mistake</div>
+      <strong>No direct quotations.</strong> A news report without attributed quotes reads as a summary, not journalism. Include at least two named sources with varied attribution verbs.
+    </div>
+
+    <div class="checklist">
+      <h4>Quick Checklist</h4>
+      <ul>
+        <li>Factual headline &mdash; short, active, specific</li>
+        <li>Lead paragraph: WHO + WHAT + WHEN + WHERE</li>
+        <li>Inverted pyramid &mdash; most important first</li>
+        <li>Third person throughout &mdash; no "I" or "we"</li>
+        <li>No editorialising &mdash; opinions in attributed quotes only</li>
+        <li>At least two named sources with roles</li>
+        <li>Varied attribution verbs: said, told, added, noted</li>
+        <li>Source material integrated naturally, not copied</li>
+        <li>Forward-looking close (optional but strong)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: LETTER ==================== -->
+  <div class="section" id="sec-model-letter">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Directed Writing &middot; <span class="model-score">40/40</span></span>
+      <h2>Model Answer: Formal Letter</h2>
+      <p class="purpose">A top-band directed writing response demonstrating formal letter conventions, persuasive argument, and effective use of source material.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task</div>
+      Your local council plans to close the only public library in your area. Using ideas from the passage about the value of libraries, write a letter to the council arguing against the closure.
+    </div>
+
+    <h3>Opening</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Dear Councillor Reeves,</p>
+        <p>I am writing to express my deep concern regarding the proposed closure of Elm Road Library, which has served this community for over forty years. While I understand the council faces significant budgetary pressures, I believe that closing the library would cause far greater harm than the savings it would generate.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Correct formal letter conventions: named salutation, clear purpose stated immediately, concession to the opposing view ("I understand the council faces..."). The tone is measured and respectful &mdash; not aggressive. This is the register examiners reward.
+      </div>
+    </div>
+
+    <h3>Paragraph 2 &mdash; Community Impact</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>As the passage makes clear, libraries are not simply repositories of books &mdash; they are essential community spaces. For many elderly residents in this area, the library is the only place they visit regularly outside their own homes. Removing it would deepen the isolation that already affects a significant proportion of our ageing population. Furthermore, the library's free internet access is relied upon by families who cannot afford home broadband, and by job seekers who depend on it to search and apply for employment.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Two passage ideas (community space, internet access) are <strong>adapted to the local context</strong> &mdash; the student does not simply repeat the passage but applies it. This is the key to top-band directed writing: use the source material as a springboard, not a script.
+      </div>
+    </div>
+
+    <h3>Paragraph 3 &mdash; Educational Role</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The passage also highlights the educational role of libraries, and this is particularly relevant here. Elm Road Library runs a weekly reading group for under-fives and a homework club for secondary students. These are not luxuries; they directly support the attainment of children in an area where educational outcomes already fall below the national average. To remove them would be to widen an inequality that the council claims, in its own strategic plan, to be committed to narrowing.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Passage idea (educational role) + local detail (reading group, homework club) + persuasive turn (using the council's own language against it). The final sentence is rhetorically powerful without being rude. Examiners note this as <strong>"sophisticated engagement with audience."</strong>
+      </div>
+    </div>
+
+    <h3>Closing</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>I would urge the council to explore alternatives before making this decision irreversible: reduced opening hours, shared premises with the community centre, or a volunteer staffing model. Other councils have successfully implemented such measures, and I would welcome the opportunity to discuss them further.</p>
+        <p>Yours sincerely,<br>Alex Harrington</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Constructive close: offers solutions rather than just complaining. Correct sign-off ("Yours sincerely" after a named salutation). The tone throughout has been formal, persuasive, and audience-aware &mdash; all three are rewarded in the mark scheme.
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Concede before arguing</strong> &mdash; acknowledging the council's budget pressure makes the writer sound reasonable, not hostile. <strong>Extend the source</strong> &mdash; passage ideas are applied to local detail, not just repeated. <strong>Close with solutions</strong> &mdash; the letter becomes constructive, not just a complaint.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: ARTICLE ==================== -->
+  <div class="section" id="sec-model-article">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Directed Writing &middot; <span class="model-score">40/40</span></span>
+      <h2>Model Answer: Magazine Article</h2>
+      <p class="purpose">A top-band directed writing response demonstrating article conventions, critical engagement with source material, and a distinctive authorial voice.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task</div>
+      A school magazine is running a feature on whether technology helps or hinders learning. Using ideas from the passage, write an article giving your views.
+    </div>
+
+    <h3>Opening</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p style="font-weight:600;text-transform:uppercase;font-style:normal;letter-spacing:0.02em;">THE SCREEN GENERATION: SMARTER OR JUST FASTER?</p>
+        <p>Walk into any classroom in 2025 and the first thing you will notice is the glow. Thirty screens, thirty bent heads, thirty pairs of thumbs moving in patterns that would have baffled a typist twenty years ago. Technology has not just arrived in education &mdash; it has taken up permanent residence, rearranged the furniture, and changed the locks.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Article conventions: headline in capitals, engaging opening image, direct address ("you will notice"). The extended metaphor ("taken up permanent residence, rearranged the furniture") is witty and original. This signals to the examiner that the student understands the form.
+      </div>
+    </div>
+
+    <h3>Paragraph 2 &mdash; The Case For</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The passage argues, persuasively, that digital tools have democratised access to knowledge. A student in rural Kenya can now watch the same lecture as a student at Cambridge, and this is genuinely revolutionary. Online platforms allow learners to pause, rewind and revisit material at their own pace, and for students with additional needs this flexibility can be transformative.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Passage ideas used with attribution ("The passage argues"). The student adds their own evaluation ("genuinely revolutionary") and extends the point with an original example (students with additional needs). This balance of source material and personal voice is what the examiner means by <strong>"effective use of the reading material."</strong>
+      </div>
+    </div>
+
+    <h3>Paragraph 3 &mdash; The Counter-Argument</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>But here is the difficulty that the passage does not quite address: access to information is not the same as understanding. I can look up the causes of the First World War in four seconds, but that does not mean I have thought about them. The speed of digital learning can create an illusion of mastery &mdash; students believe they know something because they have read it, when in fact they have only seen it. And the constant notifications, the social media tabs, the reflex to check a phone every ninety seconds &mdash; these are not minor distractions. They are an architecture designed to prevent exactly the kind of sustained, difficult thinking that real learning requires.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> This paragraph moves <strong>beyond the passage</strong> to offer an original counter-argument. The phrase "architecture designed to prevent... sustained, difficult thinking" is sophisticated and specific. The examiner rewards candidates who engage critically with the source material rather than passively summarising it.
+      </div>
+    </div>
+
+    <h3>Closing</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Technology, then, is neither saviour nor villain. It is a tool, and like any tool, its value depends entirely on the hand that holds it. Perhaps the real question is not whether we should use screens in classrooms, but whether we are teaching students to use them wisely &mdash; or simply teaching them to use them.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Balanced conclusion, memorable final line with a rhetorical turn. The student has maintained an article register throughout &mdash; engaging, opinionated, direct &mdash; without losing formality. Full marks for both content and language.
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Go beyond the passage</strong> &mdash; the highest marks come from engaging critically, not passively summarising. <strong>Headline matters</strong> &mdash; it immediately signals the form. <strong>End with a turn</strong> &mdash; the final sentence reframes the entire question.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: SPEECH ==================== -->
+  <div class="section" id="sec-model-speech">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Directed Writing &middot; <span class="model-score">40/40</span></span>
+      <h2>Model Answer: Speech</h2>
+      <p class="purpose">A top-band speech demonstrating audience awareness, personal anecdote, rhetorical devices, and a powerful call to action.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task</div>
+      You have been asked to give a speech to your year group about the importance of reading for pleasure. Using ideas from the passage, write the words of your speech.
+    </div>
+
+    <h3>Opening &mdash; The Confession</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Good morning everyone. I want to start with a confession: I did not read a single book for pleasure between the ages of thirteen and sixteen. Not one. I read what I was told to read for English, I read the backs of cereal boxes, and I read approximately four thousand Instagram captions a day. But a book? No.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Speech conventions: greeting, direct address, personal anecdote, humour. The confession creates an immediate connection with the audience (teenagers who also do not read). The examiner rewards this as <strong>"strong awareness of audience and purpose."</strong>
+      </div>
+    </div>
+
+    <h3>Paragraph 2 &mdash; The Turning Point</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>And then, in the middle of a particularly boring half-term, I picked up a book my mother had left on the kitchen table. I cannot even remember the title. But I remember the feeling &mdash; the strange, almost physical sensation of being somewhere else entirely, of hearing a voice that was not my own but somehow understood exactly what I was thinking. That is what reading does. It does not just give you information. It gives you someone else's mind to live in for a while.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> The student transitions from anecdote to the passage's central argument (reading as empathy) but phrases it in their own voice. "Someone else's mind to live in" is more powerful than any passage quotation because it is clearly the student's own thought. This is the <strong>highest level of directed writing</strong>.
+      </div>
+    </div>
+
+    <h3>Paragraph 3 &mdash; The Real Reason</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The passage we read this morning tells us that reading improves vocabulary, develops concentration, and reduces stress. All true. But I think those are the boring reasons, and if I stand up here and list health benefits at you, I will lose you in about fifteen seconds. So let me give you the real reason: reading is the only legal way to be someone else. It is the only way to know what it feels like to be a soldier in 1917, or a girl growing up in Lagos, or an astronaut watching the Earth shrink behind you. No film does this. No game does this. Only a book puts you so far inside another person that you forget, for a moment, that you are you.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Masterful speech technique: acknowledges the audience directly ("I will lose you"), dismisses the dry arguments in favour of an emotional one, uses the <strong>rule of three</strong> ("a soldier... a girl... an astronaut"). The final sentence is simple, direct, and memorable &mdash; exactly what a speech needs.
+      </div>
+    </div>
+
+    <h3>Closing &mdash; The Challenge</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>So here is my challenge. One book. Any book. Before the end of this term. Not because your teacher told you to, not because it will help your grades &mdash; though it will &mdash; but because you deserve to know what it feels like to disappear into a story and come back slightly different. Thank you.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Call to action &mdash; essential for a speech. The challenge is specific ("one book, before end of term") and the motivation is emotional, not academic. "Thank you" closes correctly. Throughout, the register has been conversational, warm, and persuasive &mdash; perfect for a peer audience. Full marks.
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Start with vulnerability</strong> &mdash; admitting you didn't read creates instant credibility with a teenage audience. <strong>Dismiss the obvious</strong> &mdash; acknowledging that "health benefits" are boring shows real audience awareness. <strong>Specific call to action</strong> &mdash; "one book before the end of term" is actionable and memorable.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: DESCRIPTIVE ==================== -->
+  <div class="section" id="sec-model-descriptive">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Section B Composition &middot; <span class="model-score">40/40</span></span>
+      <h2>Model Answer: Descriptive Writing</h2>
+      <p class="purpose">"A railway station at dawn" &mdash; a top-band descriptive composition demonstrating atmosphere, sensory detail, structural control, and an original authorial voice.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task</div>
+      Write a descriptive composition with the title: <em>A railway station at dawn</em>.
+    </div>
+
+    <h3>Paragraph 1 &mdash; The Empty Station</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The station existed in the hour before it was needed. The departures board was a grid of amber letters that no one was reading, and the coffee kiosk was still shuttered, its corrugated door holding the ghost of yesterday's espresso in a faint, bitter sweetness that hung in the cold air like a promise.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Opening establishes time and atmosphere <strong>without stating "it was dawn."</strong> Personification of the station ("existed in the hour before it was needed") gives it character. Smell introduced early &mdash; "ghost of yesterday's espresso" is unexpected and precise. The simile "like a promise" carries emotional weight without being sentimental.
+      </div>
+    </div>
+
+    <h3>Paragraph 2 &mdash; The Pigeon</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>A pigeon walked the length of Platform 3 with the careful, self-important stride of a building inspector. It paused at each bench, examined the underside with one tilted eye, and moved on, apparently satisfied. The only other movement was the clock, its second hand dragging itself around the face as if the effort of keeping time at this hour were almost too much.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Extended personification of both the pigeon (building inspector) and the clock (exhausted timekeeper). <strong>Humour is rare in descriptive writing</strong> &mdash; the examiner notes it as evidence of voice and control. The pigeon detail is the kind of observed, specific image that reads as genuine rather than rehearsed.
+      </div>
+    </div>
+
+    <h3>Paragraph 3 &mdash; The Light Arrives</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Then light. It came from the east end of the platform, where the tracks curved out of sight, a thin gold line drawn across the rails and the gravel and the base of the signal post. It found the puddles first and turned them into coins. It found the edges of the benches and made them sharp. It crept along the platform floor like a tide coming in, slow and certain, and as it reached the place where I was standing, I felt the cold begin to loosen, as if the station were taking its first deep breath of the day.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> The shift: dawn light arriving. <strong>Anaphora</strong> ("It found... It found... It crept") creates rhythm and momentum. Puddles as coins &mdash; fresh metaphor. The final personification (station breathing) ties back to the opening, giving the piece <strong>circular structure</strong>. Examiners note this as "crafted and deliberate."
+      </div>
+    </div>
+
+    <h3>Paragraph 4 &mdash; The First Person</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>A man appeared at the far end of the platform, coat buttoned to the collar, briefcase held close to his body like a shield. He did not look at the departures board. He knew where he was going &mdash; you could tell from the way he stood, weight on one foot, eyes fixed on the empty track, waiting for a shape to appear around the curve. Behind him, the coffee kiosk rattled open, and the station, at last, began to fill with the small, ordinary sounds of a day deciding to begin.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Human figure introduced <strong>late</strong> &mdash; a deliberate choice that keeps the description centred on the place. The man is characterised entirely through physical detail (coat, briefcase, posture) with no backstory. The final image echoes the opening ("the hour before it was needed" / "a day deciding to begin"), giving the piece a <strong>satisfying frame</strong>. The examiner reads this as controlled, evocative, and structurally complete.
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Don't state the obvious</strong> &mdash; never write "It was dawn." Show it through light, sound, emptiness. <strong>Use humour</strong> &mdash; the pigeon as building inspector is unexpected and memorable. <strong>Circular structure</strong> &mdash; the opening and closing images echo each other. <strong>Introduce people late</strong> &mdash; the place is the subject, not the people.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: NARRATIVE ==================== -->
+  <div class="section" id="sec-model-narrative">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 &middot; Section B Composition &middot; <span class="model-score">40/40</span></span>
+      <h2>Model Answer: Narrative Writing</h2>
+      <p class="purpose">"The Envelope" &mdash; a top-band narrative composition demonstrating restraint, precise physical detail, structural repetition, and an emotionally resonant ending.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task</div>
+      Write a narrative composition with the title: <em>The Envelope</em>.
+    </div>
+
+    <h3>Paragraph 1 &mdash; The Wait</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The envelope had been sitting on the hall table for three days before I opened it. It was not that I did not know what was inside &mdash; I knew exactly what was inside. It was a thin, cream-coloured envelope with a typed address and no return label, and the postmark said Cambridge, and Cambridge only ever sent one kind of letter to people like me.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> In medias res opening centred on a single object. Tension built through delay ("three days before I opened it") and the narrator's certainty about the contents. <strong>"People like me"</strong> invites the reader to fill in the gap &mdash; inference rather than exposition. The examiner rewards this restraint.
+      </div>
+    </div>
+
+    <h3>Paragraph 2 &mdash; The Mother</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>My mother had noticed it first. She had come into the hallway with a basket of washing and stopped so suddenly that a pillowcase slid off the top and landed on the floor, and neither of us picked it up. She looked at me. I looked at the envelope. The pillowcase lay between us like a small white surrender.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Character revealed through action, not description. The dropped pillowcase is a tiny, specific physical detail that carries enormous emotional weight. <strong>"Small white surrender"</strong> is a controlled metaphor &mdash; not overwritten. The scene is built from three images: the washing, the eye contact, the pillowcase.
+      </div>
+    </div>
+
+    <h3>Paragraph 3 &mdash; Three Evenings</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>"You should open it," she said, on the first evening.</p>
+        <p>"I know," I said.</p>
+        <p>"You should open it," she said, on the second evening.</p>
+        <p>"I know," I said.</p>
+        <p>On the third evening, she did not say anything. She put a cup of tea next to the envelope and went upstairs, and I sat at the hall table in the half-light and thought about all the versions of my life that were folded up inside that cream-coloured paper.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Repetition used <strong>structurally</strong> &mdash; the two-line exchange on days one and two, then silence on day three. This is show-don't-tell: the mother's silence speaks louder than her words. "All the versions of my life" is the thematic heart of the piece. The examiner notes the <strong>sentence variety</strong>: short dialogue, then a long reflective sentence.
+      </div>
+    </div>
+
+    <h3>Paragraph 4 &mdash; The Opening</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>I opened it standing up, which I had not planned. I had imagined sitting down, taking a breath, sliding a finger under the seal carefully, the way people do in films. Instead I just picked it up and tore it open, quickly, the way you pull off a plaster, and the sound of the paper tearing was the loudest thing in the house.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> The climax is handled through <strong>pace and physical detail</strong>. The contrast between the imagined version (slow, cinematic) and the real version (fast, messy) is psychologically true. "The loudest thing in the house" is a strong sensory detail &mdash; it tells us how silent the house has been, how much has been held back.
+      </div>
+    </div>
+
+    <h3>Paragraph 5 &mdash; The Answer</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>It said yes.</p>
+        <p>I read it twice, because the first time I read it I did not believe it, and the second time I read it I believed it but did not know what to do with the believing. I put the letter back on the table and went to the bottom of the stairs and called up to my mother, and my voice, when it came, was steadier than I had expected.</p>
+        <p>"Mum," I said. "It said yes."</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Two-word paragraph for the revelation &mdash; <strong>maximum impact through minimum language</strong>. The emotional processing is described honestly: "did not know what to do with the believing" is a phrase that feels earned rather than manufactured. The final line mirrors the mother's earlier dialogue, bringing the relationship full circle. The examiner reads this as a piece with <strong>"a controlled, resonant ending that avoids sentimentality."</strong>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Small scale, big impact</strong> &mdash; one envelope, one hallway, three days. No car chases. <strong>Physical detail carries emotion</strong> &mdash; the pillowcase, the sound of tearing paper, the cup of tea. <strong>Structural repetition</strong> &mdash; the repeated dialogue creates rhythm and makes the silence on day three devastating. <strong>Short sentences at the climax</strong> &mdash; "It said yes." is three words that carry the entire piece.
+    </div>
+
+    <div class="mistake-box">
+      <div class="mistake-label">What Weak Narratives Do Instead</div>
+      <strong>Cover too much time</strong> &mdash; years crammed into 500 words. <strong>Tell rather than show</strong> &mdash; "I was so happy" instead of the physical detail. <strong>Dream endings</strong> &mdash; "and then I woke up." <strong>Melodrama</strong> &mdash; explosions, deaths, twists that feel unearned. The best narratives are small, precise, and emotionally honest.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: JOURNAL ==================== -->
+  <div class="section" id="sec-model-journal">
+    <div class="section-header">
+      <span class="form-badge">Paper 1 Q4 &middot; Extended Response &middot; <span class="model-score">Top Band</span></span>
+      <h2>Model Answer: Journal Entry</h2>
+      <p class="purpose">A top-band journal response demonstrating personal voice, emotional depth, sensory detail, and genuine reflection on experience.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task (Paper 1 Q4 style)</div>
+      Text C describes a travel specialist&rsquo;s cycling journey across the Andes in South America. Imagine you are the writer. Write a journal entry about the experience, reflecting on the challenges, highlights and what you learned. Base your response on the ideas in Text C.
+    </div>
+
+    <h3>Opening &mdash; Setting the Scene</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Now that we are homeward bound, I can reflect on this incredible adventure. We started out so excited, confident that our wet-weather gear prepared us for anything. I quickly realised how wrong I was when we hit the mountain pass and the hailstones began! I normally love the thrill of a descent, but the freezing cold numbed my hands, making it terrifyingly hard to control the bike. I can&rsquo;t describe the relief of reaching Colquepata. Although the ride to Paucartambo took longer than the promised &ldquo;40 minutes,&rdquo; the smooth roads were a joy, and the picturesque town reignited my excitement.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Clearly first person with a reflective opening (&ldquo;Now that we are homeward bound, I can reflect&rdquo;). The writer moves naturally between describing events and expressing feelings: excitement &rarr; shock &rarr; fear &rarr; relief &rarr; renewed excitement. Sensory detail (&ldquo;freezing cold numbed my hands&rdquo;) brings the experience alive. Source material is used but reframed in the writer&rsquo;s own voice.
+      </div>
+    </div>
+
+    <h3>Middle &mdash; The Journey Develops</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The journey was physically tough, with constant downpours and flat tyres, but the jungle changed everything. The humid air and heady scents were the complete opposite of the high Andes, and cycling through a haze of butterflies felt like a cartoon. The bus delay in Pilcopata, while initially annoying, became an unexpected bonus. It allowed us to truly immerse ourselves in Peruvian life. It made me realise how we rush around at home, ruled by schedules, whereas nobody hurries in the jungle heat.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Contrast creates structure (&ldquo;tough&hellip; but the jungle changed everything&rdquo;). Sensory language (&ldquo;humid air and heady scents&rdquo;, &ldquo;a haze of butterflies&rdquo;) is vivid and specific. The bus delay is turned into a moment of <strong>reflection</strong> &mdash; the writer compares Peruvian and Western attitudes to time. This is exactly the kind of inference examiners reward: drawing out meaning from a factual detail in the text.
+      </div>
+    </div>
+
+    <h3>Closing &mdash; Reflection &amp; Growth</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>I was, however, shocked to learn how little tourism money reaches the actual townspeople. This trip has taught me to be an environmentally aware tourist and to buy locally to support the economy. Despite the gruelling challenges, I have grown as a person, learned the value of teamwork, and discovered a part of the world I knew little about.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> The reflection deepens beyond personal experience into social awareness (tourism economics, environmental responsibility). The closing sentence pulls together three lessons &mdash; personal growth, teamwork, discovery &mdash; giving the journal entry a sense of completeness. The voice is mature but still personal, not preachy. Examiners describe this as <strong>&ldquo;a convincing and clearly focused account with developed thoughts and feelings.&rdquo;</strong>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Weave feelings into the narrative</strong> &mdash; don&rsquo;t bolt emotions on at the end; they should appear throughout each paragraph. <strong>Use contrast for structure</strong> &mdash; mountains vs jungle, expectation vs reality, home life vs Peruvian life. <strong>End with reflection, not events</strong> &mdash; the closing paragraph is entirely about meaning and personal growth, which is what separates top-band journal entries from mid-band ones.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: NEWSPAPER REPORT ==================== -->
+  <div class="section" id="sec-model-newspaper">
+    <div class="section-header">
+      <span class="form-badge">Paper 1 Q4 &middot; Extended Response &middot; <span class="model-score">Top Band</span></span>
+      <h2>Model Answer: Newspaper Report</h2>
+      <p class="purpose">A top-band news report demonstrating inverted pyramid structure, the 5 Ws lead, attributed quotations, and objective third-person register.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task (Paper 1 Q4 style &mdash; 20 marks)</div>
+      Text C reports a rise in pupils cycling to school across the borough. Write a newspaper report of this trend for a local paper, using ideas from Text C. Write 250&ndash;300 words.
+    </div>
+
+    <h3>Headline &amp; Lead</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p><strong>Cycling to school climbs 28 per cent in record borough rise</strong></p>
+        <p>The number of pupils cycling to school across the borough has risen by 28 per cent since September, the largest single-year increase ever recorded by the council, according to a survey published this week. The change has been sharpest at Northgate Secondary, where the proportion of pupils cycling has doubled in a single academic year.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Headline is factual, active, specific &mdash; instantly signals newspaper form. The lead paragraph packs all 5 Ws: WHO (pupils), WHAT (28% cycling rise), WHEN (since September), WHERE (across the borough). The most newsworthy fact is fronted. Attribution (&ldquo;according to a survey&rdquo;) grounds the claim.
+      </div>
+    </div>
+
+    <h3>Key Facts &amp; Causes</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The survey links the rise to three causes: new cycle lanes installed on Park Road, free helmets distributed through school councils, and steadily climbing bus fares that have pushed families to seek cheaper alternatives.</p>
+        <p>Northgate&rsquo;s headteacher, Mr Patel, said the effect on the school day had been clear. &ldquo;Pupils arrive more alert and more ready to learn,&rdquo; he told reporters. &ldquo;Several teachers noticed the change before I had said a word.&rdquo;</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> Source material (three causes) is selected and reframed, not copied. The first attributed quotation is from a <strong>named source with a role</strong> (Mr Patel, headteacher). Attribution verbs are varied (&ldquo;said&rdquo;, &ldquo;told reporters&rdquo;). The quote adds human interest without the reporter editorialising.
+      </div>
+    </div>
+
+    <h3>Balance &amp; Complexity</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The trend has not been without difficulty. Some Park Road residents report congestion where the new lanes meet busy junctions, and a small number of incidents between cyclists and pedestrians have been recorded. Council transport officer Mrs Aliyah Khan said a redesign of the worst junction was already planned. &ldquo;We know where the pinch points are,&rdquo; she added, &ldquo;and we are acting on them.&rdquo;</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> A balanced report presents <strong>problems alongside successes</strong>. The difficulties (congestion, incidents) are stated factually, then immediately addressed through a second named source. This shows journalistic balance. The attribution verb &ldquo;added&rdquo; varies from the earlier &ldquo;said&rdquo; and &ldquo;told reporters.&rdquo;
+      </div>
+    </div>
+
+    <h3>Context &amp; Close</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The survey also found that around one in four pupils still rely on public transport, either because they live more than three miles away or because parents remain concerned about road safety. Its authors concluded that wider investment in infrastructure, rather than pressure on families, would be the key to extending the shift.</p>
+        <p>A full review of the cycling scheme is due before the council in March.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores:</strong> The remaining source ideas (one-in-four stat, infrastructure conclusion) appear in the lower part of the pyramid &mdash; important but less essential than the lead. The forward-looking final sentence (&ldquo;A full review&hellip; in March&rdquo;) is a classic news-report close. The reporter&rsquo;s voice stays <strong>completely objective throughout</strong> &mdash; no &ldquo;I think&rdquo;, no editorialising, all opinions live inside attributed quotations. Examiners describe this as <strong>&ldquo;accurate news form with consistent impersonal register.&rdquo;</strong>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>5 Ws in the lead &mdash; always</strong>. Every fact the reader needs should be in the first paragraph. <strong>Two named sources minimum</strong> &mdash; with different roles and varied attribution verbs. <strong>Balance is journalism</strong> &mdash; present problems alongside successes. <strong>Forward-looking close</strong> &mdash; what happens next gives the report a professional finish. <strong>Zero editorialising</strong> &mdash; the reporter is invisible.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: FOOD WASTE ARTICLE ==================== -->
+  <div class="section" id="sec-model-foodwaste">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 Section A &middot; 0500/21 May/June 2024 &middot; <span class="model-score">40/40</span></span>
+      <h2>Model Answer: Article on Food Waste</h2>
+      <p class="purpose">A top-band directed writing response to Question 1 from the May/June 2024 Paper 2 (variant 21). Demonstrates article register, evaluation of both texts, and practical suggestions for young readers.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task &mdash; 0500/21 M/J 2024, Question 1 (40 marks: 15R + 25W)</div>
+      Write an article for young people about food waste and what they can do about it. In your article you should: <strong>evaluate the ideas, attitudes and opinions given in both texts</strong>; <strong>suggest how young people can help to reduce food waste in their homes, schools and the wider world</strong>. Base your article on what you have read in both texts, but be careful to use your own words. Address both bullet points. Write about 250&ndash;350 words.
+    </div>
+
+    <h3>Headline &amp; Opening</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p><strong>Your leftovers are louder than you think</strong></p>
+        <p>A third of the world&rsquo;s food rots before anyone eats it, and according to climate researchers, tackling that waste would do more for the planet than almost any other single change apart from switching entirely to renewable energy. Yet most of us, if asked, would swear we hardly throw anything away. Surveys suggest that almost nobody sees themselves as part of the problem &mdash; which, of course, means almost everybody is.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R1, R3, W1, W2, W4):</strong> The headline is engaging and specific &mdash; not a restatement of the question. The opening draws on Text A&rsquo;s key facts (one-third wasted, climate impact second only to wind power, self-perception gap) but reframes them entirely in the candidate&rsquo;s own words. The final sentence &mdash; &ldquo;which, of course, means almost everybody is&rdquo; &mdash; is an <strong>evaluative inference</strong> (R2), not just a restatement. The semi-formal article register addresses young people directly without being childish.
+      </div>
+    </div>
+
+    <h3>Paragraph 2 &mdash; Evaluating Why It Happens</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The reasons are depressingly ordinary. In many countries, households generate the vast majority of food waste &mdash; not because people are careless, but because life gets in the way. Plans for home-cooked meals collapse under the weight of late shifts, last-minute invitations, and the simple exhaustion of a long day. Misleading packaging labels do not help: perfectly safe food ends up in the bin because a printed date has passed, and few people pause to check whether &ldquo;best before&rdquo; actually means &ldquo;unsafe after.&rdquo;</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R1, R2, R3, W3):</strong> Text A&rsquo;s ideas (80% domestic, busy lives, confusing labels, aspirational meal planning) are selected, combined and <strong>developed with evaluation</strong>. The candidate doesn&rsquo;t just say labels are confusing &mdash; they explain the psychological mechanism (&ldquo;few people pause to check&rdquo;). This is the kind of inference (R2) and development (R3) that pushes reading marks into the top band.
+      </div>
+    </div>
+
+    <h3>Paragraph 3 &mdash; Engaging with Text B&rsquo;s Attitude</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Young people, meanwhile, face a peculiar double bind. One university blogger points out that those aged 18 to 24 are labelled the worst offenders, yet the advice aimed at them &mdash; cook more, eat fresh, waste nothing &mdash; clashes with the reality of student life, where meals are grabbed between lectures and socialising, and the fridge contains little more than fast food and an ageing apple. There is something unjust, too, about blaming consumers when a third of all food grown never reaches a kitchen at all, lost instead to poor storage, extreme weather, or retailers&rsquo; insistence that only blemish-free produce deserves a shelf.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R2, R3, W1, W4):</strong> Text B&rsquo;s frustrated, defensive tone is <strong>evaluated rather than repeated</strong> &mdash; the candidate captures the blogger&rsquo;s point (&ldquo;peculiar double bind&rdquo;, &ldquo;something unjust&rdquo;) while maintaining their own article voice. Both explicit ideas (18&ndash;24 biggest wasters, fast-food lifestyle, supply-chain losses, cosmetic standards) and the <strong>implicit attitude</strong> (intergenerational blame is unfair and unproductive) are addressed. The long final sentence packs three supply-chain causes into one controlled structure (W3).
+      </div>
+    </div>
+
+    <h3>Paragraph 4 &mdash; Practical Suggestions (Bullet 2)</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>None of this, however, means that young people are powerless. Small, realistic adjustments matter more than grand ambitions that collapse by Wednesday. At home, buying smaller quantities more often and learning to read labels properly can quietly shrink the waste pile. At school or college, students could press canteens to reduce portion sizes and partner with local charities that redistribute surplus meals &mdash; and do so openly, because the stigma around such schemes fades only when ordinary people treat them as sensible rather than shameful. In the wider world, choosing imperfect fruit from bargain shelves and supporting businesses that sell surplus food sends a clear market signal: profit and responsibility need not be opposites.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R3, R5, W1, W2):</strong> The second bullet (suggestions) is addressed across <strong>all three contexts the question names</strong>: home, school, wider world. Each suggestion is rooted in the texts &mdash; labels (Text A), canteen waste and stigma (Text B), imperfect produce (Text B) &mdash; but developed with the candidate&rsquo;s own reasoning. The concession-then-action structure (&ldquo;None of this, however, means&hellip;&rdquo;) is a top-band move: it acknowledges the complexity from the previous paragraph before pivoting constructively.
+      </div>
+    </div>
+
+    <h3>Closing</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Awareness alone will not empty fewer bins. But awareness combined with a few stubborn habits &mdash; a shorter shopping list, a honest look at the fridge before it is too late, a willingness to eat the imperfect apple &mdash; might just begin to. The world&rsquo;s food crisis will not be solved by young people alone, but it certainly will not be solved without them.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R2, R3, W1, W2, W3):</strong> The closing evaluates Text B&rsquo;s final claim (&ldquo;I don&rsquo;t need any more awareness campaigns&rdquo;) by agreeing that awareness is insufficient but arguing it is still necessary when paired with action. The tricolon (&ldquo;a shorter shopping list, an honest look&hellip; a willingness&rdquo;) is controlled rhetoric (W3). The final sentence balances both texts&rsquo; attitudes &mdash; young people are not solely to blame (Text B) but can still lead (implicit from Text A) &mdash; giving a <strong>sophisticated, evaluative conclusion</strong> (R3) that avoids both complacency and unfair guilt.
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Evaluate, don&rsquo;t summarise</strong> &mdash; the mark scheme rewards candidates who assess the attitudes in both texts, not those who simply retell them. <strong>Address all three contexts</strong> &mdash; the question specifies homes, schools, and the wider world; covering all three shows you read the task carefully (R5). <strong>Use both texts equally</strong> &mdash; top-band reading marks require ideas from both Text A and Text B, developed in your own words. <strong>Article register throughout</strong> &mdash; engaging headline, semi-formal tone, direct address to young readers, rhetorical close. <strong>Concede before suggesting</strong> &mdash; acknowledging that the problem is not entirely young people&rsquo;s fault makes the practical suggestions more persuasive.
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Past Paper Reference</div>
+      <strong>Paper:</strong> 0500/21 May/June 2024 &mdash; <strong>Insert:</strong> 0500/21/INSERT/M/J/24 (Text A: article about food waste; Text B: university student blog about food waste and young people) &mdash; <strong>Mark Scheme:</strong> 0500/21/MS/M/J/24, pages 5&ndash;7.
+    </div>
+  </div>
+
+  <!-- ==================== MODEL: CASH-FREE SPEECH ==================== -->
+  <div class="section" id="sec-model-cashfree">
+    <div class="section-header">
+      <span class="form-badge">Paper 2 Section A &middot; 0500/23 Oct/Nov 2024 &middot; <span class="model-score">40/40</span></span>
+      <h2>Model Answer: Speech on Going Cash-Free</h2>
+      <p class="purpose">A top-band directed writing response to Question 1 from the October/November 2024 Paper 2 (variant 23). Demonstrates speech register, evaluation of both texts, and consideration of effects on individuals, businesses and the wider community.</p>
+    </div>
+
+    <div class="model-task">
+      <div class="task-label">Task &mdash; 0500/23 O/N 2024, Question 1 (40 marks: 15R + 25W)</div>
+      There is a proposal for your local area to become cash-free. You want to share your views on this proposal at a meeting of local residents. Write a <strong>speech</strong> giving your views on whether or not the proposal should go ahead. In your speech you should: <strong>evaluate the ideas, attitudes and opinions given in both texts</strong>; <strong>consider some of the ways that being cash-free might affect individuals, businesses and the wider community</strong>. Base your speech on what you have read in both texts, but be careful to use your own words. Address both bullet points. Write about 250&ndash;350 words.
+    </div>
+
+    <h3>Opening &amp; Greeting</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Good evening, everyone. Thank you for coming tonight. I know we all lead busy lives, so I will keep this brief &mdash; but I believe this proposal deserves far more scrutiny than it has received so far.</p>
+        <p>Let me ask you a simple question: when did you last pay for something with cash? If you are anything like most people in this room, you probably cannot remember. Contactless cards and phone payments have quietly become the norm, and for good reason &mdash; they are fast, convenient, and undeniably simple. But convenience for the majority is not the same as fairness for all, and that is precisely the problem with making our area entirely cash-free.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R1, W1, W2, W4):</strong> The greeting and direct question establish <strong>speech register immediately</strong> &mdash; &ldquo;Good evening&rdquo;, &ldquo;Let me ask you&rdquo;, &ldquo;this room.&rdquo; The rhetorical question draws from Text B&rsquo;s personal discovery of going cashless without realising it, but rephrased for the audience. The candidate concedes the benefits of digital payment (Text A: speed, simplicity) before pivoting to their evaluative thesis &mdash; &ldquo;convenience for the majority is not fairness for all&rdquo; &mdash; which is an <strong>implicit inference</strong> (R2), not a restatement from either text.
+      </div>
+    </div>
+
+    <h3>Paragraph 2 &mdash; Effects on Individuals</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>Consider, first, what going cash-free means for individuals. For those of us who are comfortable with technology, very little changes. But what about elderly residents who have never owned a smartphone? What about families on low incomes who rely on physical money to budget week by week &mdash; who divide notes into envelopes for rent, food and bills because that is the only system that stops them overspending? One writer warns that digital payments make it dangerously easy to lose track, and she is right: removing cash removes a discipline that many people depend on. Worse still, as one parent discovered, even teaching a child the value of money becomes almost impossible when coins and notes have vanished from daily life.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R1, R2, R3, W3, W4):</strong> Addresses bullet 2 (effects on individuals) while evaluating both texts. Text A&rsquo;s ideas (elderly exclusion, low-income budgeting, spending control) and Text B&rsquo;s personal anecdote (son&rsquo;s pocket money, losing grasp of cash&rsquo;s value) are <strong>synthesised into a single argument</strong> rather than listed separately. The repeated &ldquo;What about&hellip;?&rdquo; structure is a speech device (W4) that builds urgency. The candidate <strong>evaluates</strong> the attitude from Text A (&ldquo;she is right&rdquo;) rather than merely repeating it (R2). Complex sentence structures (W3) carry multiple ideas without losing clarity.
+      </div>
+    </div>
+
+    <h3>Paragraph 3 &mdash; Effects on Businesses &amp; Community</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>The effects on businesses are no less troubling. Street vendors, market traders and charity collectors all depend on the impulse generosity of passers-by reaching into their pockets. Take cash away, and you take away their livelihood &mdash; not because people stop caring, but because the friction of opening an app or finding a card reader kills the moment. Small businesses, meanwhile, face transaction fees on every sale, costs that larger chains absorb easily but that could push a local caf&eacute; or corner shop towards closure. And let us not forget the wider community: when a bank decides to charge fees simply for depositing coins &mdash; as one resident&rsquo;s daughter discovered with her hard-saved pocket money &mdash; we have to ask ourselves whose interests this cashless future truly serves.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R1, R2, R3, R5, W1, W3):</strong> Addresses bullet 2 across businesses and the wider community. Text A&rsquo;s ideas (street vendors, charity collectors, small-business fees) are combined with Text B&rsquo;s anecdote (daughter&rsquo;s savings eroded by deposit fees) into a coherent argument. The <strong>implicit evaluation</strong> &mdash; &ldquo;whose interests this cashless future truly serves&rdquo; &mdash; infers that corporate and banking interests drive the cashless push (R2), an idea neither text states explicitly. The candidate covers both bullet points thoroughly (R5) and uses a tricolon (&ldquo;street vendors, market traders and charity collectors&rdquo;) and the speech device &ldquo;let us not forget&rdquo; (W4) to maintain register.
+      </div>
+    </div>
+
+    <h3>Closing &amp; Call to Action</h3>
+    <div class="model-block">
+      <div class="model-text">
+        <p>I am not standing here to tell you that digital payments are the enemy. They are not. But I am asking you to reject a proposal that treats going fully cash-free as progress when, for many of our neighbours, it would be anything but. What we need is not a ban on cash but a guarantee that it remains an option &mdash; so that no one in this community is locked out of the economy they helped to build. Thank you.</p>
+      </div>
+      <div class="model-annotation">
+        <strong>Why this scores (R2, R3, W1, W2, W4):</strong> The closing delivers a <strong>balanced, evaluative conclusion</strong> (R3) &mdash; digital payments are acknowledged as useful, but the proposal is rejected on grounds of fairness, not nostalgia. &ldquo;I am not standing here to tell you&hellip; But I am asking you&rdquo; is a controlled antithetical structure (W3). The call to action (&ldquo;reject a proposal&rdquo;, &ldquo;guarantee that it remains an option&rdquo;) is specific and audience-appropriate. The inclusive &ldquo;our neighbours&rdquo; and &ldquo;this community&rdquo; sustain speech register to the final &ldquo;Thank you&rdquo; (W4). The metaphor &ldquo;locked out of the economy they helped to build&rdquo; is a <strong>sophisticated evaluative inference</strong> about social exclusion that goes well beyond either text.
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Key Takeaways</div>
+      <strong>Speech register from first to last word</strong> &mdash; greeting, direct address (&ldquo;you&rdquo;, &ldquo;we&rdquo;, &ldquo;this room&rdquo;), rhetorical questions, audience interaction (&ldquo;let us not forget&rdquo;), call to action, and &ldquo;Thank you&rdquo; are all markers examiners look for under W4. <strong>Concede before you argue</strong> &mdash; acknowledging the genuine benefits of digital payment makes the critique of the proposal far more persuasive. <strong>Synthesise, don&rsquo;t alternate</strong> &mdash; top-band answers weave ideas from both texts into a single line of reasoning rather than dealing with Text A then Text B separately. <strong>Cover all three contexts</strong> &mdash; the question names individuals, businesses and the wider community; addressing all three shows careful reading of the task (R5). <strong>Evaluate attitudes, not just facts</strong> &mdash; the mark scheme rewards candidates who assess what the writers <em>think</em> and <em>feel</em>, not just what they report.
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">Past Paper Reference</div>
+      <strong>Paper:</strong> 0500/23 October/November 2024 &mdash; <strong>Insert:</strong> 0500/23/INSERT/O/N/24 (Text A: article on digital payments replacing cash; Text B: personal blog on discovering a cashless lifestyle and its consequences) &mdash; <strong>Mark Scheme:</strong> 0500/23/MS/O/N/24, pages 5&ndash;7.
+    </div>
+  </div>
+
+  <!-- ==================== FORM COMPARISON ==================== -->
+  <div class="section" id="sec-comparison">
+    <div class="section-header">
+      <span class="form-badge">Quick Reference</span>
+      <h2>Form Comparison Table</h2>
+      <p class="purpose">At-a-glance comparison of all eight writing forms &mdash; register, structure, conventions, and what makes each one distinctive.</p>
+    </div>
+
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Form</th><th>Register</th><th>Structure</th><th>Key Convention</th><th>Top-Band Move</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Report</strong></td>
+              <td>Formal, impersonal</td>
+              <td>Overview &rarr; Findings &rarr; Recommendations</td>
+              <td>Subheadings, "To the Principal"</td>
+              <td>Objective evaluation with clear recommendations</td>
+            </tr>
+            <tr>
+              <td><strong>Article</strong></td>
+              <td>Semi-formal</td>
+              <td>Headline &rarr; Hook &rarr; Development &rarr; Conclusion</td>
+              <td>Engaging headline, expert quotes</td>
+              <td>Balanced viewpoints with varied evidence</td>
+            </tr>
+            <tr>
+              <td><strong>Speech</strong></td>
+              <td>Semi-formal, spoken</td>
+              <td>Greeting &rarr; Argument &rarr; Call to action</td>
+              <td>Direct address, rhetorical Qs, "we"/"our"</td>
+              <td>Audience interaction woven throughout</td>
+            </tr>
+            <tr>
+              <td><strong>Letter</strong></td>
+              <td>Formal or informal</td>
+              <td>Purpose &rarr; Development &rarr; Action expected</td>
+              <td>Dear/Yours, correct sign-off pairing</td>
+              <td>Calm, polite tone even in complaints</td>
+            </tr>
+            <tr>
+              <td><strong>Persuasive</strong></td>
+              <td>Confident, assertive</td>
+              <td>Thesis &rarr; 3 body &rarr; Counter-arg &rarr; Reframe</td>
+              <td>DAFOREST techniques, evidence mix</td>
+              <td>Counter-argument: concede, state, defeat, reaffirm</td>
+            </tr>
+            <tr>
+              <td><strong>Interview</strong></td>
+              <td>Two voices, varied</td>
+              <td>Framing &rarr; 5&ndash;6 Q&amp;A pairs &rarr; Close</td>
+              <td>Speaker labels, five question types</td>
+              <td>Distinctive interviewee voice + source integration</td>
+            </tr>
+            <tr>
+              <td><strong>Journal</strong></td>
+              <td>Informal, personal</td>
+              <td>Date &rarr; Event &rarr; Feelings &rarr; Reflection</td>
+              <td>Date at top, first person, intimate tone</td>
+              <td>Genuine reflection &mdash; what did it mean?</td>
+            </tr>
+            <tr>
+              <td><strong>Newspaper Report</strong></td>
+              <td>Impersonal, factual</td>
+              <td>Headline &rarr; 5-Ws lead &rarr; Detail &rarr; Close</td>
+              <td>Inverted pyramid, attributed quotes</td>
+              <td>Named sources + zero editorialising</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Which Form Appears Where?</h3>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Paper</th><th>Section</th><th>Possible Forms</th><th>Marks</th></tr></thead>
+          <tbody>
+            <tr><td>Paper 1</td><td>Q4 &mdash; Extended response to reading</td><td>Letter, report, speech, article, interview, journal</td><td>20 (10R + 10W)</td></tr>
+            <tr><td>Paper 2</td><td>Section A &mdash; Directed writing + composition</td><td>Any form directed; persuasive/descriptive/narrative choice</td><td>40 (5 + 35)</td></tr>
+            <tr><td>Paper 2</td><td>Section B &mdash; Composition</td><td>Persuasive/argumentative as one option</td><td>40</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Common Linking Words by Register</h3>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Purpose</th><th>Formal (Report/Letter)</th><th>Semi-formal (Article/Speech)</th></tr></thead>
+          <tbody>
+            <tr><td>Addition</td><td>Furthermore, moreover, additionally</td><td>In addition, likewise, also</td></tr>
+            <tr><td>Contrast</td><td>However, nevertheless, conversely</td><td>But, on the other hand, yet</td></tr>
+            <tr><td>Cause/Effect</td><td>As a consequence, therefore, hence</td><td>So, as a result, because of this</td></tr>
+            <tr><td>Conclusion</td><td>In conclusion, to summarise, finally</td><td>Ultimately, in the end, so</td></tr>
+            <tr><td>Concession</td><td>Admittedly, it must be acknowledged</td><td>True, granted, fair enough</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TECHNIQUES GLOSSARY ==================== -->
+  <div class="section" id="sec-techniques">
+    <div class="section-header">
+      <span class="form-badge">Quick Reference</span>
+      <h2>Techniques Glossary</h2>
+      <p class="purpose">Key terms, rhetorical devices, and definitions that Cambridge mark schemes credit &mdash; with examples for each.</p>
+    </div>
+
+    <h3>Rhetorical &amp; Persuasive Devices</h3>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Device</th><th>Definition</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Rhetorical question</strong></td><td>A question that expects no answer, framing the argument</td><td>"Are we content to keep paying the higher cost of inaction?"</td></tr>
+            <tr><td><strong>Tricolon (Rule of three)</strong></td><td>Three items grouped for rhythm and completeness</td><td>"Cleaner lungs, quieter streets, a town worth walking through."</td></tr>
+            <tr><td><strong>Direct address</strong></td><td>Speaking to the reader as "you" / "we" to close distance</td><td>"You deserve better than this. We all do."</td></tr>
+            <tr><td><strong>Antithesis</strong></td><td>Contrasting two ideas to force the reader into your frame</td><td>"The question is not whether we can afford to act &mdash; it is whether we can afford not to."</td></tr>
+            <tr><td><strong>Emotive language</strong></td><td>Words chosen to provoke an emotional response</td><td>"choking traffic" instead of "busy roads"</td></tr>
+            <tr><td><strong>Alliteration</strong></td><td>Repeated initial consonant sounds for emphasis</td><td>"save our seas"</td></tr>
+            <tr><td><strong>Anecdote</strong></td><td>A brief personal story to make abstract arguments human</td><td>"Take Priya, a sixteen-year-old who volunteered&hellip;"</td></tr>
+            <tr><td><strong>Concession</strong></td><td>Briefly admitting the opposing view's strength before defeating it</td><td>"Critics are right that initial costs are real."</td></tr>
+            <tr><td><strong>Aphorism</strong></td><td>A short, quotable sentence summarising a position</td><td>"Tradition is not nothing &mdash; but it is not, in this instance, enough."</td></tr>
+            <tr><td><strong>Inclusive pronouns</strong></td><td>Using "we", "our", "us" to unite writer and reader</td><td>"We owe it to ourselves to demand better."</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Examiner Keywords</h3>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Term</th><th>What It Means</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Stance (thesis)</strong></td><td>Your single, clear position on the question, stated early and held consistently.</td></tr>
+            <tr><td><strong>Ethos / Pathos / Logos</strong></td><td>Three classical appeals: credibility, emotion, reason. Strong writing uses all three.</td></tr>
+            <tr><td><strong>Counter-argument &amp; rebuttal</strong></td><td>An opposing view stated fairly, conceded where true, then defeated. The top-band discriminator.</td></tr>
+            <tr><td><strong>Call to action</strong></td><td>A direct demand on the reader at the close &mdash; to vote, sign, write, change their mind.</td></tr>
+            <tr><td><strong>PEEL</strong></td><td>Point, Evidence, Explain, Link &mdash; paragraph structure for argumentative writing.</td></tr>
+            <tr><td><strong>Develop (an idea)</strong></td><td>Going beyond what the text states to its implications, feelings, or consequences. Not repetition.</td></tr>
+            <tr><td><strong>Speaker label</strong></td><td>Identifier marking each turn in an interview: "Interviewer:" / "Maya:". On every turn, new line.</td></tr>
+            <tr><td><strong>Probing question</strong></td><td>A question aimed at a specific idea that invites a developed answer, not yes/no.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Assessment Objectives at a Glance</h3>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>AO</th><th>Focus</th><th>What Examiners Look For</th></tr></thead>
+          <tbody>
+            <tr><td><strong>AO5 (W)</strong></td><td>Vocabulary, structures, stylistic effects</td><td>Wide range of techniques used for deliberate effect; varied sentence structures; topic-appropriate vocabulary.</td></tr>
+            <tr><td><strong>AO6 (W)</strong></td><td>Spelling, punctuation, grammar</td><td>Accurate throughout; ambitious punctuation (semicolons, colons, dashes) used correctly.</td></tr>
+            <tr><td><strong>R1&ndash;R5</strong></td><td>Reading (Paper 1 Q4)</td><td>Select, develop, evaluate source ideas; use and respond to them in your own voice, not copy.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+</div>
+
+    <!-- WhatsApp CTA -->
+    <section class="cta-section">
+        <h2>Need Help With IGCSE English?</h2>
+        <p>Book a one-on-one tutoring session and get personalised feedback on your writing before the exam.</p>
+        <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with Paula on WhatsApp
+        </a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur</p>
+    </footer>
+
+
+    <script>
+    function showSection(id, fromHash) {
+      var sec = document.getElementById('sec-' + id);
+      if (!sec) return;
+      document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('active'); });
+      document.querySelectorAll('.nav-item').forEach(function(n) { n.classList.remove('active'); });
+      sec.classList.add('active');
+
+      var nav = document.querySelector('.nav-item[data-section="' + id + '"]');
+      if (nav) nav.classList.add('active');
+
+      // Keep the open topic in the URL so it can be linked to and survives a refresh
+      if (!fromHash && location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+
+      if (!fromHash) document.querySelector('.notes-layout').scrollIntoView();
+
+      if (window.innerWidth <= 768) {
+        document.querySelector('.sidebar').classList.remove('open');
+        document.querySelector('.overlay').classList.remove('open');
+      }
+    }
+
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+      document.querySelector('.overlay').classList.toggle('open');
+    }
+
+    if (location.hash) showSection(location.hash.slice(1), true);
+    window.addEventListener('hashchange', function() { showSection(location.hash.slice(1), true); });
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+            { "@type": "ListItem", "position": 2, "name": "Resources", "item": "/resources/" },
+            { "@type": "ListItem", "position": 3, "name": "IGCSE English Writing Forms" }
+        ]
+    }
+    </script>
+
+    <!-- LearningResource Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "IGCSE English Writing Forms: Notes & Model Answers",
+        "description": "Cambridge IGCSE English (0500) notes on every writing form: report, article, speech, letter, interview, journal and news report, with top-band model answers.",
+        "educationalLevel": "IGCSE",
+        "about": { "@type": "Thing", "name": "English" },
+        "author": { "@type": "Person", "name": "Paula" },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+</body>
+</html>
