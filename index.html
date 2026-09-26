@@ -242,25 +242,35 @@
     margin-top: 1.5rem;
   }
   .about-point {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(74,144,217,0.3);
+    background: var(--white);
+    border: 1px solid var(--sky);
     border-radius: 4px;
     padding: 1.1rem 1.2rem;
   }
   .about-point-head {
     display: flex; align-items: center; gap: 0.5rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--navy);
     margin-bottom: 0.6rem;
   }
   .about-point-icon { font-size: 1.2rem; }
+  .about-point.wide { grid-column: 1 / -1; background: var(--sky); border-color: var(--accent); }
+  .about-point-link {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
   .about-point ul { list-style: none; margin: 0; padding: 0; }
   .about-point li {
     position: relative;
     padding-left: 1rem;
     font-size: 0.88rem;
     line-height: 1.5;
-    color: rgba(255,255,255,0.8);
+    color: var(--muted);
     margin-bottom: 0.35rem;
   }
   .about-point li::before {
@@ -276,8 +286,8 @@
     margin-top: 2rem;
   }
   .credential {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(74,144,217,0.3);
+    background: var(--white);
+    border: 1px solid var(--sky);
     border-radius: 4px;
     padding: 1.2rem;
   }
@@ -286,11 +296,11 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--blue);
   }
   .credential-label {
     font-size: 0.78rem;
-    color: rgba(255,255,255,0.6);
+    color: var(--muted);
     margin-top: 0.2rem;
     line-height: 1.4;
   }
@@ -789,6 +799,15 @@
             <li>Flexible, one to two hours</li>
             <li>Online, or in person in KL</li>
           </ul>
+        </div>
+        <div class="about-point wide">
+          <div class="about-point-head"><span class="about-point-icon">✍️</span> Past paper marking</div>
+          <ul>
+            <li>Full past papers marked for Chemistry, Physics, Biology and Maths</li>
+            <li>Questions and essays marked for Business, Economics and English</li>
+            <li>Examiner-style feedback, back within 48 hours</li>
+          </ul>
+          <a class="about-point-link" href="marking/">See how it works &amp; prices &rarr;</a>
         </div>
       </div>
       <div class="about-credentials">
