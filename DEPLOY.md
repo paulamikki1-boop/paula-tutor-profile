@@ -88,3 +88,15 @@ SITE_URL=https://yourdomain.com
 5. Add a card for the resource in `/resources/index.html` inside the `#cards-grid` div.
 6. Add a `<url>` entry in `/sitemap.xml`.
 7. Update the related resources blocks on other pages as appropriate.
+
+## Search
+
+The search box on the Resources page and in each notes page's sidebar uses `resources/search.js` with the index file
+`resources/search-index.json`. After adding or editing a notes page, rebuild the index from the repository root:
+
+```
+python3 tools/build-search-index.py
+```
+
+To include a new notes page in search, add it to `PAGES` in `tools/build-search-index.py` and add
+`<script src="../search.js"></script>` before `</body>` on that page.
