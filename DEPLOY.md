@@ -32,6 +32,8 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   │   └── index.html                          — Stub (coming soon)
 │   └── igcse-economics-essay-structure-guide/
 │       └── index.html                          — Stub (coming soon)
+├── shop/
+│   └── index.html                              — PDF notes shop (Payhip embed, key luwET)
 ├── assets/
 │   └── resources/                              — PDF files go here as [slug].pdf
 ├── sitemap.xml
