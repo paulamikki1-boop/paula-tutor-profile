@@ -33,7 +33,7 @@ use them only as a topic checklist and write original content.
 - `marking/` — paid past-paper marking page: full past papers (Chem/Phys/Bio/Maths) RM10–30 per paper, cheaper in batches;
   questions RM10–20 / essays RM20–40 (Business/Econ/English); 48-hour turnaround; form opens WhatsApp prefilled.
   Accounting not yet listed (owner to decide). Economics model answers have "Get it marked" links that prefill the form.
-- `shop/` — PDF notes shop: embeds the Payhip store page (`payhip-embed-page`, data-key `luwET`). Linked from the nav on the
+- `shop/` — PDF notes shop: embeds 4 Payhip product pages (`payhip-embed-page`, data-keys `oVPXO`, `F1jYU`, `mJxkK`, `qWKMF`; one shared embed-page.js script). Linked from the nav on the
   homepage, hub, marking and Bio/Chem notes pages, a "Get these notes as a PDF" box in the Bio/Chem sidebars, and
   "PDF available" tags on the Bio/Chem hub cards. Add new subjects here when their PDFs go on Payhip.
 - Search: `resources/search.js` + `resources/search-index.json`. **Rebuild after editing notes:** `python3 tools/build-search-index.py`.
