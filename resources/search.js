@@ -112,7 +112,8 @@
   var header = document.querySelector('.sidebar .sidebar-header');
   if (header) {
     var subject = { 'igcse-biology-notes': 'Biology', 'igcse-chemistry-notes': 'Chemistry', 'igcse-economics-notes': 'Economics',
-                    'igcse-accounting-notes': 'Accounting', 'igcse-english-writing-forms': 'English' }[location.pathname.split('/').filter(Boolean).slice(-1)[0]];
+                    'igcse-accounting-notes': 'Accounting', 'igcse-business-notes': 'Business',
+                    'igcse-english-writing-forms': 'English' }[location.pathname.split('/').filter(Boolean).slice(-1)[0]];
     var wrap = document.createElement('div');
     wrap.className = 'sr-wrap';
     wrap.innerHTML = '<input class="sr-input" type="search" placeholder="Search these notes…" aria-label="Search these notes"><div class="sr-results" hidden></div>';

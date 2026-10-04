@@ -15,6 +15,7 @@ PAGES = [
     ("Chemistry", "igcse-chemistry-notes"),
     ("Economics", "igcse-economics-notes"),
     ("Accounting", "igcse-accounting-notes"),
+    ("Business", "igcse-business-notes"),
     ("English", "igcse-english-writing-forms"),
 ]
 
