@@ -29,6 +29,9 @@ use them only as a topic checklist and write original content.
 - `marking/` — paid past-paper marking page: full past papers (Chem/Phys/Bio/Maths) RM10–30 per paper, cheaper in batches;
   questions RM10–20 / essays RM20–40 (Business/Econ/English); 48-hour turnaround; form opens WhatsApp prefilled.
   Accounting not yet listed (owner to decide). Economics model answers have "Get it marked" links that prefill the form.
+- `shop/` — PDF notes shop: embeds the Payhip store page (`payhip-embed-page`, data-key `luwET`). Linked from the nav on the
+  homepage, hub, marking and Bio/Chem notes pages, a "Get these notes as a PDF" box in the Bio/Chem sidebars, and
+  "PDF available" tags on the Bio/Chem hub cards. Add new subjects here when their PDFs go on Payhip.
 - Search: `resources/search.js` + `resources/search-index.json`. **Rebuild after editing notes:** `python3 tools/build-search-index.py`.
   New notes page → add to `PAGES` in that script and include `<script src="../search.js"></script>`.
 - `sitemap.xml`, `DEPLOY.md` (structure + search instructions).
@@ -55,6 +58,5 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 - Exam Technique sections for Economics/Accounting describe 2027 papers generally — check against syllabus PDFs.
 - Business notes: paper layout described is the 0450 format (P1 4×20: 2/2/4/6/6; P2 case 4×20: 8/12) — check against the
   current syllabus year. Owner's sample questions were OxfordAQA 9225 style; model answers use original cases, not past-paper text.
-- Pre-existing: on 375px phones the top nav (Home/Resources/Marking/WhatsApp) overflows ~9px on notes pages.
-- Possible next: Physics/Maths notes, Business PDFs, Economics detailed PDFs, Payhip "Buy PDF" buttons, custom domain
+- Possible next: Physics/Maths notes, Business PDFs, Economics detailed PDFs, custom domain
   (Cloudflare Pages or Netlify), Accounting on the marking page, store name (top picks: "Notes by Paula", "A* Starts Here").
