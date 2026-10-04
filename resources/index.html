@@ -267,6 +267,13 @@
 
     <section class="filters-section">
         <div class="filters-inner">
+            <div class="filter-group search-group">
+                <label class="filter-label" for="site-search">Search all notes</label>
+                <div class="sr-wrap">
+                    <input id="site-search" class="sr-input" type="search" placeholder="e.g. accounting principles, osmosis, price elasticity" autocomplete="off">
+                    <div id="site-search-results" class="sr-results" hidden></div>
+                </div>
+            </div>
             <div class="filter-group">
                 <span class="filter-label">Subject</span>
                 <div class="filter-buttons" data-filter="subject">
@@ -439,6 +446,8 @@
 
         function updateURL() {
             var params = new URLSearchParams();
+            var q = new URLSearchParams(window.location.search).get('q');
+            if (q) params.set('q', q);
             if (filters.subject) params.set('subject', filters.subject);
             if (filters.level) params.set('level', filters.level);
             var qs = params.toString();
@@ -483,5 +492,6 @@
         applyFilters();
     })();
     </script>
+    <script src="search.js"></script>
 </body>
 </html>
