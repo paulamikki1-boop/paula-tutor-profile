@@ -23,6 +23,8 @@ use them only as a topic checklist and write original content.
   - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029: exam technique, 6 topics, 37 model answers, 12 SVG diagrams)
   - `resources/igcse-accounting-notes/` (0452 NEW syllabus 2027–2029: exam technique, 7 topics, 30 worked examples;
     `table.ledger` / `table.statement` layouts, `ledger colsN` adds the Dr/Cr divider)
+  - `resources/igcse-business-notes/` (0450: exam technique, 6 topics (1.1–6.3), Key Formulas page, 3 model-answer sections with
+    original cases — Siti's Batik Studio, Arjun's FixIt, KL Scoot, BrewHaus — 4 SVG diagrams; notes also flag Edexcel 4BS1 / OxfordAQA 9225)
   - Older stubs: chemistry past-paper technique, A-level biology definitions, physics formula sheet, economics essay guide.
 - `marking/` — paid past-paper marking page: full past papers (Chem/Phys/Bio/Maths) RM10–30 per paper, cheaper in batches;
   questions RM10–20 / essays RM20–40 (Business/Econ/English); 48-hour turnaround; form opens WhatsApp prefilled.
@@ -51,5 +53,8 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 ## Open items / ideas
 - Owner to confirm dates: tutoring since 2020 vs 2021; A Level certificate shows June 2022 series.
 - Exam Technique sections for Economics/Accounting describe 2027 papers generally — check against syllabus PDFs.
-- Possible next: Physics/Maths/Business notes, Economics detailed PDFs, Payhip "Buy PDF" buttons, custom domain
+- Business notes: paper layout described is the 0450 format (P1 4×20: 2/2/4/6/6; P2 case 4×20: 8/12) — check against the
+  current syllabus year. Owner's sample questions were OxfordAQA 9225 style; model answers use original cases, not past-paper text.
+- Pre-existing: on 375px phones the top nav (Home/Resources/Marking/WhatsApp) overflows ~9px on notes pages.
+- Possible next: Physics/Maths notes, Business PDFs, Economics detailed PDFs, Payhip "Buy PDF" buttons, custom domain
   (Cloudflare Pages or Netlify), Accounting on the marking page, store name (top picks: "Notes by Paula", "A* Starts Here").
