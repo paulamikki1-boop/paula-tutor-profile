@@ -22,6 +22,8 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   │   └── index.html                          — Full resource page (7 topics + worked examples)
 │   ├── igcse-business-notes/
 │   │   └── index.html                          — Full resource page (6 topics, formulas + model answers)
+│   ├── igcse-physics-notes/
+│   │   └── index.html                          — Full resource page (topics 2, 3, 5, 6 so far; 1 and 4 marked "Soon")
 │   ├── igcse-biology-notes/
 │   │   └── index.html                          — Full resource page (all 21 topics, sidebar-navigated)
 │   ├── igcse-english-writing-forms/

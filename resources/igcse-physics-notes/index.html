@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGCSE Physics Notes: Thermal, Waves, Nuclear &amp; Space (Cambridge 0625, 2026&ndash;2028) | Paula — IGCSE &amp; A Level Tutor</title>
+    <meta name="description" content="Free Cambridge IGCSE Physics (0625) revision notes for the 2026&ndash;2028 syllabus: thermal physics, waves, light, sound, nuclear physics and space physics, with diagrams, worked calculations, examiner tips and checklists.">
+    <link rel="canonical" href="https://paulamikki1-boop.github.io/paula-tutor-profile/resources/igcse-physics-notes/">
+    <meta property="og:title" content="IGCSE Physics Notes — Free Study Resource">
+    <meta property="og:description" content="Free Cambridge IGCSE Physics (0625) revision notes for the 2026&ndash;2028 syllabus: thermal physics, waves, light, sound, nuclear physics and space physics, with diagrams, worked calculations, examiner tips and checklists.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://paulamikki1-boop.github.io/paula-tutor-profile/resources/igcse-physics-notes/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+  /* Site palette (matches the profile and other resource pages) */
+  --navy: #0a1628;
+  --blue: #1e3a5f;
+  --blue-mid: #2a5080;
+  --blue-light: #3a6ea5;
+  --sky: #e8f0fe;
+  --white: #ffffff;
+  --off-white: #f5f8fc;
+  --site-muted: #4a5568;
+  --site-accent: #4a90d9;
+
+  /* Notes tokens mapped onto the site palette */
+  --bg: var(--white);
+  --bg-card: var(--white);
+  --bg-sidebar: var(--navy);
+  --bg-sidebar-hover: var(--blue);
+  --bg-sidebar-active: var(--blue-mid);
+  --bg-tip: var(--sky);
+  --bg-mistake: #fdf0ec;
+  --bg-structure: var(--off-white);
+  --bg-checklist: #f0f7e6;
+  --text: var(--navy);
+  --text-muted: var(--site-muted);
+  --text-sidebar: #c9d6e8;
+  --text-sidebar-active: #ffffff;
+  --accent: var(--blue-mid);
+  --accent-light: var(--site-accent);
+  --gold: var(--blue);
+  --gold-bg: var(--sky);
+  --border: #dde4ee;
+  --border-light: #e8eef6;
+  --red: #c0392b;
+  --shadow: 0 1px 3px rgba(10,22,40,0.06), 0 1px 2px rgba(10,22,40,0.04);
+  --shadow-lg: 0 4px 12px rgba(10,22,40,0.08);
+  --radius: 8px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.notes-layout {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--bg-sidebar);
+  color: var(--text-sidebar);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.pdf-promo {
+  display: block;
+  margin: 14px 16px 6px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(74,144,217,0.16);
+  border: 1px solid rgba(74,144,217,0.45);
+  text-decoration: none;
+  color: #fff;
+}
+.pdf-promo strong { display: block; font-size: 14px; }
+.pdf-promo span { display: block; font-size: 12px; color: var(--text-sidebar); margin-top: 2px; }
+.pdf-promo:hover { background: rgba(74,144,217,0.26); }
+.sidebar-header {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar-header h1 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.sidebar-header .syllabus {
+  font-size: 12px;
+  color: var(--text-sidebar);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.3);
+  padding: 20px 20px 8px;
+  font-weight: 600;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-size: 14px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  user-select: none;
+}
+
+.nav-item:hover { background: var(--bg-sidebar-hover); }
+.nav-item.active {
+  background: var(--bg-sidebar-active);
+  color: var(--text-sidebar-active);
+  border-left-color: #fff;
+}
+
+.nav-item .nav-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-item.active .nav-icon { background: rgba(255,255,255,0.15); }
+
+/* Sub-navigation within sections */
+.subnav {
+  display: none;
+  flex-direction: column;
+  padding: 4px 0 8px;
+}
+.subnav.show { display: flex; }
+
+.subnav-item {
+  padding: 6px 20px 6px 58px;
+  font-size: 13px;
+  color: var(--text-sidebar);
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+.subnav-item:hover { color: #fff; background: var(--bg-sidebar-hover); }
+.subnav-item.active { color: var(--accent-light); }
+
+/* Main content */
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 40px 60px;
+  max-width: 900px;
+}
+
+.section { display: none; }
+.section.active { display: block; }
+
+.section-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+}
+
+.section-header .form-badge {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-tip);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  text-wrap: balance;
+}
+
+.section-header .purpose {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 640px;
+}
+
+/* Content blocks */
+h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 36px 0 16px;
+  color: var(--blue);
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin: 24px 0 10px;
+}
+
+p { margin-bottom: 12px; max-width: 640px; }
+
+ul, ol {
+  margin: 0 0 16px 20px;
+  max-width: 640px;
+}
+li { margin-bottom: 6px; }
+li strong { color: var(--text); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+/* Structure diagram cards */
+.structure-card {
+  background: var(--bg-structure);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.structure-card .step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.structure-card .step + .step { border-top: 1px solid var(--border-light); }
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.step-content strong { display: block; font-size: 14px; font-weight: 600; }
+.step-content span { font-size: 14px; color: var(--text-muted); }
+
+/* Tip boxes */
+.tip-box {
+  background: var(--bg-tip);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.tip-box .tip-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* Mistake boxes */
+.mistake-box {
+  background: var(--bg-mistake);
+  border-left: 3px solid var(--red);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.mistake-box .mistake-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+
+/* Checklist */
+.checklist {
+  background: var(--bg-checklist);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.checklist h4 {
+  margin-top: 0;
+  color: var(--gold);
+}
+
+.checklist ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.checklist li {
+  padding: 4px 0;
+  padding-left: 22px;
+  position: relative;
+}
+
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Key terms */
+.key-term {
+  display: inline-block;
+  background: var(--gold-bg);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+/* Table */
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--bg-structure);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+/* Example block */
+.example-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 16px 0;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.example-block .ex-label {
+  font-style: normal;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+/* Mnemonic */
+.mnemonic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.mnemonic span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.mnemonic span strong {
+  color: var(--accent);
+  font-size: 15px;
+}
+
+/* Conventions grid */
+.conventions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.convention-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.convention-item .conv-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.convention-item .conv-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  width: 100%;
+  padding: 0.7rem 1.5rem;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hamburger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+  transition: transform 0.2s;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 90;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .notes-layout { display: block; }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .overlay.open { display: block; }
+  .main {
+    padding: 8px 16px 40px;
+  }
+  .section-header h2 { font-size: 30px; }
+  h3 { font-size: 21px; }
+  .conventions { grid-template-columns: 1fr 1fr; }
+}
+
+/* Scroll anchoring */
+[id] { scroll-margin-top: 20px; }
+
+/* Model answer blocks */
+.model-block {
+  margin: 20px 0;
+}
+
+.model-text {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 20px 24px;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: none;
+}
+
+.model-text p { font-style: italic; max-width: none; }
+.model-text p:last-child { margin-bottom: 0; }
+
+.model-annotation {
+  background: var(--bg-tip);
+  border: 1px solid var(--border-light);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 14px 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.model-annotation strong { color: var(--accent); font-weight: 600; }
+
+.model-score {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+  font-style: normal;
+}
+
+.model-task {
+  background: var(--bg-structure);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 16px 0 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.model-task .task-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.marking-btn { display: inline-block; margin: 0.75rem 0 0 0.75rem; color: var(--white); border: 1px solid rgba(255,255,255,0.6); padding: 0.65rem 1.3rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+.marking-btn:hover { background: rgba(255,255,255,0.1); }
+
+/* Site chrome */
+.nav { background: var(--navy); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.nav a { text-decoration: none; }
+.nav-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--white); }
+.nav-links { display: flex; gap: 0.6rem 1.25rem; align-items: center; flex-wrap: wrap; }
+.nav-links a { color: var(--sky); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--white); }
+.whatsapp-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: #25d366; color: var(--white) !important; padding: 0.5rem 1.1rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+.whatsapp-btn:hover { background: #1da851; }
+
+.breadcrumbs { padding: 1rem 1.5rem; font-size: 0.85rem; color: var(--site-muted); }
+.breadcrumbs a { color: var(--accent); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+/* WhatsApp CTA */
+.cta-section {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 2rem;
+}
+.cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 0.75rem; }
+.cta-section p { color: var(--sky); margin-bottom: 1.25rem; }
+.cta-section .whatsapp-btn { font-size: 1rem; padding: 0.7rem 1.5rem; }
+
+.footer { background: var(--navy); color: var(--sky); text-align: center; padding: 1.5rem; font-size: 0.85rem; }
+.footer a { color: var(--accent); text-decoration: none; }
+
+.cta-section h2 { font-weight: 700; }
+.cta-section p, .footer p { max-width: none; margin-bottom: 1.25rem; }
+.footer p { margin-bottom: 0; }
+
+@media print {
+  .nav, .breadcrumbs, .hamburger, .overlay, .sidebar, .cta-section, .footer { display: none !important; }
+  body { font-size: 11pt; background: #fff; }
+  .main { padding: 0; max-width: 100%; }
+  .tip-box, .mistake-box, .checklist, .structure-card, .model-block, table { page-break-inside: avoid; }
+  h2, h3, h4 { page-break-after: avoid; }
+}
+
+
+/* Physics additions */
+.formula-box {
+  margin: 16px 0;
+  padding: 12px 18px;
+  background: var(--sky);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.nuclide { display: inline-flex; flex-direction: column; vertical-align: middle; line-height: 1; font-size: 0.72em; text-align: right; margin-right: 1px; }
+.nuclide sup, .nuclide sub { position: static; font-size: 1em; }
+.diagram {
+  margin: 20px 0;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  color: var(--navy);
+}
+.diagram svg { width: 100%; height: auto; display: block; }
+.diagram figcaption { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+.nav-item .nav-icon { font-size: 12px; }
+.nav-item.soon { cursor: default; opacity: 0.5; }
+.nav-item.soon:hover { background: none; }
+.soon-tag { margin-left: auto; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.4); border-radius: 4px; padding: 1px 5px; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="../../" class="nav-brand">Paula</a>
+        <div class="nav-links">
+            <a href="../../">Home</a>
+            <a href="../../resources/">Resources</a>
+            <a href="../../marking/">Marking</a>
+            <a href="../../shop/">Shop</a>
+            <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="breadcrumbs">
+        <a href="../../">Home</a> &rsaquo; <a href="../../resources/">Resources</a> &rsaquo; IGCSE Physics Notes
+    </div>
+
+<button class="hamburger" onclick="toggleSidebar()" aria-label="Open topic navigation">
+  <span class="hamburger-icon"><span></span><span></span><span></span></span> Browse topics
+</button>
+
+<div class="notes-layout">
+<div class="overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h1>IGCSE Physics Notes</h1>
+    <div class="syllabus">Cambridge IGCSE 0625 &middot; 2026&ndash;2028 Syllabus</div>
+  </div>
+
+  <div class="nav-section-label">1 &middot; Motion, Forces &amp; Energy</div>
+  <div class="nav-item soon" aria-disabled="true">
+    <div class="nav-icon">1</div> Motion, Forces &amp; Energy <span class="soon-tag">Soon</span>
+  </div>
+  <div class="nav-section-label">2 &middot; Thermal Physics</div>
+  <div class="nav-item active" data-section="particle-model" onclick="showSection('particle-model')">
+    <div class="nav-icon">2.1</div> Kinetic Particle Model
+  </div>
+  <div class="nav-item" data-section="thermal-properties" onclick="showSection('thermal-properties')">
+    <div class="nav-icon">2.2</div> Thermal Properties
+  </div>
+  <div class="nav-item" data-section="thermal-transfer" onclick="showSection('thermal-transfer')">
+    <div class="nav-icon">2.3</div> Thermal Energy Transfer
+  </div>
+  <div class="nav-section-label">3 &middot; Waves</div>
+  <div class="nav-item" data-section="wave-properties" onclick="showSection('wave-properties')">
+    <div class="nav-icon">3.1</div> General Wave Properties
+  </div>
+  <div class="nav-item" data-section="light-reflection-refraction" onclick="showSection('light-reflection-refraction')">
+    <div class="nav-icon">3.2</div> Reflection &amp; Refraction
+  </div>
+  <div class="nav-item" data-section="light-lenses" onclick="showSection('light-lenses')">
+    <div class="nav-icon">3.2</div> Lenses &amp; Dispersion
+  </div>
+  <div class="nav-item" data-section="em-spectrum" onclick="showSection('em-spectrum')">
+    <div class="nav-icon">3.3</div> Electromagnetic Spectrum
+  </div>
+  <div class="nav-item" data-section="sound" onclick="showSection('sound')">
+    <div class="nav-icon">3.4</div> Sound
+  </div>
+  <div class="nav-section-label">4 &middot; Electricity &amp; Magnetism</div>
+  <div class="nav-item soon" aria-disabled="true">
+    <div class="nav-icon">4</div> Electricity &amp; Magnetism <span class="soon-tag">Soon</span>
+  </div>
+  <div class="nav-section-label">5 &middot; Nuclear Physics</div>
+  <div class="nav-item" data-section="nuclear-atom" onclick="showSection('nuclear-atom')">
+    <div class="nav-icon">5.1</div> The Nuclear Atom
+  </div>
+  <div class="nav-item" data-section="radioactivity" onclick="showSection('radioactivity')">
+    <div class="nav-icon">5.2</div> Radioactivity
+  </div>
+  <div class="nav-section-label">6 &middot; Space Physics</div>
+  <div class="nav-item" data-section="solar-system" onclick="showSection('solar-system')">
+    <div class="nav-icon">6.1</div> Earth &amp; the Solar System
+  </div>
+  <div class="nav-item" data-section="stars-universe" onclick="showSection('stars-universe')">
+    <div class="nav-icon">6.2</div> Stars &amp; the Universe
+  </div>
+  <div class="nav-section-label">Reference</div>
+  <div class="nav-item" data-section="key-equations" onclick="showSection('key-equations')">
+    <div class="nav-icon">=</div> Key Equations
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ==================== 2.1 KINETIC PARTICLE MODEL ==================== -->
+  <div class="section active" id="sec-particle-model">
+    <div class="section-header">
+      <span class="form-badge">Topic 2.1 &middot; Thermal Physics</span>
+      <h2>The Kinetic Particle Model of Matter</h2>
+      <p class="purpose">Everything is made of particles that never stop moving. This one idea explains the properties of solids, liquids and gases, what temperature really measures, why gases exert pressure and why there is a lowest possible temperature.</p>
+    </div>
+
+    <h3>Solids, liquids and gases</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Property</th><th>Solid</th><th>Liquid</th><th>Gas</th></tr></thead>
+      <tbody>
+        <tr><td>Shape</td><td>Fixed</td><td>Takes the shape of its container</td><td>Spreads out to fill its container</td></tr>
+        <tr><td>Volume</td><td>Fixed</td><td>Fixed</td><td>Not fixed: fills whatever space is available</td></tr>
+        <tr><td>Can it be compressed?</td><td>No (almost not at all)</td><td>No (almost not at all)</td><td>Yes, easily</td></tr>
+        <tr><td>Can it flow?</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>The particle model</h3>
+    <figure class="diagram" style="max-width:520px"><svg viewBox="0 0 480 170" role="img" aria-label="Particle arrangement in a solid (regular, touching), a liquid (touching but random) and a gas (far apart and random)">
+      <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs><rect x="15" y="15" width="130" height="120" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text x="80" y="158" font-size="14" text-anchor="middle" fill="currentColor">Solid</text>
+      <rect x="175" y="15" width="130" height="120" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text x="240" y="158" font-size="14" text-anchor="middle" fill="currentColor">Liquid</text>
+      <rect x="335" y="15" width="130" height="120" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text x="400" y="158" font-size="14" text-anchor="middle" fill="currentColor">Gas</text>
+      <circle cx="32" cy="43" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="56" cy="43" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="80" cy="43" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="104" cy="43" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="128" cy="43" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="32" cy="67" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="56" cy="67" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="80" cy="67" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="104" cy="67" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="128" cy="67" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="32" cy="91" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="56" cy="91" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="80" cy="91" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="104" cy="91" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="128" cy="91" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="32" cy="115" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="56" cy="115" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="80" cy="115" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="104" cy="115" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="128" cy="115" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="195" cy="122" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="219" cy="123" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="243" cy="121" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="268" cy="122" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="291" cy="120" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="207" cy="99" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="231" cy="100" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="256" cy="98" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="281" cy="99" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="197" cy="76" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="222" cy="77" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="268" cy="77" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="293" cy="90" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="244" cy="75" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="210" cy="54" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <circle cx="360" cy="40" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <line x1="373.0" y1="34.8" x2="397.0" y2="25.2" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arr)"/>
+      <circle cx="430" cy="50" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <line x1="418.6" y1="58.2" x2="398.6" y2="72.6" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arr)"/>
+      <circle cx="395" cy="95" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <line x1="405.4" y1="104.4" x2="423.0" y2="120.4" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arr)"/>
+      <circle cx="355" cy="115" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <line x1="368.5" y1="111.2" x2="390.9" y2="104.8" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arr)"/>
+      <circle cx="445" cy="118" r="11.5" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.5"/>
+      <line x1="435.6" y1="107.6" x2="419.6" y2="90.0" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arr)"/>
+    </svg><figcaption>Solid: regular and touching. Liquid: touching but irregular. Gas: far apart and random.</figcaption></figure>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Solid</th><th>Liquid</th><th>Gas</th></tr></thead>
+      <tbody>
+        <tr><td>Arrangement</td><td>Regular pattern (lattice)</td><td>Irregular</td><td>Random</td></tr>
+        <tr><td>Separation</td><td>Very close, touching</td><td>Close, mostly touching</td><td>Far apart (about 10&times; further than in a liquid)</td></tr>
+        <tr><td>Motion</td><td>Vibrate about fixed positions</td><td>Move around, sliding past each other</td><td>Move quickly in random directions</td></tr>
+      </tbody>
+    </table></div>
+    <div class="mnemonic"><span><strong>A</strong>rrangement</span> <span><strong>S</strong>eparation</span> <span><strong>M</strong>otion</span> &mdash; describe all three for full marks.</div>
+
+    <h3><span class="key-term">Supplement</span> Forces and distances between particles</h3>
+    <ul>
+      <li><strong>Solid:</strong> strong forces of attraction hold particles in fixed positions, so the solid keeps its shape.</li>
+      <li><strong>Liquid:</strong> particles have enough energy to move out of fixed positions, but the attractive forces are still strong enough to keep them close together. That is why a liquid flows but keeps its volume.</li>
+      <li><strong>Gas:</strong> particles are far apart and the forces between them are negligible (except when they collide), so a gas spreads out and is easy to compress.</li>
+    </ul>
+
+    <h3>Temperature and particle energy</h3>
+    <ul>
+      <li>When a substance is heated, its particles gain <strong>kinetic energy</strong> and move (or vibrate) faster.</li>
+      <li>The <strong>temperature</strong> of a substance is a measure of the <strong>average kinetic energy</strong> of its particles. Higher temperature = faster particles on average.</li>
+    </ul>
+
+    <h3>Gas pressure</h3>
+    <p>Gas particles move randomly at high speed. Every time one hits a wall of its container it bounces off and exerts a tiny force. Billions of these collisions every second add up to a steady force on each area of wall, and that is <strong>gas pressure</strong>.</p>
+    <ul>
+      <li><strong>Heat the gas (fixed volume):</strong> particles move faster, so they hit the walls <strong>more often</strong> and <strong>harder</strong>. Pressure increases.</li>
+      <li><strong>Squash the gas (fixed temperature):</strong> the same particles are in a smaller space, so they hit the walls <strong>more often</strong>. Pressure increases.</li>
+    </ul>
+
+    <h3><span class="key-term">Supplement</span> Explaining pressure with force</h3>
+    <p>Each collision changes the momentum of a particle, so the wall exerts a force on the particle and the particle exerts an equal force on the wall. Pressure is this total force divided by the area of the wall (p = F / A). More frequent or harder collisions mean a larger total force on the same area, so a higher pressure.</p>
+
+    <h3>Absolute zero and the Kelvin scale</h3>
+    <ul>
+      <li>Cooling a substance slows its particles down. At <strong>absolute zero (&minus;273&nbsp;&deg;C)</strong> the particles have the least possible kinetic energy, so nothing can be colder.</li>
+      <li>The <strong>Kelvin scale</strong> starts at absolute zero. One kelvin is the same size as one degree Celsius.</li>
+    </ul>
+    <div class="formula-box">T (in K) = &theta; (in &deg;C) + 273</div>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>Convert 27&nbsp;&deg;C and 0&nbsp;K into the other scale.</strong><br>27&nbsp;&deg;C &rarr; 27 + 273 = <strong>300&nbsp;K</strong><br>0&nbsp;K &rarr; 0 &minus; 273 = <strong>&minus;273&nbsp;&deg;C</strong> (absolute zero)</div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Writing &ldquo;300&nbsp;&deg;K&rdquo;. Kelvin has no degree sign: write 300&nbsp;K.</div>
+
+    <h3><span class="key-term">Supplement</span> Pressure and volume of a gas</h3>
+    <p>For a <strong>fixed mass of gas at constant temperature</strong>, pressure and volume are inversely proportional: halve the volume and the pressure doubles.</p>
+    <div class="formula-box">pV = constant &nbsp;&nbsp;or&nbsp;&nbsp; p<sub>1</sub>V<sub>1</sub> = p<sub>2</sub>V<sub>2</sub></div>
+    <p><strong>Why:</strong> in a smaller volume the particles travel a shorter distance between collisions with the walls, so they hit the walls more often. At the same temperature they hit with the same average force, so the total force per unit area (pressure) rises.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A syringe holds 60&nbsp;cm<sup>3</sup> of air at 100&nbsp;kPa. The plunger is pushed in slowly (temperature stays the same) until the volume is 20&nbsp;cm<sup>3</sup>. Calculate the new pressure. [3]</strong><br>p<sub>1</sub>V<sub>1</sub> = p<sub>2</sub>V<sub>2</sub><br>100 &times; 60 = p<sub>2</sub> &times; 20<br>p<sub>2</sub> = 6000 &divide; 20 = <strong>300&nbsp;kPa</strong><br><em>Check: the volume became 3&times; smaller, so the pressure should be 3&times; bigger. &#10003;</em></div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Volumes and pressures can stay in any units (cm<sup>3</sup>, kPa) as long as both sides of p<sub>1</sub>V<sub>1</sub> = p<sub>2</sub>V<sub>2</sub> use the same units. Always state &ldquo;constant temperature&rdquo; if asked for the conditions.</div>
+
+    <h3>Brownian motion</h3>
+    <p>If you look at smoke in air (or pollen grains in water) through a microscope, the specks jiggle around in a jerky, random way. This is <strong>Brownian motion</strong>.</p>
+    <ul>
+      <li>It is caused by the specks being hit by the invisible, fast-moving air (or water) molecules from all sides.</li>
+      <li>It is evidence that the particles of a gas or liquid are moving randomly.</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Why the specks move</h3>
+    <p>The smoke particles are much larger and heavier than air molecules. At any instant, more molecules happen to hit one side than the other, so there is an unbalanced force and the speck moves a little. The direction keeps changing at random. Because a <strong>light, fast-moving</strong> molecule can move a <strong>massive</strong> speck, the molecules must be moving very fast.</p>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Saying the <em>smoke particles</em> are the air molecules. You can see the smoke specks; the air molecules hitting them are far too small to see.</div>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe the properties of solids, liquids and gases and their particle arrangement, separation and motion.</li>
+      <li>I can explain the forces between particles in each state (Supplement).</li>
+      <li>I can link temperature to the average kinetic energy of particles.</li>
+      <li>I can explain gas pressure using particle collisions, and how it changes with temperature and volume.</li>
+      <li>I can convert between &deg;C and K and state the value of absolute zero.</li>
+      <li>I can use pV = constant and explain it using particles (Supplement).</li>
+      <li>I can describe Brownian motion and explain what it shows (Supplement: why the specks move).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 2.2 THERMAL PROPERTIES ==================== -->
+  <div class="section" id="sec-thermal-properties">
+    <div class="section-header">
+      <span class="form-badge">Topic 2.2 &middot; Thermal Physics</span>
+      <h2>Thermal Properties and Temperature</h2>
+      <p class="purpose">What happens when things are heated: they expand, their temperature rises by an amount that depends on the material, and at the right temperatures they melt, boil or evaporate.</p>
+    </div>
+
+    <h3>Thermal expansion</h3>
+    <p>Most substances expand when heated. The particles do <strong>not</strong> get bigger: they move or vibrate more, so they take up more space.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>State</th><th>How much it expands</th><th><span class="key-term">Supplement</span> Why</th></tr></thead>
+      <tbody>
+        <tr><td>Solid</td><td>Least</td><td>Strong forces hold the particles tightly; they only vibrate more.</td></tr>
+        <tr><td>Liquid</td><td>More</td><td>Forces are weaker, so particles move further apart as they gain energy.</td></tr>
+        <tr><td>Gas</td><td>Most</td><td>Forces between particles are negligible, so nothing holds them back.</td></tr>
+      </tbody>
+    </table></div>
+    <h4>Everyday examples</h4>
+    <ul>
+      <li><strong>Gaps in bridges and railway tracks</strong> leave room for the metal to expand on hot days without buckling.</li>
+      <li><strong>Overhead power cables</strong> are hung slack so they don&rsquo;t snap when they contract in cold weather.</li>
+      <li><strong>Liquid-in-glass thermometers:</strong> the liquid expands up a narrow tube as temperature rises.</li>
+      <li><strong>Loosening a tight metal lid</strong> by running it under hot water: the metal lid expands more than the glass jar.</li>
+    </ul>
+
+    <h3>Specific heat capacity</h3>
+    <ul>
+      <li>Heating an object increases its <strong>internal energy</strong> (the total energy of its particles), which raises its temperature.</li>
+      <li>Different materials need different amounts of energy to warm up by the same amount. Water needs a lot; metals need much less.</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Definition and equation</h3>
+    <p><strong>Specific heat capacity (c)</strong> is the energy needed to raise the temperature of <strong>1&nbsp;kg</strong> of a substance by <strong>1&nbsp;&deg;C</strong>.</p>
+    <div class="formula-box">c = &Delta;E &divide; (m &Delta;&theta;) &nbsp;&nbsp;or&nbsp;&nbsp; &Delta;E = m c &Delta;&theta;</div>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">&Delta;E</div><div class="conv-value">Energy supplied, in J</div></div>
+      <div class="convention-item"><div class="conv-label">m</div><div class="conv-value">Mass, in kg</div></div>
+      <div class="convention-item"><div class="conv-label">c</div><div class="conv-value">Specific heat capacity, in J/(kg&nbsp;&deg;C)</div></div>
+      <div class="convention-item"><div class="conv-label">&Delta;&theta;</div><div class="conv-value">Temperature change, in &deg;C</div></div>
+    </div>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A kettle heats 0.50&nbsp;kg of water from 20&nbsp;&deg;C to 100&nbsp;&deg;C. The specific heat capacity of water is 4200&nbsp;J/(kg&nbsp;&deg;C). Calculate the energy needed. [3]</strong><br>&Delta;&theta; = 100 &minus; 20 = 80&nbsp;&deg;C<br>&Delta;E = m c &Delta;&theta; = 0.50 &times; 4200 &times; 80<br>&Delta;E = <strong>168&nbsp;000&nbsp;J</strong> (168&nbsp;kJ)</div>
+    <h4>Measuring specific heat capacity</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Set up</strong><span>Measure the mass of a metal block (or water in a beaker). Put an electric heater and a thermometer in holes in the block, and wrap it in insulation.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Heat</strong><span>Record the starting temperature. Switch on the heater for a measured time, using a joulemeter (or voltmeter, ammeter and stopwatch: E = VIt) to find the energy supplied.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Calculate</strong><span>Record the highest temperature reached. Use c = &Delta;E &divide; (m &Delta;&theta;).</span></div></div>
+    </div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>The measured value is usually <strong>too high</strong>, because some energy escapes to the surroundings instead of heating the block. Insulation reduces this error. Say this if asked to explain why the result differs from the textbook value.</div>
+
+    <h3>Melting, boiling and evaporation</h3>
+    <ul>
+      <li>While a substance is <strong>melting</strong> or <strong>boiling</strong>, energy is still going in but its <strong>temperature stays the same</strong>. The energy is used to overcome the forces between particles, not to speed them up.</li>
+      <li>For pure water at standard atmospheric pressure: <strong>melting point 0&nbsp;&deg;C</strong>, <strong>boiling point 100&nbsp;&deg;C</strong>.</li>
+      <li><strong>Condensation</strong> (gas &rarr; liquid) and <strong>solidification</strong> (liquid &rarr; solid): particles lose energy, slow down and the attractive forces pull them closer together.</li>
+      <li><strong>Evaporation</strong> happens at the surface of a liquid at any temperature. Only the <strong>more energetic</strong> particles near the surface have enough energy to escape.</li>
+      <li>Evaporation <strong>causes cooling</strong>: the fastest particles leave, so the <strong>average kinetic energy</strong> of those left behind is lower, and temperature measures average kinetic energy.</li>
+    </ul>
+
+    <h3><span class="key-term">Supplement</span> Boiling vs evaporation</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Boiling</th><th>Evaporation</th></tr></thead>
+      <tbody>
+        <tr><td>Only at the boiling point</td><td>At any temperature</td></tr>
+        <tr><td>Throughout the liquid (bubbles form)</td><td>Only at the surface</td></tr>
+        <tr><td>Needs a continuous energy supply</td><td>Uses energy from the liquid itself, so the liquid cools</td></tr>
+      </tbody>
+    </table></div>
+    <h3><span class="key-term">Supplement</span> What makes evaporation faster</h3>
+    <ul>
+      <li><strong>Higher temperature:</strong> more particles have enough energy to escape.</li>
+      <li><strong>Larger surface area:</strong> more particles are at the surface.</li>
+      <li><strong>Air moving over the surface (wind, a fan):</strong> escaped particles are carried away before they can fall back in.</li>
+    </ul>
+    <p><strong>Cooling something by evaporation:</strong> when a liquid evaporates from an object (sweat on skin, water on a clay pot), the liquid cools, and energy flows from the warmer object into the liquid. The object cools down.</p>
+    <div class="example-block"><div class="ex-label">Model answer</div><strong>Explain why you feel cold when you step out of a swimming pool on a windy day. [3]</strong><br>Water on the skin evaporates. The most energetic water molecules escape from the surface, so the average kinetic energy of the remaining water falls and it becomes colder. Energy then flows from the skin into the cooler water, cooling the skin. The wind removes escaped molecules so evaporation is faster, causing more cooling.</div>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe thermal expansion of solids, liquids and gases and give everyday examples.</li>
+      <li>I can explain the relative amounts of expansion using particles (Supplement).</li>
+      <li>I can link a rise in temperature to an increase in internal energy.</li>
+      <li>I can define specific heat capacity and use &Delta;E = mc&Delta;&theta; (Supplement), and describe how to measure it.</li>
+      <li>I can explain why temperature stays constant during melting and boiling, and recall 0&nbsp;&deg;C and 100&nbsp;&deg;C for water.</li>
+      <li>I can explain evaporation and why it causes cooling.</li>
+      <li>I can compare boiling and evaporation and list the factors that affect evaporation (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 2.3 THERMAL ENERGY TRANSFER ==================== -->
+  <div class="section" id="sec-thermal-transfer">
+    <div class="section-header">
+      <span class="form-badge">Topic 2.3 &middot; Thermal Physics</span>
+      <h2>Transfer of Thermal Energy</h2>
+      <p class="purpose">Thermal energy always flows from hotter to colder places, by conduction, convection or radiation. Expect &ldquo;explain using particles&rdquo; questions and applications such as cooking pans, fridges and the Earth&rsquo;s temperature.</p>
+    </div>
+
+    <h3>Conduction</h3>
+    <p><strong>Conduction</strong> is the transfer of thermal energy through a material, mainly solids, without the material itself moving.</p>
+    <ul>
+      <li><strong>Good thermal conductors:</strong> metals (copper, aluminium, iron).</li>
+      <li><strong>Poor conductors (insulators):</strong> plastic, wood, glass, air, wool. Materials that trap air, such as foam and fleece, are especially good insulators.</li>
+      <li>Liquids and gases are poor conductors because their particles are far apart.</li>
+    </ul>
+    <h4>Showing which material conducts best</h4>
+    <p>Attach a pin to the end of equal-sized rods of different metals with wax, then heat the other ends equally. The pin falls first from the best conductor.</p>
+    <h3><span class="key-term">Supplement</span> How conduction works</h3>
+    <ul>
+      <li><strong>Lattice vibrations (all solids):</strong> particles at the hot end vibrate more strongly and pass this vibration on to their neighbours, one by one. This is slow.</li>
+      <li><strong>Free (delocalised) electrons (metals only):</strong> electrons at the hot end gain kinetic energy and move quickly through the metal, colliding with particles further away and transferring energy. This is much faster, which is why metals are the best conductors.</li>
+    </ul>
+
+    <h3>Convection</h3>
+    <p><strong>Convection</strong> is the transfer of thermal energy by the movement of a liquid or gas (a fluid). It cannot happen in solids.</p>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Fluid near the heater warms up</strong><span>Its particles move faster and spread further apart, so the fluid expands.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>It becomes less dense and rises</strong><span>The same mass now takes up more volume.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Cooler, denser fluid sinks</strong><span>It moves in to replace the rising fluid, is heated in turn and rises.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>A convection current forms</strong><span>A continuous loop of moving fluid carries energy around.</span></div></div>
+    </div>
+    <p><strong>Showing convection:</strong> drop a crystal of potassium manganate(VII) at the bottom edge of a beaker of water and heat gently below it. The purple colour rises above the flame, moves across the top and sinks on the far side.</p>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>&ldquo;Heat rises&rdquo; earns no marks. It is the <strong>warmer, less dense fluid</strong> that rises.</div>
+
+    <h3>Thermal radiation</h3>
+    <ul>
+      <li><strong>Thermal radiation</strong> is <strong>infrared</strong> electromagnetic radiation. All objects emit it, and hotter objects emit more.</li>
+      <li>It needs <strong>no medium</strong>, so it can travel through a vacuum. That is how energy reaches us from the Sun.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Surface</th><th>Emitting infrared</th><th>Absorbing infrared</th><th>Reflecting infrared</th></tr></thead>
+      <tbody>
+        <tr><td>Dull black</td><td>Best emitter</td><td>Best absorber</td><td>Worst reflector</td></tr>
+        <tr><td>Shiny white or silver</td><td>Worst emitter</td><td>Worst absorber</td><td>Best reflector</td></tr>
+      </tbody>
+    </table></div>
+    <h4>Comparing surfaces</h4>
+    <p>Fill identical cans painted different colours (or a Leslie cube with four different faces) with the same volume of hot water. Measure the infrared from each surface with an infrared detector at the same distance, or record how fast each can cools. The dull black surface emits most and cools fastest.</p>
+    <h3><span class="key-term">Supplement</span> Rate of radiation and the Earth&rsquo;s temperature</h3>
+    <ul>
+      <li>The rate at which an object emits radiation increases with its <strong>surface temperature</strong> and its <strong>surface area</strong>.</li>
+      <li>An object stays at a <strong>constant temperature</strong> when it absorbs energy at the <strong>same rate</strong> as it emits it. If it absorbs faster, it warms up; if it emits faster, it cools down.</li>
+      <li>The Earth absorbs radiation from the Sun and emits infrared back into space. Its temperature depends on the balance. Greenhouse gases in the atmosphere absorb some of the outgoing infrared and re-emit some back towards the Earth. More greenhouse gas means less energy escapes, so the balance is reached at a higher temperature. On a cloudy night, clouds trap more infrared, so it stays warmer than on a clear night.</li>
+    </ul>
+
+    <h3>Consequences of thermal energy transfer</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Example</th><th>Physics behind it</th></tr></thead>
+      <tbody>
+        <tr><td>Saucepan: metal base, plastic or wooden handle</td><td>Metal conducts energy to the food quickly; the handle is an insulator so you don&rsquo;t get burnt.</td></tr>
+        <tr><td>Freezer compartment at the top of a fridge</td><td>Air cooled at the top becomes denser and sinks, setting up a convection current that cools the whole fridge.</td></tr>
+        <tr><td>Room heater placed low down</td><td>Warm air rises from it and convection currents carry energy round the room.</td></tr>
+        <tr><td>Car radiator</td><td>Hot coolant flows through a thin metal radiator with a large surface area; air passing over it carries energy away by convection.</td></tr>
+        <tr><td>Houses in hot countries painted white</td><td>White reflects most of the Sun&rsquo;s infrared, so less is absorbed.</td></tr>
+        <tr><td>Wearing several thin layers</td><td>Air trapped between layers is a poor conductor and can&rsquo;t move to form convection currents.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>For &ldquo;explain&rdquo; questions, name the process <strong>and</strong> say what the material or design does to it, e.g. &ldquo;the shiny surface is a poor emitter, so it reduces energy lost by radiation&rdquo;.</div>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can name good and poor thermal conductors and describe an experiment to compare them.</li>
+      <li>I can explain conduction by lattice vibrations and free electrons (Supplement).</li>
+      <li>I can explain convection using density changes and describe how to show a convection current.</li>
+      <li>I can describe thermal radiation as infrared that needs no medium, and compare black and shiny surfaces.</li>
+      <li>I can explain how surface temperature, area and the absorb/emit balance affect temperature, including the Earth&rsquo;s (Supplement).</li>
+      <li>I can explain everyday applications of conduction, convection and radiation.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 3.1 GENERAL WAVE PROPERTIES ==================== -->
+  <div class="section" id="sec-wave-properties">
+    <div class="section-header">
+      <span class="form-badge">Topic 3.1 &middot; Waves</span>
+      <h2>General Properties of Waves</h2>
+      <p class="purpose">The vocabulary and the one equation that every other wave topic uses, plus what happens when waves reflect, refract and diffract.</p>
+    </div>
+
+    <h3>What a wave does</h3>
+    <p>Waves transfer <strong>energy</strong> from one place to another <strong>without transferring matter</strong>. The particles of the medium vibrate about fixed positions; they don&rsquo;t travel with the wave.</p>
+
+    <figure class="diagram" style="max-width:520px"><svg viewBox="0 0 470 200" role="img" aria-label="A transverse wave with the wavelength marked from crest to crest and the amplitude marked from the centre line to a crest">
+      <line x1="20" y1="100" x2="450" y2="100" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"/>
+      <polyline points="30,100.0 34,91.4 38,83.0 42,75.0 46,67.7 50,61.1 54,55.5 58,51.0 62,47.7 66,45.7 70,45.0 74,45.7 78,47.7 82,51.0 86,55.5 90,61.1 94,67.7 98,75.0 102,83.0 106,91.4 110,100.0 114,108.6 118,117.0 122,125.0 126,132.3 130,138.9 134,144.5 138,149.0 142,152.3 146,154.3 150,155.0 154,154.3 158,152.3 162,149.0 166,144.5 170,138.9 174,132.3 178,125.0 182,117.0 186,108.6 190,100.0 194,91.4 198,83.0 202,75.0 206,67.7 210,61.1 214,55.5 218,51.0 222,47.7 226,45.7 230,45.0 234,45.7 238,47.7 242,51.0 246,55.5 250,61.1 254,67.7 258,75.0 262,83.0 266,91.4 270,100.0 274,108.6 278,117.0 282,125.0 286,132.3 290,138.9 294,144.5 298,149.0 302,152.3 306,154.3 310,155.0 314,154.3 318,152.3 322,149.0 326,144.5 330,138.9 334,132.3 338,125.0 342,117.0 346,108.6 350,100.0 354,91.4 358,83.0 362,75.0 366,67.7 370,61.1 374,55.5 378,51.0 382,47.7 386,45.7 390,45.0 394,45.7 398,47.7 402,51.0 406,55.5 410,61.1 414,67.7 418,75.0 422,83.0 426,91.4 430,100.0" fill="none" stroke="#2a5080" stroke-width="2.5"/>
+      <defs><marker id="dbl" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <line x1="70.0" y1="31" x2="230.0" y2="31" stroke="currentColor" stroke-width="1.3" marker-start="url(#dbl)" marker-end="url(#dbl)"/>
+      <text x="150.0" y="25" font-size="13" text-anchor="middle" fill="currentColor">wavelength &#955;</text>
+      <line x1="238.0" y1="100" x2="238.0" y2="45" stroke="#c0392b" stroke-width="1.3" marker-start="url(#dbl)" marker-end="url(#dbl)"/>
+      <text x="244.0" y="76.5" font-size="13" fill="currentColor">amplitude</text>
+      <text x="70.0" y="17" font-size="12" text-anchor="middle" fill="currentColor"></text>
+      <text x="58.0" y="63" font-size="12" fill="currentColor" text-anchor="end">crest</text>
+      <text x="150.0" y="173" font-size="12" text-anchor="middle" fill="currentColor">trough</text>
+      <text x="440" y="116" font-size="11" text-anchor="end" fill="currentColor">rest position</text>
+    </svg><figcaption>Wavelength is measured crest to crest. Amplitude is measured from the centre line, not trough to crest.</figcaption></figure>
+
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Wavelength (&lambda;)</div><div class="conv-value">Distance between two neighbouring crests (or any two matching points). Unit: m</div></div>
+      <div class="convention-item"><div class="conv-label">Amplitude</div><div class="conv-value">Maximum distance of a point from its rest position (centre line). Unit: m</div></div>
+      <div class="convention-item"><div class="conv-label">Frequency (f)</div><div class="conv-value">Number of waves passing a point per second. Unit: hertz, Hz</div></div>
+      <div class="convention-item"><div class="conv-label">Wave speed (v)</div><div class="conv-value">Distance travelled by the wave per second. Unit: m/s</div></div>
+      <div class="convention-item"><div class="conv-label">Crest / trough</div><div class="conv-value">The highest / lowest points of a transverse wave</div></div>
+      <div class="convention-item"><div class="conv-label">Wavefront</div><div class="conv-value">A line joining matching points on a wave, e.g. all the crests. Drawn as lines one wavelength apart</div></div>
+    </div>
+
+    <div class="formula-box">wave speed = frequency &times; wavelength &nbsp;&nbsp; v = f &lambda;</div>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A water wave has a frequency of 2.5&nbsp;Hz and a wavelength of 0.40&nbsp;m. Calculate its speed. Then find the wavelength of a radio wave of frequency 100&nbsp;MHz (speed 3.0 &times; 10<sup>8</sup>&nbsp;m/s).</strong><br>v = f&lambda; = 2.5 &times; 0.40 = <strong>1.0&nbsp;m/s</strong><br>&lambda; = v &divide; f = 3.0 &times; 10<sup>8</sup> &divide; 100 &times; 10<sup>6</sup> = <strong>3.0&nbsp;m</strong></div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Forgetting to convert prefixes: kHz &times; 10<sup>3</sup>, MHz &times; 10<sup>6</sup>, GHz &times; 10<sup>9</sup>. Also, the <strong>source</strong> sets the frequency, so frequency does not change when a wave moves into a new medium; speed and wavelength do.</div>
+
+    <h3>Transverse and longitudinal waves</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Transverse</th><th>Longitudinal</th></tr></thead>
+      <tbody>
+        <tr><td>Vibrations are&hellip;</td><td><strong>Perpendicular</strong> (at 90&deg;) to the direction the wave travels</td><td><strong>Parallel</strong> to the direction the wave travels</td></tr>
+        <tr><td>Features</td><td>Crests and troughs</td><td>Compressions (particles close together) and rarefactions (particles spread out)</td></tr>
+        <tr><td>Examples</td><td>All electromagnetic waves (including light), water waves, seismic S-waves</td><td>Sound, seismic P-waves</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>On a slinky: move your hand side to side for a transverse wave, and push and pull along its length for a longitudinal wave. Questions often describe exactly this.</div>
+
+    <h3>Reflection, refraction and diffraction</h3>
+    <p>A <strong>ripple tank</strong> shows these effects with water waves. A light above it projects the wavefronts onto a screen below.</p>
+    <ul>
+      <li><strong>Reflection:</strong> waves bounce off a flat barrier. The angle of reflection equals the angle of incidence, and the wavelength stays the same.</li>
+      <li><strong>Refraction:</strong> waves change speed when they move into a different medium (in a ripple tank, into shallower water where they slow down). The wavelength gets shorter and, if the waves arrive at an angle, they <strong>change direction</strong>.</li>
+      <li><strong>Diffraction:</strong> waves spread out when they pass through a gap or round the edge of an obstacle. The wavelength stays the same.</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> How much do waves diffract?</h3>
+    <ul>
+      <li>Diffraction is greatest when the <strong>gap is about the same size as the wavelength</strong>. A gap much wider than the wavelength gives only a little spreading at the edges.</li>
+      <li>Longer wavelengths diffract more round obstacles. That is why you can hear someone round a corner (sound wavelengths are around a metre) but can&rsquo;t see them (light wavelengths are less than a millionth of a metre).</li>
+    </ul>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can state that waves transfer energy without transferring matter.</li>
+      <li>I can define wavelength, amplitude, frequency, wave speed, crest, trough and wavefront.</li>
+      <li>I can use v = f&lambda;, including unit prefixes.</li>
+      <li>I can compare transverse and longitudinal waves with examples.</li>
+      <li>I can describe reflection, refraction and diffraction in a ripple tank.</li>
+      <li>I can explain how gap size and wavelength affect diffraction (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 3.2a REFLECTION & REFRACTION ==================== -->
+  <div class="section" id="sec-light-reflection-refraction">
+    <div class="section-header">
+      <span class="form-badge">Topic 3.2 &middot; Waves</span>
+      <h2>Light: Reflection and Refraction</h2>
+      <p class="purpose">How light behaves at mirrors and at the boundary between air and glass or water, including total internal reflection and optical fibres. Ray diagrams must be drawn with a ruler and accurate angles.</p>
+    </div>
+
+    <h3>Key words</h3>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Normal</div><div class="conv-value">A line drawn at 90&deg; to a surface where the ray hits it (draw it dashed)</div></div>
+      <div class="convention-item"><div class="conv-label">Angle of incidence (i)</div><div class="conv-value">Angle between the incoming ray and the normal</div></div>
+      <div class="convention-item"><div class="conv-label">Angle of reflection</div><div class="conv-value">Angle between the reflected ray and the normal</div></div>
+      <div class="convention-item"><div class="conv-label">Angle of refraction (r)</div><div class="conv-value">Angle between the refracted ray and the normal</div></div>
+    </div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Measuring angles from the surface instead of from the <strong>normal</strong>. Every angle in this topic is measured from the normal.</div>
+
+    <h3>Reflection in a plane mirror</h3>
+    <p><strong>Law of reflection:</strong> angle of incidence = angle of reflection.</p>
+    <p>The image in a plane mirror is:</p>
+    <ul>
+      <li>the <strong>same size</strong> as the object</li>
+      <li>the <strong>same distance</strong> behind the mirror as the object is in front</li>
+      <li><strong>virtual</strong> (it can&rsquo;t be shown on a screen, because the light only appears to come from it)</li>
+      <li><strong>upright</strong>, and <strong>laterally inverted</strong> (left and right swapped)</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Drawing the image in a plane mirror</h3>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Find the image</strong><span>Mark the image point the same perpendicular distance behind the mirror as the object is in front.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Draw the reflected rays</strong><span>Draw straight lines from the image point to the eye. Where each line crosses the mirror, draw it solid in front of the mirror and dashed behind it (the dashed part is virtual).</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Draw the incident rays</strong><span>Join the object to each point where the rays meet the mirror. Add arrows pointing from object to mirror to eye.</span></div></div>
+    </div>
+
+    <h3>Refraction</h3>
+    <p>Light changes speed when it passes from one material into another. If it hits the boundary at an angle, this makes it change direction: this is <strong>refraction</strong>.</p>
+    <figure class="diagram" style="max-width:460px"><svg viewBox="0 0 440 260" role="img" aria-label="A light ray entering a glass block bends towards the normal, then bends away from the normal as it leaves, emerging parallel to the original ray">
+      <rect x="110" y="80" width="260" height="100" fill="#e8f0fe" stroke="currentColor" stroke-width="1.5"/>
+      <text x="355" y="172" font-size="13" text-anchor="end" fill="currentColor">glass</text>
+      <text x="380" y="60" font-size="13" fill="currentColor">air</text>
+      <line x1="200" y1="25" x2="200" y2="135" stroke="currentColor" stroke-dasharray="5 4"/>
+      <line x1="253.4" y1="125" x2="253.4" y2="235" stroke="currentColor" stroke-dasharray="5 4"/>
+      <polyline points="130,10 200,80 253.4,180 323.4,250" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+      <polygon points="168,48 160,46 166,40" fill="#c0392b"/>
+      <polygon points="230,136 224,130 232,128" fill="#c0392b"/>
+      <polygon points="292,219 284,217 290,211" fill="#c0392b"/>
+      <path d="M200,50 A30,30 0 0 0 178.8,58.8" fill="none" stroke="currentColor"/>
+      <text x="182" y="45" font-size="13" fill="currentColor">i</text>
+      <path d="M200,115 A35,35 0 0 0 216.5,110.9" fill="none" stroke="currentColor"/>
+      <text x="206" y="130" font-size="13" fill="currentColor">r</text>
+      <text x="40" y="215" font-size="12" fill="currentColor">Into glass: slows down,</text>
+      <text x="40" y="231" font-size="12" fill="currentColor">bends towards the normal</text>
+    </svg><figcaption>Into a denser medium: towards the normal. Out of it: away from the normal. The ray leaving a parallel-sided block is parallel to the ray going in.</figcaption></figure>
+    <ul>
+      <li><strong>Air &rarr; glass or water:</strong> light slows down and bends <strong>towards</strong> the normal (r is smaller than i).</li>
+      <li><strong>Glass or water &rarr; air:</strong> light speeds up and bends <strong>away from</strong> the normal.</li>
+      <li>A ray that hits the boundary <strong>along the normal</strong> (i = 0) changes speed but does <strong>not</strong> change direction.</li>
+    </ul>
+    <h4>Investigating refraction with a glass block</h4>
+    <p>Draw round a rectangular block on paper. Shine a narrow ray from a ray box into one side, mark the ray going in and coming out with crosses, then remove the block and join the points. Draw the normal and measure i and r with a protractor. Repeat for several angles of incidence.</p>
+
+    <h3><span class="key-term">Supplement</span> Refractive index</h3>
+    <p>The <strong>refractive index (n)</strong> of a material tells you how much it bends (and slows) light. It has no units, and the larger it is, the more the light bends. Glass is about 1.5; water is about 1.33.</p>
+    <div class="formula-box">n = sin i &divide; sin r</div>
+    <p>Here i is the angle in <strong>air</strong> and r is the angle in the material.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>Light enters a plastic block with an angle of incidence of 50&deg;. The angle of refraction is 31&deg;. Calculate the refractive index of the plastic.</strong><br>n = sin 50&deg; &divide; sin 31&deg; = 0.766 &divide; 0.515 = <strong>1.49</strong></div>
+
+    <h3>Total internal reflection</h3>
+    <ul>
+      <li>When light travels from glass (or water) towards air, some is refracted out and some is reflected back.</li>
+      <li>As the angle of incidence increases, the refracted ray bends further from the normal. At the <strong>critical angle (c)</strong>, the refracted ray travels along the boundary (angle of refraction = 90&deg;).</li>
+      <li>If the angle of incidence is <strong>greater than the critical angle</strong>, all the light is reflected back inside: <strong>total internal reflection (TIR)</strong>.</li>
+    </ul>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>TIR needs <strong>two</strong> conditions: (1) light travelling from a denser to a less dense medium (e.g. glass to air), and (2) angle of incidence greater than the critical angle. Many answers lose a mark by giving only one.</div>
+    <h3><span class="key-term">Supplement</span> Critical angle and optical fibres</h3>
+    <div class="formula-box">n = 1 &divide; sin c</div>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>Glass has a refractive index of 1.50. Calculate its critical angle.</strong><br>sin c = 1 &divide; n = 1 &divide; 1.50 = 0.667<br>c = sin<sup>&minus;1</sup>(0.667) = <strong>42&deg;</strong></div>
+    <p><strong>Optical fibres</strong> are thin, flexible strands of very clear glass. Light entering one end hits the inside surface at an angle greater than the critical angle, so it is totally internally reflected again and again and comes out of the far end with very little loss.</p>
+    <ul>
+      <li><strong>Communications:</strong> carrying telephone, cable TV and broadband signals as pulses of light or infrared.</li>
+      <li><strong>Medicine:</strong> an <strong>endoscope</strong> uses bundles of fibres to carry light into the body and an image back out, so doctors can look inside without major surgery.</li>
+    </ul>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can define normal, angle of incidence, angle of reflection and angle of refraction.</li>
+      <li>I can state the law of reflection and describe the image in a plane mirror.</li>
+      <li>I can construct a ray diagram for a plane mirror image (Supplement).</li>
+      <li>I can describe refraction through a glass block and say which way light bends.</li>
+      <li>I can use n = sin i &divide; sin r (Supplement).</li>
+      <li>I can explain total internal reflection and the critical angle.</li>
+      <li>I can use n = 1 &divide; sin c and describe uses of optical fibres (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 3.2b LENSES & DISPERSION ==================== -->
+  <div class="section" id="sec-light-lenses">
+    <div class="section-header">
+      <span class="form-badge">Topic 3.2 &middot; Waves</span>
+      <h2>Light: Lenses and Dispersion</h2>
+      <p class="purpose">How converging and diverging lenses form images, how to draw accurate ray diagrams, how lenses correct eyesight, and how a prism splits white light into a spectrum.</p>
+    </div>
+
+    <h3>Converging and diverging lenses</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Converging (convex)</th><th>Diverging (concave)</th></tr></thead>
+      <tbody>
+        <tr><td>Shape</td><td>Thicker in the middle</td><td>Thinner in the middle</td></tr>
+        <tr><td>Effect on a parallel beam</td><td>Brings the rays together (converges them) to a point: the principal focus</td><td>Spreads the rays out (diverges them) so they appear to come from the principal focus behind the lens</td></tr>
+      </tbody>
+    </table></div>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Principal axis</div><div class="conv-value">The line through the centre of the lens, at 90&deg; to it</div></div>
+      <div class="convention-item"><div class="conv-label">Principal focus (F)</div><div class="conv-value">The point where rays parallel to the principal axis meet after passing through a converging lens</div></div>
+      <div class="convention-item"><div class="conv-label">Focal length (f)</div><div class="conv-value">Distance from the centre of the lens to the principal focus</div></div>
+    </div>
+
+    <h3>Ray diagrams for a converging lens</h3>
+    <p>To find where the image of the top of an object is, draw two of these rays from it:</p>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Parallel ray</strong><span>Parallel to the principal axis, then through the principal focus on the far side.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Central ray</strong><span>Straight through the centre of the lens, without bending.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Focal ray</strong><span>Through the principal focus on the near side, then parallel to the principal axis.</span></div></div>
+    </div>
+    <p>The top of the image is where the rays cross.</p>
+    <figure class="diagram" style="max-width:520px"><svg viewBox="0 0 470 200" role="img" aria-label="Ray diagram for a converging lens: an object beyond twice the focal length forms a real, inverted, smaller image on the other side">
+      <line x1="20" y1="110" x2="450" y2="110" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="260" cy="110" rx="9" ry="80" fill="#e8f0fe" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="110" y1="110" x2="110" y2="60" stroke="#1e3a5f" stroke-width="3"/>
+      <polygon points="110,54 104,66 116,66" fill="#1e3a5f"/>
+      <text x="110" y="128" font-size="12" text-anchor="middle" fill="currentColor">object</text>
+      <line x1="360" y1="110" x2="360" y2="143.3" stroke="#c0392b" stroke-width="3"/>
+      <polygon points="360,149 354,137 366,137" fill="#c0392b"/>
+      <text x="360" y="165" font-size="12" text-anchor="middle" fill="currentColor">image</text>
+      <circle cx="200" cy="110" r="3" fill="currentColor"/><text x="200" y="100" font-size="12" text-anchor="middle" fill="currentColor">F</text>
+      <circle cx="320" cy="110" r="3" fill="currentColor"/><text x="320" y="100" font-size="12" text-anchor="middle" fill="currentColor">F</text>
+      <polyline points="110,60 260,60 410,185" fill="none" stroke="#2a5080" stroke-width="1.6"/>
+      <line x1="110" y1="60" x2="410" y2="160" stroke="#2a5080" stroke-width="1.6"/>
+      <text x="185" y="52" font-size="11" fill="currentColor">parallel ray</text>
+      <text x="138" y="88" font-size="11" fill="currentColor" transform="rotate(18 138 88)">central ray</text>
+    </svg><figcaption>Object beyond 2F: the image is real, inverted and smaller (diminished), as in a camera.</figcaption></figure>
+    <ul>
+      <li>A <strong>real image</strong> is formed where light rays actually meet. It can be projected onto a screen and is upside down (inverted).</li>
+      <li>Describe an image with three words: <strong>real or virtual</strong>, <strong>upright or inverted</strong>, <strong>enlarged, same size or diminished</strong>.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Object position</th><th>Image</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td>Beyond 2F</td><td>Real, inverted, diminished</td><td>Camera, eye</td></tr>
+        <tr><td>Between F and 2F</td><td>Real, inverted, enlarged</td><td>Projector</td></tr>
+        <tr><td>Closer than F <span class="key-term">Supplement</span></td><td>Virtual, upright, enlarged, on the same side as the object</td><td>Magnifying glass</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="key-term">Supplement</span> Virtual images and the magnifying glass</h3>
+    <ul>
+      <li>When the object is <strong>closer to the lens than F</strong>, the rays leaving the lens spread apart and never meet. Extend them backwards with <strong>dashed lines</strong>: they appear to meet behind the object. That is where the <strong>virtual</strong> image is.</li>
+      <li>A virtual image can&rsquo;t be projected on a screen. A magnifying glass uses a converging lens this way to give an upright, enlarged image.</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Correcting eyesight</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Problem</th><th>What goes wrong</th><th>Corrected with</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Short sight</strong> (can&rsquo;t see far objects clearly)</td><td>Light from distant objects focuses <strong>in front of</strong> the retina</td><td><strong>Diverging</strong> lens: spreads the light out first so it focuses on the retina</td></tr>
+        <tr><td><strong>Long sight</strong> (can&rsquo;t see near objects clearly)</td><td>Light from near objects would focus <strong>behind</strong> the retina</td><td><strong>Converging</strong> lens: starts bending the light inwards so it focuses on the retina</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Memory hook: <strong>S</strong>hort sight &rarr; <strong>S</strong>pread it out (diverging). Long sight needs extra converging.</div>
+
+    <h3>Dispersion of light</h3>
+    <ul>
+      <li>When white light passes through a <strong>glass prism</strong>, it is refracted and splits into a spectrum of colours: this is <strong>dispersion</strong>.</li>
+      <li>Each colour refracts by a slightly different amount: <strong>violet bends the most, red the least</strong>.</li>
+      <li>The seven colours, in order: <strong>red, orange, yellow, green, blue, indigo, violet</strong> (&ldquo;ROY G BIV&rdquo;).</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Colour, frequency and wavelength</h3>
+    <ul>
+      <li>From red to violet, <strong>frequency increases</strong> and <strong>wavelength decreases</strong>. Red has the longest wavelength of visible light; violet has the shortest.</li>
+      <li><strong>Monochromatic</strong> light has a single frequency (one colour), e.g. light from a laser.</li>
+    </ul>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe how converging and diverging lenses affect a parallel beam.</li>
+      <li>I can define principal axis, principal focus and focal length.</li>
+      <li>I can draw ray diagrams for a converging lens and describe the image formed.</li>
+      <li>I can explain the difference between real and virtual images and draw a magnifying glass ray diagram (Supplement).</li>
+      <li>I can explain how lenses correct short and long sight (Supplement).</li>
+      <li>I can describe dispersion by a prism and list the colours in order.</li>
+      <li>I can link the colours of the spectrum to frequency and wavelength and define monochromatic (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 3.3 ELECTROMAGNETIC SPECTRUM ==================== -->
+  <div class="section" id="sec-em-spectrum">
+    <div class="section-header">
+      <span class="form-badge">Topic 3.3 &middot; Waves</span>
+      <h2>The Electromagnetic Spectrum</h2>
+      <p class="purpose">The family of waves from radio to gamma: the order, what they have in common, what each one is used for, and the harm some of them can do. Learn the order first; most marks follow from it.</p>
+    </div>
+
+    <figure class="diagram" style="max-width:620px"><svg viewBox="0 0 600 130" role="img" aria-label="The electromagnetic spectrum in order: radio, microwaves, infrared, visible, ultraviolet, X-rays, gamma rays, with frequency increasing to the right and wavelength increasing to the left">
+      <defs><linearGradient id="rainbow"><stop offset="0" stop-color="#e74c3c"/><stop offset="0.25" stop-color="#f39c12"/><stop offset="0.45" stop-color="#f1c40f"/><stop offset="0.65" stop-color="#2ecc71"/><stop offset="0.85" stop-color="#3498db"/><stop offset="1" stop-color="#8e44ad"/></linearGradient>
+      <marker id="emarr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="20" y="30" width="80" height="46" fill="#dbe6f5" stroke="#ffffff" stroke-width="2"/>
+      <text x="60.0" y="58" font-size="13" text-anchor="middle" fill="#0a1628">Radio</text>
+      <rect x="100" y="30" width="80" height="46" fill="#cddcf0" stroke="#ffffff" stroke-width="2"/>
+      <text x="140.0" y="50" font-size="13" text-anchor="middle" fill="#0a1628">Micro-</text><text x="140.0" y="66" font-size="13" text-anchor="middle" fill="#0a1628">waves</text>
+      <rect x="180" y="30" width="80" height="46" fill="#f5d5c8" stroke="#ffffff" stroke-width="2"/>
+      <text x="220.0" y="58" font-size="13" text-anchor="middle" fill="#0a1628">Infrared</text>
+      <rect x="260" y="30" width="80" height="46" fill="url(#rainbow)" stroke="#ffffff" stroke-width="2"/>
+      <text x="300.0" y="58" font-size="13" text-anchor="middle" fill="#0a1628">Visible</text>
+      <rect x="340" y="30" width="80" height="46" fill="#e2d4f2" stroke="#ffffff" stroke-width="2"/>
+      <text x="380.0" y="58" font-size="13" text-anchor="middle" fill="#0a1628">UV</text>
+      <rect x="420" y="30" width="80" height="46" fill="#d6cdee" stroke="#ffffff" stroke-width="2"/>
+      <text x="460.0" y="58" font-size="13" text-anchor="middle" fill="#0a1628">X-rays</text>
+      <rect x="500" y="30" width="80" height="46" fill="#cbc3e6" stroke="#ffffff" stroke-width="2"/>
+      <text x="540.0" y="58" font-size="13" text-anchor="middle" fill="#0a1628">Gamma</text>
+      <line x1="200" y1="14" x2="560" y2="14" stroke="currentColor" stroke-width="1.3" marker-end="url(#emarr)"/>
+      <text x="190" y="18" font-size="12" text-anchor="end" fill="currentColor">increasing frequency and energy</text>
+      <line x1="400" y1="96" x2="40" y2="96" stroke="currentColor" stroke-width="1.3" marker-end="url(#emarr)"/>
+      <text x="410" y="100" font-size="12" fill="currentColor">increasing wavelength</text>
+      <text x="300" y="122" font-size="12" text-anchor="middle" fill="currentColor">All travel at 3.0 &#215; 10&#8312; m/s in a vacuum</text>
+    </svg><figcaption>All EM waves travel at the same speed in a vacuum. Moving right, each step has a higher frequency and a shorter wavelength.</figcaption></figure>
+    <div class="mnemonic"><span><strong>R</strong>ich</span> <span><strong>M</strong>en</span> <span><strong>I</strong>n</span> <span><strong>V</strong>egas</span> <span><strong>U</strong>se</span> <span><strong>X</strong>-ray</span> <span><strong>G</strong>lasses</span> &mdash; radio to gamma.</div>
+
+    <h3>Properties all EM waves share</h3>
+    <ul>
+      <li>They are all <strong>transverse</strong> waves.</li>
+      <li>They can all travel through a <strong>vacuum</strong>.</li>
+      <li>They all travel at the <strong>same speed in a vacuum: 3.0 &times; 10<sup>8</sup>&nbsp;m/s</strong> (about the same in air).</li>
+      <li>They all transfer energy, and can be reflected and refracted.</li>
+    </ul>
+
+    <h3>Uses</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Wave</th><th>Uses</th></tr></thead>
+      <tbody>
+        <tr><td>Radio waves</td><td>Radio and television broadcasting, astronomy, radio-frequency identification (RFID) tags</td></tr>
+        <tr><td>Microwaves</td><td>Satellite TV, mobile phones, microwave ovens</td></tr>
+        <tr><td>Infrared</td><td>Electric grills and heaters, remote controls, intruder alarms, thermal imaging cameras, optical fibres</td></tr>
+        <tr><td>Visible light</td><td>Seeing, photography, lighting</td></tr>
+        <tr><td>Ultraviolet</td><td>Security marking (invisible ink that glows under UV), detecting fake bank notes, sterilising water</td></tr>
+        <tr><td>X-rays</td><td>Medical imaging of bones, airport security scanners</td></tr>
+        <tr><td>Gamma rays</td><td>Sterilising food and medical equipment, detecting and treating cancer</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Harmful effects</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Wave</th><th>Danger</th></tr></thead>
+      <tbody>
+        <tr><td>Microwaves</td><td>Heat the inside of the body (internal heating of body tissue)</td></tr>
+        <tr><td>Infrared</td><td>Skin burns</td></tr>
+        <tr><td>Ultraviolet</td><td>Damage to surface cells and eyes, leading to skin cancer and eye conditions</td></tr>
+        <tr><td>X-rays and gamma rays</td><td>Mutations or damage to cells in the body, which can lead to cancer</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Higher frequency means more energy and generally more danger. UV, X-rays and gamma are <strong>ionising</strong>, so they can damage DNA. Be specific: &ldquo;UV can cause skin cancer&rdquo;, not &ldquo;UV is dangerous&rdquo;.</div>
+
+    <h3>EM waves in communication</h3>
+    <ul>
+      <li><strong>Microwaves:</strong> mobile phones, wireless internet and satellite communication. They pass easily through the atmosphere to and from satellites.</li>
+      <li><strong>Radio waves:</strong> Bluetooth and radio broadcasting. Longer radio waves diffract around hills and buildings, so they reach areas without a direct line of sight.</li>
+      <li><strong>Visible light and infrared:</strong> optical fibres for cable TV and high-speed broadband, because the glass is very transparent to them and they can carry a lot of data.</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Analogue and digital signals</h3>
+    <ul>
+      <li>An <strong>analogue</strong> signal varies continuously and can take any value (like the sound wave from your voice).</li>
+      <li>A <strong>digital</strong> signal has only two values: on and off (1 and 0).</li>
+      <li>Sound can be sent as either. To send it digitally, the analogue signal is converted into a code of 1s and 0s.</li>
+    </ul>
+    <p><strong>Benefits of digital signals:</strong></p>
+    <ul>
+      <li>As any signal travels, it gets weaker and picks up <strong>noise</strong> (random unwanted changes). A digital signal can be <strong>regenerated</strong>: it only has to be recognised as a 1 or a 0, so the noise is removed and a clean copy is sent on. When an analogue signal is amplified, the noise is amplified with it.</li>
+      <li>This means digital signals can travel <strong>longer distances</strong> with no loss of quality, and data can be sent <strong>faster</strong>.</li>
+    </ul>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can list the EM spectrum in order and say which way frequency and wavelength change.</li>
+      <li>I can state the properties shared by all EM waves, including the speed 3.0 &times; 10<sup>8</sup>&nbsp;m/s.</li>
+      <li>I can give at least two uses of each type of EM wave.</li>
+      <li>I can describe the harmful effects of microwaves, infrared, UV, X-rays and gamma rays.</li>
+      <li>I can explain which EM waves are used for different kinds of communication.</li>
+      <li>I can compare analogue and digital signals and explain the benefits of digital (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 3.4 SOUND ==================== -->
+  <div class="section" id="sec-sound">
+    <div class="section-header">
+      <span class="form-badge">Topic 3.4 &middot; Waves</span>
+      <h2>Sound</h2>
+      <p class="purpose">How sound is produced and travels, how pitch and loudness relate to the wave, how to measure the speed of sound, and how ultrasound is used to see inside things.</p>
+    </div>
+
+    <h3>How sound is made and travels</h3>
+    <ul>
+      <li>Sound is produced by <strong>vibrating</strong> objects (a guitar string, a loudspeaker cone, your vocal cords).</li>
+      <li>Sound is a <strong>longitudinal</strong> wave: the particles of the medium vibrate back and forth parallel to the direction the wave travels.</li>
+      <li>It travels as a series of <strong>compressions</strong> (particles squashed together, higher pressure) and <strong>rarefactions</strong> (particles spread out, lower pressure).</li>
+      <li>Sound needs a <strong>medium</strong> (solid, liquid or gas) and <strong>cannot travel through a vacuum</strong>. If air is pumped out of a jar containing a ringing bell, the sound fades even though you can still see the bell vibrating.</li>
+    </ul>
+
+    <h3>Hearing, pitch and loudness</h3>
+    <ul>
+      <li>The <strong>range of human hearing</strong> is about <strong>20&nbsp;Hz to 20&nbsp;000&nbsp;Hz</strong> (20&nbsp;kHz).</li>
+      <li><strong>Higher frequency = higher pitch.</strong></li>
+      <li><strong>Larger amplitude = louder sound.</strong></li>
+      <li>An <strong>echo</strong> is a reflected sound wave.</li>
+    </ul>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>On an oscilloscope trace, <strong>more waves across the screen</strong> means higher frequency (higher pitch); <strong>taller waves</strong> mean larger amplitude (louder). Compare the traces carefully: questions often change only one of these.</div>
+
+    <h3>The speed of sound</h3>
+    <ul>
+      <li>In air, the speed of sound is about <strong>330&ndash;350&nbsp;m/s</strong>.</li>
+      <li>Sound travels <strong>fastest in solids</strong>, slower in liquids and slowest in gases.</li>
+    </ul>
+    <h4>Measuring the speed of sound in air (echo method)</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Set up</strong><span>Stand a measured distance (e.g. 50&nbsp;m, using a tape measure) from a large wall.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Clap and time</strong><span>Clap in time with the echoes so each clap coincides with the echo of the one before. Time 20 claps with a stopwatch.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Calculate</strong><span>Time for one clap = total &divide; 20. The sound travelled to the wall and back, so speed = 2 &times; distance &divide; time for one clap.</span></div></div>
+    </div>
+    <p>Another method: two people stand a measured distance apart. One makes a loud sound with a visible action (bangs two blocks together) and the other starts a stopwatch on seeing it and stops it on hearing it. Light arrives almost instantly, so speed = distance &divide; time.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A student stands 85&nbsp;m from a cliff and hears the echo of a shout 0.50&nbsp;s later. Calculate the speed of sound.</strong><br>Distance travelled = there and back = 2 &times; 85 = 170&nbsp;m<br>speed = distance &divide; time = 170 &divide; 0.50 = <strong>340&nbsp;m/s</strong></div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Forgetting to <strong>double the distance</strong> in echo questions. The sound goes to the wall and back.</div>
+
+    <h3><span class="key-term">Supplement</span> Ultrasound</h3>
+    <p><strong>Ultrasound</strong> is sound with a frequency <strong>above 20&nbsp;kHz</strong>, too high for humans to hear. It partly reflects at boundaries between different materials, and the time taken for the echo to return shows how deep the boundary is.</p>
+    <ul>
+      <li><strong>Non-destructive testing:</strong> finding cracks or flaws inside metal parts (such as aircraft wings or rail tracks) without damaging them. A crack reflects some ultrasound back early.</li>
+      <li><strong>Medical scanning of soft tissue:</strong> e.g. scanning an unborn baby. Unlike X-rays, ultrasound is not ionising, so it is safe.</li>
+      <li><strong>Sonar:</strong> ships send pulses of ultrasound down and time the echo from the sea bed or a shoal of fish to find the depth.</li>
+    </ul>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A ship sends an ultrasound pulse to the sea bed. The echo returns after 0.80&nbsp;s. The speed of sound in sea water is 1500&nbsp;m/s. Calculate the depth of the sea. [3]</strong><br>Total distance = speed &times; time = 1500 &times; 0.80 = 1200&nbsp;m<br>This is there and back, so depth = 1200 &divide; 2 = <strong>600&nbsp;m</strong></div>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe how sound is produced and why it is a longitudinal wave with compressions and rarefactions.</li>
+      <li>I can explain why sound needs a medium and can&rsquo;t travel through a vacuum.</li>
+      <li>I can state the range of human hearing.</li>
+      <li>I can link pitch to frequency and loudness to amplitude, and describe an echo.</li>
+      <li>I can state the speed of sound in air and compare its speed in solids, liquids and gases.</li>
+      <li>I can describe a method to measure the speed of sound and do echo calculations.</li>
+      <li>I can define ultrasound and describe its uses, including sonar depth calculations (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 5.1 THE NUCLEAR MODEL ==================== -->
+  <div class="section" id="sec-nuclear-atom">
+    <div class="section-header">
+      <span class="form-badge">Topic 5.1 &middot; Nuclear Physics</span>
+      <h2>The Nuclear Model of the Atom</h2>
+      <p class="purpose">What atoms are made of, how we know the nucleus exists, how to read nuclide notation, and how nuclear fission and fusion release energy.</p>
+    </div>
+
+    <h3>The structure of the atom</h3>
+    <ul>
+      <li>An atom has a tiny, dense, <strong>positively charged nucleus</strong> at its centre, made of <strong>protons</strong> and <strong>neutrons</strong>.</li>
+      <li><strong>Electrons</strong> (negatively charged) orbit the nucleus. Most of the atom is empty space.</li>
+      <li>An atom has equal numbers of protons and electrons, so it is <strong>neutral</strong> overall.</li>
+      <li>An atom that <strong>loses</strong> electrons becomes a <strong>positive ion</strong>; one that <strong>gains</strong> electrons becomes a <strong>negative ion</strong>.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Particle</th><th>Where</th><th>Relative charge</th><th>Relative mass</th></tr></thead>
+      <tbody>
+        <tr><td>Proton</td><td>Nucleus</td><td>+1</td><td>1</td></tr>
+        <tr><td>Neutron</td><td>Nucleus</td><td>0</td><td>1</td></tr>
+        <tr><td>Electron</td><td>Orbiting the nucleus</td><td>&minus;1</td><td>About 1/2000 (negligible)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="key-term">Supplement</span> Evidence: the alpha-particle scattering experiment</h3>
+    <p>Rutherford&rsquo;s team fired alpha particles (small, positive) at a very thin sheet of gold foil and recorded where they went.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Observation</th><th>Conclusion</th></tr></thead>
+      <tbody>
+        <tr><td>Most alpha particles went straight through</td><td>Most of the atom is <strong>empty space</strong></td></tr>
+        <tr><td>Some were deflected through small angles</td><td>The nucleus is <strong>positively charged</strong>: it repels the positive alpha particles that pass close to it</td></tr>
+        <tr><td>A very few bounced almost straight back</td><td>The nucleus is <strong>very small</strong> and contains <strong>most of the mass</strong> of the atom</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Match each observation to its own conclusion, as in the table. Answers that say &ldquo;this proves the nucleus exists&rdquo; without linking evidence to each property get few marks.</div>
+
+    <h3>The nucleus and nuclide notation</h3>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Proton number (Z)</div><div class="conv-value">Number of protons in the nucleus. It decides which element the atom is</div></div>
+      <div class="convention-item"><div class="conv-label">Nucleon number (A)</div><div class="conv-value">Total number of protons + neutrons (nucleons) in the nucleus</div></div>
+      <div class="convention-item"><div class="conv-label">Neutron number</div><div class="conv-value">A &minus; Z</div></div>
+    </div>
+    <p>A nuclide is written as <span class="nuclide"><sup>A</sup><sub>Z</sub></span>X, for example <span class="nuclide"><sup>14</sup><sub>6</sub></span>C: carbon-14 has 6 protons and 14 &minus; 6 = <strong>8 neutrons</strong>.</p>
+    <h3><span class="key-term">Supplement</span> What A and Z tell you</h3>
+    <ul>
+      <li>The <strong>proton number</strong> is also the <strong>relative charge</strong> of the nucleus (each proton is +1, neutrons are 0).</li>
+      <li>The <strong>nucleon number</strong> is the <strong>relative mass</strong> of the nucleus (protons and neutrons each have a relative mass of 1).</li>
+    </ul>
+
+    <h3>Isotopes</h3>
+    <p><strong>Isotopes</strong> are atoms of the same element (same number of protons) with <strong>different numbers of neutrons</strong>, so different nucleon numbers. Example: carbon-12 (6 neutrons) and carbon-14 (8 neutrons). Some isotopes are unstable and radioactive.</p>
+
+    <h3>Nuclear fission and fusion</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Fission</th><th>Fusion</th></tr></thead>
+      <tbody>
+        <tr><td>What happens</td><td>A large, unstable nucleus (e.g. uranium-235) <strong>splits</strong> into two smaller nuclei, usually after absorbing a neutron. Two or three neutrons are also released.</td><td>Two small, light nuclei (e.g. hydrogen) <strong>join</strong> to make a larger nucleus.</td></tr>
+        <tr><td>Where</td><td>Nuclear power stations</td><td>The Sun and other stars</td></tr>
+        <tr><td>Energy</td><td colspan="2">In both, the total mass of the products is slightly <strong>less</strong> than the mass at the start. The &ldquo;missing&rdquo; mass has been converted into a large amount of <strong>energy</strong>.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="example-block"><div class="ex-label">Example equations</div><strong>Fission:</strong> <span class="nuclide"><sup>1</sup><sub>0</sub></span>n + <span class="nuclide"><sup>235</sup><sub>92</sub></span>U &rarr; <span class="nuclide"><sup>141</sup><sub>56</sub></span>Ba + <span class="nuclide"><sup>92</sup><sub>36</sub></span>Kr + 3 <span class="nuclide"><sup>1</sup><sub>0</sub></span>n<br><strong>Fusion:</strong> <span class="nuclide"><sup>2</sup><sub>1</sub></span>H + <span class="nuclide"><sup>3</sup><sub>1</sub></span>H &rarr; <span class="nuclide"><sup>4</sup><sub>2</sub></span>He + <span class="nuclide"><sup>1</sup><sub>0</sub></span>n<br><em>Check: the top numbers add up to the same total on each side (236 = 141 + 92 + 3), and so do the bottom numbers (92 = 56 + 36).</em></div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Mixing up the two. <strong>Fission</strong> = splitting (think &ldquo;fissure&rdquo;, a crack). <strong>Fusion</strong> = joining (think &ldquo;fuse together&rdquo;).</div>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe the structure of an atom and the charge and mass of protons, neutrons and electrons.</li>
+      <li>I can explain how ions form.</li>
+      <li>I can describe the alpha-particle scattering experiment and what each observation shows (Supplement).</li>
+      <li>I can use nuclide notation and work out the numbers of protons, neutrons and electrons.</li>
+      <li>I can relate proton number to nuclear charge and nucleon number to nuclear mass (Supplement).</li>
+      <li>I can define isotopes and give an example.</li>
+      <li>I can describe fission and fusion, write their nuclide equations and explain where the energy comes from.</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 5.2 RADIOACTIVITY ==================== -->
+  <div class="section" id="sec-radioactivity">
+    <div class="section-header">
+      <span class="form-badge">Topic 5.2 &middot; Nuclear Physics</span>
+      <h2>Radioactivity</h2>
+      <p class="purpose">The three types of nuclear radiation, how they are detected, how nuclei change when they decay, how to work with half-life, and how to use radioactive sources safely.</p>
+    </div>
+
+    <h3>Detecting radiation and background radiation</h3>
+    <ul>
+      <li>Ionising nuclear radiation is measured with a detector such as a <strong>Geiger&ndash;M&uuml;ller (GM) tube</strong> connected to a counter. The <strong>count rate</strong> is given in counts per second or counts per minute.</li>
+      <li><strong>Background radiation</strong> is the low level of radiation around us all the time. Its sources include:
+        <ul>
+          <li><strong>radon gas</strong> in the air (from rocks and soil)</li>
+          <li><strong>rocks and buildings</strong></li>
+          <li><strong>food and drink</strong></li>
+          <li><strong>cosmic rays</strong> from space</li>
+        </ul>
+      </li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Correcting for background</h3>
+    <p>Measure the background count rate with no source present, then <strong>subtract</strong> it from every reading taken with the source. This gives the <strong>corrected count rate</strong> due to the source alone.</p>
+
+    <h3>The three types of radiation</h3>
+    <ul>
+      <li>Radioactive decay is <strong>spontaneous</strong> (nothing triggers it) and <strong>random</strong> (you can&rsquo;t predict which nucleus will decay next, or when).</li>
+      <li>It happens because the nucleus is <strong>unstable</strong>. Emitting radiation makes it more stable.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Alpha (&alpha;)</th><th>Beta (&beta;)</th><th>Gamma (&gamma;)</th></tr></thead>
+      <tbody>
+        <tr><td>What it is</td><td>2 protons + 2 neutrons (a helium nucleus)</td><td>A fast-moving electron, from the nucleus</td><td>Electromagnetic radiation (a high-frequency wave)</td></tr>
+        <tr><td>Symbol</td><td><span class="nuclide"><sup>4</sup><sub>2</sub></span>&alpha; or <span class="nuclide"><sup>4</sup><sub>2</sub></span>He</td><td><span class="nuclide"><sup>0</sup><sub>&minus;1</sub></span>&beta; or <span class="nuclide"><sup>0</sup><sub>&minus;1</sub></span>e</td><td>&gamma;</td></tr>
+        <tr><td>Charge</td><td>+2</td><td>&minus;1</td><td>0</td></tr>
+        <tr><td>Ionising effect</td><td>Strongly ionising</td><td>Moderately ionising</td><td>Weakly ionising</td></tr>
+        <tr><td>Stopped by</td><td>A sheet of paper, skin or a few cm of air</td><td>A few mm of aluminium</td><td>Reduced (not fully stopped) by several cm of lead or thick concrete</td></tr>
+      </tbody>
+    </table></div>
+    <figure class="diagram" style="max-width:520px"><svg viewBox="0 0 480 170" role="img" aria-label="Alpha radiation is stopped by paper, beta passes paper but is stopped by aluminium, gamma passes both and is reduced by lead">
+      <defs><marker id="parr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="20" y="30" width="50" height="110" rx="6" fill="#0a1628"/><text x="45" y="90" font-size="12" text-anchor="middle" fill="#fff">source</text>
+      <rect x="160" y="20" width="6" height="130" fill="#f5e6c8" stroke="currentColor"/><text x="163" y="166" font-size="12" text-anchor="middle" fill="currentColor">paper</text>
+      <rect x="260" y="20" width="14" height="130" fill="#c9d3de" stroke="currentColor"/><text x="267" y="166" font-size="12" text-anchor="middle" fill="currentColor">aluminium</text>
+      <rect x="370" y="20" width="40" height="130" fill="#7f8c99" stroke="currentColor"/><text x="390" y="166" font-size="12" text-anchor="middle" fill="currentColor">lead</text>
+      <text x="85" y="39" font-size="15" fill="#c0392b" font-weight="700">&#945;</text>
+      <line x1="75" y1="45" x2="156" y2="45" stroke="#c0392b" stroke-width="3" marker-end="url(#parr)"/>
+      <text x="85" y="79" font-size="15" fill="#2a5080" font-weight="700">&#946;</text>
+      <line x1="75" y1="85" x2="256" y2="85" stroke="#2a5080" stroke-width="3" marker-end="url(#parr)"/>
+      <text x="85" y="119" font-size="15" fill="#1f9d63" font-weight="700">&#947;</text>
+      <line x1="75" y1="125" x2="370" y2="125" stroke="#1f9d63" stroke-width="3"/>
+      <line x1="410" y1="125" x2="460" y2="125" stroke="#1f9d63" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#parr)"/>
+    </svg><figcaption>The more ionising the radiation, the less penetrating it is: it loses its energy quickly by ionising the atoms it passes.</figcaption></figure>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>To identify a source in an experiment: if the count drops when <strong>paper</strong> is added, it emits alpha. If it drops when <strong>aluminium</strong> is added (but not paper), beta. If neither makes much difference, gamma.</div>
+
+    <h3><span class="key-term">Supplement</span> Deflection in electric and magnetic fields</h3>
+    <ul>
+      <li><strong>Alpha</strong> and <strong>beta</strong> are charged, so they are deflected by electric and magnetic fields, in <strong>opposite directions</strong>.</li>
+      <li><strong>Beta</strong> is deflected <strong>more</strong> than alpha because a beta particle has a much smaller mass.</li>
+      <li><strong>Gamma</strong> is uncharged, so it is <strong>not deflected</strong>.</li>
+      <li>In an electric field, alpha bends towards the negative plate and beta towards the positive plate.</li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Why their ionising effects differ</h3>
+    <p>Ionisation happens when radiation knocks electrons off atoms. Alpha particles have a large charge (+2) and are relatively large and slow, so they interact strongly with nearly every atom they pass. They lose all their energy quickly and travel only a short distance. Beta particles have less charge and move faster, so they ionise less. Gamma rays have no charge and rarely interact, so they ionise least and penetrate furthest.</p>
+
+    <h3>Radioactive decay equations</h3>
+    <ul>
+      <li>In <strong>alpha</strong> and <strong>beta</strong> decay the number of protons changes, so the nucleus becomes a <strong>different element</strong>.</li>
+      <li><strong>Gamma</strong> emission does not change the proton or nucleon number. The nucleus just loses energy.</li>
+    </ul>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Decay</th><th>Nucleon number A</th><th>Proton number Z</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Alpha</td><td>Decreases by 4</td><td>Decreases by 2</td><td><span class="nuclide"><sup>226</sup><sub>88</sub></span>Ra &rarr; <span class="nuclide"><sup>222</sup><sub>86</sub></span>Rn + <span class="nuclide"><sup>4</sup><sub>2</sub></span>&alpha;</td></tr>
+        <tr><td>Beta</td><td>Stays the same</td><td>Increases by 1</td><td><span class="nuclide"><sup>14</sup><sub>6</sub></span>C &rarr; <span class="nuclide"><sup>14</sup><sub>7</sub></span>N + <span class="nuclide"><sup>0</sup><sub>&minus;1</sub></span>&beta;</td></tr>
+        <tr><td>Gamma</td><td>No change</td><td>No change</td><td><span class="nuclide"><sup>99</sup><sub>43</sub></span>Tc &rarr; <span class="nuclide"><sup>99</sup><sub>43</sub></span>Tc + &gamma;</td></tr>
+      </tbody>
+    </table></div>
+    <h3><span class="key-term">Supplement</span> Why isotopes decay and what happens in beta decay</h3>
+    <ul>
+      <li>Isotopes can be unstable because they have <strong>too many neutrons</strong> (or too few), or because the nucleus is too heavy.</li>
+      <li>In <strong>beta decay</strong>, a <strong>neutron changes into a proton and an electron</strong>. The proton stays in the nucleus and the electron is emitted as the beta particle. That is why Z goes up by 1 but A stays the same.</li>
+    </ul>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>Check every decay equation: the top numbers must add up to the same total on both sides, and so must the bottom numbers. Then use the new proton number to name the new element from the periodic table given.</div>
+
+    <h3>Half-life</h3>
+    <p>The <strong>half-life</strong> of a radioactive isotope is the time taken for <strong>half the nuclei</strong> in a sample to decay. Equivalently, it is the time taken for the count rate (activity) to fall to half its value.</p>
+    <figure class="diagram" style="max-width:500px"><svg viewBox="0 0 460 260" role="img" aria-label="A decay curve: count rate halves every 2 minutes, from 100 to 50 at 2 minutes to 25 at 4 minutes">
+      <line x1="60" y1="215" x2="430" y2="215" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="60" y1="215" x2="60" y2="20" stroke="currentColor" stroke-width="1.5"/>
+      <text x="60.0" y="232" font-size="12" text-anchor="middle" fill="currentColor">0</text>
+      <text x="150.0" y="232" font-size="12" text-anchor="middle" fill="currentColor">2</text>
+      <text x="240.0" y="232" font-size="12" text-anchor="middle" fill="currentColor">4</text>
+      <text x="330.0" y="232" font-size="12" text-anchor="middle" fill="currentColor">6</text>
+      <text x="420.0" y="232" font-size="12" text-anchor="middle" fill="currentColor">8</text>
+      <text x="52" y="219.0" font-size="12" text-anchor="end" fill="currentColor">0</text>
+      <text x="52" y="174.0" font-size="12" text-anchor="end" fill="currentColor">25</text>
+      <text x="52" y="129.0" font-size="12" text-anchor="end" fill="currentColor">50</text>
+      <text x="52" y="39.0" font-size="12" text-anchor="end" fill="currentColor">100</text>
+      <text x="240.0" y="253" font-size="13" text-anchor="middle" fill="currentColor">time / minutes</text>
+      <text x="18" y="125.0" font-size="13" text-anchor="middle" fill="currentColor" transform="rotate(-90 18 125.0)">count rate</text>
+      <polyline points="60,125.0 150.0,125.0 150.0,215" fill="none" stroke="#c0392b" stroke-dasharray="5 4" stroke-width="1.3"/>
+      <polyline points="60,170.0 240.0,170.0 240.0,215" fill="none" stroke="#c0392b" stroke-dasharray="5 4" stroke-width="1.3"/>
+      <polyline points="60.0,35.0 64.5,41.1 69.0,47.1 73.5,52.8 78.0,58.3 82.5,63.6 87.0,68.8 91.5,73.8 96.0,78.6 100.5,83.2 105.0,87.7 109.5,92.1 114.0,96.2 118.5,100.3 123.0,104.2 127.5,108.0 132.0,111.6 136.5,115.1 141.0,118.5 145.5,121.8 150.0,125.0 154.5,128.1 159.0,131.0 163.5,133.9 168.0,136.7 172.5,139.3 177.0,141.9 181.5,144.4 186.0,146.8 190.5,149.1 195.0,151.4 199.5,153.5 204.0,155.6 208.5,157.6 213.0,159.6 217.5,161.5 222.0,163.3 226.5,165.1 231.0,166.8 235.5,168.4 240.0,170.0 244.5,171.5 249.0,173.0 253.5,174.4 258.0,175.8 262.5,177.2 267.0,178.4 271.5,179.7 276.0,180.9 280.5,182.1 285.0,183.2 289.5,184.3 294.0,185.3 298.5,186.3 303.0,187.3 307.5,188.2 312.0,189.2 316.5,190.0 321.0,190.9 325.5,191.7 330.0,192.5 334.5,193.3 339.0,194.0 343.5,194.7 348.0,195.4 352.5,196.1 357.0,196.7 361.5,197.3 366.0,197.9 370.5,198.5 375.0,199.1 379.5,199.6 384.0,200.2 388.5,200.7 393.0,201.1 397.5,201.6 402.0,202.1 406.5,202.5 411.0,202.9 415.5,203.4 420.0,203.8" fill="none" stroke="#2a5080" stroke-width="2.5"/>
+      <text x="156.0" y="117.0" font-size="12" fill="#c0392b">1 half-life</text>
+      <text x="246.0" y="162.0" font-size="12" fill="#c0392b">2 half-lives</text>
+    </svg><figcaption>Read the half-life from any point: find when the count rate is halved. Here it is 2 minutes each time.</figcaption></figure>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A sample has a count rate of 800 counts/min. Its half-life is 3 hours. What is the count rate after 12 hours?</strong><br>Number of half-lives = 12 &divide; 3 = 4<br>800 &rarr; 400 &rarr; 200 &rarr; 100 &rarr; <strong>50 counts/min</strong></div>
+    <div class="example-block"><div class="ex-label">Worked example <span class="key-term">Supplement</span></div><strong>A detector reads 520 counts/min near a source. The background count rate is 40 counts/min. After 10 days the reading is 160 counts/min. Find the half-life.</strong><br>Corrected count rates: 520 &minus; 40 = 480, and 160 &minus; 40 = 120<br>480 &rarr; 240 &rarr; 120 is <strong>2 half-lives</strong> in 10 days<br>Half-life = 10 &divide; 2 = <strong>5 days</strong></div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Thinking a sample is completely gone after two half-lives. After 1 half-life &frac12; is left, after 2 half-lives &frac14;, after 3 half-lives &frac18;: it never quite reaches zero. In Supplement questions, also remember to subtract background <strong>before</strong> halving.</div>
+
+    <h3>Uses of radioactive isotopes</h3>
+    <p>The best isotope for a job depends on the <strong>type of radiation</strong> (how penetrating it is) and its <strong>half-life</strong>.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Use</th><th>Radiation</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Smoke alarms</td><td>Alpha, long half-life</td><td>Alpha ionises the air so a small current flows. Smoke absorbs the alpha, the current falls and the alarm sounds. Alpha doesn&rsquo;t escape the alarm case. A long half-life means the source lasts for years.</td></tr>
+        <tr><td>Measuring and controlling thickness of paper or metal foil</td><td>Beta</td><td>Some beta passes through and some is absorbed, so the count rate changes noticeably if the thickness changes. Alpha would all be stopped and gamma would all pass through.</td></tr>
+        <tr><td>Sterilising food and medical equipment</td><td>Gamma</td><td>Penetrates packaging and kills bacteria. The item doesn&rsquo;t become radioactive.</td></tr>
+        <tr><td>Diagnosing and treating cancer</td><td>Gamma</td><td>Tracers with a short half-life can be detected outside the body and don&rsquo;t stay radioactive for long. Focused gamma beams kill cancer cells.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Safety</h3>
+    <ul>
+      <li>Ionising radiation can <strong>kill cells</strong>, cause <strong>mutations</strong> (damage to DNA) and lead to <strong>cancer</strong>.</li>
+      <li>Keep exposure as low as possible:
+        <ul>
+          <li><strong>Reduce exposure time</strong>: use the source for as short a time as possible.</li>
+          <li><strong>Increase distance</strong>: handle sources with long tongs and never point them at people.</li>
+          <li><strong>Use shielding</strong>: store sources in lead-lined boxes and use lead or concrete barriers.</li>
+        </ul>
+      </li>
+    </ul>
+    <h3><span class="key-term">Supplement</span> Explaining the safety precautions</h3>
+    <ul>
+      <li><strong>Shorter time:</strong> fewer particles or rays reach the body, so less ionisation and lower risk.</li>
+      <li><strong>Greater distance:</strong> radiation spreads out (and alpha and beta are absorbed by air), so less reaches the body.</li>
+      <li><strong>Shielding:</strong> dense materials like lead absorb the radiation before it reaches people.</li>
+      <li>Alpha sources are most dangerous <strong>inside</strong> the body (if swallowed or breathed in), because alpha is so strongly ionising. Outside the body, skin stops it.</li>
+    </ul>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can name sources of background radiation and describe how radiation is detected.</li>
+      <li>I can correct count rates for background (Supplement).</li>
+      <li>I can describe alpha, beta and gamma: nature, charge, ionising effect and penetration.</li>
+      <li>I can describe how alpha, beta and gamma are deflected by fields and explain their ionising effects (Supplement).</li>
+      <li>I can write and balance alpha, beta and gamma decay equations, and explain beta decay as a neutron becoming a proton (Supplement).</li>
+      <li>I can define half-life and calculate it from data or a graph, including background correction (Supplement).</li>
+      <li>I can explain how the uses of isotopes depend on radiation type and half-life.</li>
+      <li>I can describe the dangers of ionising radiation and how to handle sources safely, and explain why the precautions work (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 6.1 EARTH & SOLAR SYSTEM ==================== -->
+  <div class="section" id="sec-solar-system">
+    <div class="section-header">
+      <span class="form-badge">Topic 6.1 &middot; Space Physics</span>
+      <h2>The Earth and the Solar System</h2>
+      <p class="purpose">Why we have days, seasons and phases of the Moon, what is in the Solar System and how it formed, and how gravity controls the orbits. Expect short recall questions plus calculations with orbital speed and the time light takes to travel.</p>
+    </div>
+
+    <h3>The Earth, the Sun and the Moon</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Motion</th><th>Time taken</th><th>What it explains</th></tr></thead>
+      <tbody>
+        <tr><td>The Earth <strong>spins on its axis</strong></td><td>About <strong>24 hours</strong></td><td><strong>Day and night</strong>, and why the Sun appears to move across the sky from east to west each day. The Sun isn&rsquo;t moving round us: we are turning.</td></tr>
+        <tr><td>The Earth <strong>orbits the Sun</strong></td><td>About <strong>365 days</strong></td><td><strong>The seasons</strong>, because the Earth&rsquo;s axis is tilted (see below)</td></tr>
+        <tr><td>The Moon <strong>orbits the Earth</strong></td><td>About <strong>one month</strong> (about 27&ndash;29 days)</td><td>The cycle of the <strong>phases of the Moon</strong></td></tr>
+      </tbody>
+    </table></div>
+    <h4>Seasons</h4>
+    <p>The Earth&rsquo;s axis is <strong>tilted</strong> (by about 23&deg;) and always points the same way in space as the Earth orbits the Sun. When your hemisphere is tilted <strong>towards</strong> the Sun, it is summer: the Sun is higher in the sky, its energy is more concentrated on each square metre of ground and the days are longer. Six months later your hemisphere is tilted <strong>away</strong> from the Sun and it is winter.</p>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Saying summer happens because the Earth is <strong>closer</strong> to the Sun. The distance hardly changes. It is the <strong>tilt</strong> that matters, which is why the two hemispheres have opposite seasons at the same time.</div>
+    <h4>Phases of the Moon</h4>
+    <ul>
+      <li>The Moon gives out no light of its own. We see it because it <strong>reflects sunlight</strong>.</li>
+      <li>The half of the Moon facing the Sun is always lit. As the Moon orbits the Earth, we see different amounts of that lit half.</li>
+      <li><strong>New Moon:</strong> the Moon is between the Earth and the Sun, so its lit side faces away from us and we see almost nothing.</li>
+      <li><strong>Full Moon:</strong> the Earth is between the Sun and the Moon, so we see the whole lit half.</li>
+      <li>The cycle from new Moon to full Moon and back takes about a month, showing that the Moon orbits the Earth once a month.</li>
+    </ul>
+
+    <h3>What is in the Solar System</h3>
+    <ul>
+      <li><strong>One star:</strong> the Sun.</li>
+      <li><strong>Eight planets</strong> orbiting the Sun. In order from the Sun: <strong>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</strong>.</li>
+      <li><strong>Minor planets</strong> orbiting the Sun, including <strong>dwarf planets</strong> such as Pluto, and <strong>asteroids</strong> in the asteroid belt between Mars and Jupiter.</li>
+      <li><strong>Moons</strong> (natural satellites), which orbit planets.</li>
+      <li>Smaller bodies, including <strong>comets</strong>: lumps of ice and dust with very stretched (elliptical) orbits.</li>
+    </ul>
+    <div class="mnemonic"><span><strong>M</strong>y</span> <span><strong>V</strong>ery</span> <span><strong>E</strong>asy</span> <span><strong>M</strong>ethod</span> <span><strong>J</strong>ust</span> <span><strong>S</strong>peeds</span> <span><strong>U</strong>p</span> <span><strong>N</strong>aming</span> &mdash; the planets in order from the Sun.</div>
+
+    <h3>Inner and outer planets</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Inner four (Mercury to Mars)</th><th>Outer four (Jupiter to Neptune)</th></tr></thead>
+      <tbody>
+        <tr><td>Made of</td><td><strong>Rock</strong> (and metal)</td><td>Mostly <strong>gas</strong> (gas giants)</td></tr>
+        <tr><td>Size</td><td><strong>Small</strong></td><td><strong>Large</strong></td></tr>
+      </tbody>
+    </table></div>
+    <h4>How the Solar System formed (the accretion model)</h4>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>A cloud of gas and dust</strong><span>The Solar System began as a huge cloud of gas and dust in space, which collapsed under its own gravity.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>A spinning disc forms</strong><span>Most of the material fell to the centre and formed the Sun. The rest formed a spinning disc around it.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Particles clump together (accretion)</strong><span>Gravity pulled particles in the disc together into larger and larger lumps, which became the planets.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Rocky inside, gas outside</strong><span>Near the Sun it was too hot for gases and ices to collect, so only rock and metal could clump together, making small rocky planets. Further out it was cold enough for gases and ice to collect too, so the outer planets grew much larger and are mostly gas.</span></div></div>
+    </div>
+
+    <h3>Light travelling across the Solar System</h3>
+    <p>Distances in space are so large that even light takes time to cross them. Use speed = distance &divide; time with the speed of light, 3.0 &times; 10<sup>8</sup>&nbsp;m/s.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>The Earth is 1.5 &times; 10<sup>11</sup>&nbsp;m from the Sun. How long does sunlight take to reach the Earth?</strong><br>time = distance &divide; speed = 1.5 &times; 10<sup>11</sup> &divide; 3.0 &times; 10<sup>8</sup><br>time = <strong>500&nbsp;s</strong> (just over 8 minutes)</div>
+
+    <h3>Gravity and orbits</h3>
+    <ul>
+      <li>The <strong>gravitational attraction of the Sun</strong> is the force that keeps the planets, minor planets and comets in orbit.</li>
+      <li>Planets, minor planets and comets move in <strong>elliptical</strong> orbits (stretched circles). Most planets&rsquo; orbits are very nearly circular; comets&rsquo; are very stretched.</li>
+    </ul>
+    <h3>Using planetary data</h3>
+    <p>Exam questions often give a table of data about the planets (distance from the Sun, orbital time, density, surface temperature, gravitational field strength) and ask you to spot patterns. Look for:</p>
+    <ul>
+      <li>The <strong>further</strong> a planet is from the Sun, the <strong>longer</strong> its orbit takes and (generally) the <strong>colder</strong> its surface. Venus is the exception for temperature: its thick carbon dioxide atmosphere traps energy.</li>
+      <li>The inner rocky planets have <strong>higher densities</strong> than the outer gas giants.</li>
+      <li>Planets with <strong>more mass</strong> have a stronger gravitational field at their surface (Jupiter&rsquo;s is the strongest).</li>
+    </ul>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>When describing a pattern from data, quote numbers from the table to back it up, and mention any planet that doesn&rsquo;t fit the pattern.</div>
+
+    <h3><span class="key-term">Supplement</span> Gravitational fields</h3>
+    <ul>
+      <li>The gravitational field strength at the <strong>surface</strong> of a planet depends on the planet&rsquo;s <strong>mass</strong>.</li>
+      <li>The field around a planet (or the Sun) gets <strong>weaker</strong> as the <strong>distance increases</strong>.</li>
+      <li>The <strong>Sun contains most of the mass of the Solar System</strong> (over 99%). This is why everything orbits the Sun.</li>
+      <li>Further from the Sun, its gravitational field is weaker, so the planets&rsquo; <strong>orbital speeds are lower</strong> and their orbits take much longer.</li>
+    </ul>
+
+    <h3><span class="key-term">Supplement</span> Orbital speed</h3>
+    <div class="formula-box">v = 2&pi;r &divide; T</div>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">v</div><div class="conv-value">Average orbital speed, in m/s</div></div>
+      <div class="convention-item"><div class="conv-label">r</div><div class="conv-value">Average radius of the orbit, in m</div></div>
+      <div class="convention-item"><div class="conv-label">T</div><div class="conv-value">Orbital period (time for one orbit), in s</div></div>
+    </div>
+    <p>2&pi;r is the distance round a circular orbit, so this is just speed = distance &divide; time.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>The Earth orbits the Sun at an average radius of 1.5 &times; 10<sup>11</sup>&nbsp;m once every 365 days. Calculate its average orbital speed. [3]</strong><br>T = 365 &times; 24 &times; 60 &times; 60 = 3.15 &times; 10<sup>7</sup>&nbsp;s<br>v = 2&pi;r &divide; T = 2 &times; &pi; &times; 1.5 &times; 10<sup>11</sup> &divide; 3.15 &times; 10<sup>7</sup><br>v = <strong>3.0 &times; 10<sup>4</sup>&nbsp;m/s</strong> (30&nbsp;km/s)</div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Leaving T in days or hours, or r in km. Convert to <strong>seconds</strong> and <strong>metres</strong> first (km &times; 1000).</div>
+
+    <h3><span class="key-term">Supplement</span> Speed in an elliptical orbit</h3>
+    <ul>
+      <li>An object in an elliptical orbit (such as a comet) moves <strong>fastest when it is closest to the Sun</strong> and slowest when it is furthest away.</li>
+      <li><strong>Why (conservation of energy):</strong> as the comet moves towards the Sun, it loses gravitational potential energy, which is converted to kinetic energy, so it speeds up. As it moves away, kinetic energy is converted back to gravitational potential energy, so it slows down. The total energy stays the same.</li>
+      <li>In a <strong>circular</strong> orbit the distance from the Sun stays the same, so the <strong>speed is constant</strong>, but the <strong>velocity changes</strong> all the time because the direction of motion keeps changing.</li>
+    </ul>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can explain day and night, the Sun&rsquo;s apparent motion, the seasons and the phases of the Moon.</li>
+      <li>I can list what the Solar System contains and name the planets in order.</li>
+      <li>I can compare inner and outer planets and explain the difference with the accretion model.</li>
+      <li>I can calculate how long light takes to travel between objects in space.</li>
+      <li>I can state that the Sun&rsquo;s gravity keeps objects in elliptical orbits and spot patterns in planetary data.</li>
+      <li>I can explain how gravitational field strength depends on mass and distance, and why planets orbit the Sun (Supplement).</li>
+      <li>I can use v = 2&pi;r &divide; T (Supplement).</li>
+      <li>I can explain why a comet speeds up near the Sun using conservation of energy (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== 6.2 STARS & THE UNIVERSE ==================== -->
+  <div class="section" id="sec-stars-universe">
+    <div class="section-header">
+      <span class="form-badge">Topic 6.2 &middot; Space Physics</span>
+      <h2>Stars and the Universe</h2>
+      <p class="purpose">What the Sun is and what powers it, how stars are born and die, how big the Universe is, and the evidence that it began with the Big Bang.</p>
+    </div>
+
+    <h3>The Sun</h3>
+    <ul>
+      <li>The Sun is a <strong>star of medium size</strong>.</li>
+      <li>It is made mostly of <strong>hydrogen and helium</strong>.</li>
+      <li>It radiates most of its energy as <strong>infrared, visible light and ultraviolet</strong>. Visible light is the peak; infrared has longer wavelengths and ultraviolet shorter.</li>
+      <li>Stars are powered by <strong>nuclear reactions</strong> that release energy. In stable stars like the Sun, the reaction is the <strong>fusion of hydrogen nuclei into helium</strong>.</li>
+    </ul>
+
+    <h3>Galaxies and the light-year</h3>
+    <ul>
+      <li>A <strong>galaxy</strong> is made up of many billions of stars.</li>
+      <li>The Sun is one of the stars in our galaxy, the <strong>Milky Way</strong>.</li>
+      <li>Other stars in the Milky Way are <strong>much further</strong> from Earth than any planet. The nearest, Proxima Centauri, is about 4 light-years away.</li>
+      <li>The Milky Way is one of <strong>many billions</strong> of galaxies in the Universe. Its diameter is about <strong>100&nbsp;000 light-years</strong>.</li>
+    </ul>
+    <p>A <strong>light-year</strong> is the <strong>distance</strong> light travels through space in one year: about <strong>9.5 &times; 10<sup>15</sup>&nbsp;m</strong>.</p>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>A light-year is a <strong>distance</strong>, not a time, even though it has &ldquo;year&rdquo; in the name.</div>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>Show that one light-year is about 9.5 &times; 10<sup>15</sup>&nbsp;m.</strong><br>One year = 365 &times; 24 &times; 60 &times; 60 = 3.15 &times; 10<sup>7</sup>&nbsp;s<br>distance = speed &times; time = 3.0 &times; 10<sup>8</sup> &times; 3.15 &times; 10<sup>7</sup> = <strong>9.5 &times; 10<sup>15</sup>&nbsp;m</strong></div>
+
+    <h3><span class="key-term">Supplement</span> The life cycle of a star</h3>
+    <figure class="diagram" style="max-width:620px"><svg viewBox="0 0 600 300" role="img" aria-label="Life cycle of stars: nebula, protostar, stable star, then for a star like the Sun red giant, planetary nebula and white dwarf; for a massive star red supergiant, supernova, then neutron star or black hole">
+      <defs><marker id="larr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="10" y="130" width="110" height="36" rx="6" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.3"/><text x="65.0" y="145" font-size="12" text-anchor="middle" fill="#0a1628">Nebula</text><text x="65.0" y="159" font-size="12" text-anchor="middle" fill="#0a1628">(gas and dust)</text>
+      <line x1="120" y1="144" x2="140" y2="144" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <rect x="140" y="133" width="100" height="22" rx="6" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.3"/><text x="190.0" y="148" font-size="12" text-anchor="middle" fill="#0a1628">Protostar</text>
+      <line x1="240" y1="144" x2="260" y2="144" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <rect x="260" y="130" width="110" height="36" rx="6" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.3"/><text x="315.0" y="145" font-size="12" text-anchor="middle" fill="#0a1628">Stable star</text><text x="315.0" y="159" font-size="12" text-anchor="middle" fill="#0a1628">(H fusion)</text>
+      <line x1="370" y1="140" x2="400" y2="70" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <line x1="370" y1="150" x2="400" y2="220" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <text x="404" y="130" font-size="11" fill="currentColor">like the Sun</text>
+      <text x="378" y="200" font-size="11" fill="currentColor">massive</text>
+      <rect x="400" y="40" width="95" height="22" rx="6" fill="#fbe3dc" stroke="#2a5080" stroke-width="1.3"/><text x="447.5" y="55" font-size="12" text-anchor="middle" fill="#0a1628">Red giant</text>
+      <line x1="495" y1="51" x2="515" y2="51" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <rect x="515" y="30" width="80" height="36" rx="6" fill="#e8f0fe" stroke="#2a5080" stroke-width="1.3"/><text x="555.0" y="45" font-size="12" text-anchor="middle" fill="#0a1628">Planetary</text><text x="555.0" y="59" font-size="12" text-anchor="middle" fill="#0a1628">nebula</text>
+      <line x1="447" y1="62" x2="447" y2="90" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <rect x="400" y="90" width="95" height="22" rx="6" fill="#ffffff" stroke="#2a5080" stroke-width="1.3"/><text x="447.5" y="105" font-size="12" text-anchor="middle" fill="#0a1628">White dwarf</text>
+      <rect x="400" y="205" width="95" height="36" rx="6" fill="#fbe3dc" stroke="#2a5080" stroke-width="1.3"/><text x="447.5" y="220" font-size="12" text-anchor="middle" fill="#0a1628">Red</text><text x="447.5" y="234" font-size="12" text-anchor="middle" fill="#0a1628">supergiant</text>
+      <line x1="495" y1="223" x2="515" y2="223" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <rect x="515" y="212" width="80" height="22" rx="6" fill="#fde9c4" stroke="#2a5080" stroke-width="1.3"/><text x="555.0" y="227" font-size="12" text-anchor="middle" fill="#0a1628">Supernova</text>
+      <line x1="555" y1="234" x2="555" y2="252" stroke="currentColor" stroke-width="1.3" marker-end="url(#larr)"/>
+      <rect x="500" y="252" width="95" height="36" rx="6" fill="#d6d9e0" stroke="#2a5080" stroke-width="1.3"/><text x="547.5" y="267" font-size="12" text-anchor="middle" fill="#0a1628">Neutron star</text><text x="547.5" y="281" font-size="12" text-anchor="middle" fill="#0a1628">or black hole</text>
+      <path d="M515,222 C440,290 120,290 65,166" fill="none" stroke="currentColor" stroke-width="1.1" stroke-dasharray="5 4" marker-end="url(#larr)"/>
+      <text x="230" y="290" font-size="11" fill="currentColor">dust and heavy elements form new stars and planets</text>
+    </svg><figcaption>The path a star follows after its stable stage depends on its mass.</figcaption></figure>
+    <div class="structure-card">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Nebula</strong><span>A star forms from an interstellar cloud of gas and dust, mostly hydrogen, which collapses under gravity.</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Protostar</strong><span>As the cloud collapses, its temperature rises. A protostar is unstable: it is still collapsing and heating up.</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><strong>Stable star</strong><span>When the centre is hot enough, hydrogen fusion begins. The star is stable when the <strong>inward force of gravity</strong> is balanced by the <strong>outward force</strong> due to the high temperature in its centre. It stays like this for most of its life.</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><strong>Running out of hydrogen</strong><span>When most of the hydrogen in the core has been used up, the star swells. A star like the Sun becomes a <strong>red giant</strong>; a much more massive star becomes a <strong>red supergiant</strong>.</span></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><strong>Smaller stars (like the Sun)</strong><span>The red giant throws off its outer layers as a <strong>planetary nebula</strong>, leaving a small, hot core called a <strong>white dwarf</strong>.</span></div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-content"><strong>Massive stars</strong><span>The red supergiant explodes as a <strong>supernova</strong>, leaving a <strong>neutron star</strong> or, for the most massive stars, a <strong>black hole</strong>.</span></div></div>
+      <div class="step"><div class="step-num">7</div><div class="step-content"><strong>Recycling</strong><span>A supernova throws out a nebula containing hydrogen and <strong>new, heavier elements</strong>. This material may later form new stars with orbiting planets. The Solar System formed from material like this.</span></div></div>
+    </div>
+    <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Mixing up the two nebulas. A <strong>planetary nebula</strong> comes from a red giant (smaller stars) and has nothing to do with planets. A <strong>supernova</strong> comes only from massive stars (red supergiants).</div>
+
+    <h3>The expanding Universe and redshift</h3>
+    <ul>
+      <li><strong>Redshift</strong> is an <strong>increase in the observed wavelength</strong> of electromagnetic radiation from stars and galaxies that are <strong>moving away</strong> from us. The light is shifted towards the red end of the spectrum.</li>
+      <li>Light from distant galaxies is redshifted compared with light from the same elements on Earth. So the galaxies are moving away from us.</li>
+      <li>This shows the <strong>Universe is expanding</strong> and supports the <strong>Big Bang Theory</strong>: the Universe began from a single point a long time ago and has been expanding ever since.</li>
+    </ul>
+
+    <h3><span class="key-term">Supplement</span> Cosmic microwave background radiation (CMBR)</h3>
+    <ul>
+      <li>The CMBR is <strong>microwave radiation of a specific frequency</strong> that is detected coming from <strong>every direction</strong> in space.</li>
+      <li>It was produced shortly after the Universe formed, when the Universe was extremely hot. As the Universe expanded, the wavelength of this radiation was stretched until it reached the <strong>microwave</strong> region.</li>
+      <li>It is further evidence for the Big Bang.</li>
+    </ul>
+
+    <h3><span class="key-term">Supplement</span> The Hubble constant and the age of the Universe</h3>
+    <ul>
+      <li>The <strong>speed</strong> v at which a galaxy is moving away is found from the <strong>change in wavelength</strong> of its light (its redshift).</li>
+      <li>The <strong>distance</strong> d to a far galaxy can be found from the <strong>brightness of a supernova</strong> in it: supernovae of a particular type all have about the same true brightness, so a dimmer one is further away.</li>
+      <li>The further away a galaxy is, the faster it is moving away. The ratio is the <strong>Hubble constant</strong>, H<sub>0</sub>, currently estimated at about <strong>2.2 &times; 10<sup>&minus;18</sup> per second</strong>.</li>
+    </ul>
+    <div class="formula-box">H<sub>0</sub> = v &divide; d</div>
+    <p>On a graph of speed (y-axis) against distance (x-axis) for galaxies, the gradient is H<sub>0</sub>.</p>
+    <div class="formula-box">age of the Universe &asymp; d &divide; v = 1 &divide; H<sub>0</sub></div>
+    <p><strong>Why:</strong> if a galaxy has always moved away at speed v, then d &divide; v is the time it has taken to travel distance d from the point where everything started. Because d &divide; v is the same for every galaxy, everything was together at a single point at that time. This is evidence that the Universe expanded from a single point.</p>
+    <div class="example-block"><div class="ex-label">Worked example</div><strong>A galaxy is moving away from the Earth at 6.6 &times; 10<sup>6</sup>&nbsp;m/s. Taking H<sub>0</sub> = 2.2 &times; 10<sup>&minus;18</sup>&nbsp;/s, find (a) its distance and (b) the age of the Universe in years.</strong><br>(a) d = v &divide; H<sub>0</sub> = 6.6 &times; 10<sup>6</sup> &divide; 2.2 &times; 10<sup>&minus;18</sup> = <strong>3.0 &times; 10<sup>24</sup>&nbsp;m</strong><br>(b) age = 1 &divide; H<sub>0</sub> = 1 &divide; 2.2 &times; 10<sup>&minus;18</sup> = 4.5 &times; 10<sup>17</sup>&nbsp;s<br>In years: 4.5 &times; 10<sup>17</sup> &divide; 3.15 &times; 10<sup>7</sup> = <strong>1.4 &times; 10<sup>10</sup> years</strong> (about 14 billion years)</div>
+
+    <div class="checklist"><h4>Quick Checklist</h4><ul>
+      <li>I can describe the Sun: size, composition, the radiation it emits and how fusion powers it.</li>
+      <li>I can describe galaxies and the Milky Way, and define a light-year.</li>
+      <li>I can describe the life cycle of stars of different masses (Supplement).</li>
+      <li>I can describe redshift and explain how it supports an expanding Universe and the Big Bang.</li>
+      <li>I can describe the CMBR and explain its origin (Supplement).</li>
+      <li>I can use H<sub>0</sub> = v &divide; d, describe how v and d are measured, and estimate the age of the Universe as 1 &divide; H<sub>0</sub> (Supplement).</li>
+    </ul></div>
+  </div>
+
+  <!-- ==================== KEY EQUATIONS ==================== -->
+  <div class="section" id="sec-key-equations">
+    <div class="section-header">
+      <span class="form-badge">Reference</span>
+      <h2>Key Equations</h2>
+      <p class="purpose">Every equation from the topics on this page in one place. You need to recall these: the 0625 exam does not give you a formula sheet.</p>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Equation</th><th>Symbols and units</th><th>Topic</th></tr></thead>
+      <tbody>
+        <tr><td>T = &theta; + 273</td><td>T in K, &theta; in &deg;C</td><td>2.1</td></tr>
+        <tr><td>p = F &divide; A <span class="key-term">Supplement</span></td><td>pressure (Pa), force (N), area (m<sup>2</sup>)</td><td>2.1</td></tr>
+        <tr><td>pV = constant, p<sub>1</sub>V<sub>1</sub> = p<sub>2</sub>V<sub>2</sub> <span class="key-term">Supplement</span></td><td>Fixed mass of gas at constant temperature</td><td>2.1</td></tr>
+        <tr><td>&Delta;E = m c &Delta;&theta; <span class="key-term">Supplement</span></td><td>energy (J), mass (kg), c in J/(kg&nbsp;&deg;C), temperature change (&deg;C)</td><td>2.2</td></tr>
+        <tr><td>v = f &lambda;</td><td>speed (m/s), frequency (Hz), wavelength (m)</td><td>3.1</td></tr>
+        <tr><td>n = sin i &divide; sin r <span class="key-term">Supplement</span></td><td>refractive index (no units)</td><td>3.2</td></tr>
+        <tr><td>n = 1 &divide; sin c <span class="key-term">Supplement</span></td><td>c = critical angle</td><td>3.2</td></tr>
+        <tr><td>speed = distance &divide; time</td><td>For echoes, distance = 2 &times; distance to the reflector. Also for light crossing space</td><td>3.4, 6.1</td></tr>
+        <tr><td>v = 2&pi;r &divide; T <span class="key-term">Supplement</span></td><td>orbital speed (m/s), orbit radius (m), period (s)</td><td>6.1</td></tr>
+        <tr><td>H<sub>0</sub> = v &divide; d <span class="key-term">Supplement</span></td><td>Hubble constant (per s), speed of galaxy (m/s), distance (m)</td><td>6.2</td></tr>
+        <tr><td>age of Universe &asymp; 1 &divide; H<sub>0</sub> <span class="key-term">Supplement</span></td><td>in s; divide by 3.15 &times; 10<sup>7</sup> for years</td><td>6.2</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Numbers to remember</h3>
+    <div class="conventions">
+      <div class="convention-item"><div class="conv-label">Absolute zero</div><div class="conv-value">&minus;273&nbsp;&deg;C = 0&nbsp;K</div></div>
+      <div class="convention-item"><div class="conv-label">Water</div><div class="conv-value">Melts at 0&nbsp;&deg;C, boils at 100&nbsp;&deg;C</div></div>
+      <div class="convention-item"><div class="conv-label">Speed of EM waves</div><div class="conv-value">3.0 &times; 10<sup>8</sup>&nbsp;m/s in a vacuum</div></div>
+      <div class="convention-item"><div class="conv-label">Speed of sound in air</div><div class="conv-value">330&ndash;350&nbsp;m/s</div></div>
+      <div class="convention-item"><div class="conv-label">Human hearing</div><div class="conv-value">20&nbsp;Hz to 20&nbsp;kHz</div></div>
+      <div class="convention-item"><div class="conv-label">Ultrasound</div><div class="conv-value">Above 20&nbsp;kHz</div></div>
+      <div class="convention-item"><div class="conv-label">Light-year</div><div class="conv-value">9.5 &times; 10<sup>15</sup>&nbsp;m (a distance)</div></div>
+      <div class="convention-item"><div class="conv-label">Hubble constant</div><div class="conv-value">About 2.2 &times; 10<sup>&minus;18</sup> per second</div></div>
+      <div class="convention-item"><div class="conv-label">Earth</div><div class="conv-value">Spins in 24&nbsp;h, orbits in 365 days; Moon orbits in about a month</div></div>
+    </div>
+    <div class="tip-box"><div class="tip-label">Examiner Tip</div>In calculations, write the equation first, then substitute the numbers, then give the answer <strong>with its unit</strong>. If you make an arithmetic slip, the first two steps can still earn marks.</div>
+  </div>
+
+</main>
+</div>
+
+    <!-- WhatsApp CTA -->
+    <section class="cta-section">
+        <h2>Need Help With IGCSE Physics?</h2>
+        <p>Book a one-on-one tutoring session and get personalised help with the topics you find hardest.</p>
+        <a href="https://wa.me/60103686902" class="whatsapp-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with Paula on WhatsApp
+        </a>
+        <a href="../../marking/" class="marking-btn">Get a past paper marked &rarr;</a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur</p>
+    </footer>
+
+
+    <script>
+    function showSection(id, fromHash) {
+      var sec = document.getElementById('sec-' + id);
+      if (!sec) return;
+      document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('active'); });
+      document.querySelectorAll('.nav-item').forEach(function(n) { n.classList.remove('active'); });
+      sec.classList.add('active');
+
+      var nav = document.querySelector('.nav-item[data-section="' + id + '"]');
+      if (nav) nav.classList.add('active');
+
+      // Keep the open topic in the URL so it can be linked to and survives a refresh
+      if (!fromHash && location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+
+      if (!fromHash) document.querySelector('.notes-layout').scrollIntoView();
+
+      if (window.innerWidth <= 768) {
+        document.querySelector('.sidebar').classList.remove('open');
+        document.querySelector('.overlay').classList.remove('open');
+      }
+    }
+
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+      document.querySelector('.overlay').classList.toggle('open');
+    }
+
+    if (location.hash) showSection(location.hash.slice(1), true);
+    window.addEventListener('hashchange', function() { showSection(location.hash.slice(1), true); });
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://paulamikki1-boop.github.io/paula-tutor-profile/" },
+            { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://paulamikki1-boop.github.io/paula-tutor-profile/resources/" },
+            { "@type": "ListItem", "position": 3, "name": "IGCSE Physics Notes" }
+        ]
+    }
+    </script>
+
+    <!-- LearningResource Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LearningResource",
+        "name": "IGCSE Physics Notes: Thermal, Waves, Nuclear and Space (Cambridge 0625, 2026-2028)",
+        "description": "Free Cambridge IGCSE Physics (0625) revision notes for the 2026-2028 syllabus: thermal physics, waves, light, sound, nuclear physics and space physics, with diagrams, worked calculations, examiner tips and checklists.",
+        "educationalLevel": "IGCSE",
+        "about": { "@type": "Thing", "name": "Physics" },
+        "author": { "@type": "Person", "name": "Paula" },
+        "inLanguage": "en",
+        "isAccessibleForFree": true
+    }
+    </script>
+    <script src="../search.js"></script>
+</body>
+</html>
