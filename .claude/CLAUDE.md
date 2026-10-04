@@ -25,6 +25,10 @@ use them only as a topic checklist and write original content.
     `table.ledger` / `table.statement` layouts, `ledger colsN` adds the Dr/Cr divider)
   - `resources/igcse-business-notes/` (0450: exam technique, 6 topics (1.1–6.3), Key Formulas page, 3 model-answer sections with
     original cases — Siti's Batik Studio, Arjun's FixIt, KL Scoot, BrewHaus — 4 SVG diagrams; notes also flag Edexcel 4BS1 / OxfordAQA 9225)
+  - `resources/igcse-physics-notes/` (0625, 2026–2028; one section per sub-topic: 2.1–2.3 Thermal, 3.1–3.4 Waves, 5.1–5.2 Nuclear,
+    6.1–6.2 Space, plus Key Equations; 7 inline SVG diagrams; `.formula-box`, `.nuclide` (A/Z stacked) classes. Topics 1 and 4
+    are greyed-out "Soon" sidebar items (`.nav-item.soon`) — owner is sending source PDFs (Save My Exams / Cambridge practice
+    questions) for the rest; use them only as a checklist and write original notes. No Physics PDFs yet, so no shop promo box.)
   - Older stubs: chemistry past-paper technique, A-level biology definitions, physics formula sheet, economics essay guide.
 - `marking/` — paid past-paper marking page: full past papers (Chem/Phys/Bio/Maths) RM10–30 per paper, cheaper in batches;
   questions RM10–20 / essays RM20–40 (Business/Econ/English); 48-hour turnaround; form opens WhatsApp prefilled.
@@ -58,5 +62,5 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 - Exam Technique sections for Economics/Accounting describe 2027 papers generally — check against syllabus PDFs.
 - Business notes: paper layout described is the 0450 format (P1 4×20: 2/2/4/6/6; P2 case 4×20: 8/12) — check against the
   current syllabus year. Owner's sample questions were OxfordAQA 9225 style; model answers use original cases, not past-paper text.
-- Possible next: Physics/Maths notes, Business PDFs, Economics detailed PDFs, custom domain
+- Possible next: Physics topics 1 & 4, Maths notes, Business PDFs, Economics detailed PDFs, custom domain
   (Cloudflare Pages or Netlify), Accounting on the marking page, store name (top picks: "Notes by Paula", "A* Starts Here").

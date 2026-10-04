@@ -13,6 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = [
     ("Biology", "igcse-biology-notes"),
     ("Chemistry", "igcse-chemistry-notes"),
+    ("Physics", "igcse-physics-notes"),
     ("Economics", "igcse-economics-notes"),
     ("Accounting", "igcse-accounting-notes"),
     ("Business", "igcse-business-notes"),
