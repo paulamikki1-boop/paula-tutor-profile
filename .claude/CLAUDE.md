@@ -58,6 +58,5 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 - Exam Technique sections for Economics/Accounting describe 2027 papers generally — check against syllabus PDFs.
 - Business notes: paper layout described is the 0450 format (P1 4×20: 2/2/4/6/6; P2 case 4×20: 8/12) — check against the
   current syllabus year. Owner's sample questions were OxfordAQA 9225 style; model answers use original cases, not past-paper text.
-- Pre-existing: on 375px phones the top nav (Home/Resources/Marking/WhatsApp) overflows ~9px on notes pages.
-- Possible next: Physics/Maths notes, Business PDFs, Economics detailed PDFs, Payhip "Buy PDF" buttons, custom domain
+- Possible next: Physics/Maths notes, Business PDFs, Economics detailed PDFs, custom domain
   (Cloudflare Pages or Netlify), Accounting on the marking page, store name (top picks: "Notes by Paula", "A* Starts Here").
