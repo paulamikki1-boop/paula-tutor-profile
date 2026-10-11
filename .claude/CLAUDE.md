@@ -57,6 +57,11 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 - Built with Playwright/Chromium HTML→PDF (`page.pdf`, A4) + PyMuPDF for page numbers, watermark and encryption. The build
   scripts lived in a temporary session folder and are NOT in the repo; recreate from the notes pages' HTML if needed.
 
+## Editable editions (Obsidian / handwriting PDF / Word)
+- Converter scripts in `tools/note-editions/` (see its README). Done: Chemistry (vault, GoodNotes PDF, Word), Biology (vault, GoodNotes PDF).
+- Note sources + PDF build files are in the owner's private **Paula-Notes-Build-Kit.zip** (never commit them; repo is public).
+  Ask the owner to upload it, set `NOTES_SRC` to its `sources/` folder, then run the scripts.
+
 ## Open items / ideas
 - Owner to confirm dates: tutoring since 2020 vs 2021; A Level certificate shows June 2022 series.
 - Exam Technique sections for Economics/Accounting describe 2027 papers generally — check against syllabus PDFs.
