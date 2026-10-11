@@ -52,12 +52,47 @@ def split_ext(runs):
     if r: r[0] = (r[0][0].lstrip(), r[0][1])
     return r, ext
 
+FIGS = pathlib.Path(f"figs-{SUBJ}")  # inline SVGs (Economics) are written here for png.js
+RAW_SVGS = []  # raw <svg> text of the current fragment, in order (lxml lowercases viewBox etc.)
+def figure(el, name):
+    FIGS.mkdir(exist_ok=True)
+    svg = RAW_SVGS[int(name.rsplit("-", 1)[1]) - 1]
+    if "xmlns=" not in svg: svg = svg.replace("<svg", '<svg xmlns="http://www.w3.org/2000/svg"', 1)
+    (FIGS/f"{name}.svg").write_text(svg)
+    cap = el.figcaption
+    return ("figure", name, plain(inl(cap)) if cap else "")
+
+BLOCKY = ("p", "ul", "ol", "figure")
+def box_parts(el, n, slug, nfig):
+    """example/tip boxes with <p>/<ul>/<figure> children -> list of parts (Economics model answers)"""
+    parts, loose = [], []
+    def flush():
+        r = inl_list(loose)
+        if r: parts.append(("p", r))
+        loose.clear()
+    for ch in el.children:
+        if isinstance(ch, Tag) and ch.name in BLOCKY:
+            flush()
+            if ch.name == "p": parts.append(("p", inl(ch)))
+            elif ch.name == "figure": nfig[0] += 1; parts.append(figure(ch, f"{n:02d}-{slug}-{nfig[0]}"))
+            else: parts.append((ch.name, [inl(li) for li in ch.find_all("li", recursive=False)]))
+        else: loose.append(ch)
+    flush()
+    return parts
+
+def inl_list(nodes):
+    w = BeautifulSoup("<span></span>", "lxml").span
+    for x in nodes: w.append(x.__copy__() if isinstance(x, Tag) else NavigableString(str(x)))
+    return inl(w)
+
 def parse(n, slug):
-    s = BeautifulSoup((CHEM/f"{n:02d}-{slug}.html").read_text(), "lxml")
+    src = (CHEM/f"{n:02d}-{slug}.html").read_text()
+    RAW_SVGS[:] = re.findall(r"<svg\b.*?</svg>", src, re.S)
+    s = BeautifulSoup(src, "lxml")
     sec = s.select_one(".section")
     hdr = sec.select_one(".section-header")
     meta = dict(badge=plain(inl(hdr.select_one(".form-badge"))), title=plain(inl(hdr.h2)), purpose=inl(hdr.select_one(".purpose")))
-    blocks = []
+    blocks = []; nfig = [0]
     for el in sec.find_all(recursive=False):
         c = el.get("class", [""])[0] if el.get("class") else ""
         if c == "section-header": continue
@@ -85,14 +120,18 @@ def parse(n, slug):
                 if runs: runs.append((" ", frozenset()))
                 runs += inl(sp)
             blocks.append(("mnemonic", runs))
+        elif el.name == "figure": nfig[0] += 1; blocks.append(figure(el, f"{n:02d}-{slug}-{nfig[0]}"))
         elif c in ("tip-box", "mistake-box", "example-block"):
             lab = el.select_one(".tip-label,.mistake-label,.ex-label"); label = plain(inl(lab)); lab.extract()
-            blocks.append(("box", {"tip-box": "tip", "mistake-box": "mistake", "example-block": "example"}[c], label, inl(el)))
+            kind = {"tip-box": "tip", "mistake-box": "mistake", "example-block": "example"}[c]
+            if el.find(BLOCKY, recursive=False): blocks.append(("box", kind, label, [], box_parts(el, n, slug, nfig)))
+            else: blocks.append(("box", kind, label, inl(el)))
         elif c == "checklist":
             blocks.append(("checklist", plain(inl(el.h4)), [inl(li) for li in el.select("li")]))
         else: raise SystemExit(f"unhandled {el.name}.{c} in {slug}")
     # diagram: same placement rule as the PDF build
     e = MANIFEST.get(slug)
+    if not e and not (DIAG/f"{n:02d}-{slug}.svg").exists(): return meta, blocks  # topic without a separate diagram
     fig = ("figure", f"{n:02d}-{slug}", e["caption"] if e else "")
     pos = 0
     if e and e.get("after_h3"):
