@@ -62,7 +62,25 @@ def figure(el, name):
     cap = el.figcaption
     return ("figure", name, plain(inl(cap)) if cap else "")
 
-BLOCKY = ("p", "ul", "ol", "figure")
+def table(el):
+    """-> ("table", head, rows, info); info: caption, right-aligned (num) columns, row kinds
+    (total/sub/note, Accounting statements) and ledger (two-sided Dr|Cr account)"""
+    t = el.table
+    ths = t.select("thead th") or t.tr.find_all("th")
+    head = [inl(th) for th in ths]
+    trs = t.select("tbody tr") or [tr for tr in t.find_all("tr") if tr.find("td")]
+    rows, kinds = [], []
+    for tr in trs:
+        r = []
+        for td in tr.find_all("td"):
+            r.append(inl(td)); r += [[]] * (int(td.get("colspan", 1)) - 1)
+        rows.append(r); kinds.append((tr.get("class") or [""])[0])
+    num = ["num" in th.get("class", []) for th in ths]
+    cap = t.caption
+    return ("table", head, rows, dict(caption=plain(inl(cap)) if cap else "", num=num, kinds=kinds,
+                                      ledger="ledger" in t.get("class", [])))
+
+BLOCKY = ("p", "ul", "ol", "figure", "div", "h4")
 def box_parts(el, n, slug, nfig):
     """example/tip boxes with <p>/<ul>/<figure> children -> list of parts (Economics model answers)"""
     parts, loose = [], []
@@ -74,6 +92,10 @@ def box_parts(el, n, slug, nfig):
         if isinstance(ch, Tag) and ch.name in BLOCKY:
             flush()
             if ch.name == "p": parts.append(("p", inl(ch)))
+            elif ch.name == "h4": parts.append(("h4", inl(ch)))
+            elif ch.name == "div":
+                if "table-wrap" not in ch.get("class", []): raise SystemExit(f"unhandled div.{ch.get('class')} in box ({slug})")
+                parts.append(table(ch))
             elif ch.name == "figure": nfig[0] += 1; parts.append(figure(ch, f"{n:02d}-{slug}-{nfig[0]}"))
             else: parts.append((ch.name, [inl(li) for li in ch.find_all("li", recursive=False)]))
         else: loose.append(ch)
@@ -100,12 +122,7 @@ def parse(n, slug):
             r, ext = split_ext(inl(el)); blocks.append(("h", 3 if el.name == "h3" else 4, r, ext))
         elif el.name == "p": blocks.append(("p", inl(el)))
         elif el.name in ("ul", "ol"): blocks.append((el.name, [inl(li) for li in el.find_all("li", recursive=False)]))
-        elif c == "table-wrap":
-            t = el.table
-            head = [inl(th) for th in t.select("thead th")] or [inl(x) for x in t.tr.find_all(["th"])]
-            rows = [[inl(td) for td in tr.find_all("td")] for tr in t.select("tbody tr")] or \
-                   [[inl(td) for td in tr.find_all("td")] for tr in t.find_all("tr") if tr.find("td")]
-            blocks.append(("table", head, rows))
+        elif c == "table-wrap": blocks.append(table(el))
         elif c == "conventions":
             blocks.append(("conv", [(plain(inl(i.select_one(".conv-label"))), inl(i.select_one(".conv-value"))) for i in el.select(".convention-item")]))
         elif c == "structure-card":

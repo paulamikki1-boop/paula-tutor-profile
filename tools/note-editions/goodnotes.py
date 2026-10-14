@@ -2,8 +2,8 @@ import re, json, subprocess, pathlib, pymupdf, html as H
 D = pathlib.Path("gn").resolve(); D.mkdir(exist_ok=True); from ir import SUBJ, B
 import shutil
 for f in ("dm400.ttf","dm400i.ttf","dm500.ttf","dm700.ttf","corm700.ttf"): shutil.copy(B/f"{SUBJ}pdf"/f, D/f)
-NAME = {"chem": "Chemistry", "bio": "Biology", "econ": "Economics"}[SUBJ]; CODE = {"chem": "0620", "bio": "0610", "econ": "0455"}[SUBJ]
-YEARS = "2027-2029" if SUBJ == "econ" else "2026-2028"
+NAME = {"chem": "Chemistry", "bio": "Biology", "econ": "Economics", "acct": "Accounting"}[SUBJ]; CODE = {"chem": "0620", "bio": "0610", "econ": "0455", "acct": "0452"}[SUBJ]
+YEARS = "2027-2029" if SUBJ in ("econ", "acct") else "2026-2028"
 SRC = B/f"{SUBJ}pdf"/f"{NAME.lower()}-notes.html"
 from ir import TOPICS, FOOTER, B
 EXTRA = """
@@ -62,7 +62,7 @@ for i in range(1, doc.page_count):
     kw = dict(fontsize=7, fontname="dm", fontfile=F, color=(0.54, 0.59, 0.66))
     pg.insert_text((37, h - 24), FOOTER, **kw)
     num = str(i + 1); pg.insert_text((w - 30 - pymupdf.get_text_length(num, fontsize=7), h - 24), num, **kw)
-toc = [[1, "Cover", 1], [1, "Contents", 2]] + [[1, (f"Model Answers: {t}" if g.startswith("Past Paper") else f"{n}. {t}"), pages[s]] for n, s, t, g in TOPICS] + [[1, "Want your answers checked?", doc.page_count]]
+toc = [[1, "Cover", 1], [1, "Contents", 2]] + [[1, (f"Model Answers: {t}" if g.startswith("Past Paper") else f"Worked Examples: {t}" if g.startswith("Worked Example") else f"{n}. {t}"), pages[s]] for n, s, t, g in TOPICS] + [[1, "Want your answers checked?", doc.page_count]]
 doc.set_toc(toc)
 links = sum(1 for l in doc[1].get_links() if l["kind"] == pymupdf.LINK_GOTO or l.get("page") is not None)
 doc.set_metadata({"title": f"IGCSE {NAME} Revision Notes - GoodNotes edition (Cambridge {CODE}, {YEARS})", "author": "Paula"})

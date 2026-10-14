@@ -25,7 +25,7 @@ mkdir -p assets-bio && node $T/png.js $NOTES_SRC/biopdf/diagrams assets-bio
 SUBJ=bio python3 $T/obsidian.py                       # -> out/Biology 0610 Vault
 SUBJ=bio python3 $T/goodnotes.py                      # -> out/IGCSE-Biology-Compact-Notes-GoodNotes-Edition.pdf
 ```
-`SUBJ` is `bio`, `chem` or `econ` (folder names in `sources/`). The GoodNotes edition uses the built Compact HTML
+`SUBJ` is `bio`, `chem`, `econ` or `acct` (folder names in `sources/`). The GoodNotes edition uses the built Compact HTML
 (`sources/<subj>pdf/<subject>-notes.html`).
 
 ## Adding a new subject
@@ -34,8 +34,12 @@ SUBJ=bio python3 $T/goodnotes.py                      # -> out/IGCSE-Biology-Com
 2. Add the subject name/code to the `CFG` dict in `obsidian.py` and `NAME`/`CODE` in `goodnotes.py`, and a
    `RELATED_<CODE>` topic-link map in `obsidian.py`.
 3. `ir.py` handles the component classes used by Bio/Chem/Econ (tables, conventions, steps, tip/mistake/example
-   boxes, checklists, Supplement tags, multi-paragraph model-answer boxes, inline `figure.diagram` SVGs).
-   Accounting ledgers use extra classes — `ir.py` stops with "unhandled …" so you can add them.
+   boxes, checklists, Supplement tags, multi-paragraph model-answer boxes, inline `figure.diagram` SVGs, and
+   Accounting `table.ledger` / `table.statement` with captions and `total`/`sub`/`note` rows). Anything new
+   makes `ir.py` stop with "unhandled …" so you can add it.
+
+**Accounting:** no diagrams, so just `mkdir -p assets-acct` before `obsidian.py`. In the vault, ledgers get a
+`‖` column between the Dr and Cr sides, totals are bold, narrations italic.
 
 **Economics:** its diagrams are mostly inline SVGs in the topic fragments. `ir.py` writes them to `figs-econ/`,
 so render both folders into the assets:

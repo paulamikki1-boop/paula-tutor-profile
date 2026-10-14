@@ -58,7 +58,7 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
   scripts lived in a temporary session folder and are NOT in the repo; recreate from the notes pages' HTML if needed.
 
 ## Editable editions (Obsidian / handwriting PDF / Word)
-- Converter scripts in `tools/note-editions/` (see its README). Done: Chemistry (vault, GoodNotes PDF, Word), Biology (vault, GoodNotes PDF), Economics (vault, GoodNotes PDF).
+- Converter scripts in `tools/note-editions/` (see its README). Done: Chemistry (vault, GoodNotes PDF, Word), Biology (vault, GoodNotes PDF), Economics (vault, GoodNotes PDF), Accounting (vault, GoodNotes PDF).
 - Note sources + PDF build files are in the owner's private **Paula-Notes-Build-Kit.zip** (never commit them; repo is public).
   Ask the owner to upload it, set `NOTES_SRC` to its `sources/` folder, then run the scripts.
 
