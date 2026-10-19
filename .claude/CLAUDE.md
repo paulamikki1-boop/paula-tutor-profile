@@ -23,8 +23,9 @@ use them only as a topic checklist and write original content.
   - `resources/igcse-biology-notes/` (0610, 2026–2028, 21 topics, inline SVG diagrams in PDFs only)
   - `resources/igcse-chemistry-notes/` (0620, 2026–2028, 12 topics)
   - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029: exam technique, 6 topics, 37 model answers, 12 SVG diagrams)
-    plus "Topical Past Papers" sidebar group: `#pp-ped` = 11 real Paper 2 PED questions (2020–2025, verbatim + cited) with
-    original exemplar answers (pilot; owner to approve before doing other topics). Papers came from pastpapers.papacambridge.com.
+    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (187 questions across 38 sub-topics, `h3#pp-2-3` etc.)
+    and `#pp-ped` (2.7, 11 questions). All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
+    original exemplar answers. Papers/mark schemes/examiner reports came from pastpapers.papacambridge.com. Paper 1 (MCQ) not covered.
   - `resources/igcse-accounting-notes/` (0452 NEW syllabus 2027–2029: exam technique, 7 topics, 30 worked examples;
     `table.ledger` / `table.statement` layouts, `ledger colsN` adds the Dr/Cr divider)
   - `resources/igcse-business-notes/` (0450: exam technique, 6 topics (1.1–6.3), Key Formulas page, 3 model-answer sections with
