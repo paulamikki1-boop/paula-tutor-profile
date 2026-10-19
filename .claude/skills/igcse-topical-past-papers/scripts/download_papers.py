@@ -3,11 +3,11 @@
 
 Usage: download_papers.py OUT_DIR --code 0455 --years 2020-2025 --components 21,22,23 [--sessions m,s,w]
 
-Files land as OUT_DIR/<code>_<s><yy>_<type>_<comp>.pdf/.txt (types qp, ms, in) plus OUT_DIR/<code>_<s><yy>_er.txt.
+Files land as OUT_DIR/<code>_<s><yy>_<type>_<comp>.pdf/.txt (types qp, ms, in) plus OUT_DIR/<code>_<s><yy>_er.txt and one _er_<comp>.txt per component.
 Files that do not exist on the server (e.g. February/March is usually only variant 2) are skipped quietly.
 Needs network access to pastpapers.papacambridge.com and the `pdftotext` command (poppler-utils).
 """
-import argparse, os, subprocess, sys, urllib.request
+import argparse, os, re, subprocess, sys, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 BASE = 'https://pastpapers.papacambridge.com/directories/CAIE/CAIE-pastpapers/upload'
@@ -27,6 +27,20 @@ def fetch(out, name):
     open(pdf, 'wb').write(data)
     subprocess.run(['pdftotext', '-layout', pdf, txt], stderr=subprocess.DEVNULL, check=False)
     return name, 'ok' if os.path.exists(txt) else 'pdftotext failed'
+
+
+def split_reports(out, code, reports):
+    """Examiner reports cover every component and each restarts at 'Question 1'. Write one file per component
+    (<code>_<s><yy>_er_<comp>.txt) by cutting at the 'Paper <code>/<comp>' headings."""
+    for name in reports:
+        t = open(f'{out}/{name}.txt', encoding='utf-8', errors='replace').read()
+        heads = [(m.start(), m.group(1)) for m in re.finditer(rf'^\s*Paper\s+{code}/(\d\d)\b', t, re.M)]
+        parts = {}
+        for k, (pos, comp) in enumerate(heads):
+            end = heads[k + 1][0] if k + 1 < len(heads) else len(t)
+            parts[comp] = parts.get(comp, '') + t[pos:end]
+        for comp, text in parts.items():
+            open(f'{out}/{name}_{comp}.txt', 'w', encoding='utf-8').write(text)
 
 
 def main():
@@ -49,6 +63,7 @@ def main():
     with ThreadPoolExecutor(6) as ex:
         results = list(ex.map(lambda n: fetch(a.out, n), names))
     got = [n for n, st in results if st in ('ok', 'cached')]
+    split_reports(a.out, a.code, [n for n in got if n.endswith('_er')])
     qps = [n for n in got if '_qp_' in n]
     print(f'{len(got)} files ({len(qps)} question papers, {sum("_ms_" in n for n in got)} mark schemes, '
           f'{sum("_in_" in n for n in got)} inserts, {sum(n.endswith("_er") for n in got)} examiner reports)')

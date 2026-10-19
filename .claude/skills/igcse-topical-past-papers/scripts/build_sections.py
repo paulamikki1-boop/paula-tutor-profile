@@ -78,8 +78,15 @@ for f in sorted(glob.glob(f"{cfg['answers_dir']}/*.json")):
         if items:
             subtopics.setdefault(st['code'], dict(st, items=[]))['items'] += items
 
-for st in subtopics.values():
+for code, st in subtopics.items():
     st['items'].sort(key=lambda i: i['marks'])
+    if not 4 <= len(st['items']) <= 6:
+        problems.append(f"{code}: {len(st['items'])} questions (target 4-6; fine if the papers have no more)")
+    for it in st['items']:
+        for mid in re.findall(r'<marker[^>]*id="([^"]+)"', it.get('diagram') or ''):
+            if re.findall(rf'id="{re.escape(mid)}"', page) or sum(
+                    mid in (x.get('diagram') or '') for s2 in subtopics.values() for x in s2['items']) > 1:
+                problems.append(f"{code} {it['id']}: marker id {mid} is not unique")
 n_q = sum(len(s['items']) for s in subtopics.values())
 print(f'{len(subtopics)} sub-topics, {n_q} questions')
 for p in problems:
@@ -170,8 +177,10 @@ for num, s in sections.items():
 # Sidebar: one "Topical Past Papers" group, rebuilt each run.
 page = re.sub(r'  <!-- PP-NAV -->.*?<!-- /PP-NAV -->\n', '', page, flags=re.S)
 group = '  <!-- PP-NAV -->\n  <div class="nav-section-label">Topical Past Papers</div>\n' + ''.join(nav) + '  <!-- /PP-NAV -->\n'
-assert page.count('</nav>') >= 1
-i = page.index('</nav>')
+# Pages can have a header <nav> as well as the sidebar, so add the group to the end of the sidebar <nav> itself.
+side = re.search(r'<nav[^>]*class="[^"]*sidebar', page)
+assert side, 'page has no <nav class="sidebar">'
+i = page.index('</nav>', side.end())
 page = page[:i] + group + page[i:]
 
 CSS = '''

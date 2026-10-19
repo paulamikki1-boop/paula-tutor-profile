@@ -17,9 +17,13 @@ WORK = {{WORK_DIR}}
   `stimulus` (text before the question's first part, or the insert / Section A source), `refers_to_figure`.
 - `WORK/papers/<file>.txt`: the full question paper. Swap `_qp_` for `_ms_` for its **mark scheme**, `_in_` for its
   **insert** (case studies, source booklets) when one exists.
-- `WORK/papers/{{CODE}}_<s><yy>_er.txt`: examiner reports where available. Use what they say strong and weak answers did.
-- Style reference, read first: `{{STYLE_PAGE}}`. Read its exam-technique / "how to answer" section and at least one
-  existing model-answer section; those are the tutor's own tips and every answer must follow them.{{STYLE_EXTRA}}
+- `WORK/papers/{{CODE}}_<s><yy>_er_<comp>.txt`: the examiner report for that component, where one exists (the whole
+  report is `_er.txt`). Use what it says strong and weak answers did.
+- Mark-scheme and paper text lose some symbols in extraction (× signs, superscripts, subscripts): read numbers with care
+  and check against the question's own figures.
+- Style reference, read first: `{{STYLE_PAGE}}` (the same page the sections will be added to). Read its exam-technique
+  / "how to answer" section if it has one, its Common Mistake / tip boxes, and any existing model answers: those are the
+  tutor's own tips and every answer must follow them.{{STYLE_EXTRA}}
 
 ## Your job
 For each sub-topic you are given:
@@ -44,9 +48,9 @@ For each sub-topic you are given:
   sentence appears word for word in the paper. If superscripts were flattened (e.g. `7.8 × 1011` for 7.8 × 10¹¹), write
   them as HTML (`7.8 &times; 10<sup>11</sup>`); the validator unescapes HTML before checking, so do the same with `<sup>`
   only where it is unambiguous, and say so in your summary.
-- When the part only makes sense with its lead-in (`stem`), put the needed lead-in sentence(s) in `stimulus`.
-- `stimulus`: one to three sentences quoted **verbatim** from the stem, stimulus or insert that the question depends on
-  (exact words; "&hellip;" for a cut). `null` if the question stands alone.
+- `stimulus`: one to three sentences quoted **verbatim** from the stem, stimulus or insert that a student needs in order
+  to answer (exact words; "&hellip;" for a cut). Include a sub-part's `stem` whenever the question refers to it
+  ("this gas", "the train"); use `null` only when the question makes sense entirely on its own.
 - `id`, `session`, `marks`: copy exactly from questions.json.
 - The answer must be **original**: do not copy mark-scheme lines or examiner-report sample answers; use them only to
   know what earns marks. Write at full-mark standard, as a strong 15–16-year-old would in the exam, not a textbook.
@@ -77,5 +81,6 @@ Write `WORK/answers/<agent-key>.json` (create the folder if needed):
 ]}
 ```
 Before finishing, run `python3 {{SKILL_DIR}}/scripts/build_sections.py {{CONFIG_PATH}} --check` and fix every line
-it prints that mentions your key. Then reply with 3–5 lines: sub-topics done, questions per sub-topic, and any
+it prints that mentions your key or your sub-topic codes (it checks ids, verbatim wording, marks, missing fields, question
+count per sub-topic and marker-id clashes; the writing rules above are yours to keep). Then reply with 3–5 lines: sub-topics done, questions per sub-topic, and any
 sub-topic with fewer than 4 usable questions and why.
