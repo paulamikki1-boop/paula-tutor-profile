@@ -1,0 +1,19 @@
+{
+  "page": "resources/igcse-physics-notes/index.html",
+  "papers_dir": "WORK/papers",
+  "answers_dir": "WORK/answers",
+  "code": "0625",
+  "subject": "Physics",
+  "paper_label": "Paper 4 (Extended Theory)",
+  "years": "2020&ndash;2025",
+  "marking_subject": "Physics",
+  "example_ref": "0625/42/M/J/24 Q2(b)(ii)",
+  "units": [
+    {"num": "1", "title": "Motion, Forces and Energy", "nav": "Motion, Forces &amp; Energy"},
+    {"num": "2", "title": "Thermal Physics"},
+    {"num": "3", "title": "Waves"},
+    {"num": "4", "title": "Electricity and Magnetism", "nav": "Electricity &amp; Magnetism"},
+    {"num": "5", "title": "Nuclear Physics"},
+    {"num": "6", "title": "Space Physics"}
+  ]
+}

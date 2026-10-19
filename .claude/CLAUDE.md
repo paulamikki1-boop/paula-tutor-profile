@@ -44,6 +44,8 @@ use them only as a topic checklist and write original content.
 - Search: `resources/search.js` + `resources/search-index.json`. **Rebuild after editing notes:** `python3 tools/build-search-index.py`.
   New notes page → add to `PAGES` in that script and include `<script src="../search.js"></script>`.
 - `sitemap.xml`, `DEPLOY.md` (structure + search instructions).
+- Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
+  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics; tested on Physics 2.1.
 
 ## Conventions for new notes pages
 Same component classes as existing notes pages: `section-header/form-badge/purpose`, `structure-card/step`, `conventions/convention-item`,
