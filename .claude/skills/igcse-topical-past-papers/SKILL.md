@@ -1,6 +1,7 @@
 ---
 name: igcse-topical-past-papers
-description: Build "Topical Past Papers" sections on Paula's tutor website: real Cambridge IGCSE past-paper questions sorted by syllabus sub-topic, each quoted exactly with its paper reference (e.g. 0625/42/M/J/24 Q2(b)(ii)), session and marks, plus an original full-mark model answer, a "Why this scores" note and examiner-report pitfalls, rendered into that subject's notes page. Use this whenever Paula asks for topical questions, past-paper questions by topic, exemplar or model answers to past papers, "do the same as Economics for Physics/Chemistry/Biology/Business/Accounting", or wants to add or refresh past-paper Q&A for any IGCSE subject, even if she doesn't say "topical".
+description: >-
+  Build "Topical Past Papers" sections on Paula's tutor website: real Cambridge IGCSE past-paper questions sorted by syllabus sub-topic, each quoted exactly with its paper reference (e.g. 0625/42/M/J/24 Q2(b)(ii)), session and marks, plus an original full-mark model answer, a "Why this scores" note and examiner-report pitfalls, rendered into that subject's notes page. Use this whenever Paula asks for topical questions, past-paper questions by topic, exemplar or model answers to past papers, "do the same as Economics for Physics/Chemistry/Biology/Business/Accounting", or wants to add or refresh past-paper Q&A for any IGCSE subject, even if she doesn't say "topical".
 ---
 
 # IGCSE topical past papers
