@@ -11,12 +11,12 @@ import glob, json, os, re, sys
 
 SESS = {'m': ('F/M', 'February/March'), 's': ('M/J', 'May/June'), 'w': ('O/N', 'October/November')}
 JUNK_LINE = re.compile(r'©|UCLES|Cambridge University Press|\[Turn over|Permission to reproduce|BLANK PAGE|'
-                       r'DO NOT WRITE IN THIS MARGIN|^\s*\d+\s*$|^\s*\*[\d ]+\*\s*$|[Ā-ſ]{3,}|^\s*[,.]\s*,?\s*$')
+                       r'DO NOT WRITE IN THIS MARGIN|^\s{6,}\d+\s*$|^\s*\*[\d ]+\*\s*$|[Ā-ſ]{3,}|^\s*[,.]\s*,?\s*$')
 ROMAN = r'(?:i{1,3}|iv|vi{0,3}|ix|x)'
 MARK = re.compile(r'\[(\d{1,2})\]')
 # Part markers only count at the start of a line (or a roman straight after a letter), so '(ii)' quoted inside
 # a sentence such as 'the value calculated in (ii)' is not mistaken for a new part.
-TOKEN = re.compile(rf'(?m)^[ \t]*\(([a-h])\)|(?:^[ \t]*|(?<=\)) {{0,6}})\(({ROMAN})\)|\[(\d{{1,2}})\]')
+TOKEN = re.compile(rf'(?m)^[ \t]*(?:\d{{1,2}}[ \t]+)?\(([a-h])\)|(?:^[ \t]*|(?<=\)) {{0,6}})\(({ROMAN})\)|\[(\d{{1,2}})\]')
 FIG = re.compile(r'\b(?:Fig\.|Figure|Table|graph|chart)')
 
 
@@ -31,8 +31,10 @@ def clean(text):
 def find_start(t, n, pos):
     """Start of question n: '<n> (a)' if the question opens with a part, otherwise the last '<n>   Prose…' line
     before that question's first '(a)'. Taking the last one skips chart axis ticks such as '1   Inflation rate'."""
-    direct = re.compile(rf'^[ \t]*{n}[ \t]+(?=\(a\))', re.M)
-    prose = re.compile(rf'^[ \t]*{n}[ \t]{{2,}}(?=[A-Z‘“"])', re.M)
+    # The number may be followed by 2+ spaces, by one space when it has two digits ('10 Carbon-14 …'), or stand alone
+    # on its line with the text on the next line. (Page numbers are indented, so JUNK_LINE drops them first.)
+    direct = re.compile(rf'^[ \t]*{n}\s+(?=\(a\))', re.M)
+    prose = re.compile(rf'^[ \t]*{n}(?:[ \t]{{2,}}|(?<=\d\d) |[ \t]*\n[ \t]*)(?=[A-Za-z‘“"])', re.M)
     first_a = re.compile(r'^[ \t]*(?:\d{1,2}[ \t]+)?\(a\)', re.M)
     m = direct.search(t, pos)
     cands, k = [], pos
@@ -108,6 +110,10 @@ def main():
         if s not in SESS:
             continue
         raw = open(f, encoding='utf-8', errors='replace').read()
+        # Some papers print a control character (e.g. BEL \x07) after the question number; it hides the number.
+        raw = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', ' ', raw)
+        # Barcode text ('ĬÎÆĂÈđ…') can share a line with a part label such as '1 (b)'; blank it out.
+        raw = re.sub(r'\S*[Ā-ſ]{3,}\S*', ' ', raw)
         t = '\n'.join(l for l in raw.splitlines() if not JUNK_LINE.search(l))
         insert = f'{papers}/{subj}_{sy}_in_{comp}.txt'
         source = clean(open(insert, encoding='utf-8', errors='replace').read()) if os.path.exists(insert) else ''

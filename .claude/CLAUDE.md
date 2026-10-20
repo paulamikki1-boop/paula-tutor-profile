@@ -22,6 +22,9 @@ use them only as a topic checklist and write original content.
   - `resources/igcse-english-writing-forms/` (Cambridge 0500)
   - `resources/igcse-biology-notes/` (0610, 2026–2028, 21 topics, inline SVG diagrams in PDFs only)
   - `resources/igcse-chemistry-notes/` (0620, 2026–2028, 12 topics)
+    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit12` (168 questions across 29 grouped sub-topics, e.g.
+    `h3#pp-2-5` = 2.5–2.7 structures). Real 0620 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers.
+    No "Get it marked" links (marking page only offers full-paper marking for Chemistry).
   - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029: exam technique, 6 topics, 37 model answers, 12 SVG diagrams)
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (187 questions across 38 sub-topics, `h3#pp-2-3` etc.)
     and `#pp-ped` (2.7, 11 questions). All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
@@ -30,6 +33,9 @@ use them only as a topic checklist and write original content.
     `table.ledger` / `table.statement` layouts, `ledger colsN` adds the Dr/Cr divider)
   - `resources/igcse-business-notes/` (0450: exam technique, 6 topics (1.1–6.3), Key Formulas page, 3 model-answer sections with
     original cases — Siti's Batik Studio, Arjun's FixIt, KL Scoot, BrewHaus — 4 SVG diagrams; notes also flag Edexcel 4BS1 / OxfordAQA 9225)
+    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (148 questions across 25 sub-topics 1.1–6.3, `h3#pp-3-3` etc.).
+    Real 0450 Paper 1 (11/12/13) and Paper 2 case-study (21/22/23, stimulus quoted from the insert) questions 2020–2025,
+    verbatim + cited, original answers, most sub-topics include a 6-mark (e) or 12-mark (b); "Get it marked" links → marking page.
   - `resources/igcse-physics-notes/` (0625, 2026–2028; one section per sub-topic: 2.1–2.3 Thermal, 3.1–3.4 Waves, 5.1–5.2 Nuclear,
     6.1–6.2 Space, plus Key Equations; 7 inline SVG diagrams; `.formula-box`, `.nuclide` (A/Z stacked) classes. Topics 1 and 4
     are greyed-out "Soon" sidebar items (`.nav-item.soon`) — owner is sending source PDFs (Save My Exams / Cambridge practice
@@ -49,7 +55,7 @@ use them only as a topic checklist and write original content.
   New notes page → add to `PAGES` in that script and include `<script src="../search.js"></script>`.
 - `sitemap.xml`, `DEPLOY.md` (structure + search instructions).
 - Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
-  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics and Physics.
+  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business and Chemistry.
 
 ## Conventions for new notes pages
 Same component classes as existing notes pages: `section-header/form-badge/purpose`, `structure-card/step`, `conventions/convention-item`,

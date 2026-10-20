@@ -48,7 +48,9 @@ def verbatim(text, file):
     """Every sentence / '…'-separated fragment must appear word for word in the paper (whitespace collapsed)."""
     plain = norm(re.sub(r'<[^>]+>', '', text))  # e.g. 10<sup>11</sup> is flattened to '1011' in the paper text
     frags = [f.strip(' .') for f in re.split(r'…|(?<=[.?!])\s+', plain) if len(f.strip(' .')) > 3]
-    return all(f in paper_text(file) for f in frags)
+    # Spacing is ignored: extraction puts stray spaces before sub/superscripts ('POCl 3', 'Cl 2O').
+    squash = lambda s: re.sub(r'\s+', '', s)
+    return all(squash(f) in squash(paper_text(file)) for f in frags)
 
 
 page = open(cfg['page'], encoding='utf-8').read()
