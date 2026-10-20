@@ -34,6 +34,10 @@ use them only as a topic checklist and write original content.
     6.1–6.2 Space, plus Key Equations; 7 inline SVG diagrams; `.formula-box`, `.nuclide` (A/Z stacked) classes. Topics 1 and 4
     are greyed-out "Soon" sidebar items (`.nav-item.soon`) — owner is sending source PDFs (Save My Exams / Cambridge practice
     questions) for the rest; use them only as a checklist and write original notes. No Physics PDFs yet, so no shop promo box.)
+    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (180 questions across 31 sub-topics, all six topics incl.
+    1 and 4 which have no notes yet; `h3#pp-1-5-1` etc.). Real 0625 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited,
+    original answers, 9 SVG diagrams; parts on content dropped from the 2026–2028 syllabus (logic gates etc.) skipped.
+    No "Get it marked" links (marking page only offers full-paper marking for Physics).
   - Older stubs: chemistry past-paper technique, A-level biology definitions, physics formula sheet, economics essay guide.
 - `marking/` — paid past-paper marking page: full past papers (Chem/Phys/Bio/Maths) RM10–30 per paper, cheaper in batches;
   questions RM10–20 / essays RM20–40 (Business/Econ/English); 48-hour turnaround; form opens WhatsApp prefilled.
@@ -45,7 +49,7 @@ use them only as a topic checklist and write original content.
   New notes page → add to `PAGES` in that script and include `<script src="../search.js"></script>`.
 - `sitemap.xml`, `DEPLOY.md` (structure + search instructions).
 - Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
-  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics; tested on Physics 2.1.
+  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics and Physics.
 
 ## Conventions for new notes pages
 Same component classes as existing notes pages: `section-header/form-badge/purpose`, `structure-card/step`, `conventions/convention-item`,
