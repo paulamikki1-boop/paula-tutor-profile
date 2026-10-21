@@ -33,7 +33,8 @@ def find_start(t, n, pos):
     before that question's first '(a)'. Taking the last one skips chart axis ticks such as '1   Inflation rate'."""
     # The number may be followed by 2+ spaces, by one space when it has two digits ('10 Carbon-14 …'), or stand alone
     # on its line with the text on the next line. (Page numbers are indented, so JUNK_LINE drops them first.)
-    direct = re.compile(rf'^[ \t]*{n}\s+(?=\(a\))', re.M)
+    # '(a)' must open a sentence or a sub-part; dichotomous-key rows ('2 (a) two or more teeth') are lower case.
+    direct = re.compile(rf'^[ \t]*{n}\s+(?=\(a\)\s*[A-Z0-9‘“"(])', re.M)
     prose = re.compile(rf'^[ \t]*{n}(?:[ \t]{{2,}}|(?<=\d\d) |[ \t]*\n[ \t]*)(?=[A-Za-z‘“"])', re.M)
     first_a = re.compile(r'^[ \t]*(?:\d{1,2}[ \t]+)?\(a\)', re.M)
     m = direct.search(t, pos)
@@ -149,6 +150,14 @@ def main():
     print(f'{len(out)} question parts from {len(by_file)} papers')
     counts = sorted(by_file.items(), key=lambda kv: kv[1])
     print('fewest parts (check these papers by hand if a count looks low):', counts[:5])
+    # A paper whose question starts were missed shows up as many ' [2]'-suffixed ids (later questions folded into one).
+    dup = {}
+    for o in out:
+        if ' [' in o['id']:
+            dup[o['file']] = dup.get(o['file'], 0) + 1
+    worst = sorted(((n, f) for f, n in dup.items() if n > 3), reverse=True)
+    if worst:
+        print('check question numbering in:', [f for n, f in worst])
 
 
 if __name__ == '__main__':

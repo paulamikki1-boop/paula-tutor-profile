@@ -51,7 +51,8 @@ For each sub-topic you are given:
 - `stimulus`: one to three sentences quoted **verbatim** from the stem, stimulus or insert that a student needs in order
   to answer (exact words; "&hellip;" for a cut). Include a sub-part's `stem` whenever the question refers to it
   ("this gas", "the train"); use `null` only when the question makes sense entirely on its own.
-- `id`, `session`, `marks`: copy exactly from questions.json.
+- `id`, `session`, `marks`: copy exactly from questions.json, then confirm the question number against the printed paper
+  and mark scheme (the id must cite the right question and part).
 - The answer must be **original**: do not copy mark-scheme lines or examiner-report sample answers; use them only to
   know what earns marks. Write at full-mark standard, as a strong 15–16-year-old would in the exam, not a textbook.
   Length matches the marks.

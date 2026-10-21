@@ -44,7 +44,8 @@ python3 SKILL_DIR/scripts/extract_questions.py WORK/papers --code 0625
 The extractor prints the papers with the fewest parts. Open one or two question papers and compare by eye: question
 numbers, sub-parts like (b)(ii), and marks should line up. Papers that print Question 1 without a number, chart axis
 ticks that look like question numbers, and "in (ii)" inside a sentence are already handled; if a paper still parses
-badly, fix the extractor rather than hand-editing questions.json.
+badly, fix the extractor rather than hand-editing questions.json. If it prints "check question numbering in", open those
+papers: later questions have been folded into an earlier one and their ids would cite the wrong question number.
 
 ## Step 3: write the config and the brief
 1. Copy `references/config-example.json` to `WORK/config.json` and fill it in (page, folders, code, subject,
