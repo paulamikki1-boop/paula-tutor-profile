@@ -14,9 +14,10 @@ JUNK_LINE = re.compile(r'©|UCLES|Cambridge University Press|\[Turn over|Permiss
                        r'DO NOT WRITE IN THIS MARGIN|^\s{6,}\d+\s*$|^\s*\*[\d ]+\*\s*$|[Ā-ſ]{3,}|^\s*[,.]\s*,?\s*$')
 ROMAN = r'(?:i{1,3}|iv|vi{0,3}|ix|x)'
 MARK = re.compile(r'\[(\d{1,2})\]')
-# Part markers only count at the start of a line (or a roman straight after a letter), so '(ii)' quoted inside
+# Part markers only count at the start of a line, and not on lower-case table rows with a second column (dichotomous-key
+# rows such as '(b)    three petals visible          go to 4') (or a roman straight after a letter), so '(ii)' quoted inside
 # a sentence such as 'the value calculated in (ii)' is not mistaken for a new part.
-TOKEN = re.compile(rf'(?m)^[ \t]*(?:\d{{1,2}}[ \t]+)?\(([a-h])\)|(?:^[ \t]*|(?<=\)) {{0,6}})\(({ROMAN})\)|\[(\d{{1,2}})\]')
+TOKEN = re.compile(rf'(?m)^[ \t]*(?:\d{{1,2}}[ \t]+)?\(([a-h])\)(?![ \t]*[a-z][^\n]*\S[ \t]{{8,}}[^\s.])|(?:^[ \t]*|(?<=\)) {{0,6}})\(({ROMAN})\)|\[(\d{{1,2}})\]')
 FIG = re.compile(r'\b(?:Fig\.|Figure|Table|graph|chart)')
 
 
@@ -33,7 +34,8 @@ def find_start(t, n, pos):
     before that question's first '(a)'. Taking the last one skips chart axis ticks such as '1   Inflation rate'."""
     # The number may be followed by 2+ spaces, by one space when it has two digits ('10 Carbon-14 …'), or stand alone
     # on its line with the text on the next line. (Page numbers are indented, so JUNK_LINE drops them first.)
-    direct = re.compile(rf'^[ \t]*{n}\s+(?=\(a\))', re.M)
+    # '(a)' must open a sentence or a sub-part; dichotomous-key rows ('2 (a) two or more teeth') are lower case.
+    direct = re.compile(rf'^[ \t]*{n}\s+(?=\(a\)\s*[A-Z0-9‘“"(])', re.M)
     prose = re.compile(rf'^[ \t]*{n}(?:[ \t]{{2,}}|(?<=\d\d) |[ \t]*\n[ \t]*)(?=[A-Za-z‘“"])', re.M)
     first_a = re.compile(r'^[ \t]*(?:\d{1,2}[ \t]+)?\(a\)', re.M)
     m = direct.search(t, pos)
@@ -149,6 +151,14 @@ def main():
     print(f'{len(out)} question parts from {len(by_file)} papers')
     counts = sorted(by_file.items(), key=lambda kv: kv[1])
     print('fewest parts (check these papers by hand if a count looks low):', counts[:5])
+    # A paper whose question starts were missed shows up as many ' [2]'-suffixed ids (later questions folded into one).
+    dup = {}
+    for o in out:
+        if ' [' in o['id']:
+            dup[o['file']] = dup.get(o['file'], 0) + 1
+    worst = sorted(((n, f) for f, n in dup.items() if n > 3), reverse=True)
+    if worst:
+        print('check question numbering in:', [f for n, f in worst])
 
 
 if __name__ == '__main__':

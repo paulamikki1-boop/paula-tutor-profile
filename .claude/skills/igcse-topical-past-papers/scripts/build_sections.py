@@ -40,6 +40,8 @@ def paper_text(file):
                 t += ' ' + open(f"{cfg['papers_dir']}/{f}.txt", encoding='utf-8', errors='replace').read()
             except FileNotFoundError:
                 pass
+        # Margin text and barcodes are printed between the lines of a question; drop them so quotes still match.
+        t = re.sub(r'DO NOT WRITE IN THIS MARGIN|\*\s*\d[\d ]{8,}\*', ' ', t)
         _papers[file] = norm(t)
     return _papers[file]
 
