@@ -29,6 +29,21 @@ def clean(text):
     return re.sub(r'\s+', ' ', text).strip()
 
 
+def list_item(t, c, n):
+    """True if the '<n>' line at c is an item of a numbered list inside a question ('3  Discount allowed…' then
+    '4  A payment…', or a dated table): n-1 sits at the same indent just above, or n+1 just below."""
+    line_start = t.rfind('\n', 0, c.start()) + 1
+    indent = re.match(r'[ \t]*', t[line_start:]).group()
+    if len(indent.expandtabs()) < 2:  # question numbers sit at the margin; list items are indented
+        return False
+    above = [l for l in t[:line_start].split('\n') if l.strip()][-6:]
+    below = [l for l in t[c.end():].split('\n')[1:] if l.strip()][:6]
+    item = lambda k, ls: any(re.match(rf'{re.escape(indent)}{k}[ \t]+(?!\(a\))\S', l) for l in ls)
+    # Only deeply indented rows (tables) are tested against the next number: a short question can be followed
+    # closely by the next question.
+    return item(n - 1, above) or (len(indent.expandtabs()) >= 8 and item(n + 1, below))
+
+
 def find_start(t, n, pos):
     """Start of question n: '<n> (a)' if the question opens with a part, otherwise the last '<n>   Prose…' line
     before that question's first '(a)'. Taking the last one skips chart axis ticks such as '1   Inflation rate'."""
@@ -39,13 +54,15 @@ def find_start(t, n, pos):
     prose = re.compile(rf'^[ \t]*{n}(?:[ \t]{{2,}}|(?<=\d\d) |[ \t]*\n[ \t]*)(?=[A-Za-z‘“"])', re.M)
     first_a = re.compile(r'^[ \t]*(?:\d{1,2}[ \t]+)?\(a\)', re.M)
     m = direct.search(t, pos)
+    while m and list_item(t, m, n):
+        m = direct.search(t, m.end())
     cands, k = [], pos
     while True:
         c = prose.search(t, k)
         if not c or (m and c.start() > m.start()):
             break
         a = first_a.search(t, c.end())
-        if a and not t[a.start():a.end()].strip().startswith(str(n)):
+        if a and not list_item(t, c, n) and not t[a.start():a.end()].strip().startswith(str(n)):
             cands.append(c)
         k = c.end()
     if cands:
