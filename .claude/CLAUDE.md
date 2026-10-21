@@ -33,6 +33,9 @@ use them only as a topic checklist and write original content.
     original exemplar answers. Papers/mark schemes/examiner reports came from pastpapers.papacambridge.com. Paper 1 (MCQ) not covered.
   - `resources/igcse-accounting-notes/` (0452 NEW syllabus 2027–2029: exam technique, 7 topics, 30 worked examples;
     `table.ledger` / `table.statement` layouts, `ledger colsN` adds the Dr/Cr divider)
+    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit7` (122 questions across 22 sub-topics, e.g. `h3#pp-4-2`).
+    Real 0452 Paper 2 (21/22/23) questions 2020–2025 (old-syllabus papers, mapped onto the new topics), verbatim + cited,
+    original answers with ledger/statement tables. No "Get it marked" links (Accounting not on the marking page yet).
   - `resources/igcse-business-notes/` (0450: exam technique, 6 topics (1.1–6.3), Key Formulas page, 3 model-answer sections with
     original cases — Siti's Batik Studio, Arjun's FixIt, KL Scoot, BrewHaus — 4 SVG diagrams; notes also flag Edexcel 4BS1 / OxfordAQA 9225)
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (148 questions across 25 sub-topics 1.1–6.3, `h3#pp-3-3` etc.).
@@ -57,7 +60,7 @@ use them only as a topic checklist and write original content.
   New notes page → add to `PAGES` in that script and include `<script src="../search.js"></script>`.
 - `sitemap.xml`, `DEPLOY.md` (structure + search instructions).
 - Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
-  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business, Chemistry and Biology.
+  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business, Chemistry, Biology and Accounting.
 
 ## Conventions for new notes pages
 Same component classes as existing notes pages: `section-header/form-badge/purpose`, `structure-card/step`, `conventions/convention-item`,
