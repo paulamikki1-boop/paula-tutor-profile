@@ -31,7 +31,7 @@ use them only as a topic checklist and write original content.
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (187 questions across 38 sub-topics, `h3#pp-2-3` etc.)
     and `#pp-ped` (2.7, 11 questions). All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
     original exemplar answers. Papers/mark schemes/examiner reports came from pastpapers.papacambridge.com. Paper 1 (MCQ) not covered.
-  - `resources/igcse-accounting-notes/` (0452 NEW syllabus 2027–2029: exam technique, 7 topics, 30 worked examples;
+  - `resources/igcse-accounting-notes/` (0452 NEW syllabus 2027–2029: exam technique, 7 topics, 30 worked examples + "Illustrated Examples" section `#illustrated` (8 examples, 11 inline SVG diagrams);
     `table.ledger` / `table.statement` layouts, `ledger colsN` adds the Dr/Cr divider)
   - `resources/igcse-business-notes/` (0450: exam technique, 6 topics (1.1–6.3), Key Formulas page, 3 model-answer sections with
     original cases — Siti's Batik Studio, Arjun's FixIt, KL Scoot, BrewHaus — 4 SVG diagrams; notes also flag Edexcel 4BS1 / OxfordAQA 9225)
