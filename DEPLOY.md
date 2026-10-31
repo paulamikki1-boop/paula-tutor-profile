@@ -19,7 +19,7 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   ├── igcse-chemistry-notes/
 │   │   └── index.html                          — Full resource page (all 12 topics, sidebar-navigated)
 │   ├── igcse-accounting-notes/
-│   │   └── index.html                          — Full resource page (7 topics + worked examples + 8 illustrated examples with diagrams)
+│   │   └── index.html                          — Full resource page (7 topics + worked examples + 8 illustrated examples with diagrams + 4 past-paper examples)
 │   ├── igcse-business-notes/
 │   │   └── index.html                          — Full resource page (6 topics, formulas + model answers)
 │   ├── igcse-physics-notes/
