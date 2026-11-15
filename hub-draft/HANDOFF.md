@@ -10,6 +10,10 @@ cards, arrow buttons, logo strip) and a Figma language-school template (rounded 
 - Links to https://paulamikki1-boop.github.io/Paula-Mikki-Seo-Portfolio/ and
   https://paulamikki1-boop.github.io/paula-tutor-profile/. All figures are taken from the two live sites.
 
+## Update (later session)
+- Mobile portrait fixed (capped at 340px, `preview-mobile.png`). Design review written up in `DESIGN-REVIEW.md` (not applied).
+- Still needs the owner: create the `paulamikki1-boop.github.io` repo (item 1), choose a friendlier photo (item 2), and say which review items to apply.
+
 ## Not done / decisions for the owner
 1. Where to host the hub. Recommended: a new repo named `paulamikki1-boop.github.io` (GitHub user site), so the
    hub is at https://paulamikki1-boop.github.io/ and both existing sites stay at their current URLs underneath.
