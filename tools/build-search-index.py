@@ -37,16 +37,19 @@ for subject, slug in PAGES:
         body = main[m.end():starts[i + 1].start() if i + 1 < len(starts) else len(main)]
         title = text(re.search(r"<h2>(.*?)</h2>", body, re.S).group(1))
         # split the section into chunks at each <h3>; the part before the first h3 is the intro
-        parts = re.split(r"(<h3>.*?</h3>)", body, flags=re.S)
-        heading, chunk = "", parts[0]
+        # (an h3 may carry an id; "st-..." ids are sub-topic anchors that the page can open directly)
+        parts = re.split(r"(<h3(?:\s[^>]*)?>.*?</h3>)", body, flags=re.S)
+        heading, chunk, anchor = "", parts[0], m.group(1)
         for part in parts[1:] + [None]:
-            if part is None or part.startswith("<h3>"):
+            if part is None or part.startswith("<h3"):
                 t = text(chunk)
                 if t:
-                    entries.append({"s": subject, "u": f"{slug}/", "id": m.group(1),
+                    entries.append({"s": subject, "u": f"{slug}/", "id": anchor,
                                     "t": title, "h": heading, "x": t})
                 if part is not None:
                     heading, chunk = text(part), ""
+                    sub = re.match(r'<h3[^>]*\sid="(st-[^"]+)"', part)
+                    anchor = sub.group(1) if sub else m.group(1)
             else:
                 chunk += part
 

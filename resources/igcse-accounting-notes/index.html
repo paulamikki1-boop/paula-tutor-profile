@@ -698,6 +698,29 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
 .example-block .pp-stimulus { font-style: normal; font-size: 14px; color: var(--text-muted); border-left: 3px solid var(--border); padding-left: 12px; margin-bottom: 12px; }
 .example-block .pp-stimulus span { font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 0.06em; }
 .pp-credit { font-size: 12px; color: var(--text-muted); margin-top: 24px; }
+
+/* Sub-topic navigation: arrow toggle, inline list for the open topic, hover flyout on desktop */
+.nav-caret {
+  margin-left: auto; flex-shrink: 0; width: 26px; height: 26px; border: 0; border-radius: 5px;
+  background: transparent; color: inherit; opacity: 0.55; cursor: pointer; font-size: 12px; line-height: 1;
+  transition: transform 0.15s, opacity 0.15s, background 0.15s;
+}
+.nav-caret:hover, .nav-caret:focus-visible { opacity: 1; background: rgba(255,255,255,0.1); }
+.nav-caret.open { transform: rotate(90deg); opacity: 0.9; }
+.subnav-item { display: block; text-decoration: none; line-height: 1.35; border-left: 3px solid transparent; }
+.subnav-item.active { color: #fff; border-left-color: var(--accent-light); background: rgba(255,255,255,0.04); }
+.subnav-item:focus-visible { outline: 2px solid var(--accent-light); outline-offset: -2px; }
+h3[id^="st-"] { scroll-margin-top: 16px; }
+.subnav-flyout {
+  position: fixed; z-index: 200; display: none; min-width: 230px; max-width: 290px; max-height: 70vh; overflow-y: auto;
+  padding: 8px 0; background: var(--bg-sidebar); color: var(--text-sidebar); border-radius: 0 8px 8px 0;
+  box-shadow: 0 10px 28px rgba(10,22,40,0.35); border-left: 3px solid var(--accent-light);
+}
+.subnav-flyout.show { display: block; }
+.subnav-flyout .flyout-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); padding: 4px 16px 6px; font-weight: 600; }
+.subnav-flyout .subnav-item { padding: 7px 16px; }
+@media (max-width: 768px) { h3[id^="st-"] { scroll-margin-top: 60px; } .subnav-item { padding-top: 8px; padding-bottom: 8px; } }
+@media print { .subnav, .subnav-flyout, .nav-caret { display: none !important; } }
 </style>
 </head>
 <body>
@@ -738,25 +761,95 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   </div>
   <div class="nav-section-label">Syllabus Topics</div>
   <div class="nav-item" data-section="fundamentals" onclick="showSection('fundamentals')">
-    <div class="nav-icon">1</div> Fundamentals of Accounting
+    <div class="nav-icon">1</div> Fundamentals of Accounting <button class="nav-caret" type="button" aria-label="Show sub-topics" aria-expanded="false" onclick="toggleSub(event, 'fundamentals')">&#9656;</button>
+  </div>
+  <div class="subnav" id="subnav-fundamentals" data-parent="fundamentals">
+    <a class="subnav-item" href="#st-fundamentals-1" data-target="st-fundamentals-1" onclick="return goSub('st-fundamentals-1')">The purpose of accounting</a>
+    <a class="subnav-item" href="#st-fundamentals-2" data-target="st-fundamentals-2" onclick="return goSub('st-fundamentals-2')">Book-keeping and accounting</a>
+    <a class="subnav-item" href="#st-fundamentals-3" data-target="st-fundamentals-3" onclick="return goSub('st-fundamentals-3')">Users of accounting information</a>
+    <a class="subnav-item" href="#st-fundamentals-4" data-target="st-fundamentals-4" onclick="return goSub('st-fundamentals-4')">The role of the accountant and ethics</a>
+    <a class="subnav-item" href="#st-fundamentals-5" data-target="st-fundamentals-5" onclick="return goSub('st-fundamentals-5')">Key definitions</a>
+    <a class="subnav-item" href="#st-fundamentals-6" data-target="st-fundamentals-6" onclick="return goSub('st-fundamentals-6')">The accounting equation</a>
+    <a class="subnav-item" href="#st-fundamentals-7" data-target="st-fundamentals-7" onclick="return goSub('st-fundamentals-7')">Worked example: transactions changing the equation</a>
+    <a class="subnav-item" href="#st-fundamentals-8" data-target="st-fundamentals-8" onclick="return goSub('st-fundamentals-8')">Profit, loss and capital</a>
+    <a class="subnav-item" href="#st-fundamentals-9" data-target="st-fundamentals-9" onclick="return goSub('st-fundamentals-9')">The accounting cycle</a>
   </div>
   <div class="nav-item" data-section="sources-recording" onclick="showSection('sources-recording')">
-    <div class="nav-icon">2</div> Sources &amp; Recording of Data
+    <div class="nav-icon">2</div> Sources &amp; Recording of Data <button class="nav-caret" type="button" aria-label="Show sub-topics" aria-expanded="false" onclick="toggleSub(event, 'sources-recording')">&#9656;</button>
+  </div>
+  <div class="subnav" id="subnav-sources-recording" data-parent="sources-recording">
+    <a class="subnav-item" href="#st-sources-recording-1" data-target="st-sources-recording-1" onclick="return goSub('st-sources-recording-1')">The double-entry system</a>
+    <a class="subnav-item" href="#st-sources-recording-2" data-target="st-sources-recording-2" onclick="return goSub('st-sources-recording-2')">Divisions of the ledger</a>
+    <a class="subnav-item" href="#st-sources-recording-3" data-target="st-sources-recording-3" onclick="return goSub('st-sources-recording-3')">Business documents</a>
+    <a class="subnav-item" href="#st-sources-recording-4" data-target="st-sources-recording-4" onclick="return goSub('st-sources-recording-4')">Books of prime entry</a>
+    <a class="subnav-item" href="#st-sources-recording-5" data-target="st-sources-recording-5" onclick="return goSub('st-sources-recording-5')">Worked example: writing up ledger accounts</a>
+    <a class="subnav-item" href="#st-sources-recording-6" data-target="st-sources-recording-6" onclick="return goSub('st-sources-recording-6')">Balancing an account</a>
+    <a class="subnav-item" href="#st-sources-recording-7" data-target="st-sources-recording-7" onclick="return goSub('st-sources-recording-7')">The cash book</a>
+    <a class="subnav-item" href="#st-sources-recording-8" data-target="st-sources-recording-8" onclick="return goSub('st-sources-recording-8')">The petty cash book and the imprest system</a>
+    <a class="subnav-item" href="#st-sources-recording-9" data-target="st-sources-recording-9" onclick="return goSub('st-sources-recording-9')">Technology and accounting software</a>
   </div>
   <div class="nav-item" data-section="verification" onclick="showSection('verification')">
-    <div class="nav-icon">3</div> Verification of Records
+    <div class="nav-icon">3</div> Verification of Records <button class="nav-caret" type="button" aria-label="Show sub-topics" aria-expanded="false" onclick="toggleSub(event, 'verification')">&#9656;</button>
+  </div>
+  <div class="subnav" id="subnav-verification" data-parent="verification">
+    <a class="subnav-item" href="#st-verification-1" data-target="st-verification-1" onclick="return goSub('st-verification-1')">The trial balance</a>
+    <a class="subnav-item" href="#st-verification-2" data-target="st-verification-2" onclick="return goSub('st-verification-2')">Errors not revealed by a trial balance</a>
+    <a class="subnav-item" href="#st-verification-3" data-target="st-verification-3" onclick="return goSub('st-verification-3')">Errors that are revealed by a trial balance</a>
+    <a class="subnav-item" href="#st-verification-4" data-target="st-verification-4" onclick="return goSub('st-verification-4')">Correction of errors</a>
+    <a class="subnav-item" href="#st-verification-5" data-target="st-verification-5" onclick="return goSub('st-verification-5')">Effect of errors on profit and on the statement of financial position</a>
+    <a class="subnav-item" href="#st-verification-6" data-target="st-verification-6" onclick="return goSub('st-verification-6')">Bank reconciliation</a>
+    <a class="subnav-item" href="#st-verification-7" data-target="st-verification-7" onclick="return goSub('st-verification-7')">Control accounts</a>
   </div>
   <div class="nav-item" data-section="procedures" onclick="showSection('procedures')">
-    <div class="nav-icon">4</div> Accounting Procedures
+    <div class="nav-icon">4</div> Accounting Procedures <button class="nav-caret" type="button" aria-label="Show sub-topics" aria-expanded="false" onclick="toggleSub(event, 'procedures')">&#9656;</button>
+  </div>
+  <div class="subnav" id="subnav-procedures" data-parent="procedures">
+    <a class="subnav-item" href="#st-procedures-1" data-target="st-procedures-1" onclick="return goSub('st-procedures-1')">Capital and revenue expenditure and receipts</a>
+    <a class="subnav-item" href="#st-procedures-2" data-target="st-procedures-2" onclick="return goSub('st-procedures-2')">Depreciation</a>
+    <a class="subnav-item" href="#st-procedures-3" data-target="st-procedures-3" onclick="return goSub('st-procedures-3')">Other payables and other receivables</a>
+    <a class="subnav-item" href="#st-procedures-4" data-target="st-procedures-4" onclick="return goSub('st-procedures-4')">Irrecoverable debts and allowance for irrecoverable debts</a>
+    <a class="subnav-item" href="#st-procedures-5" data-target="st-procedures-5" onclick="return goSub('st-procedures-5')">Journal entries for non-current assets and year-end adjustments</a>
+    <a class="subnav-item" href="#st-procedures-6" data-target="st-procedures-6" onclick="return goSub('st-procedures-6')">Valuation of inventory</a>
   </div>
   <div class="nav-item" data-section="financial-statements" onclick="showSection('financial-statements')">
-    <div class="nav-icon">5</div> Financial Statements
+    <div class="nav-icon">5</div> Financial Statements <button class="nav-caret" type="button" aria-label="Show sub-topics" aria-expanded="false" onclick="toggleSub(event, 'financial-statements')">&#9656;</button>
+  </div>
+  <div class="subnav" id="subnav-financial-statements" data-parent="financial-statements">
+    <a class="subnav-item" href="#st-financial-statements-1" data-target="st-financial-statements-1" onclick="return goSub('st-financial-statements-1')">The two main financial statements</a>
+    <a class="subnav-item" href="#st-financial-statements-2" data-target="st-financial-statements-2" onclick="return goSub('st-financial-statements-2')">1. Sole traders: from trial balance to statements</a>
+    <a class="subnav-item" href="#st-financial-statements-3" data-target="st-financial-statements-3" onclick="return goSub('st-financial-statements-3')">2. Partnerships</a>
+    <a class="subnav-item" href="#st-financial-statements-4" data-target="st-financial-statements-4" onclick="return goSub('st-financial-statements-4')">3. Limited companies</a>
+    <a class="subnav-item" href="#st-financial-statements-5" data-target="st-financial-statements-5" onclick="return goSub('st-financial-statements-5')">4. Clubs and societies (non-profit organisations)</a>
+    <a class="subnav-item" href="#st-financial-statements-6" data-target="st-financial-statements-6" onclick="return goSub('st-financial-statements-6')">5. Manufacturing accounts</a>
+    <a class="subnav-item" href="#st-financial-statements-7" data-target="st-financial-statements-7" onclick="return goSub('st-financial-statements-7')">6. Incomplete records</a>
+    <a class="subnav-item" href="#st-financial-statements-8" data-target="st-financial-statements-8" onclick="return goSub('st-financial-statements-8')">Choosing the right statement: summary</a>
   </div>
   <div class="nav-item" data-section="analysis-interpretation" onclick="showSection('analysis-interpretation')">
-    <div class="nav-icon">6</div> Analysis &amp; Interpretation
+    <div class="nav-icon">6</div> Analysis &amp; Interpretation <button class="nav-caret" type="button" aria-label="Show sub-topics" aria-expanded="false" onclick="toggleSub(event, 'analysis-interpretation')">&#9656;</button>
+  </div>
+  <div class="subnav" id="subnav-analysis-interpretation" data-parent="analysis-interpretation">
+    <a class="subnav-item" href="#st-analysis-interpretation-1" data-target="st-analysis-interpretation-1" onclick="return goSub('st-analysis-interpretation-1')">Why we calculate ratios</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-2" data-target="st-analysis-interpretation-2" onclick="return goSub('st-analysis-interpretation-2')">Profitability ratios</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-3" data-target="st-analysis-interpretation-3" onclick="return goSub('st-analysis-interpretation-3')">Liquidity ratios and working capital</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-4" data-target="st-analysis-interpretation-4" onclick="return goSub('st-analysis-interpretation-4')">Efficiency ratios</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-5" data-target="st-analysis-interpretation-5" onclick="return goSub('st-analysis-interpretation-5')">How to improve each ratio</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-6" data-target="st-analysis-interpretation-6" onclick="return goSub('st-analysis-interpretation-6')">Working capital: the cycle</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-7" data-target="st-analysis-interpretation-7" onclick="return goSub('st-analysis-interpretation-7')">What affects gross profit and profit for the year</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-8" data-target="st-analysis-interpretation-8" onclick="return goSub('st-analysis-interpretation-8')">Why profit is not the same as cash</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-9" data-target="st-analysis-interpretation-9" onclick="return goSub('st-analysis-interpretation-9')">Inter-business comparison and comparing years</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-10" data-target="st-analysis-interpretation-10" onclick="return goSub('st-analysis-interpretation-10')">Interested parties</a>
+    <a class="subnav-item" href="#st-analysis-interpretation-11" data-target="st-analysis-interpretation-11" onclick="return goSub('st-analysis-interpretation-11')">Worked example: comparing two years</a>
   </div>
   <div class="nav-item" data-section="concepts-modern-practice" onclick="showSection('concepts-modern-practice')">
-    <div class="nav-icon">7</div> Concepts &amp; Modern Practice
+    <div class="nav-icon">7</div> Concepts &amp; Modern Practice <button class="nav-caret" type="button" aria-label="Show sub-topics" aria-expanded="false" onclick="toggleSub(event, 'concepts-modern-practice')">&#9656;</button>
+  </div>
+  <div class="subnav" id="subnav-concepts-modern-practice" data-parent="concepts-modern-practice">
+    <a class="subnav-item" href="#st-concepts-modern-practice-1" data-target="st-concepts-modern-practice-1" onclick="return goSub('st-concepts-modern-practice-1')">Why accounting concepts matter</a>
+    <a class="subnav-item" href="#st-concepts-modern-practice-2" data-target="st-concepts-modern-practice-2" onclick="return goSub('st-concepts-modern-practice-2')">The accounting concepts</a>
+    <a class="subnav-item" href="#st-concepts-modern-practice-3" data-target="st-concepts-modern-practice-3" onclick="return goSub('st-concepts-modern-practice-3')">Accounting policies</a>
+    <a class="subnav-item" href="#st-concepts-modern-practice-4" data-target="st-concepts-modern-practice-4" onclick="return goSub('st-concepts-modern-practice-4')">Ethical considerations in accounting</a>
+    <a class="subnav-item" href="#st-concepts-modern-practice-5" data-target="st-concepts-modern-practice-5" onclick="return goSub('st-concepts-modern-practice-5')">Technology: digital applications for accounting records</a>
+    <a class="subnav-item" href="#st-concepts-modern-practice-6" data-target="st-concepts-modern-practice-6" onclick="return goSub('st-concepts-modern-practice-6')">Storing accounting data safely and sustainably</a>
   </div>
   <div class="nav-section-label">Worked Example Answers</div>
   <div class="nav-item" data-section="answers-recording" onclick="showSection('answers-recording')">
@@ -920,7 +1013,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p class="purpose">This topic explains why businesses keep accounting records, who uses them, and the accounting equation that sits underneath every double entry and every statement of financial position. Equation questions appear regularly in Paper 1 and underpin the whole of Paper 2.</p>
     </div>
   
-    <h3>The purpose of accounting</h3>
+    <h3 id="st-fundamentals-1">The purpose of accounting</h3>
     <p><strong>Accounting</strong> is the process of recording, classifying, summarising, analysing and communicating financial information about a business so that users can make decisions.</p>
     <ul>
       <li><strong>Record</strong> financial transactions accurately so there is a permanent, reliable history of what happened.</li>
@@ -931,7 +1024,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li><strong>Meet obligations</strong> to outside parties such as tax authorities and lenders.</li>
     </ul>
   
-    <h3>Book-keeping and accounting</h3>
+    <h3 id="st-fundamentals-2">Book-keeping and accounting</h3>
     <div class="table-wrap"><table><thead><tr><th></th><th>Book-keeping</th><th>Accounting</th></tr></thead>
     <tbody>
     <tr><td>Meaning</td><td>The detailed recording of financial transactions in books of prime entry and ledgers</td><td>Using the book-keeping records to prepare financial statements, then analysing and interpreting them</td></tr>
@@ -942,7 +1035,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>If asked to distinguish book-keeping from accounting, use the words <strong>recording</strong> (book-keeping) and <strong>summarising, analysing and communicating</strong> (accounting). One sentence for each, then a link: &ldquo;accounting uses the records produced by book-keeping.&rdquo;</div>
   
-    <h3>Users of accounting information</h3>
+    <h3 id="st-fundamentals-3">Users of accounting information</h3>
     <p>Different people look at accounting information for different reasons. Examiners reward answers that link the user to a <strong>specific</strong> interest.</p>
     <div class="table-wrap"><table><thead><tr><th>User</th><th>What they want to know</th></tr></thead>
     <tbody>
@@ -956,7 +1049,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     <tr><td>Potential investors or partners</td><td>Whether to invest money in the business and the likely return</td></tr>
     </tbody></table></div>
   
-    <h3>The role of the accountant and ethics</h3>
+    <h3 id="st-fundamentals-4">The role of the accountant and ethics</h3>
     <p>People who prepare accounts are trusted with confidential and important information. Accountants are expected to act with:</p>
     <ul>
       <li><strong>Integrity</strong> &mdash; being honest and straightforward; not manipulating figures.</li>
@@ -967,7 +1060,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </ul>
     <p>Unethical behaviour, such as overstating profit to obtain a loan, misleads users and can lead to poor decisions, legal penalties and loss of trust.</p>
   
-    <h3>Key definitions</h3>
+    <h3 id="st-fundamentals-5">Key definitions</h3>
     <div class="conventions">
       <div class="convention-item"><div class="conv-label">Asset</div><div class="conv-value">A resource owned or controlled by the business, e.g. premises, inventory, trade receivables, bank</div></div>
       <div class="convention-item"><div class="conv-label">Liability</div><div class="conv-value">An amount owed by the business to others, e.g. trade payables, bank loan, bank overdraft</div></div>
@@ -985,7 +1078,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li><strong>Current liabilities</strong>: due within one year &mdash; trade payables, other payables, bank overdraft.</li>
     </ul>
   
-    <h3>The accounting equation</h3>
+    <h3 id="st-fundamentals-6">The accounting equation</h3>
     <div class="example-block"><div class="ex-label">The equation</div><strong>Assets = Liabilities + Capital (owner&rsquo;s equity)</strong><br>
     Rearranged: <strong>Capital = Assets &minus; Liabilities</strong> &nbsp; and &nbsp; <strong>Liabilities = Assets &minus; Capital</strong></div>
     <p>Everything a business owns has been financed either by the owner (capital, also called <strong>owner&rsquo;s equity</strong>) or by outsiders (liabilities). Owner&rsquo;s equity is the owner&rsquo;s claim on the business: what would be left for the owner if all the assets were used to pay off all the liabilities. Because every transaction has two effects, the equation <strong>always</strong> stays in balance. This is the foundation of double-entry book-keeping and is why the statement of financial position balances.</p>
@@ -996,7 +1089,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li>Capital is $32 500 and assets are $45 000. Liabilities = $45 000 &minus; $32 500 = <strong>$12 500</strong>.</li>
     </ul>
   
-    <h3>Worked example: transactions changing the equation</h3>
+    <h3 id="st-fundamentals-7">Worked example: transactions changing the equation</h3>
     <p>Lina starts a small gift shop. Follow how each transaction affects the equation. Notice that after every line, total assets equal liabilities plus capital.</p>
     <ol>
       <li>Lina pays $10 000 of her savings into a business bank account.</li>
@@ -1035,7 +1128,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Saying a credit sale increases assets by the full selling price. The inventory sold leaves the business at cost, so assets only rise by the <strong>profit</strong> on the sale (selling price minus cost), and that profit is added to capital.</div>
   
-    <h3>Profit, loss and capital</h3>
+    <h3 id="st-fundamentals-8">Profit, loss and capital</h3>
     <ul>
       <li><strong>Profit</strong> = revenue &minus; expenses (when revenue is greater than expenses).</li>
       <li><strong>Loss</strong> occurs when expenses are greater than revenue.</li>
@@ -1058,7 +1151,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     <div class="example-block"><div class="ex-label">Model answer</div><strong>Explain why the accounting equation always balances. [3]</strong><br>
     Every asset a business has must have been financed either by the owner&rsquo;s capital or by a liability owed to someone outside the business (1). Each transaction has a two-fold effect, so whenever one figure in the equation changes another changes by the same amount (1). For example, buying inventory on credit increases assets and increases trade payables by the same amount, so the two sides remain equal (1).</div>
   
-    <h3>The accounting cycle</h3>
+    <h3 id="st-fundamentals-9">The accounting cycle</h3>
     <p>The path that every transaction follows from the moment it happens to the final statements:</p>
     <div class="structure-card">
       <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Transaction occurs</strong><span>A sale, purchase, payment or receipt takes place.</span></div></div>
@@ -1092,7 +1185,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p class="purpose">This topic covers how transactions are captured: the double-entry rules, the business documents that provide evidence, the books of prime entry, and how ledger accounts are written up and balanced. Almost every Paper 2 question expects you to make correct double entries, so this is the core skill of the whole course.</p>
     </div>
   
-    <h3>The double-entry system</h3>
+    <h3 id="st-sources-recording-1">The double-entry system</h3>
     <p><strong>Double-entry book-keeping</strong> records every transaction twice: once on the debit side of one account and once on the credit side of another, with equal amounts. This reflects the two-fold effect of each transaction and keeps the accounting equation in balance.</p>
     <ul>
       <li><strong>Debit (Dr)</strong> = left-hand side of an account. <strong>Credit (Cr)</strong> = right-hand side.</li>
@@ -1118,7 +1211,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Debiting an &ldquo;Inventory&rdquo; account when goods for resale are bought. During the year, goods bought for resale are debited to <strong>Purchases</strong> and goods sold are credited to <strong>Sales</strong>. The inventory account is used only for opening and closing inventory at the end of the year.</div>
   
-    <h3>Divisions of the ledger</h3>
+    <h3 id="st-sources-recording-2">Divisions of the ledger</h3>
     <p>A <strong>ledger</strong> is the book (or file) containing all the accounts of a business. It is divided so that work can be shared and errors located more easily.</p>
     <div class="table-wrap"><table><thead><tr><th>Ledger</th><th>Accounts it contains</th></tr></thead>
     <tbody>
@@ -1133,7 +1226,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li><strong>Impersonal accounts</strong>: <strong>real</strong> accounts for things owned (premises, vehicles) and <strong>nominal</strong> accounts for income, expenses, gains and losses.</li>
     </ul>
   
-    <h3>Business documents</h3>
+    <h3 id="st-sources-recording-3">Business documents</h3>
     <p>Source documents provide evidence that a transaction took place and give the details needed to record it.</p>
     <div class="table-wrap"><table><thead><tr><th>Document</th><th>Sent by &rarr; to</th><th>Purpose</th><th>Recorded in</th></tr></thead>
     <tbody>
@@ -1154,7 +1247,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li><strong>Cash discount</strong>: a reduction given for paying within a stated time. It is recorded in the cash book discount columns as <strong>discount allowed</strong> (an expense for the seller) or <strong>discount received</strong> (income for the buyer).</li>
     </ul>
   
-    <h3>Books of prime entry</h3>
+    <h3 id="st-sources-recording-4">Books of prime entry</h3>
     <p>Transactions are first listed in a <strong>book of prime entry</strong> before being posted to the ledger. This reduces the number of entries in the ledger (totals can be posted), keeps transactions in date order and gives a reference trail back to the source document.</p>
     <div class="table-wrap"><table><thead><tr><th>Book of prime entry</th><th>Records</th><th>Source document</th><th>Posting to the ledger</th></tr></thead>
     <tbody>
@@ -1189,7 +1282,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>The general journal is a frequent Paper 2 task. Always write the debit entry first, the credit entry indented underneath, and a narrative. The purchase of a non-current asset on credit goes through the <strong>general journal</strong>, not the purchases journal, which is only for goods for resale.</div>
   
-    <h3>Worked example: writing up ledger accounts</h3>
+    <h3 id="st-sources-recording-5">Worked example: writing up ledger accounts</h3>
     <p>Tom starts trading on 1 March 2026. His transactions for March:</p>
     <ul>
       <li>1 Mar &mdash; paid $8 000 capital into the business bank account</li>
@@ -1256,7 +1349,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     <p>900 &minus; 600 = 300 Dr, the same balance as in the two-sided account on 31 March. 300 + 450 = 750 Dr: R Lee now owes $750. K Supplies&rsquo; account in this format would show 1 500 Cr after the purchase and 500 Cr after the payment.</p></div>
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>In a running balance account, a debit entry <strong>increases a Dr balance</strong> (or reduces a Cr balance) and a credit entry does the opposite. Always write Dr or Cr after each balance &mdash; a balance without it can lose the mark.</div>
   
-    <h3>Balancing an account</h3>
+    <h3 id="st-sources-recording-6">Balancing an account</h3>
     <div class="structure-card">
       <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Add both sides</strong><span>Find the total of the debit side and the credit side separately (in rough).</span></div></div>
       <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Find the difference</strong><span>Subtract the smaller total from the larger.</span></div></div>
@@ -1267,7 +1360,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </div>
     <p>If an account has only one entry, or both sides are already equal, no balancing is needed &mdash; simply total both sides if they are equal.</p>
   
-    <h3>The cash book</h3>
+    <h3 id="st-sources-recording-7">The cash book</h3>
     <ul>
       <li>A <strong>two-column cash book</strong> has a cash column and a bank column on each side. Receipts go on the debit side; payments on the credit side.</li>
       <li>A <strong>three-column cash book</strong> adds a discount column on each side: <strong>discount allowed</strong> on the debit side (given to customers who pay promptly) and <strong>discount received</strong> on the credit side (from suppliers we pay promptly).</li>
@@ -1329,7 +1422,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </tbody></table></div>
     <p>A sensible approach is to keep only a small float (for example through the imprest system) and pay the rest of the takings into the bank promptly.</p>
   
-    <h3>The petty cash book and the imprest system</h3>
+    <h3 id="st-sources-recording-8">The petty cash book and the imprest system</h3>
     <p>Small, frequent expenses (postage, cleaning, travel, refreshments) are paid by a petty cashier from a separate float so the main cashier is not distracted by minor items.</p>
     <div class="structure-card">
       <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Set the imprest</strong><span>The main cashier gives the petty cashier a fixed float (the imprest), e.g. $200.</span></div></div>
@@ -1366,7 +1459,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     <div class="example-block"><div class="ex-label">Model answer</div><strong>Explain one advantage to a business of using books of prime entry. [2]</strong><br>
     Books of prime entry list similar transactions together, so only the periodic totals need to be posted to accounts such as sales or purchases in the nominal ledger (1). This reduces the number of entries in the ledger, saving time and reducing the chance of errors (1).</div>
   
-    <h3>Technology and accounting software</h3>
+    <h3 id="st-sources-recording-9">Technology and accounting software</h3>
     <p>Most businesses now record transactions using accounting software, often cloud-based. The double-entry principles are unchanged, but the way they are carried out is different.</p>
     <div class="table-wrap"><table><thead><tr><th>Aspect</th><th>Manual records</th><th>Accounting software</th></tr></thead>
     <tbody>
@@ -1408,7 +1501,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p class="purpose">How a business checks that its books are accurate: the trial balance, finding and correcting errors, bank reconciliation and control accounts. These topics come up in almost every Paper 2, often as a long question with journal entries and a corrected profit.</p>
     </div>
   
-    <h3>The trial balance</h3>
+    <h3 id="st-verification-1">The trial balance</h3>
     <p>A <strong>trial balance</strong> is a list of the balances on all the ledger accounts at a certain date. Debit balances go in one column and credit balances in the other, and the two totals should agree.</p>
     <h4>Purpose of a trial balance</h4>
     <ul>
@@ -1429,7 +1522,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <div class="convention-item"><div class="conv-label">Totals agree</div><div class="conv-value">Six types of error may still exist</div></div>
     </div>
   
-    <h3>Errors not revealed by a trial balance</h3>
+    <h3 id="st-verification-2">Errors not revealed by a trial balance</h3>
     <p>In each of these errors the debit entry still equals the credit entry, so the trial balance totals agree.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Error</th><th>Meaning</th><th>Example</th></tr></thead>
@@ -1445,7 +1538,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     <div class="mnemonic"><span><strong>O</strong>mission</span> <span><strong>C</strong>ommission</span> <span><strong>P</strong>rinciple</span> <span><strong>O</strong>riginal entry</span> <span><strong>R</strong>eversal</span> <span><strong>C</strong>ompensating</span> &mdash; &ldquo;<strong>O</strong>ne <strong>C</strong>areless <strong>P</strong>erson <strong>O</strong>ften <strong>R</strong>uins <strong>C</strong>alculations&rdquo;</div>
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Students often confuse <strong>commission</strong> with <strong>principle</strong>. In an error of commission the account is the right type but belongs to the wrong person, e.g. one customer instead of another. In an error of principle the account is the wrong class altogether, e.g. an expense instead of a non-current asset.</div>
   
-    <h3>Errors that are revealed by a trial balance</h3>
+    <h3 id="st-verification-3">Errors that are revealed by a trial balance</h3>
     <ul>
       <li><strong>Single entry:</strong> only one side of the transaction is recorded.</li>
       <li><strong>Two debits or two credits:</strong> both entries are made on the same side.</li>
@@ -1454,7 +1547,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li><strong>Balance omitted</strong> from the trial balance, or entered in the wrong column.</li>
     </ul>
   
-    <h3>Correction of errors</h3>
+    <h3 id="st-verification-4">Correction of errors</h3>
     <p>Errors are corrected through the <strong>journal</strong>. Each entry gives the date, the account to debit, the account to credit, the amounts and a short <strong>narrative</strong> explaining the correction.</p>
     <h4>The suspense account</h4>
     <ul>
@@ -1507,7 +1600,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p>The suspense account has cleared. Error 4 did not go through suspense because both entries in it were for $1 200.</p>
     </div>
   
-    <h3>Effect of errors on profit and on the statement of financial position</h3>
+    <h3 id="st-verification-5">Effect of errors on profit and on the statement of financial position</h3>
     <ul>
       <li>If a correction changes an <strong>income or expense</strong> account (including purchases, sales and returns), it changes <strong>profit for the year</strong>.</li>
       <li>If a correction changes only <strong>assets, liabilities or capital</strong> accounts, profit stays the same and only the <strong>statement of financial position</strong> changes.</li>
@@ -1526,7 +1619,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     <p>The P Dube correction makes trade receivables $70 lower and does not affect profit. The equipment correction raises non-current assets by $1 200.</p>
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>For each error, ask two questions: &ldquo;Does it touch an statement of profit or loss account?&rdquo; and &ldquo;Which way?&rdquo; An expense that was overstated means profit was understated, so you add it back. Present your answer as a statement that starts with the draft profit, never as a bare final figure.</div>
   
-    <h3>Bank reconciliation</h3>
+    <h3 id="st-verification-6">Bank reconciliation</h3>
     <p>A <strong>bank reconciliation statement</strong> explains why the bank balance in the cash book differs from the balance on the bank statement at the same date.</p>
     <h4>Reasons for differences</h4>
     <ul>
@@ -1623,7 +1716,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li>It helps to detect fraud and theft, and it is part of good internal control.</li>
     </ul>
   
-    <h3>Control accounts</h3>
+    <h3 id="st-verification-7">Control accounts</h3>
     <p>A <strong>control account</strong> is a summary account that holds the totals of all the entries made in a ledger. Its balance should equal the total of the individual balances in that ledger.</p>
     <ul>
       <li>The <strong>sales ledger control account</strong> (trade receivables control) summarises all the customer accounts in the sales ledger.</li>
@@ -1733,7 +1826,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p class="purpose">The year-end adjustments that turn raw ledger balances into a fair profit figure: capital and revenue items, depreciation and disposals, accruals and prepayments, irrecoverable debts and allowances, and inventory valuation. Expect at least one long Paper 2 question built around these ledger accounts and adjustments.</p>
     </div>
   
-    <h3>Capital and revenue expenditure and receipts</h3>
+    <h3 id="st-procedures-1">Capital and revenue expenditure and receipts</h3>
     <div class="conventions">
       <div class="convention-item"><div class="conv-label">Capital expenditure</div><div class="conv-value">Buying or improving non-current assets, including costs to get them ready for use</div></div>
       <div class="convention-item"><div class="conv-label">Revenue expenditure</div><div class="conv-value">Day-to-day running costs, including repairs and maintenance</div></div>
@@ -1768,7 +1861,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       </tbody>
     </table></div>
   
-    <h3>Depreciation</h3>
+    <h3 id="st-procedures-2">Depreciation</h3>
     <p><strong>Depreciation</strong> is the estimated loss in value of a non-current asset over its useful life. It is an application of the <strong>matching (accruals) principle</strong>: the cost of the asset is spread over the years that benefit from using it.</p>
     <h4>Causes of depreciation</h4>
     <ul>
@@ -1895,7 +1988,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </div>
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>Read the depreciation policy carefully. &ldquo;A full year in the year of purchase and none in the year of sale&rdquo; and &ldquo;charged monthly from the date of purchase&rdquo; give different answers. Show your workings for each asset separately, because method marks are awarded even when the final figure is wrong.</div>
   
-    <h3>Other payables and other receivables</h3>
+    <h3 id="st-procedures-3">Other payables and other receivables</h3>
     <p>Under the <strong>accruals (matching) principle</strong>, income and expenses are recorded in the period they relate to, not when the cash is received or paid.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Item</th><th>Meaning</th><th>Shown as</th></tr></thead>
@@ -1949,7 +2042,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </div>
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Getting the sides wrong in income accounts. In an expense account a closing accrual is carried down on the <strong>debit</strong> side and brought down as a credit. In an income account the sides for money owing are reversed: income owing (accrued income) is carried down on the <strong>credit</strong> side and brought down as a debit (an asset), while income received in advance is carried down on the debit side and brought down as a credit (a liability).</div>
   
-    <h3>Irrecoverable debts and allowance for irrecoverable debts</h3>
+    <h3 id="st-procedures-4">Irrecoverable debts and allowance for irrecoverable debts</h3>
     <ul>
       <li>An <strong>irrecoverable debt</strong> is an amount owed by a credit customer that will never be received, for example because the customer has become bankrupt. Entries: <strong>Debit</strong> irrecoverable debts, <strong>Credit</strong> customer&rsquo;s account (trade receivables). At the year end, irrecoverable debts are transferred to the statement of profit or loss as an expense.</li>
       <li><strong>Irrecoverable debt recovered:</strong> a customer unexpectedly pays all or part of a debt that was written off in an earlier year. Two steps: first <strong>reinstate</strong> the debt (Debit customer, Credit irrecoverable debts recovered), then record the receipt (Debit bank, Credit customer). For example, if J Lee pays $300 that was written off last year, both entries are $300 and the customer&rsquo;s account closes with a nil balance. At the year end the irrecoverable debts recovered account is transferred to the statement of profit or loss as <strong>other income</strong> (added to gross profit). Reinstating the debt first means the customer&rsquo;s account shows that the debt was eventually paid, which is useful if they ask for credit again.</li>
@@ -1996,7 +2089,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </div>
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>Only the <strong>change</strong> in the allowance goes to the statement of profit or loss, never the whole closing balance (except in the year the allowance is created). The <strong>full</strong> closing balance is deducted from trade receivables in the statement of financial position.</div>
   
-    <h3>Journal entries for non-current assets and year-end adjustments</h3>
+    <h3 id="st-procedures-5">Journal entries for non-current assets and year-end adjustments</h3>
     <p>Paper 2 often asks for these entries in the <strong>general journal</strong> instead of (or before) the ledger accounts. All the figures below come from one business, Ravi&rsquo;s Print Shop, for the year ended 31 December 2026. Debit first, credit underneath, then a narrative.</p>
     <div class="example-block"><div class="ex-label">Worked example: Ravi&rsquo;s Print Shop &ndash; journal reference</div>
       <ul>
@@ -2064,7 +2157,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </div>
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>For accruals and prepayments the journal names <strong>other payables</strong> or <strong>other receivables</strong>. In the ledger the same amount appears as the balance carried down in the expense or income account. Check your sides with a simple test: an amount owing <strong>by</strong> the business is a credit (liability); an amount owing <strong>to</strong> the business is a debit (asset).</div>
   
-    <h3>Valuation of inventory</h3>
+    <h3 id="st-procedures-6">Valuation of inventory</h3>
     <ul>
       <li>Inventory is valued at the <strong>lower of cost and net realisable value</strong>. This applies the <strong>prudence</strong> concept: profit is not overstated, and losses are recognised as soon as they are expected.</li>
       <li><strong>Cost</strong> is the purchase price plus any costs of bringing the goods to their present location and condition, such as carriage inwards.</li>
@@ -2118,7 +2211,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p class="purpose">How to turn a trial balance (or an incomplete set of records) into an statement of profit or loss and a statement of financial position for sole traders, partnerships, limited companies, clubs and manufacturers. This is the highest-mark area of Paper 2: layout, labelling and correct treatment of adjustments earn most of the marks.</p>
     </div>
   
-    <h3>The two main financial statements</h3>
+    <h3 id="st-financial-statements-1">The two main financial statements</h3>
     <ul>
       <li><strong>Statement of profit or loss</strong> &mdash; a summary of revenue and expenses for a period (usually one year), showing <strong>gross profit</strong> and <strong>profit for the year</strong> (or loss). It is headed &ldquo;for the year ended &hellip;&rdquo;.</li>
       <li><strong>Statement of financial position</strong> &mdash; a list of assets, liabilities and capital (equity) at one point in time. It is headed &ldquo;at &hellip;&rdquo; (a single date), never &ldquo;for the year ended&rdquo;.</li>
@@ -2135,7 +2228,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <div class="convention-item"><div class="conv-label">Working capital</div><div class="conv-value">Current assets &minus; current liabilities</div></div>
     </div>
   
-    <h3>1. Sole traders: from trial balance to statements</h3>
+    <h3 id="st-financial-statements-2">1. Sole traders: from trial balance to statements</h3>
     <h4>Why prepare these statements?</h4>
     <ul>
       <li>The <strong>statement of profit or loss</strong> shows whether the business made a profit or a loss, so the owner can judge performance, compare it with earlier years and other businesses, decide how much can safely be taken as drawings, and work out tax.</li>
@@ -2318,7 +2411,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Putting the <strong>whole</strong> new allowance for irrecoverable debts ($390) in the statement of profit or loss. Only the <strong>change</strong> in the allowance ($90) is an expense; the full allowance is deducted from trade receivables in the statement of financial position.</div>
   
-    <h3>2. Partnerships</h3>
+    <h3 id="st-financial-statements-3">2. Partnerships</h3>
     <p>A <strong>partnership</strong> is a business owned by two or more people who share the profits and losses (the law in each country may set a maximum number of partners). Like a sole trader, it can be a trading, service or manufacturing business, or a combination. Advantages over a sole trader: more capital, shared workload and skills, shared losses. Disadvantages: profits shared, possible disagreements, and (in an ordinary partnership) <strong>unlimited liability</strong>.</p>
   
     <h4>The partnership agreement</h4>
@@ -2408,7 +2501,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Treating partners&rsquo; salaries or interest on capital as expenses in the statement of profit or loss. They are <strong>appropriations of profit</strong>, not expenses, so they appear only in the appropriation account. (Wages paid to employees, and interest on a loan made by a partner, are expenses.)</div>
   
-    <h3>3. Limited companies</h3>
+    <h3 id="st-financial-statements-4">3. Limited companies</h3>
     <h4>Key features</h4>
     <ul>
       <li><strong>Separate legal entity</strong>: the company can own assets, sue and be sued in its own name.</li>
@@ -2498,7 +2591,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p>A debenture holder receives a <strong>fixed rate of interest</strong> that must be paid even if the company makes a loss, so it is an expense in the statement of profit or loss. An ordinary shareholder receives a <strong>dividend</strong> that varies with profit and the directors&rsquo; decision and may be nil; it is an appropriation of profit deducted from retained earnings.</p>
     </div>
   
-    <h3>4. Clubs and societies (non-profit organisations)</h3>
+    <h3 id="st-financial-statements-5">4. Clubs and societies (non-profit organisations)</h3>
     <p>Clubs exist to provide facilities for members, not to make a profit. Terminology changes but the principles are the same.</p>
   
     <div class="table-wrap"><table><thead><tr><th>Business term</th><th>Club equivalent</th></tr></thead><tbody>
@@ -2594,7 +2687,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Putting the cash received for subscriptions ($9 600) straight into the income and expenditure account, or including the new equipment ($4 000) as expenditure. The I&amp;E account shows only the subscriptions <strong>earned</strong> for the year and only revenue items; equipment is capitalised and depreciated.</div>
   
-    <h3>5. Manufacturing accounts</h3>
+    <h3 id="st-financial-statements-6">5. Manufacturing accounts</h3>
     <p>A manufacturer makes the goods it sells, so a <strong>manufacturing account</strong> is prepared before the statement of profit or loss to find the <strong>cost of production</strong> of goods completed in the year.</p>
   
     <div class="conventions">
@@ -2648,7 +2741,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>When a cost is shared (e.g. rent split 3/4 factory, 1/4 office), put the factory share in factory overheads and the office share in the statement of profit or loss expenses. State the split in a working so method marks can be awarded.</div>
   
-    <h3>6. Incomplete records</h3>
+    <h3 id="st-financial-statements-7">6. Incomplete records</h3>
     <p>Many small traders do not keep a full double-entry system. The accountant must reconstruct the figures from bank statements, invoices and lists of assets and liabilities.</p>
     <p><strong>Why not keep full records?</strong> The owner may lack bookkeeping knowledge, time or the money to pay a bookkeeper; the business may be small with few transactions, mostly for cash; and the owner may feel a bank statement, cash book and file of invoices are enough to run the business.</p>
     <div class="table-wrap"><table><thead><tr><th>Advantages of not keeping full records</th><th>Disadvantages of not keeping full records</th></tr></thead><tbody>
@@ -2739,7 +2832,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>Opening capital is often the missing figure in incomplete-records questions. Prepare an opening statement of affairs first (assets &minus; liabilities), then use it as the opening capital in the statement of financial position.</div>
   
-    <h3>Choosing the right statement: summary</h3>
+    <h3 id="st-financial-statements-8">Choosing the right statement: summary</h3>
     <div class="table-wrap"><table><thead><tr><th>Organisation</th><th>Extra statement or account</th><th>Ownership section of SOFP</th></tr></thead><tbody>
       <tr><td>Sole trader</td><td>&mdash;</td><td>Capital + profit &minus; drawings</td></tr>
       <tr><td>Partnership</td><td>Appropriation account; current accounts</td><td>Capital accounts + current accounts</td></tr>
@@ -2774,7 +2867,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p class="purpose">This topic is about turning the figures in the statement of profit or loss and statement of financial position into ratios that measure profitability, liquidity and efficiency. Exam questions reward accurate calculation, but most of the marks go to interpreting the results, comparing them and advising the owner.</p>
     </div>
   
-    <h3>Why we calculate ratios</h3>
+    <h3 id="st-analysis-interpretation-1">Why we calculate ratios</h3>
     <ul>
       <li>A single figure (e.g. profit for the year of $24 000) tells you little on its own. A <strong>ratio</strong> relates one figure to another so that performance can be judged and <strong>compared</strong>.</li>
       <li>Ratios fall into three groups:
@@ -2789,7 +2882,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>The ratios were updated for the 2027&ndash;2029 syllabus, which lists ten you must know: gross profit margin, mark-up, profit margin, return on capital employed, current (working capital) ratio, acid test (liquid) ratio, rate of inventory turnover (times), inventory turnover (days), trade receivables turnover (days) and trade payables turnover (days). The formulae below follow the syllabus, and Cambridge expects you to use those formulae and names. Note that ROCE uses profit <strong>before interest</strong>.</div>
   
-    <h3>Profitability ratios</h3>
+    <h3 id="st-analysis-interpretation-2">Profitability ratios</h3>
     <div class="conventions">
       <div class="convention-item"><div class="conv-label">Gross profit margin (%)</div><div class="conv-value">Gross profit &divide; Revenue &times; 100</div></div>
       <div class="convention-item"><div class="conv-label">Mark-up (%)</div><div class="conv-value">Gross profit &divide; Cost of sales &times; 100</div></div>
@@ -2810,7 +2903,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>Gross margin and mark-up are linked. If mark-up is 50%, gross margin is 50 &divide; 150 = 33.3%. If gross margin is 25%, mark-up is 25 &divide; 75 = 33.3%. Questions on incomplete records often expect you to convert between them.</div>
   
-    <h3>Liquidity ratios and working capital</h3>
+    <h3 id="st-analysis-interpretation-3">Liquidity ratios and working capital</h3>
     <div class="conventions">
       <div class="convention-item"><div class="conv-label">Working capital</div><div class="conv-value">Current assets &minus; Current liabilities</div></div>
       <div class="convention-item"><div class="conv-label">Current (working capital) ratio</div><div class="conv-value">Current assets : Current liabilities (expressed as x : 1)</div></div>
@@ -2824,7 +2917,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li>A large gap between the current and liquid ratios shows the business relies heavily on inventory.</li>
     </ul>
   
-    <h3>Efficiency ratios</h3>
+    <h3 id="st-analysis-interpretation-4">Efficiency ratios</h3>
     <div class="conventions">
       <div class="convention-item"><div class="conv-label">Average inventory</div><div class="conv-value">(Opening inventory + Closing inventory) &divide; 2</div></div>
       <div class="convention-item"><div class="conv-label">Rate of inventory turnover (times)</div><div class="conv-value">Cost of sales &divide; Average inventory</div></div>
@@ -2841,7 +2934,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Using <strong>total</strong> revenue or purchases when the question gives credit sales or credit purchases, or using closing inventory instead of <strong>average</strong> inventory for inventory turnover. Also, students often state a ratio has &ldquo;improved&rdquo; when a liquid ratio has risen to 3 : 1 &mdash; a very high ratio can signal poor use of resources.</div>
   
-    <h3>How to improve each ratio</h3>
+    <h3 id="st-analysis-interpretation-5">How to improve each ratio</h3>
     <div class="table-wrap"><table>
       <thead><tr><th>Ratio</th><th>Ways to improve it</th></tr></thead>
       <tbody>
@@ -2857,7 +2950,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       </tbody>
     </table></div>
   
-    <h3>Working capital: the cycle</h3>
+    <h3 id="st-analysis-interpretation-6">Working capital: the cycle</h3>
     <div class="structure-card">
       <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Cash buys inventory</strong><span>Goods are bought, often on credit from suppliers (creating trade payables).</span></div></div>
       <div class="step"><div class="step-num">2</div><div class="step-content"><strong>Inventory is held</strong><span>Goods sit in the business until sold &mdash; measured by inventory turnover.</span></div></div>
@@ -2866,7 +2959,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </div>
     <p>The longer goods are held and the longer customers take to pay, the more working capital the business needs. Shortening the cycle improves liquidity without any extra capital.</p>
   
-    <h3>What affects gross profit and profit for the year</h3>
+    <h3 id="st-analysis-interpretation-7">What affects gross profit and profit for the year</h3>
     <p>Gross profit = Revenue &minus; Cost of sales, and Cost of sales = Opening inventory + Purchases &minus; Closing inventory. Anything that changes revenue or cost of sales therefore changes gross profit.</p>
     <ul>
       <li><strong>Valuation of inventory</strong>: if closing inventory is valued <strong>higher</strong>, cost of sales is lower and gross profit is higher by the same amount (and lower if it is valued lower, e.g. after writing damaged goods down to net realisable value). Because this year&rsquo;s closing inventory is next year&rsquo;s opening inventory, an overvaluation also <strong>reduces</strong> next year&rsquo;s gross profit.</li>
@@ -2895,7 +2988,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </ul>
     <p>This is why gross profit margin and profit margin are read together: a steady gross margin with a falling profit margin points to higher expenses or lower other income; a falling gross margin points to prices, purchase costs or inventory.</p>
 
-    <h3>Why profit is not the same as cash</h3>
+    <h3 id="st-analysis-interpretation-8">Why profit is not the same as cash</h3>
     <p>A profitable business can still run short of money, because the statement of profit or loss follows the <strong>matching</strong> and <strong>realisation</strong> concepts while the bank balance only changes when money actually moves. The main reasons for the difference are:</p>
     <ul>
       <li><strong>Non-cash expenses</strong>: depreciation, irrecoverable debts, an increase in the allowance for irrecoverable debts and a loss on disposal reduce profit but involve no payment in the year.</li>
@@ -2925,7 +3018,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </div>
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Saying &ldquo;the business made a profit, so it must have more cash&rdquo;. Always name the specific items (e.g. drawings, purchase of non-current assets, rising trade receivables) that explain why cash has moved differently from profit.</div>
 
-    <h3>Inter-business comparison and comparing years</h3>
+    <h3 id="st-analysis-interpretation-9">Inter-business comparison and comparing years</h3>
     <ul>
       <li><strong>Inter-period comparison</strong>: comparing the same business over two or more years to identify trends (is the business improving or getting worse?).</li>
       <li><strong>Inter-business comparison</strong>: comparing a business with another business, ideally in the same trade and of similar size, to judge relative performance.</li>
@@ -2950,7 +3043,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <li>Ratios show <strong>symptoms</strong>, not causes &mdash; further investigation is needed.</li>
     </ul>
   
-    <h3>Interested parties</h3>
+    <h3 id="st-analysis-interpretation-10">Interested parties</h3>
     <p>Different people use accounting information to make different decisions. Learn who each party is and what it wants to know.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Interested party</th><th>Main interest</th><th>Most useful ratios</th></tr></thead>
@@ -2969,7 +3062,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       </tbody>
     </table></div>
   
-    <h3>Worked example: comparing two years</h3>
+    <h3 id="st-analysis-interpretation-11">Worked example: comparing two years</h3>
     <p>Hana runs a stationery shop. All sales and purchases are on credit. Extracts from her financial statements are shown below.</p>
     <div class="table-wrap"><table class="statement"><caption>Extracts for the years ended 31 March</caption>
       <thead><tr><th></th><th class="num">2025 $</th><th class="num">2026 $</th></tr></thead>
@@ -3047,14 +3140,14 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
       <p class="purpose">Accounting concepts are the agreed rules that explain why transactions are recorded the way they are, and modern practice covers ethics, technology and sustainability. Exam questions ask you to name the concept behind a treatment, explain it in context, and judge ethical or practical situations.</p>
     </div>
   
-    <h3>Why accounting concepts matter</h3>
+    <h3 id="st-concepts-modern-practice-1">Why accounting concepts matter</h3>
     <ul>
       <li>Concepts (also called principles or conventions) give a <strong>common framework</strong> so that financial statements are prepared in the same way by everyone.</li>
       <li>They make statements <strong>reliable</strong> and <strong>comparable</strong> between years and between businesses.</li>
       <li>Almost every adjustment you meet in other topics &mdash; depreciation, accruals, prepayments, allowances for irrecoverable debts, inventory valuation &mdash; is justified by one or more concepts.</li>
     </ul>
   
-    <h3>The accounting concepts</h3>
+    <h3 id="st-concepts-modern-practice-2">The accounting concepts</h3>
     <div class="table-wrap"><table>
       <thead><tr><th>Concept</th><th>Definition</th><th>Example of how it is applied</th></tr></thead>
       <tbody>
@@ -3091,7 +3184,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Naming the concept but not linking it to the situation. &ldquo;Prudence means not overstating profit&rdquo; earns at most one mark; you must explain <strong>what</strong> in the scenario would be overstated and <strong>how</strong> the treatment prevents it. Another frequent error is confusing realisation (when revenue is recognised) with matching (pairing expenses with that revenue).</div>
   
-    <h3>Accounting policies</h3>
+    <h3 id="st-concepts-modern-practice-3">Accounting policies</h3>
     <ul>
       <li><strong>Accounting policies</strong> are the specific methods a business chooses to apply the concepts, e.g. which depreciation method and rate to use, how inventory is valued, what percentage allowance is made for irrecoverable debts.</li>
       <li>Policies should be applied <strong>consistently</strong>. Because they involve judgement, different policies give different profits and asset values &mdash; one of the limitations of accounting statements in Topic 6.</li>
@@ -3109,7 +3202,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
     </table></div>
     <p>There can be a <strong>conflict</strong> between qualities: waiting to obtain fully accurate figures increases reliability but reduces relevance because the information arrives late.</p>
   
-    <h3>Ethical considerations in accounting</h3>
+    <h3 id="st-concepts-modern-practice-4">Ethical considerations in accounting</h3>
     <p>Accountants are trusted by owners, lenders, tax authorities and the public. Professional bodies expect them to follow these fundamental principles:</p>
     <div class="structure-card">
       <div class="step"><div class="step-num">1</div><div class="step-content"><strong>Integrity</strong><span>Being honest and straightforward in all work; not being associated with information that is false or misleading.</span></div></div>
@@ -3143,7 +3236,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="tip-box"><div class="tip-label">Examiner Tip</div>In ethics scenarios, (1) name the principle, (2) say exactly what in the scenario breaches it, (3) state the consequence for users or the business, and (4) suggest the correct action. Linking ethics to a concept (such as prudence or matching) often earns an extra mark.</div>
   
-    <h3>Technology: digital applications for accounting records</h3>
+    <h3 id="st-concepts-modern-practice-5">Technology: digital applications for accounting records</h3>
     <ul>
       <li><strong>All or part of the records</strong>: a business can keep its whole accounting system digitally, or use digital applications for only some records while keeping the rest manually &mdash; e.g. a spreadsheet for the petty cash book or wages, an invoicing app for sales, or online banking in place of a paper bank statement. You do not need to know any particular software package.</li>
       <li><strong>Accounting software</strong>: once a transaction is entered, the software posts it to the ledgers, updates balances and produces the trial balance, financial statements and reports automatically.</li>
@@ -3164,7 +3257,7 @@ table.statement tr.note td { font-style: italic; color: var(--text-muted); font-
   
     <div class="mistake-box"><div class="mistake-label">Common Mistake</div>Claiming that accounting software &ldquo;eliminates all errors&rdquo;. Software prevents arithmetical errors and one-sided entries, but errors of commission, principle, omission and original entry can still happen because a person still enters the data.</div>
   
-    <h3>Storing accounting data safely and sustainably</h3>
+    <h3 id="st-concepts-modern-practice-6">Storing accounting data safely and sustainably</h3>
     <h4>Why it matters</h4>
     <ul>
       <li>Records must be kept for several years for the <strong>tax authorities</strong> and as evidence in disputes with customers or suppliers.</li>
@@ -6005,6 +6098,16 @@ Answer: only the rent that belongs to <em>this</em> year&rsquo;s trading ($4 940
 
 
     <script>
+    function setSubnav(id) {
+      // Show the sub-topic list for the open topic and close the others
+      document.querySelectorAll('.subnav').forEach(function(sn) {
+        var open = sn.dataset.parent === id;
+        sn.classList.toggle('show', open);
+        var c = document.querySelector('.nav-item[data-section="' + sn.dataset.parent + '"] .nav-caret');
+        if (c) { c.classList.toggle('open', open); c.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      });
+    }
+
     function showSection(id, fromHash) {
       var sec = document.getElementById('sec-' + id);
       if (!sec) return;
@@ -6014,6 +6117,8 @@ Answer: only the rent that belongs to <em>this</em> year&rsquo;s trading ($4 940
 
       var nav = document.querySelector('.nav-item[data-section="' + id + '"]');
       if (nav) nav.classList.add('active');
+      setSubnav(id);
+      hideFlyout(true);
 
       // Keep the open topic in the URL so it can be linked to and survives a refresh
       if (!fromHash && location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
@@ -6024,6 +6129,97 @@ Answer: only the rent that belongs to <em>this</em> year&rsquo;s trading ($4 940
         document.querySelector('.sidebar').classList.remove('open');
         document.querySelector('.overlay').classList.remove('open');
       }
+      updateActiveSub();
+    }
+
+    function toggleSub(ev, id) {
+      // The arrow opens or closes a topic's sub-topics without leaving the current page
+      ev.stopPropagation();
+      var sn = document.getElementById('subnav-' + id);
+      if (!sn) return;
+      var open = !sn.classList.contains('show');
+      sn.classList.toggle('show', open);
+      ev.currentTarget.classList.toggle('open', open);
+      ev.currentTarget.setAttribute('aria-expanded', open ? 'true' : 'false');
+      hideFlyout(true);
+    }
+
+    function goSub(hid) {
+      var h = document.getElementById(hid);
+      if (!h) return false;
+      var sec = h.closest('.section');
+      var id = sec.id.replace(/^sec-/, '');
+      if (!sec.classList.contains('active')) showSection(id, true);
+      else { setSubnav(id); hideFlyout(true); }
+      if (location.hash !== '#' + hid) history.replaceState(null, '', '#' + hid);
+      if (window.innerWidth <= 768) {
+        document.querySelector('.sidebar').classList.remove('open');
+        document.querySelector('.overlay').classList.remove('open');
+      }
+      setTimeout(function() { h.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 30);
+      markSub(hid);
+      return false;
+    }
+
+    function markSub(hid) {
+      document.querySelectorAll('.sidebar .subnav-item').forEach(function(a) { a.classList.toggle('active', a.dataset.target === hid); });
+    }
+
+    // Highlight the sub-topic currently being read
+    function updateActiveSub() {
+      var sec = document.querySelector('.section.active');
+      if (!sec) return;
+      var hs = sec.querySelectorAll('h3[id^="st-"]');
+      if (!hs.length) { markSub(null); return; }
+      var current = null;
+      hs.forEach(function(h) { if (h.getBoundingClientRect().top < 140) current = h.id; });
+      markSub(current);
+    }
+    var subTick = false;
+    window.addEventListener('scroll', function() {
+      if (subTick) return; subTick = true;
+      requestAnimationFrame(function() { subTick = false; updateActiveSub(); });
+    }, { passive: true });
+
+    // Desktop: hovering a topic shows its sub-topics in a flyout beside the sidebar
+    var flyout = document.createElement('div');
+    flyout.className = 'subnav-flyout';
+    flyout.setAttribute('role', 'menu');
+    document.body.appendChild(flyout);
+    var flyTimer = null, flyFor = null;
+    function hideFlyout(now) {
+      clearTimeout(flyTimer);
+      if (now) { flyout.classList.remove('show'); flyFor = null; return; }
+      flyTimer = setTimeout(function() { flyout.classList.remove('show'); flyFor = null; }, 220);
+    }
+    function showFlyout(item) {
+      var id = item.dataset.section;
+      var sn = document.getElementById('subnav-' + id);
+      clearTimeout(flyTimer);
+      if (!sn || sn.classList.contains('show') || window.innerWidth <= 768) { hideFlyout(true); return; }
+      if (flyFor !== id) {
+        var label = item.textContent.replace(/\u25B8/g, '').replace(/\s+/g, ' ').trim().replace(/^\d+\s*/, '');
+        flyout.innerHTML = '<div class="flyout-title">' + label + '</div>' + sn.innerHTML;
+        flyFor = id;
+      }
+      var r = item.getBoundingClientRect(), side = document.querySelector('.sidebar').getBoundingClientRect();
+      flyout.style.left = side.right + 'px';
+      flyout.classList.add('show');
+      var top = Math.min(r.top, window.innerHeight - flyout.offsetHeight - 12);
+      flyout.style.top = Math.max(12, top) + 'px';
+    }
+    {
+      document.querySelectorAll('.nav-item[data-section]').forEach(function(item) {
+        if (!document.getElementById('subnav-' + item.dataset.section)) {
+          item.addEventListener('mouseenter', function() { hideFlyout(true); });
+          return;
+        }
+        item.addEventListener('mouseenter', function() { showFlyout(item); });
+        item.addEventListener('mouseleave', function() { hideFlyout(false); });
+      });
+      flyout.addEventListener('mouseenter', function() { clearTimeout(flyTimer); });
+      flyout.addEventListener('mouseleave', function() { hideFlyout(false); });
+      document.querySelector('.sidebar').addEventListener('scroll', function() { hideFlyout(true); }, { passive: true });
     }
 
     function toggleSidebar() {
@@ -6031,8 +6227,14 @@ Answer: only the rent that belongs to <em>this</em> year&rsquo;s trading ($4 940
       document.querySelector('.overlay').classList.toggle('open');
     }
 
-    if (location.hash) showSection(location.hash.slice(1), true);
-    window.addEventListener('hashchange', function() { showSection(location.hash.slice(1), true); });
+    function fromLocation() {
+      var h = location.hash.slice(1);
+      if (!h) { setSubnav((document.querySelector('.section.active') || {id: ''}).id.replace(/^sec-/, '')); return; }
+      if (h.indexOf('st-') === 0 && document.getElementById(h)) goSub(h);
+      else showSection(h, true);
+    }
+    fromLocation();
+    window.addEventListener('hashchange', fromLocation);
     </script>
 
     <!-- BreadcrumbList Schema -->
