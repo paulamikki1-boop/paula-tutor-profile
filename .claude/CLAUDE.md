@@ -7,6 +7,9 @@ use them only as a topic checklist and write original content.
   Exception (owner-approved): topical past-paper sections may quote Cambridge question wording exactly, cited with the full
   reference (e.g. `0455/22/M/J/25 Q2(d)`) and a UCLES credit line; the model answers must still be original.
 
+**Every task: load the skill `fable-playbook` (`.claude/skills/fable-playbook/SKILL.md`) before the first edit or command** —
+it sets how to plan, split the work into steps, check the result in a browser and report back.
+
 ## Site
 - Live: https://paulamikki1-boop.github.io/paula-tutor-profile/ (GitHub Pages, project subpath → **all internal links must be
   relative**; canonical/og/sitemap URLs absolute). No build step; plain HTML/CSS/JS.
