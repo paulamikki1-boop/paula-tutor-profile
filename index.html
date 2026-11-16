@@ -56,6 +56,9 @@
     color: var(--navy);
   }
   .nav-logo span { color: var(--accent); }
+  .nav-brand { display: flex; align-items: baseline; gap: .9rem; }
+  .hub-link { font-size: .8rem; color: var(--muted); text-decoration: none; white-space: nowrap; }
+  .hub-link:hover { color: var(--accent); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
     text-decoration: none;
@@ -721,7 +724,10 @@
 <body>
 
 <nav>
-  <div class="nav-logo">Paula<span>.</span></div>
+  <div class="nav-brand">
+    <div class="nav-logo">Paula<span>.</span></div>
+    <a class="hub-link" href="https://paulamikki1-boop.github.io/">&larr; Portfolio</a>
+  </div>
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
     <span class="nav-toggle-icon"><span></span><span></span><span></span></span> Menu
   </button>
@@ -1047,6 +1053,7 @@
 
 <footer>
   &copy; 2025 Paula &middot; IGCSE, GCSE & A Level Tutor &middot; Cambridge & Edexcel &middot; Kuala Lumpur &middot; <a href="https://www.facebook.com/paulamikkitutor" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none;">Facebook</a>
+  &middot; <a href="https://paulamikki1-boop.github.io/" style="color:var(--accent); text-decoration:none;">&larr; Paula Mikki Tindoc</a>
 </footer>
 
 <script>
