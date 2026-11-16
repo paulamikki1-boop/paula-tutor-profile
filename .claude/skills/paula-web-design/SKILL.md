@@ -29,6 +29,19 @@ All are plain HTML/CSS/JS on GitHub Pages with no build step. Each page carries 
 
 If Paula does not name a style, use `hub`. Read the style's spec before writing any markup.
 
+### Tutor site inner pages (notes, resources hub, marking, shop, short guides)
+
+These pages are not rebuilt by hand. Each keeps its own `<style>` block, and the hub look is added as one shared
+override layer, `styles/hub-pages-layer.css`, appended to the end of that block by a script:
+
+```bash
+python3 .claude/skills/paula-web-design/scripts/apply_hub_layer.py
+```
+
+To change how those pages look, edit `hub-pages-layer.css` and re-run the script; it replaces the earlier copy of the
+layer on every page and leaves the content alone. Run it after adding a new notes page too. The layer sits inside
+`@media screen`, so the pages' print rules are untouched. The homepage is not covered; it has its own full stylesheet.
+
 ## Workflow
 
 1. **Read the page first.** List every piece of content on it: text, images, links, anchors (`id`s other pages or
