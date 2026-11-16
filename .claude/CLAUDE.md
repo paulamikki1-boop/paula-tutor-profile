@@ -10,9 +10,10 @@ use them only as a topic checklist and write original content.
 ## Site
 - Live: https://paulamikki1-boop.github.io/paula-tutor-profile/ (GitHub Pages, project subpath → **all internal links must be
   relative**; canonical/og/sitemap URLs absolute). No build step; plain HTML/CSS/JS.
-- Brand: navy `#0a1628`, blue `#1e3a5f`, accent `#4a90d9`, sky `#e8f0fe`. Homepage uses the "hub" style since Nov 2026 (DM Sans + DM Mono,
-  rounded cards; see skill `.claude/skills/paula-web-design/`). Notes, marking and shop pages still use the older look
-  (Cormorant Garamond headings + DM Sans) until they are restyled.
+- Brand: navy `#0a1628`, blue `#1e3a5f`, accent `#4a90d9`, sky `#e8f0fe`. Whole site uses the "hub" style since Nov 2026 (DM Sans + DM Mono,
+  rounded cards; see skill `.claude/skills/paula-web-design/`). The homepage has its own full stylesheet; every other page
+  gets the look from a shared override layer at the end of its `<style>` block. **After adding a page or changing the
+  layer, run** `python3 .claude/skills/paula-web-design/scripts/apply_hub_layer.py`.
 - Contact: WhatsApp +60 10-368 6902 (`wa.me/60103686902`), Facebook https://www.facebook.com/paulamikkitutor
 - Google Business Profile: "Paula IGCSE & A-level Tuition" (Tutoring service).
 
