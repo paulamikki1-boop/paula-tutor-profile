@@ -101,6 +101,14 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 - Built with Playwright/Chromium HTML→PDF (`page.pdf`, A4) + PyMuPDF for page numbers, watermark and encryption. The build
   scripts lived in a temporary session folder and are NOT in the repo; recreate from the notes pages' HTML if needed.
 
+## Offline personal copies (selling on Shopee)
+- `tools/offline-edition/make_offline.py <subject> --buyer "Name" --order N --out <folder outside repo>` makes one
+  self-contained HTML file per buyer (works offline, embedded DM fonts, notes + past papers merged, no password).
+  Owner chose **no password, just names**: Paula's © and the buyer's name/order on a top banner, every section header,
+  a faint diagonal watermark, title and footer. Never write buyer copies into the repo (script refuses).
+- Shopee: digital items use the "Virtual Goods" shipping channel, which since 1 Sep 2026 needs Seller KYC as a
+  Registered Business (SSM) — owner to confirm her shop status. Delivery = send the file/link per order.
+
 ## Editable editions (Obsidian / handwriting PDF / Word)
 - Converter scripts in `tools/note-editions/` (see its README). Done: Chemistry (vault, GoodNotes PDF, Word), Biology (vault, GoodNotes PDF).
 - Note sources + PDF build files are in the owner's private **Paula-Notes-Build-Kit.zip** (never commit them; repo is public).
