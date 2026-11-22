@@ -22,9 +22,10 @@ LIVE = 'https://paulamikki1-boop.github.io/paula-tutor-profile/'
 
 ap = argparse.ArgumentParser()
 ap.add_argument('subject', help='e.g. chemistry, biology, economics (page folder igcse-<subject>-notes)')
-ap.add_argument('--buyer', required=True, help="buyer's name as it should appear on the copy")
+ap.add_argument('--buyer', default=None, help="buyer's name as it should appear on the copy")
 ap.add_argument('--order', default='', help='Shopee order number (optional, shown next to the name)')
 ap.add_argument('--out', required=True, help='output folder (outside the repo)')
+ap.add_argument('--master', action='store_true', help='make a master copy with placeholders (for the Order Maker)')
 a = ap.parse_args()
 
 out_dir = os.path.abspath(os.path.expanduser(a.out))
@@ -42,6 +43,10 @@ page = open(notes_path).read()
 pp_path = os.path.join(REPO, 'resources', PP, 'index.html')
 pp_page = open(pp_path).read() if os.path.exists(pp_path) else None
 
+if a.master:                       # placeholders the Order Maker replaces (letters only, so escaping never changes them)
+    a.buyer, a.order = 'QQBUYERQQ', 'QQORDERQQ'
+if not a.buyer:
+    sys.exit('--buyer is required (or --master)')
 buyer = re.sub(r'\s+', ' ', a.buyer).strip()
 order = re.sub(r'\s+', ' ', a.order).strip()
 B = html.escape(buyer)
@@ -176,6 +181,8 @@ if left:
 safe = re.sub(r'[^A-Za-z0-9]+', '-', buyer).strip('-') or 'buyer'
 fname = f'{h1.replace(" ", "-")}-{safe}' + (f'-{re.sub(r"[^A-Za-z0-9]+", "", order)}' if order else '') + '.html'
 os.makedirs(out_dir, exist_ok=True)
+if a.master:
+    fname = f'master-{a.subject}.html'
 path = os.path.join(out_dir, fname)
 open(path, 'w').write(doc)
 print(f'{path}  ({len(doc) // 1024} KB, {len(re.findall(r'<div class="section( active)?" id="sec-', doc))} sections, '
