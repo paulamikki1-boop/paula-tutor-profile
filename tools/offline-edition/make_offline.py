@@ -33,6 +33,9 @@ if out_dir == REPO or out_dir.startswith(REPO + os.sep):
 NOTES = f'igcse-{a.subject}-notes'
 PP = f'igcse-{a.subject}-past-papers'
 notes_path = os.path.join(REPO, 'resources', NOTES, 'index.html')
+if not os.path.exists(notes_path) and os.path.exists(os.path.join(REPO, 'resources', f'igcse-{a.subject}', 'index.html')):
+    NOTES = f'igcse-{a.subject}'                     # e.g. english-writing-forms
+    notes_path = os.path.join(REPO, 'resources', NOTES, 'index.html')
 if not os.path.exists(notes_path):
     sys.exit(f'no notes page at resources/{NOTES}/')
 page = open(notes_path).read()
@@ -115,6 +118,9 @@ new_nav = re.sub(r'<a href="\.\./\.\./">Home</a>', '<a href="#home">Home</a>\n  
 head = head.replace(nav, new_nav)
 tail = re.sub(r'\s*<a href="[^"]*marking/"[^>]*class="marking-btn"[^>]*>.*?</a>', '', tail, flags=re.S)
 tail = re.sub(r'\s*<a [^>]*class="marking-btn"[^>]*>.*?</a>', '', tail, flags=re.S)
+
+# "Get it marked" buttons point to the marking page on the website: leave them out of copies
+main = re.sub(r'\s*<a\b[^>]*href="\.\./\.\./marking/[^"]*"[^>]*>.*?</a>', '', main, flags=re.S)
 
 def absolutise(s):
     s = re.sub(r'href="\.\./\.\./([^"]*)"', lambda m: f'href="{LIVE}{m.group(1)}"', s)
