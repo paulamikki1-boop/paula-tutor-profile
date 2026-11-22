@@ -79,6 +79,10 @@ it sets how to plan, split the work into steps, check the result in a browser an
 - Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
   (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business, Chemistry and Biology.
   Its renderer targets the notes page; for Chemistry the past papers now live in `resources/igcse-chemistry-past-papers/`.
+- Skill `.claude/skills/split-past-papers/`: one command moves a subject's `pp-` sections into `resources/igcse-<subject>-past-papers/`
+  with link boxes both ways, old-link forwarding and all followers (search, sitemap, hub card, DEPLOY.md); includes a
+  Playwright checker. Dry-run tested on Biology, Physics, Economics, Business and Accounting (Nov 2026); not yet applied
+  to them (owner to choose, one subject per chat).
 
 ## Conventions for new notes pages
 Same component classes as existing notes pages: `section-header/form-badge/purpose`, `structure-card/step`, `conventions/convention-item`,
