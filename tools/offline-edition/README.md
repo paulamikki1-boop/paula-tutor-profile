@@ -23,3 +23,16 @@ python3 tools/offline-edition/make_offline.py chemistry --buyer "Aisha Rahman" -
   protection matters.
 
 Fonts in `fonts/` are DM Sans and DM Mono (SIL Open Font License 1.1, `fonts/OFL.txt`), embedded in each copy.
+
+## Order Maker (no tokens per order)
+
+```bash
+python3 tools/offline-edition/build_order_maker.py --out ~/Desktop
+```
+
+Builds `Order-Maker.html` (about 3 MB, all seven subjects): Paula opens it in her browser, picks the subject, types the
+buyer's name and order number and clicks **Make copy**; the browser saves the personalised file. Works offline, nothing
+is sent anywhere, and the result is byte-for-byte what `make_offline.py` would make (tested for all subjects with a
+name containing quotes, &, <, %, ! and accents). It holds a master copy of each subject (`make_offline.py --master`,
+placeholders `QQBUYERQQ` / `QQORDERQQ`), gzip-packed, with shared photos stored once. **Rebuild it after the notes change**
+(the page shows the date it was built). Order number is required in the Order Maker.
