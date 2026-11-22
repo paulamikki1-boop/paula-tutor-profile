@@ -15,6 +15,10 @@ python3 tools/offline-edition/make_offline.py chemistry --buyer "Aisha Rahman" -
   otherwise.
 - Output name: `IGCSE-Chemistry-Notes-Aisha-Rahman-2611220001.html` (about 0.7–1 MB).
 - The site search box is left out (it needs the website); everything else works offline.
+- Top bar: **Home** (opens an About page inside the file, built from the live homepage by `about_page.py`), **Notes**
+  and WhatsApp. No Resources, Marking or Shop links, and nothing in the copy mentions or links to the free website
+  (the script stops if it finds a mention). The About page drops the marking card, the "past papers marked" badge,
+  the "Free notes" subject links and the portfolio link; photos are shrunk (copy is about 1.7 MB).
 - The name is a deterrent, not a lock: anyone who edits HTML could remove it. Use the locked PDFs where stronger
   protection matters.
 

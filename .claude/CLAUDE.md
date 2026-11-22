@@ -106,6 +106,8 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
   self-contained HTML file per buyer (works offline, embedded DM fonts, notes + past papers merged, no password).
   Owner chose **no password, just names**: Paula's © and the buyer's name/order on a top banner, every section header,
   a faint diagonal watermark, title and footer. Never write buyer copies into the repo (script refuses).
+  Top bar in copies = Home (About page made from the homepage, `about_page.py`), Notes, WhatsApp; owner asked that copies
+  never mention or link to the free site (no Resources/Marking/Shop, no "free notes", no marking card) — script enforces it.
 - Shopee: digital items use the "Virtual Goods" shipping channel, which since 1 Sep 2026 needs Seller KYC as a
   Registered Business (SSM) — owner to confirm her shop status. Delivery = send the file/link per order.
 

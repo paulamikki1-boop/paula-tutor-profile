@@ -13,6 +13,8 @@
 * Buyer names must never be committed: write output OUTSIDE the repo (--out). The script refuses an --out inside it.
 """
 import argparse, base64, html, os, re, sys, urllib.parse, datetime
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import about_page
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
@@ -105,6 +107,15 @@ LIC_CSS = f'''{font_face()}
 head = head.replace('</style>', LIC_CSS + '</style>', 1)
 
 # site navigation: keep it, but point it at the live site (a local file has no ../../)
+# top bar: Home opens the About page inside the file, Notes goes back to the notes; no website links
+nav = re.search(r'<nav class="nav">.*?</nav>', head, re.S).group(0)
+new_nav = re.sub(r'<a href="\.\./\.\./" class="nav-brand">', '<a href="#home" class="nav-brand">', nav)
+new_nav = re.sub(r'\s*<a href="\.\./\.\./(resources|marking|shop)/">[^<]*</a>', '', new_nav)
+new_nav = re.sub(r'<a href="\.\./\.\./">Home</a>', '<a href="#home">Home</a>\n            <a href="#notes">Notes</a>', new_nav)
+head = head.replace(nav, new_nav)
+tail = re.sub(r'\s*<a href="[^"]*marking/"[^>]*class="marking-btn"[^>]*>.*?</a>', '', tail, flags=re.S)
+tail = re.sub(r'\s*<a [^>]*class="marking-btn"[^>]*>.*?</a>', '', tail, flags=re.S)
+
 def absolutise(s):
     s = re.sub(r'href="\.\./\.\./([^"]*)"', lambda m: f'href="{LIVE}{m.group(1)}"', s)
     s = re.sub(r'href="\.\./([a-z0-9-]+/[^"]*)"', lambda m: f'href="{LIVE}resources/{m.group(1)}"', s)
@@ -133,12 +144,28 @@ tail = re.sub(r'<footer class="footer">.*?</footer>',
               f'<footer class="footer"><p>&copy; {YEAR} Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur. '
               f'Personal copy for {WHO}. For personal use only; not for sharing or resale.</p></footer>', tail, count=1, flags=re.S)
 tail = re.sub(r'\s*<script type="application/ld\+json">.*?</script>', '', tail, flags=re.S)
+syl = re.search(r'class="syllabus">(.*?)<', head)
+syl = syl.group(1).strip() if syl else ''
+nq = main.count('class="pp-ref"')
+notes_line = (f'These {h1} are written by Paula' + (f' for the {syl}' if syl else '') +
+              (f', with {nq} real past-paper questions and full-mark model answers.' if nq else '.') +
+              ' Use <a class="text-link" href="#notes">Notes</a> at the top to go back to them.')
+idx = open(os.path.join(REPO, 'index.html')).read()
+a_css, a_html, a_js = about_page.build(idx, notes_line)
+head = head.replace('</style>', a_css + '\n</style>', 1)
+head = head.replace(banner, banner + '\n' + a_html, 1)
+tail = tail.replace('</body>', a_js + '</body>', 1)
 doc = head + main + tail
 # the notes page forwards old #pp- links to the past-papers page; inside one file they open in place
 doc = re.sub(r"\s*// The topical past papers moved to their own page[^\n]*\n\s*if \(/\^pp-/\.test\(h\)\)[^\n]*\n", '\n', doc)
 doc = re.sub(r'<script>/\* past papers moved to their own page.*?</script>\n?', '', doc, flags=re.S)
 assert 'location.replace' not in doc, 'forwarding script still present'
 assert '../search.js' not in doc
+# nothing in the copy may point to or mention the free website
+visible = re.sub(r'data:[^"\')]+', '', doc)
+left = re.findall(r'paulamikki1-boop\.github\.io|href="[^"]*(?:resources|marking|shop)/|free (?:notes|revision|study)', visible, re.I)
+if left:
+    sys.exit(f'copy still mentions the website: {sorted(set(left))[:6]}')
 
 safe = re.sub(r'[^A-Za-z0-9]+', '-', buyer).strip('-') or 'buyer'
 fname = f'{h1.replace(" ", "-")}-{safe}' + (f'-{re.sub(r"[^A-Za-z0-9]+", "", order)}' if order else '') + '.html'
