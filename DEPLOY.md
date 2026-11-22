@@ -17,7 +17,9 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   ├── igcse-economics-notes/
 │   │   └── index.html                          — Full resource page (6 topics + model answers)
 │   ├── igcse-chemistry-notes/
-│   │   └── index.html                          — Full resource page (all 12 topics, sidebar-navigated)
+│   │   └── index.html                          — Full resource page (Exam Guide, all 12 topics, illustrated examples; each topic links to its past papers)
+│   ├── igcse-chemistry-past-papers/
+│   │   └── index.html                          — Topical past papers (168 real 0620 Paper 4 questions by topic; each unit links back to its notes)
 │   ├── igcse-accounting-notes/
 │   │   └── index.html                          — Full resource page (7 topics + worked examples + 8 illustrated examples with diagrams + 40 past-paper examples by topic)
 │   ├── igcse-business-notes/

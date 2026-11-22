@@ -13,6 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = [
     ("Biology", "igcse-biology-notes"),
     ("Chemistry", "igcse-chemistry-notes"),
+    ("Chemistry", "igcse-chemistry-past-papers"),
     ("Physics", "igcse-physics-notes"),
     ("Economics", "igcse-economics-notes"),
     ("Accounting", "igcse-accounting-notes"),
@@ -31,13 +32,15 @@ entries = []
 for subject, slug in PAGES:
     page = (ROOT / "resources" / slug / "index.html").read_text()
     main = page[page.index('<main class="main">'):page.index("</main>")]
+    # pp-x-y sub-topic anchors only on pages whose script can open an h3 id directly (otherwise link the unit section)
+    pp_ok = "el.tagName === 'H3'" in page
     # each notes section is a <div class="section ..." id="sec-...">
     starts = [m for m in re.finditer(r'<div class="section[^"]*" id="sec-([a-z0-9-]+)">', main)]
     for i, m in enumerate(starts):
         body = main[m.end():starts[i + 1].start() if i + 1 < len(starts) else len(main)]
         title = text(re.search(r"<h2>(.*?)</h2>", body, re.S).group(1))
         # split the section into chunks at each <h3>; the part before the first h3 is the intro
-        # (an h3 may carry an id; "st-..." ids are sub-topic anchors that the page can open directly)
+        # (an h3 may carry an id; "st-..." ids, and "pp-..." ids where the page supports them, are sub-topic anchors)
         parts = re.split(r"(<h3(?:\s[^>]*)?>.*?</h3>)", body, flags=re.S)
         heading, chunk, anchor = "", parts[0], m.group(1)
         for part in parts[1:] + [None]:
@@ -48,7 +51,8 @@ for subject, slug in PAGES:
                                     "t": title, "h": heading, "x": t})
                 if part is not None:
                     heading, chunk = text(part), ""
-                    sub = re.match(r'<h3[^>]*\sid="(st-[^"]+)"', part)
+                    sub = re.match(r'<h3[^>]*\sid="(st-[^"]+)"', part) or (
+                        pp_ok and re.match(r'<h3[^>]*\sid="(pp-[^"]+)"', part))
                     anchor = sub.group(1) if sub else m.group(1)
             else:
                 chunk += part
