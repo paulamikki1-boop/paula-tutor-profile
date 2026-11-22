@@ -56,14 +56,24 @@ it sets how to plan, split the work into steps, check the result in a browser an
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (148 questions across 25 sub-topics 1.1–6.3, `h3#pp-3-3` etc.).
     Real 0450 Paper 1 (11/12/13) and Paper 2 case-study (21/22/23, stimulus quoted from the insert) questions 2020–2025,
     verbatim + cited, original answers, most sub-topics include a 6-mark (e) or 12-mark (b); "Get it marked" links → marking page.
-  - `resources/igcse-physics-notes/` (0625, 2026–2028; one section per sub-topic: 2.1–2.3 Thermal, 3.1–3.4 Waves, 5.1–5.2 Nuclear,
-    6.1–6.2 Space, plus Key Equations; 7 inline SVG diagrams; `.formula-box`, `.nuclide` (A/Z stacked) classes. Topics 1 and 4
-    are greyed-out "Soon" sidebar items (`.nav-item.soon`) — owner is sending source PDFs (Save My Exams / Cambridge practice
-    questions) for the rest; use them only as a checklist and write original notes. No Physics PDFs yet, so no shop promo box.)
-    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (180 questions across 31 sub-topics, all six topics incl.
-    1 and 4 which have no notes yet; `h3#pp-1-5-1` etc.). Real 0625 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited,
-    original answers, 9 SVG diagrams; parts on content dropped from the 2026–2028 syllabus (logic gates etc.) skipped.
-    No "Get it marked" links (marking page only offers full-paper marking for Physics).
+  - `resources/igcse-physics-notes/` (0625, 2026–2028, official syllabus **version 2**, Dec 2025; all six topics, one section per
+    sub-topic: 1.1–1.8 Motion/forces/energy (ids `physical-quantities`, `motion`, `mass-weight`, `density`, `forces`, `turning-effect`,
+    `momentum`, `energy-work-power`, `energy-resources`, `pressure`), 2.1–2.3 Thermal, 3.1–3.4 Waves, 4.1–4.5 Electricity & magnetism
+    (`magnetism`, `electric-charge`, `current-voltage-resistance`, `electrical-energy`, `circuits`, `circuit-components`,
+    `practical-electricity` = syllabus 4.4 "Electrical safety", `em-induction`, `motor-effect`, `transformer`), 5.1–5.2 Nuclear,
+    6.1–6.2 Space; plus "Exam Guide" `#exam-guide` (papers/timing/15 syllabus command words/symbols+units/practical skills, all
+    from the syllabus: P1/P2 45 min 40 MCQ 30%, P3/P4 1h15 80 marks 50%, P5 1h15 / P6 1h 40 marks 20%), "Key Equations"
+    (every equation in topics 1–6, Supplement-tagged) and "Illustrated Examples" `#illustrated` (10 original worked examples with
+    SVGs); landing section is 1.1. Full QC + syllabus alignment done Nov 2026 (every calculation re-worked, every Core/Supplement
+    bullet covered and labelled; off-syllabus items tagged `key-term bg-term` "Background" / `.background-note`). 52 notes SVGs;
+    `.formula-box`, `.nuclide` (A/Z stacked) classes; figures with viewBox ≥ 440 wide get `.diagram.wide` (scroll inside the figure
+    on phones so labels stay legible). Sidebar sub-topics as on Chemistry (arrow toggle, hover flyout, scroll-spy): notes h3 ids
+    `st-<section>-<n>` (e.g. `#st-motor-effect-6`), past-paper units list their `pp-` h3s. Malaysian mains quoted as 230 V.
+    No Physics PDFs yet, so no shop promo box.)
+    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (180 questions across 31 sub-topics; `h3#pp-1-5-1` etc.).
+    Real 0625 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers, 50 SVG diagrams (41 added Nov 2026,
+    reviewed); parts on content dropped from the 2026–2028 syllabus (logic gates etc.) skipped. A few papers say take g = 10 N/kg
+    and their answers follow that. No "Get it marked" links (marking page only offers full-paper marking for Physics).
   - Older stubs: chemistry past-paper technique, A-level biology definitions, physics formula sheet, economics essay guide.
 - `marking/` — paid past-paper marking page: full past papers (Chem/Phys/Bio/Maths) RM10–30 per paper, cheaper in batches;
   questions RM10–20 / essays RM20–40 (Business/Econ/English); 48-hour turnaround; form opens WhatsApp prefilled.
@@ -121,11 +131,11 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 
 ## Open items / ideas
 - Owner to confirm dates: tutoring since 2020 vs 2021; A Level certificate shows June 2022 series.
-- Exam Technique section for Economics describes 2027 papers generally — check against the syllabus PDF (Accounting and Chemistry done, Nov 2026).
-- Past-paper "How to use" tips on Biology/Physics may still say "about 1½ minutes per mark"; Paper 4 is 80 marks in 1h15
-  (under 1 min/mark) — fixed on Chemistry only, check the others. Official syllabus PDFs can be downloaded from the subject
+- Exam Technique section for Economics describes 2027 papers generally — check against the syllabus PDF (Accounting, Chemistry and Physics done, Nov 2026).
+- Past-paper "How to use" tips on Biology may still say "about 1½ minutes per mark"; Paper 4 is 80 marks in 1h15
+  (under 1 min/mark) — fixed on Chemistry and Physics, check Biology. Official syllabus PDFs can be downloaded from the subject
   page on cambridgeinternational.org (link "2026-2028 syllabus" → `/Images/<id>-2026-2028-syllabus.pdf`).
 - Business notes: paper layout described is the 0450 format (P1 4×20: 2/2/4/6/6; P2 case 4×20: 8/12) — check against the
   current syllabus year. Owner's sample questions were OxfordAQA 9225 style; model answers use original cases, not past-paper text.
-- Possible next: Physics topics 1 & 4, Maths notes, Business PDFs, Economics detailed PDFs, custom domain
+- Possible next: Physics PDFs, Maths notes, Business PDFs, Economics detailed PDFs, custom domain
   (Cloudflare Pages or Netlify), Accounting on the marking page, store name (top picks: "Notes by Paula", "A* Starts Here").
