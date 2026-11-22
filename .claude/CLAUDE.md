@@ -34,11 +34,16 @@ it sets how to plan, split the work into steps, check the result in a browser an
     P3/P4 1h15 80 marks 50%, P5 1h15 / P6 1h 40 marks 20%) and "Illustrated Examples" `#illustrated` (10 original worked
     examples with SVG diagrams). Full QC + syllabus alignment done Nov 2026 (every calculation re-worked, every Core/Supplement
     bullet covered and labelled, off-syllabus items tagged `key-term bg-term` "Background" or `.background-note`).
-    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit12` (168 questions across 29 grouped sub-topics, e.g.
-    `h3#pp-2-5` = 2.5–2.7 structures). Real 0620 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers,
-    44 original SVG diagrams added to answers (Nov 2026). No "Get it marked" links (marking page only offers full-paper marking for Chemistry).
     Sidebar sub-topics as on Accounting (arrow toggle, hover flyout, scroll-spy): notes h3 ids `st-<section>-<n>` (e.g.
-    `#st-stoichiometry-5`), past-paper units reuse their `pp-x-y` h3 ids. Figures sit in `figure.diagram`; `.example-block`
+    `#st-stoichiometry-5`). Each topic has a `a.pp-link-box` under its header and one at the end (`.end`) linking to its
+    past-paper unit; the sidebar has a "Topical Past Papers" box (styled `.pdf-promo`) linking to the separate page.
+    Old `#pp-…` hashes on the notes page are forwarded by JS to the past-papers page (owner asked for separate pages, Nov 2026).
+  - `resources/igcse-chemistry-past-papers/` — **separate page** for Chemistry's Topical Past Papers: `#pp-unit1`…`#pp-unit12`
+    (168 questions across 29 grouped sub-topics, e.g. `h3#pp-2-5` = 2.5–2.7 structures; sub-topic menu reuses the `pp-x-y`
+    ids). Real 0620 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers, 44 original SVG diagrams.
+    Each unit starts with a "Revise the notes first" `a.pp-link-box` back to `../igcse-chemistry-notes/#<topic>`; sidebar has a
+    "← Back to the notes" box. Same CSS/JS as the notes page. No "Get it marked" links (marking page only offers
+    full-paper marking for Chemistry). Other subjects still keep past papers inside their notes page. Figures sit in `figure.diagram`; `.example-block`
     text is italic, so the page sets `.diagram { font-style: normal }`.
   - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029: exam technique, 6 topics, 37 model answers, 12 SVG diagrams)
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (187 questions across 38 sub-topics, `h3#pp-2-3` etc.)
@@ -66,13 +71,14 @@ it sets how to plan, split the work into steps, check the result in a browser an
 - `shop/` — PDF notes shop: embeds 4 Payhip product pages (`payhip-embed-page`, data-keys `oVPXO`, `F1jYU`, `mJxkK`, `qWKMF`; one shared embed-page.js script). Linked from the nav on the
   homepage, hub, marking and Bio/Chem notes pages, a "Get these notes as a PDF" box in the Bio/Chem sidebars, and
   "PDF available" tags on the Bio/Chem hub cards. Add new subjects here when their PDFs go on Payhip.
-- Search: `resources/search.js` + `resources/search-index.json`. **Rebuild after editing notes:** `python3 tools/build-search-index.py`.
+- Search: `resources/search.js` + `resources/search-index.json` (hits link to `st-`/`pp-` h3 anchors). **Rebuild after editing notes:** `python3 tools/build-search-index.py`.
   New notes page → add to `PAGES` in that script and include `<script src="../search.js"></script>`.
 - `sitemap.xml`, `DEPLOY.md` (structure + search instructions).
 - Skill `.claude/skills/paula-web-design/`: designs or restyles pages for all three of Paula's sites (hub, SEO portfolio, this
   site) in a saved style; the "hub" style is the first one (`styles/hub-style.md` + `.css`).
 - Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
   (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business, Chemistry and Biology.
+  Its renderer targets the notes page; for Chemistry the past papers now live in `resources/igcse-chemistry-past-papers/`.
 
 ## Conventions for new notes pages
 Same component classes as existing notes pages: `section-header/form-badge/purpose`, `structure-card/step`, `conventions/convention-item`,
