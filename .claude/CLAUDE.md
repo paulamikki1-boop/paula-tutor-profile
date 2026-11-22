@@ -29,10 +29,17 @@ it sets how to plan, split the work into steps, check the result in a browser an
   - `resources/igcse-biology-notes/` (0610, 2026–2028, 21 topics, inline SVG diagrams in PDFs only)
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit21` (223 questions across 39 sub-topics, e.g. `h3#pp-14-3`).
     Real 0610 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers. No "Get it marked" links.
-  - `resources/igcse-chemistry-notes/` (0620, 2026–2028, 12 topics)
+  - `resources/igcse-chemistry-notes/` (0620, 2026–2028, 12 topics) plus "Exam Guide" section `#exam-guide` (papers/timing/
+    command words/key relationships, from the official 2026–2028 syllabus **version 2**, Aug 2026: P1/P2 45 min 40 MCQ 30%,
+    P3/P4 1h15 80 marks 50%, P5 1h15 / P6 1h 40 marks 20%) and "Illustrated Examples" `#illustrated` (10 original worked
+    examples with SVG diagrams). Full QC + syllabus alignment done Nov 2026 (every calculation re-worked, every Core/Supplement
+    bullet covered and labelled, off-syllabus items tagged `key-term bg-term` "Background" or `.background-note`).
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit12` (168 questions across 29 grouped sub-topics, e.g.
-    `h3#pp-2-5` = 2.5–2.7 structures). Real 0620 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers.
-    No "Get it marked" links (marking page only offers full-paper marking for Chemistry).
+    `h3#pp-2-5` = 2.5–2.7 structures). Real 0620 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers,
+    44 original SVG diagrams added to answers (Nov 2026). No "Get it marked" links (marking page only offers full-paper marking for Chemistry).
+    Sidebar sub-topics as on Accounting (arrow toggle, hover flyout, scroll-spy): notes h3 ids `st-<section>-<n>` (e.g.
+    `#st-stoichiometry-5`), past-paper units reuse their `pp-x-y` h3 ids. Figures sit in `figure.diagram`; `.example-block`
+    text is italic, so the page sets `.diagram { font-style: normal }`.
   - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029: exam technique, 6 topics, 37 model answers, 12 SVG diagrams)
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (187 questions across 38 sub-topics, `h3#pp-2-3` etc.)
     and `#pp-ped` (2.7, 11 questions). All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
@@ -91,7 +98,10 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 
 ## Open items / ideas
 - Owner to confirm dates: tutoring since 2020 vs 2021; A Level certificate shows June 2022 series.
-- Exam Technique section for Economics describes 2027 papers generally — check against the syllabus PDF (Accounting done, Nov 2026).
+- Exam Technique section for Economics describes 2027 papers generally — check against the syllabus PDF (Accounting and Chemistry done, Nov 2026).
+- Past-paper "How to use" tips on Biology/Physics may still say "about 1½ minutes per mark"; Paper 4 is 80 marks in 1h15
+  (under 1 min/mark) — fixed on Chemistry only, check the others. Official syllabus PDFs can be downloaded from the subject
+  page on cambridgeinternational.org (link "2026-2028 syllabus" → `/Images/<id>-2026-2028-syllabus.pdf`).
 - Business notes: paper layout described is the 0450 format (P1 4×20: 2/2/4/6/6; P2 case 4×20: 8/12) — check against the
   current syllabus year. Owner's sample questions were OxfordAQA 9225 style; model answers use original cases, not past-paper text.
 - Possible next: Physics topics 1 & 4, Maths notes, Business PDFs, Economics detailed PDFs, custom domain
