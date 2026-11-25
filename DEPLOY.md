@@ -15,7 +15,7 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   ├── igcse-chemistry-past-paper-technique/
 │   │   └── index.html                          — Full resource page
 │   ├── igcse-economics-notes/
-│   │   └── index.html                          — Full resource page (6 topics + model answers)
+│   │   └── index.html                          — Full resource page (exam technique, 6 topics, illustrated examples, model answers, topical past papers)
 │   ├── igcse-chemistry-notes/
 │   │   └── index.html                          — Full resource page (Exam Guide, all 12 topics, illustrated examples; each topic links to its past papers)
 │   ├── igcse-chemistry-past-papers/
