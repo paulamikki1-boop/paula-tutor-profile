@@ -45,10 +45,24 @@ it sets how to plan, split the work into steps, check the result in a browser an
     "← Back to the notes" box. Same CSS/JS as the notes page. No "Get it marked" links (marking page only offers
     full-paper marking for Chemistry). Other subjects still keep past papers inside their notes page. Figures sit in `figure.diagram`; `.example-block`
     text is italic, so the page sets `.diagram { font-style: normal }`.
-  - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029: exam technique, 6 topics, 37 model answers, 12 SVG diagrams)
+  - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029, official syllabus PDF from cambridgeinternational.org
+    `/Images/718148-2027-2029-syllabus.pdf`; 2027 specimen Paper 2 + mark scheme `/Images/718809-…`, `/Images/718805-…`).
+    Exam Technique (P1 40 MCQ 1h 30%; P2 2h 80 marks 70%: Section A Q1 (a)–(f) 20 marks, Section B three from four, 2/4/6/8;
+    only Section B (d) Discuss [8] is levels-marked (L3 6–8), Section A (f) Discuss [6] point-marked max 4 per side; AO weights;
+    the 9 syllabus command words), 6 topics whose h3s are exactly the syllabus sub-topics (1.1–6.4, PED = 2.6, PES = 2.7),
+    37 model answers, "Illustrated Examples" `#illustrated` (12 original worked examples, two per topic, SVGs drawn to scale).
+    Full QC + syllabus alignment done Nov 2026 (every calculation re-worked, every syllabus bullet covered, independently
+    reviewed); off-syllabus items tagged `key-term bg-term` "Background" / `.background-note` (micro vs macro, role of
+    government, mobility of all factors, fixed exchange rates, pyramids/dependency ratio, etc.). 113 SVG diagrams in all;
+    figures with viewBox ≥ 430 wide get `.diagram.wide`. Sidebar sub-topics as on Chemistry/Physics (arrow toggle, hover
+    flyout, scroll-spy; same JS): notes h3 ids `st-<section>-<n>` (e.g. `#st-allocation-of-resources-6`), past-paper units
+    list their `pp-` h3s.
     plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (187 questions across 38 sub-topics, `h3#pp-2-3` etc.)
-    and `#pp-ped` (2.7, 11 questions). All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
-    original exemplar answers. Papers/mark schemes/examiner reports came from pastpapers.papacambridge.com. Paper 1 (MCQ) not covered.
+    and `#pp-ped` (11 questions). All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
+    original exemplar answers; 68 SVG diagrams (60 added Nov 2026 as "Revision diagram (not required by the question)",
+    reviewed). Headings keep the old (pre-2027) sub-topic numbers the papers were set on; a `.syl-tag` beside each heading
+    gives the 2027–2029 number where it differs. Papers/mark schemes/examiner reports came from pastpapers.papacambridge.com.
+    Paper 1 (MCQ) not covered. "Get it marked" links → marking page.
   - `resources/igcse-accounting-notes/` (0452 NEW syllabus 2027–2029: exam technique, 7 topics, 30 worked examples + "Illustrated Examples" section `#illustrated` (8 original examples, 11 inline SVG diagrams) + "Past-Paper Examples" sidebar group `#pp-t1`…`#pp-t7` (one section per syllabus topic; 40 real 0452 Paper 2 questions 2023–2025, verbatim + cited, 64 original SVG diagrams, original model answers; figures checked against the mark schemes. Note: `extract_questions.py` mislabels some Paper 2 question numbers (e.g. M/J/25 Jasmine is Q3 not Q4), so always take numbers from the printed paper; some column headings that wrap across lines in the PDF are not quoted verbatim, and a few advice answers use extra figures worked out from the paper, labelled as such). Full QC pass done Nov 2026 (every calculation re-worked, explanations corrected), then aligned with the official 2027–2029 syllabus PDF (owner uploaded it): syllabus terminology in the original notes (statement of profit or loss, allowance for irrecoverable debts, owner’s equity, uncredited deposits, statement of changes in equity), the ten syllabus ratios with syllabus formulas (ROCE = profit before interest ÷ capital employed), Paper 1 40 MCQs/1h30/30% and Paper 2 five 20-mark questions/1h45/70%, the 16 syllabus command words, and every topic bullet covered (incl. revaluation method, 7.3 data storage). Past-paper answers keep the older papers’ wording, with a note;
     `table.ledger` / `table.statement` layouts, `ledger colsN` adds the Dr/Cr divider; sidebar sub-topics: each syllabus topic has an arrow toggle + `.subnav` list of its h3s (ids `st-<section>-<n>`, e.g. `#st-procedures-2` deep-links), inline list for the open topic, hover flyout on desktop, scroll-spy highlight. `tools/build-search-index.py` links search hits to `st-` anchors)
   - `resources/igcse-business-notes/` (0450: exam technique, 6 topics (1.1–6.3), Key Formulas page, 3 model-answer sections with
@@ -131,7 +145,6 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 
 ## Open items / ideas
 - Owner to confirm dates: tutoring since 2020 vs 2021; A Level certificate shows June 2022 series.
-- Exam Technique section for Economics describes 2027 papers generally — check against the syllabus PDF (Accounting, Chemistry and Physics done, Nov 2026).
 - Past-paper "How to use" tips on Biology may still say "about 1½ minutes per mark"; Paper 4 is 80 marks in 1h15
   (under 1 min/mark) — fixed on Chemistry and Physics, check Biology. Official syllabus PDFs can be downloaded from the subject
   page on cambridgeinternational.org (link "2026-2028 syllabus" → `/Images/<id>-2026-2028-syllabus.pdf`).
