@@ -16,6 +16,8 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   │   └── index.html                          — Full resource page
 │   ├── igcse-economics-notes/
 │   │   └── index.html                          — Full resource page (exam technique, 6 topics, illustrated examples, model answers, topical past papers)
+│   ├── igcse-economics-past-papers/
+│   │   └── index.html                          — Topical Past Papers (198 questions by topic; each unit links back to its notes)
 │   ├── igcse-chemistry-notes/
 │   │   └── index.html                          — Full resource page (Exam Guide, all 12 topics, illustrated examples; each topic links to its past papers)
 │   ├── igcse-chemistry-past-papers/
@@ -26,6 +28,8 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   │   └── index.html                          — Full resource page (6 topics, formulas + model answers)
 │   ├── igcse-physics-notes/
 │   │   └── index.html                          — Full resource page (topics 2, 3, 5, 6 so far; 1 and 4 marked "Soon")
+│   ├── igcse-physics-past-papers/
+│   │   └── index.html                          — Topical Past Papers (180 questions by topic; each unit links back to its notes)
 │   ├── igcse-biology-notes/
 │   │   └── index.html                          — Full resource page (all 21 topics, sidebar-navigated)
 │   ├── igcse-english-writing-forms/
