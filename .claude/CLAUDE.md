@@ -43,7 +43,7 @@ it sets how to plan, split the work into steps, check the result in a browser an
     ids). Real 0620 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers, 44 original SVG diagrams.
     Each unit starts with a "Revise the notes first" `a.pp-link-box` back to `../igcse-chemistry-notes/#<topic>`; sidebar has a
     "← Back to the notes" box. Same CSS/JS as the notes page. No "Get it marked" links (marking page only offers
-    full-paper marking for Chemistry). Other subjects still keep past papers inside their notes page. Figures sit in `figure.diagram`; `.example-block`
+    full-paper marking for Chemistry). Economics and Physics were split the same way; Biology, Business and Accounting still keep past papers inside their notes page. Figures sit in `figure.diagram`; `.example-block`
     text is italic, so the page sets `.diagram { font-style: normal }`.
   - `resources/igcse-economics-notes/` (0455 NEW syllabus 2027–2029, official syllabus PDF from cambridgeinternational.org
     `/Images/718148-2027-2029-syllabus.pdf`; 2027 specimen Paper 2 + mark scheme `/Images/718809-…`, `/Images/718805-…`).
@@ -57,8 +57,11 @@ it sets how to plan, split the work into steps, check the result in a browser an
     figures with viewBox ≥ 430 wide get `.diagram.wide`. Sidebar sub-topics as on Chemistry/Physics (arrow toggle, hover
     flyout, scroll-spy; same JS): notes h3 ids `st-<section>-<n>` (e.g. `#st-allocation-of-resources-6`), past-paper units
     list their `pp-` h3s.
-    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (187 questions across 38 sub-topics, `h3#pp-2-3` etc.)
-    and `#pp-ped` (11 questions). All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
+    Each topic has `a.pp-link-box`es (under its header and `.end`) to its past-paper unit; sidebar `.side-link` box to the
+    past-papers page; old `#pp-…` hashes forward there (split Nov 2026 with skill `split-past-papers`).
+  - `resources/igcse-economics-past-papers/` — **separate page** for Economics' Topical Past Papers: `#pp-unit1`…`#pp-unit6`
+    (187 questions across 38 sub-topics, `h3#pp-2-3` etc.) and `#pp-ped` (11 questions). Each unit opens with a "Revise the
+    notes first" box back to the notes; same CSS/JS as the notes page. All real 0455 Paper 2 questions 2020–2025, verbatim + cited (`span.pp-ref`), with
     original exemplar answers; 68 SVG diagrams (60 added Nov 2026 as "Revision diagram (not required by the question)",
     reviewed). Headings keep the old (pre-2027) sub-topic numbers the papers were set on; a `.syl-tag` beside each heading
     gives the 2027–2029 number where it differs. Papers/mark schemes/examiner reports came from pastpapers.papacambridge.com.
@@ -84,7 +87,8 @@ it sets how to plan, split the work into steps, check the result in a browser an
     on phones so labels stay legible). Sidebar sub-topics as on Chemistry (arrow toggle, hover flyout, scroll-spy): notes h3 ids
     `st-<section>-<n>` (e.g. `#st-motor-effect-6`), past-paper units list their `pp-` h3s. Malaysian mains quoted as 230 V.
     No Physics PDFs yet, so no shop promo box.)
-    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit6` (180 questions across 31 sub-topics; `h3#pp-1-5-1` etc.).
+    Each notes topic links to its past-paper unit (`a.pp-link-box`), sidebar `.side-link` box; old `#pp-…` hashes forward.
+  - `resources/igcse-physics-past-papers/` — **separate page** (split Nov 2026): `#pp-unit1`…`#pp-unit6` (180 questions across 31 sub-topics; `h3#pp-1-5-1` etc.).
     Real 0625 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers, 50 SVG diagrams (41 added Nov 2026,
     reviewed); parts on content dropped from the 2026–2028 syllabus (logic gates etc.) skipped. A few papers say take g = 10 N/kg
     and their answers follow that. No "Get it marked" links (marking page only offers full-paper marking for Physics).
@@ -102,11 +106,11 @@ it sets how to plan, split the work into steps, check the result in a browser an
   site) in a saved style; the "hub" style is the first one (`styles/hub-style.md` + `.css`).
 - Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
   (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business, Chemistry and Biology.
-  Its renderer targets the notes page; for Chemistry the past papers now live in `resources/igcse-chemistry-past-papers/`.
+  Its renderer targets the notes page; Chemistry, Economics and Physics past papers now live in `resources/igcse-<subject>-past-papers/`.
 - Skill `.claude/skills/split-past-papers/`: one command moves a subject's `pp-` sections into `resources/igcse-<subject>-past-papers/`
   with link boxes both ways, old-link forwarding and all followers (search, sitemap, hub card, DEPLOY.md); includes a
-  Playwright checker. Dry-run tested on Biology, Physics, Economics, Business and Accounting (Nov 2026); not yet applied
-  to them (owner to choose, one subject per chat).
+  Playwright checker. Applied to Economics and Physics (Nov 2026); dry-run tested on Biology, Business and Accounting, not yet
+  applied to them (owner to choose).
 
 ## Conventions for new notes pages
 Same component classes as existing notes pages: `section-header/form-badge/purpose`, `structure-card/step`, `conventions/convention-item`,
