@@ -687,6 +687,7 @@ td {
 .diagram { font-style: normal; }
 .example-block .diagram { padding: 10px; }
 @media (max-width: 600px) { .diagram { padding: 8px; } .example-block .diagram { padding: 4px; margin-left: -6px; margin-right: -6px; } }
+@media (max-width: 600px) { .diagram.wide { overflow-x: auto; -webkit-overflow-scrolling: touch; } .diagram.wide svg { min-width: 430px; } }
 .key-term.bg-term { background: #eef1f5; color: #5b6b80; border: 1px dashed #9aa8ba; }
 .background-note { border-left: 3px dashed #9aa8ba; padding: 10px 14px; margin: 16px 0; background: #f6f8fb; border-radius: 8px; font-size: 14.5px; }
 .background-note .bg-label { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #5b6b80; margin-bottom: 4px; }
