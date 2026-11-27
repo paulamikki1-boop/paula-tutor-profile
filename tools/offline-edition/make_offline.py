@@ -150,6 +150,11 @@ main = re.sub(r'(<div class="section-header">.*?)(\n    </div>)',
 
 # ---------------------------------------------------------------- tail: no search, no forwarding, licensed footer
 tail = re.sub(r'\s*<script src="\.\./search\.js"></script>', '', tail)
+# show/hide-answer buttons: paste the shared script in, since a single file has no ../
+_ppjs = open(os.path.join(REPO, 'resources', 'pp-answers.js'), encoding='utf-8').read()
+tail = re.sub(r'\s*<script src="\.\./pp-answers\.js"></script>', '', tail)
+if 'class="pp-ref"' in main:
+    tail = tail.replace('</body>', '<script>\n' + _ppjs + '</script>\n</body>', 1)
 tail = re.sub(r'\s*<script src="[^"]*search\.js"></script>', '', tail)
 tail = re.sub(r'<footer class="footer">.*?</footer>',
               f'<footer class="footer"><p>&copy; {YEAR} Paula &mdash; IGCSE &amp; A Level Tutor in Kuala Lumpur. '
@@ -171,7 +176,7 @@ doc = head + main + tail
 doc = re.sub(r"\s*// The topical past papers moved to their own page[^\n]*\n\s*if \(/\^pp-/\.test\(h\)\)[^\n]*\n", '\n', doc)
 doc = re.sub(r'<script>/\* past papers moved to their own page.*?</script>\n?', '', doc, flags=re.S)
 assert 'location.replace' not in doc, 'forwarding script still present'
-assert '../search.js' not in doc
+assert '../search.js' not in doc and '../pp-answers.js' not in doc
 # nothing in the copy may point to or mention the free website
 visible = re.sub(r'data:[^"\')]+', '', doc)
 left = re.findall(r'paulamikki1-boop\.github\.io|href="[^"]*(?:resources|marking|shop)/|free (?:notes|revision|study)', visible, re.I)
