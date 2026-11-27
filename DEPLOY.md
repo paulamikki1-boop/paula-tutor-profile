@@ -25,7 +25,7 @@ This site is deployed as a collection of static HTML files. No build step is req
 │   ├── igcse-accounting-notes/
 │   │   └── index.html                          — Full resource page (7 topics + worked examples + 8 illustrated examples with diagrams + 40 past-paper examples by topic)
 │   ├── igcse-business-notes/
-│   │   └── index.html                          — Full resource page (6 topics, formulas + model answers)
+│   │   └── index.html                          — Full resource page (0264 syllabus: exam technique, 6 topics, formulas, 12 illustrated examples, model answers, 148 topical past-paper questions)
 │   ├── igcse-physics-notes/
 │   │   └── index.html                          — Full resource page (topics 2, 3, 5, 6 so far; 1 and 4 marked "Soon")
 │   ├── igcse-physics-past-papers/

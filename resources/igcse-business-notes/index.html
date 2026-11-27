@@ -684,6 +684,15 @@ td {
 .pp-jump { font-size: 14px; line-height: 1.9; }
 .pp-jump a { color: var(--accent); }
 .pp-credit { font-size: 12px; color: var(--text-muted); margin-top: 24px; }
+/* Syllabus alignment (0264, 2027-2029): background labels, old-to-new sub-topic tags, wide figures */
+.key-term.bg-term { background: #eef1f5; color: #5b6b80; border: 1px dashed #9aa8ba; }
+.background-note { border-left: 3px dashed #9aa8ba; padding: 10px 14px; margin: 16px 0; background: #f6f8fb; border-radius: 8px; font-size: 14.5px; }
+.background-note .bg-label { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #5b6b80; margin-bottom: 4px; }
+.syl-tag { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; background: #eef1f5; color: #5b6b80; border: 1px solid #d5dce6; white-space: nowrap; }
+.diagram { font-style: normal; }
+.diagram.wide { max-width: 560px; }
+@media (max-width: 600px) { .diagram.wide { overflow-x: auto; -webkit-overflow-scrolling: touch; } .diagram.wide svg { min-width: 430px; } }
+.formula-box { background: #f6f8fb; border: 1px solid var(--border-light); border-radius: 10px; padding: 12px 16px; margin: 12px 0; font-family: var(--mono); font-size: 14px; color: var(--navy); }
 /* >>> hub-style layer (applied by .claude/skills/paula-web-design/scripts/apply_hub_layer.py; edit the skill's copy, then re-run) */
 @media screen {
 :root {
