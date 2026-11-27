@@ -26,18 +26,25 @@ it sets how to plan, split the work into steps, check the result in a browser an
 - `resources/index.html` — resources hub: "Search all notes" box, subject/level filters, cards.
 - Notes pages (sidebar + sections layout, `showSection()` + URL hash per section):
   - `resources/igcse-english-writing-forms/` (Cambridge 0500)
-  - `resources/igcse-biology-notes/` (0610, 2026–2028, 21 topics)
-    plus "Illustrated Examples" `#illustrated` (10 original worked examples with SVGs, h3 ids `st-illustrated-1`…`10`)
-    plus "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit21` (223 questions across 39 sub-topics, e.g. `h3#pp-14-3`).
-    Real 0610 Paper 4 (41/42/43) questions 2020–2025, verbatim + cited, original answers; 56 original "Revision diagram (not
-    required by the question)" SVGs in the answers (added + independently reviewed Nov 2026). No "Get it marked" links.
-    QC pass done Nov 2026 (notes and past-paper answers re-checked, calculations re-worked; timing tip now "under 1 minute
-    per mark"). Sidebar sub-topics as on Chemistry (arrow toggle, hover flyout, scroll-spy; same JS): notes h3 ids
-    `st-<section>-<n>` (e.g. `#st-transport-animals-2`), past-paper units list their `pp-` h3s. Figures with viewBox ≥ 440
-    wide get `.diagram.wide`. **Syllabus alignment NOT yet done** (no 2026–2028 syllabus PDF available; cambridgeinternational.org
-    blocked by the session network). Open Core/Supplement queries for that pass: role of the brain in temperature control and
-    "insulin decreases blood glucose" (Core?), nitrate/magnesium deficiency, named pepsin/trypsin, teeth (still on syllabus?),
-    light intensity in transpiration, 2,4-D, gene mutation, haploid/diploid labels.
+  - `resources/igcse-biology-notes/` (0610, 2026–2028 syllabus **version 3**, Aug 2026, uploaded by the owner; 21 topics in
+    syllabus order: **Topic 20 = Human influences (id `human-influences`, past papers `pp-unit21`, h3s `pp-21-x` labelled
+    20.x), Topic 21 = Biotechnology (id `biotechnology`, `pp-unit20`, `pp-20-x` labelled 21.x)** — ids kept from the old
+    order so links still work). "Exam Guide" `#exam-guide` first in the sidebar (papers/timing from the syllabus: P1/P2 45 min
+    40 MCQ 30%, P3/P4 1h15 80 marks 50%, P5 1h15 / P6 1h 40 marks 20%; AO1 50 / AO2 30 / AO3 20; the **14** syllabus command
+    words; key calculations; practical contexts; table/graph/drawing rules). "Illustrated Examples" `#illustrated` (10 original
+    worked examples with SVGs, `st-illustrated-1`…`10`). Full QC + syllabus alignment done Nov 2026 (every Core/Supplement
+    bullet covered and labelled, practical methods added, off-syllabus items tagged `key-term bg-term` "Background" /
+    `.background-note`, e.g. deficiency symptoms, 2,4-D, loop of Henle, fitness).
+    "Topical Past Papers" sidebar group: `#pp-unit1`…`#pp-unit21` (**290 questions** across 39 sub-topics, e.g. `h3#pp-14-3`):
+    real 0610 Paper 4 (41/42/43) questions 2020–2026 (67 from May/June 2026 added Nov 2026), verbatim + cited, original
+    answers, every answer checked against the mark schemes (papers from pastpapers.papacambridge.com; no examiner reports exist
+    there for M/J 2020, M/J 2024, O/N 2023–2025 or M/J 2026, so those notes rely on the mark scheme only). 62 original
+    "Revision diagram (not required by the question)" SVGs in the answers. Past-paper h3s keep the older grouped sub-topic
+    names (e.g. 7.3 "Chemical Digestion and Absorption" spans syllabus 7.4–7.5). No "Get it marked" links. Timing tip says
+    "under 1 minute per mark". Sidebar sub-topics as on Chemistry (arrow toggle, hover flyout, scroll-spy; same JS): notes h3
+    ids `st-<section>-<n>` (e.g. `#st-transport-animals-2`), past-paper units list their `pp-` h3s. Figures with viewBox ≥ 440
+    wide get `.diagram.wide`. Don't re-run the topical-past-papers renderer on this page: it would rebuild the sections and
+    drop the diagrams and fixes (new questions were inserted with a one-off script instead).
   - `resources/igcse-chemistry-notes/` (0620, 2026–2028, 12 topics) plus "Exam Guide" section `#exam-guide` (papers/timing/
     command words/key relationships, from the official 2026–2028 syllabus **version 2**, Aug 2026: P1/P2 45 min 40 MCQ 30%,
     P3/P4 1h15 80 marks 50%, P5 1h15 / P6 1h 40 marks 20%) and "Illustrated Examples" `#illustrated` (10 original worked
@@ -114,7 +121,7 @@ it sets how to plan, split the work into steps, check the result in a browser an
 - Skill `.claude/skills/paula-web-design/`: designs or restyles pages for all three of Paula's sites (hub, SEO portfolio, this
   site) in a saved style; the "hub" style is the first one (`styles/hub-style.md` + `.css`).
 - Skill `.claude/skills/igcse-topical-past-papers/`: builds topical past-paper Q&A sections for any IGCSE notes page
-  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business, Chemistry and Biology.
+  (download papers, extract questions, parallel writer agents, verbatim validator, renderer). Used for Economics, Physics, Business, Chemistry and Biology. pastpapers.co sits behind a Cloudflare bot check; use PapaCambridge.
   Its renderer targets the notes page; Chemistry, Economics and Physics past papers now live in `resources/igcse-<subject>-past-papers/`.
 - Skill `.claude/skills/split-past-papers/`: one command moves a subject's `pp-` sections into `resources/igcse-<subject>-past-papers/`
   with link boxes both ways, old-link forwarding and all followers (search, sitemap, hub card, DEPLOY.md); includes a
@@ -158,7 +165,7 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
 
 ## Open items / ideas
 - Owner to confirm dates: tutoring since 2020 vs 2021; A Level certificate shows June 2022 series.
-- Biology syllabus alignment (step 2 of the per-subject routine) still to do once the 0610 2026–2028 syllabus PDF is available. Official syllabus PDFs can be downloaded from the subject
+- Official syllabus PDFs can be downloaded from the subject
   page on cambridgeinternational.org (link "2026-2028 syllabus" → `/Images/<id>-2026-2028-syllabus.pdf`).
 - Business notes: paper layout described is the 0450 format (P1 4×20: 2/2/4/6/6; P2 case 4×20: 8/12) — check against the
   current syllabus year. Owner's sample questions were OxfordAQA 9225 style; model answers use original cases, not past-paper text.

@@ -123,6 +123,9 @@ If a check cannot be run, say so in the summary and say why. Never report a chec
 - Absolute internal links, or links that work from the root but not from `resources/<page>/`.
 - Renaming or renumbering section ids. Other pages, the search index and "Get it marked" links point at them.
 - Editing the shared style layer by hand in one page instead of through the script, so pages drift apart.
+- Re-running the topical-past-papers renderer (`build_sections.py` without `--check`) on a page whose past-paper sections
+  were later edited by hand (diagrams, mark-scheme fixes): it rebuilds the sections and silently drops that work. To add
+  questions, validate with `--check` and insert the new blocks with a small script.
 - Adding features the page has deliberately left out (CLAUDE.md records several, such as no "Get it marked" links on
   the science pages).
 
