@@ -69,6 +69,10 @@
     starts.forEach(function (q, j) {
       var end = j + 1 < starts.length ? starts[j + 1] : kids.length;
       var ans = kids.slice(q + 1, end);
+      // Source material printed between two parts belongs to the next part: keep it visible
+      for (var a = 0; a < ans.length; a++) {
+        if (ans[a].classList.contains('pp-stimulus')) { ans = ans.slice(0, a); break; }
+      }
       if (!ans.length) return;
       var wrap = document.createElement('div');
       wrap.className = 'pp-answer';
