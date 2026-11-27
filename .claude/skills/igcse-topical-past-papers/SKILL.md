@@ -67,6 +67,9 @@ python3 SKILL_DIR/scripts/build_sections.py WORK/config.json --check   # problem
 python3 SKILL_DIR/scripts/build_sections.py WORK/config.json           # writes the page
 python3 tools/build-search-index.py
 ```
+The page must load `<script src="../pp-answers.js"></script>` (before `../search.js`): it adds the Show answer /
+Hide answer buttons and hides the answers. Add the tag if the page doesn't have it yet.
+
 The validator drops anything it can't stand behind: unknown ids, wording or source text that isn't verbatim in the paper,
 answers with no "why". It keeps the first of any question chosen twice. Read its output; if many items from one writer were
 dropped, send that writer the lines to fix (SendMessage) rather than patching the JSON yourself. Re-running the renderer

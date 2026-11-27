@@ -133,8 +133,8 @@ CREDIT = (f'    <p class="pp-credit">Questions &copy; UCLES / Cambridge Universi
           f'{cfg["subject"]} {cfg["code"]} {cfg["paper_label"]}, reproduced for revision purposes with references. The model '
           'answers and commentary are original and are not official Cambridge mark schemes.</p>\n')
 ex = cfg.get('example_ref', '')
-HOWTO = ('    <div class="tip-box"><div class="tip-label">How to use this page</div>Cover the answer, write your own in timed '
-         'conditions (about 1&frac12; minutes per mark), then compare.'
+HOWTO = ('    <div class="tip-box"><div class="tip-label">How to use this page</div>The answers are hidden. Write your own in '
+         'timed conditions (use the mark allocation and the paper&rsquo;s time per mark), then press <strong>Show answer</strong> and compare.'
          + (f' <strong>{ex}</strong> is the paper reference: syllabus/component/session/year, then question and part.' if ex else '')
          + ' F/M = February/March, M/J = May/June, O/N = October/November.</div>\n')
 

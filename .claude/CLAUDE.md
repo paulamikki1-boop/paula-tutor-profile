@@ -115,6 +115,11 @@ it sets how to plan, split the work into steps, check the result in a browser an
 - `shop/` — PDF notes shop: embeds 4 Payhip product pages (`payhip-embed-page`, data-keys `oVPXO`, `F1jYU`, `mJxkK`, `qWKMF`; one shared embed-page.js script). Linked from the nav on the
   homepage, hub, marking and Bio/Chem notes pages, a "Get these notes as a PDF" box in the Bio/Chem sidebars, and
   "PDF available" tags on the Bio/Chem hub cards. Add new subjects here when their PDFs go on Payhip.
+- Show/hide answers: `resources/pp-answers.js` (loaded before `../search.js` on every page with `span.pp-ref`: Accounting,
+  Biology and Business notes, Chemistry/Economics/Physics past-papers pages). It hides each past-paper answer behind a
+  "Show answer" button (question = first bold-only paragraph in the `example-block`; Accounting's multi-part blocks get one
+  button per bold "(a)…" part) plus its "Why this scores" box, and adds one "Show all answers" switch per section;
+  printing shows everything. `make_offline.py` pastes it into offline copies. Any new past-paper page must load it.
 - Search: `resources/search.js` + `resources/search-index.json` (hits link to `st-`/`pp-` h3 anchors). **Rebuild after editing notes:** `python3 tools/build-search-index.py`.
   New notes page → add to `PAGES` in that script and include `<script src="../search.js"></script>`.
 - `sitemap.xml`, `DEPLOY.md` (structure + search instructions).
