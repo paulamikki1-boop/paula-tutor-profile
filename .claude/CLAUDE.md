@@ -149,6 +149,11 @@ Sold as two products per subject, delivered as zips to the owner (not in this re
   never commit them.
 - Built with Playwright/Chromium HTML→PDF (`page.pdf`, A4) + PyMuPDF for page numbers, watermark and encryption. The build
   scripts lived in a temporary session folder and are NOT in the repo; recreate from the notes pages' HTML if needed.
+- **Study pack builder (Nov 2026):** `tools/study-pack/build_study_pack.py <subject> --out <dir outside repo>` builds Compact PDF +
+  one Detailed PDF per section + Obsidian vault + READ ME FIRST.txt + zip straight from the live notes page (see its README).
+  Owner chose no open-password; copy/edit blocked, © watermark/footer, no website mentions, past papers left out.
+  Chemistry pack built 28 Nov 2026 (compact 83 pp, detailed 14 PDFs/122 pp, vault 15 notes/17 diagrams) with a Shopee
+  listing text + two 1080² listing images (made outside the repo, sent to the owner).
 
 ## Offline personal copies (selling on Shopee)
 - `tools/offline-edition/make_offline.py <subject> --buyer "Name" --order N --out <folder outside repo>` makes one
